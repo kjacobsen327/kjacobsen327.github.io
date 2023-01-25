@@ -1,93 +1,125 @@
 <!DOCTYPE html>
     <html lang="en">
-        <head>
-            <meta charset="utf-8">
-            <meta name="viewport content=width=device-width, initial-scale=1">
-            <title>Chaos Mongers</title>
-            <style type = "text/css">
-                body { font-family:"Verdana", sans-serif; background: rgb(236, 230, 189); }
-                h1 { color: rgb(252, 190, 190); background: rgb(86, 12, 14); font-weight: 700; }
-                h2 { color: rgb(252, 190, 190); background: rgb(86, 12, 14); }
-                p { color: black; background: rgb(246, 245, 238); }
-                ul { color: black; background: rgb(246, 245, 238); }
-                section { color: black; background: rgb(236, 230, 189); }
-                table {background:rgb(246, 245, 238);}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport content=width=device-width, initial-scale=1">
+    <title>Chaos Mongers</title>
 
-                .a { font-size: 36px; }
-                .b { font-size: 28px; }
-                .c { font-size: 20px; }
-                .d { font-size: 16px; }              
-            </style>
-        </head>
-        <body>
-            
-            <header>
-                <h1>
-                    <div class="a" style="text-align:center">Chaos Mongers Cheat Sheets
-                    </div>
-                </h1>
-            </header>
+    <style type = "text/css">
+        body {  font-family:"Verdana", sans-serif; 
+                background: rgb(236, 230, 189);
+                }
+        h1 { background: rgb(132, 48, 51);
+                color: rgb(247, 206, 206); 
+                font-size: 36px;
+                width: 100%;
+                height: 48px;
+                text-align: center;
+                padding: 6px;
+                border: 6px solid rgb(86, 12, 14);
+                }
+        h2 { background: rgb(86, 12, 14);
+                color: rgb(247, 206, 206); 
+                font-size: 28px;
+                width: 100%;
+                height: 36px;
+                text-align: center;
+            padding: 6px;}
+        p { background: rgb(246, 245, 238);
+            color: black;
+            font-size: 20px;
+            }
+        ul { background: rgb(246, 245, 238);
+            color: black;
+            font-size: 20px;
+            }
+        section { color: black; background: rgb(236, 230, 189); }
+        table {background:rgb(246, 245, 238);}
 
-            
-            <section>
-                    <div class="c">
-                        <p>
-                            <ul><li>
-                                <a href="http://kjacobsen327.github.io/whProject/dok.html">Daughters of Khaine</a></li>
-                                <br><li><a href="http://kjacobsen327.github.io/whProject/dok.html">Slaves to Darkness</a></li>
-                                <br><li><a href="http://kjacobsen327.github.io/whProject/dok.html">Sylvaneth</a></li>
-                                <br><li><a href="http://kjacobsen327.github.io/whProject/dok.html">Idoneth Deepkin</a></li></ul>
-                        </p>
-                    </div>
-            </section>
-            
-           <h2>
-                <div class="b" style="text-align:center">Grand Strategies
-                </div>
-               
-            </h2>
-            
-            <section>
-                <p>
-                    <div class="c">
-                        <p>
-                            <b>Tame the Land:</b> You control all of the objectives on the battlefield that are wholly outside your territory.
-                            <br><br><b>Defend What's Ours:</b> There are no enemy units wholly within your territory.
-                            <br><br><b>Take What's Theirs:</b> There are more friendly than enemy units wholly within enemy territory.
-                            <br><br><b>Stake a Claim:</b> 3 or more friendly GALLETIAN CHAMPIONS are wholly within enemy territory.
-                            <br><br><b>Survivor's Instinct:</b> The model picked to be your general is a GALLETIAN CHAMPION and that model is contesting an objective wholly outside your territory.
-                            <br><br><b>The Day is Ours!:</b> There are more friendly GALLETIAN CHAMPIONS from your starting army than GALLETIAN CHAMPIONS from your opponents starting army on the battlefield.
-                        </p>
-                    </div>
-                </p>
-            </section>
+        .a { font-size: 36px; }
+        .b { font-size: 28px; }
+        .c { font-size: 20px; }
+        .d { font-size: 16px; }
+        
+        .collapsible {
+        background-color: rgb(86, 12, 14);
+        color: rgb(252, 190, 190);
+        cursor: pointer;
+        padding: 6px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 28px;
+        }
 
-            <h2>
-                <div class="b" style="text-align:center">Battle Tactics
-                </div>
-            </h2>
+        .active, .collapsible:hover {
+        background-color: rgb(148, 33, 33);
+        }
+        .collapsible:after {
+        content: '\02795'; /* Unicode character for "plus" sign (+) */
+        font-size: 20px;
+        color: white;
+        float: left;
+        margin-left: 5px;
+        }
 
-            <section>
-                <p>
-                    <div class="c">
-                        <p>
-                            <b>Gaining Momentum:</b> Pick 1 enemy unit. Destroy that unit this turn and control more objectives than your opponent at the end of this turn.
-                            <br><br><b>An Eye for an Eye:</b> If 1 or more friendly units were destroyed in the previous turn, destroy 1 or more enemy units this turn.
-                            <br><br><b>Desecrate their Lands:</b> Pick 1 terrain feature or faction terrain feature that is partially or wholly within enemy territory. Control that terrain feature at the end of this turn.
-                            <br><br><b>This One's Mine:</b> Pick 1 enemy unit on the battlefield. Destroy that unit this turn by an attack made by your general.
-                            <br><br><b>A Matter of Honour:</b> Destroy 1 enemy GALLETIAN CHAMPION or Sworn Bodyguard unit with a friendly GALLETIAN CHAMPION or Sworn Bodyguard unit.
-                            <br><br><b>Lead the Assault:</b> 2 objectives in enemy territory you control are each contested by a friendly GALLETIAN CHAMPION.
-                            <br><br><b>United Offence:</b> Pick 1 objective controlled by your opponent. Control that objective with 2 or more friendly GALLETIAN CHAMPIONS contesting it.
-                            <br><br><b>Cunning Manoeuvre:</b> Pick 1 friendly GALLETIAN CHAMPION that is more than 3" from all enemy units. That GALLETIAN CHAMPION must end the turn more than 3" from all enemy units and contest an objective you control wholly outside your territory.
-                        </p>
-                    </div>
-                </p>
-            </section>
+        .active:after {
+        content: "\2796"; /* Unicode character for "minus" sign (-) */
+        }
 
-            <section>
-                <h2><div class="b" style="text-align:center">Heroic Actions</div>
-                </h2>
-                
+        .content {
+        padding: 0 18px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        background-color: #f1f1f1;
+        }
+    </style>        
+</head>
+
+<body>
+<!-- Chaos Mongers Header-->
+    <header>
+        <h1>Chaos Mongers Cheat Sheets
+        </h1>
+    </header>
+
+<!-- Links to armies -->
+    <p>
+        <ul><li><a href="http://kjacobsen327.github.io/whProject/dok.html">Daughters of Khaine</a></li>
+            <br><li><a href="http://kjacobsen327.github.io/whProject/dok.html">Slaves to Darkness</a></li>
+            <br><li><a href="http://kjacobsen327.github.io/whProject/dok.html">Sylvaneth</a></li>
+            <br><li><a href="http://kjacobsen327.github.io/whProject/dok.html">Idoneth Deepkin</a></li></ul>
+    </p>
+<!-- Grand Strategies Header -->
+    <h2>Grand Strategies
+    </h2>
+    <!-- Grand Strategies list -->
+    <p><b>Tame the Land:</b> You control all of the objectives on the battlefield that are wholly outside your territory.
+        <br><br><b>Defend What's Ours:</b> There are no enemy units wholly within your territory.
+        <br><br><b>Take What's Theirs:</b> There are more friendly than enemy units wholly within enemy territory.
+        <br><br><b>Stake a Claim:</b> 3 or more friendly GALLETIAN CHAMPIONS are wholly within enemy territory.
+        <br><br><b>Survivor's Instinct:</b> The model picked to be your general is a GALLETIAN CHAMPION and that model is contesting an objective wholly outside your territory.
+        <br><br><b>The Day is Ours!:</b> There are more friendly GALLETIAN CHAMPIONS from your starting army than GALLETIAN CHAMPIONS from your opponents starting army on the battlefield.
+    </p>
+<!-- Battle Tactics Header -->
+    <h2>Battle Tactics
+    </h2>
+    <!-- Grand Strategies List -->
+    <p><b>Gaining Momentum:</b> Pick 1 enemy unit. Destroy that unit this turn and control more objectives than your opponent at the end of this turn.
+        <br><br><b>An Eye for an Eye:</b> If 1 or more friendly units were destroyed in the previous turn, destroy 1 or more enemy units this turn.
+        <br><br><b>Desecrate their Lands:</b> Pick 1 terrain feature or faction terrain feature that is partially or wholly within enemy territory. Control that terrain feature at the end of this turn.
+        <br><br><b>This One's Mine:</b> Pick 1 enemy unit on the battlefield. Destroy that unit this turn by an attack made by your general.
+        <br><br><b>A Matter of Honour:</b> Destroy 1 enemy GALLETIAN CHAMPION or Sworn Bodyguard unit with a friendly GALLETIAN CHAMPION or Sworn Bodyguard unit.
+        <br><br><b>Lead the Assault:</b> 2 objectives in enemy territory you control are each contested by a friendly GALLETIAN CHAMPION.
+        <br><br><b>United Offence:</b> Pick 1 objective controlled by your opponent. Control that objective with 2 or more friendly GALLETIAN CHAMPIONS contesting it.
+        <br><br><b>Cunning Manoeuvre:</b> Pick 1 friendly GALLETIAN CHAMPION that is more than 3" from all enemy units. That GALLETIAN CHAMPION must end the turn more than 3" from all enemy units and contest an objective you control wholly outside your territory.
+    </p>
+<!-- Heroic Actions Header -->
+        <h2>Heroic Actions
+        </h2>
+    <!-- Heroic Actions Table -->
                 <table class="d">
                     <tr>
                         <td>
@@ -125,8 +157,12 @@
                         </table></td>
                     </tr>
                 </table>
-            </section>
 
-            
+
+
+
+
+
+                
         </body>
     </html>
