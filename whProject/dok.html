@@ -20,19 +20,30 @@
                 .d { font-size: 16px; }
                 
                 .collapsible {
-                background-color: #777;
-                color: white;
+                background-color: rgb(86, 12, 14);
+                color: rgb(252, 190, 190);
                 cursor: pointer;
-                padding: 18px;
+                padding: 6px;
                 width: 100%;
                 border: none;
                 text-align: left;
                 outline: none;
-                font-size: 15px;
+                font-size: 28px;
                 }
 
                 .active, .collapsible:hover {
-                background-color: #555;
+                background-color: rgb(148, 33, 33);
+                }
+                .collapsible:after {
+                content: '\02795'; /* Unicode character for "plus" sign (+) */
+                font-size: 20px;
+                color: white;
+                float: left;
+                margin-left: 5px;
+                }
+
+                .active:after {
+                content: "\2796"; /* Unicode character for "minus" sign (-) */
                 }
 
                 .content {
