@@ -1,124 +1,138 @@
 <!DOCTYPE html>
     <html lang="en">
 
-        <head>
-            <meta charset="utf-8">
-            <meta name="viewport content=width=device-width, initial-scale=1">
-            <title>Daughters of Khaine</title>
-            <style type = "text/css">
-                body { font-family:"Verdana", sans-serif; background: rgb(236, 230, 189); }
-                h1 { color: rgb(252, 190, 190); background: rgb(86, 12, 14); }
-                h2 { color: rgb(252, 190, 190); background: rgb(86, 12, 14); }
-                p { color: black; background: rgb(246, 245, 238); }
-                ul { color: black; background: rgb(246, 245, 238); }
-                section { color: black; background: rgb(236, 230, 189); }
-                table {background:rgb(246, 245, 238);}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport content=width=device-width, initial-scale=1">
+    <title>Daughters of Khaine</title>
 
-                .a { font-size: 36px; }
-                .b { font-size: 28px; }
-                .c { font-size: 20px; }
-                .d { font-size: 16px; }
-                
-                .collapsible {
-                background-color: rgb(86, 12, 14);
-                color: rgb(252, 190, 190);
-                cursor: pointer;
-                padding: 6px;
+    <style type = "text/css">
+        body {  font-family:"Verdana", sans-serif; 
+                background: rgb(236, 230, 189);
+                }
+        h1 { background: rgb(132, 48, 51);
+                color: rgb(247, 206, 206); 
+                font-size: 36px;
                 width: 100%;
-                border: none;
-                text-align: left;
-                outline: none;
+                height: 48px;
+                text-align: center;
+                padding: 6px;
+                border: 6px solid rgb(86, 12, 14);
+                }
+        h2 { background: rgb(86, 12, 14);
+                color: rgb(247, 206, 206); 
                 font-size: 28px;
-                }
+                width: 100%;
+                height: 36px;
+                text-align: center;
+            padding: 6px;}
+        p { background: rgb(246, 245, 238);
+            color: black;
+            font-size: 20px;
+            }
+        ul { background: rgb(246, 245, 238);
+            color: black;
+            font-size: 20px;
+            }
+        section { color: black; background: rgb(236, 230, 189); }
+        table {background:rgb(246, 245, 238);}
 
-                .active, .collapsible:hover {
-                background-color: rgb(148, 33, 33);
-                }
-                .collapsible:after {
-                content: '\02795'; /* Unicode character for "plus" sign (+) */
-                font-size: 20px;
-                color: white;
-                float: left;
-                margin-left: 5px;
-                }
+        .a { font-size: 36px; }
+        .b { font-size: 28px; }
+        .c { font-size: 20px; }
+        .d { font-size: 16px; }
+        
+        .collapsible {
+        background-color: rgb(86, 12, 14);
+        color: rgb(252, 190, 190);
+        cursor: pointer;
+        padding: 6px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 28px;
+        }
 
-                .active:after {
-                content: "\2796"; /* Unicode character for "minus" sign (-) */
-                }
+        .active, .collapsible:hover {
+        background-color: rgb(148, 33, 33);
+        }
+        .collapsible:after {
+        content: '\02795'; /* Unicode character for "plus" sign (+) */
+        font-size: 20px;
+        color: white;
+        float: left;
+        margin-left: 5px;
+        }
 
-                .content {
-                padding: 0 18px;
-                max-height: 0;
-                overflow: hidden;
-                transition: max-height 0.2s ease-out;
-                background-color: #f1f1f1;
-                }
-            </style>
-        </head>
+        .active:after {
+        content: "\2796"; /* Unicode character for "minus" sign (-) */
+        }
 
-        <body>
+        .content {
+        padding: 0 18px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        background-color: #f1f1f1;
+        }
+    </style>
+</head>
 
-            <header>
-                <nav class="b">
-                    <a href="/whProject/home">Home</a>
-                </nav>
-                <h1>
-                    <div style="text-align:center">Daughters of Khaine
-                    </div>
-                </h1>
-            </header>
+<body>
 
-            <h2>
-                <div class="b" style="text-align:center">Battle Tactics
-                </div>
-            </h2>
+    <header>
+        <nav class="b">
+            <a href="/whProject/home">Home</a>
+        </nav>
+        <h1>Daughters of Khaine
+        </h1>
+    </header>
 
-            <section>
-                <p>
-                    <div class="c">
-                        <p>
-                            <b>Clash of Arms:</b> You complete this tactic if 3 or more friendly units make a charge move this turn.
-                            <br><br><b>Cruel Delight:</b> You complete this tactic if 2 or more friendly KHINERAI units move using their Fire and Flight ability or Fight and Flight ability this turn.
-                            <br><br><b>Tide of Blades:</b> You complete this tactic if there are 2 or more units from your starting army wholly within your opponent’s territory at the end of this turn.
-                        </p>
-                    </div>
-                </p>
-            </section>
+    <h2>Battle Tactics
+    </h2>
 
-            <section><h2>
-                <div class="b" style="text-align:center">Hero Phase
-                </div></h2>
-                <button class="collapsible">Heroic Actions</button>
-                <div class="content">
-                    <table>
-                        <tr>
-                            <td><img border="0" src="https://wahapedia.ru/aos3/img/HeroicLeadership.png" style="margin:4px"></td>
-                            <td><table>
-                                <tr><td><b>Heroic Leadership:</b></td></tr>
-                                <tr><td>Pick 1 friendly HERO and roll a dice. Add 2 to the roll if your general has been slain. On a 4+, you receive 1 command point that can only be spent during that turn 
-                                        to allow that HERO to issue a command.</td></tr>
-                            </table></td>
-                        </tr>
-                    </table>
-                </div>
-                
-            </section>
+    <p>
+        <b>Clash of Arms:</b> You complete this tactic if 3 or more friendly units make a charge move this turn.
+        <br><br><b>Cruel Delight:</b> You complete this tactic if 2 or more friendly KHINERAI units move using their Fire and Flight ability or Fight and Flight ability this turn.
+        <br><br><b>Tide of Blades:</b> You complete this tactic if there are 2 or more units from your starting army wholly within your opponent’s territory at the end of this turn.
+    </p>
 
-            <script>
-                var coll = document.getElementsByClassName("collapsible");
-                var i;
-                
-                for (i = 0; i < coll.length; i++) {
-                  coll[i].addEventListener("click", function() {
-                    this.classList.toggle("active");
-                    var content = this.nextElementSibling;
-                    if (content.style.maxHeight){
-                      content.style.maxHeight = null;
-                    } else {
-                      content.style.maxHeight = content.scrollHeight + "px";
-                    } 
-                  });
-                }
-                </script>
-        </body>
-    </html>
+
+
+    <h2>Hero Phase
+    </h2>
+
+    <button class="collapsible">Heroic Actions</button>
+    <div class="content">
+        <table>
+            <tr>
+                <td><img border="0" src="https://wahapedia.ru/aos3/img/HeroicLeadership.png" style="margin:4px"></td>
+                <td><table>
+                    <tr><td><b>Heroic Leadership:</b></td></tr>
+                    <tr><td>Pick 1 friendly HERO and roll a dice. Add 2 to the roll if your general has been slain. On a 4+, you receive 1 command point that can only be spent during that turn 
+                            to allow that HERO to issue a command.</td></tr>
+                </table></td>
+            </tr>
+        </table>
+    </div>
+        
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            } 
+            });
+        }
+    </script>
+</body>
+</html>
