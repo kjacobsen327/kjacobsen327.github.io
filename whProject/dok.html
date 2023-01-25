@@ -17,7 +17,31 @@
                 .a { font-size: 36px; }
                 .b { font-size: 28px; }
                 .c { font-size: 20px; }
-                .d { font-size: 16px; }               
+                .d { font-size: 16px; }
+                
+                .collapsible {
+                background-color: #777;
+                color: white;
+                cursor: pointer;
+                padding: 18px;
+                width: 100%;
+                border: none;
+                text-align: left;
+                outline: none;
+                font-size: 15px;
+                }
+
+                .active, .collapsible:hover {
+                background-color: #555;
+                }
+
+                .content {
+                padding: 0 18px;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.2s ease-out;
+                background-color: #f1f1f1;
+                }
             </style>
         </head>
 
@@ -53,18 +77,37 @@
             <section><h2>
                 <div class="b" style="text-align:center">Hero Phase
                 </div></h2>
-                <p><h2>Heroic Actions</h2></p>
-                <table>
-                    <tr>
-                        <td><img border="0" src="https://wahapedia.ru/aos3/img/HeroicLeadership.png" style="margin:4px"></td>
-                        <td><table>
-                            <tr><td><b>Heroic Leadership:</b></td></tr>
-                            <tr><td>Pick 1 friendly HERO and roll a dice. Add 2 to the roll if your general has been slain. On a 4+, you receive 1 command point that can only be spent during that turn 
-                                    to allow that HERO to issue a command.</td></tr>
-                        </table></td>
-                    </tr>
-                </table>
+                <button class="collapsible">Heroic Actions</button>
+                <div class="content">
+                    <table>
+                        <tr>
+                            <td><img border="0" src="https://wahapedia.ru/aos3/img/HeroicLeadership.png" style="margin:4px"></td>
+                            <td><table>
+                                <tr><td><b>Heroic Leadership:</b></td></tr>
+                                <tr><td>Pick 1 friendly HERO and roll a dice. Add 2 to the roll if your general has been slain. On a 4+, you receive 1 command point that can only be spent during that turn 
+                                        to allow that HERO to issue a command.</td></tr>
+                            </table></td>
+                        </tr>
+                    </table>
+                </div>
+                
             </section>
 
+            <script>
+                var coll = document.getElementsByClassName("collapsible");
+                var i;
+                
+                for (i = 0; i < coll.length; i++) {
+                  coll[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.maxHeight){
+                      content.style.maxHeight = null;
+                    } else {
+                      content.style.maxHeight = content.scrollHeight + "px";
+                    } 
+                  });
+                }
+                </script>
         </body>
     </html>
