@@ -1,0 +1,91 @@
+body {  font-family:"Verdana", sans-serif; 
+    background: rgb(236, 230, 189);
+    font-size: 100%
+    }
+h1 { background: rgb(132, 48, 51);
+    color: rgb(247, 206, 206); 
+    font-size: 3em;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    vertical-align: center;
+    padding: 6px;
+    border: 6px solid rgb(86, 12, 14);
+    }
+h2 { background: rgb(86, 12, 14);
+    color: rgb(247, 206, 206); 
+    font-size: 2em;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+padding: 6px;}
+p { background: rgb(246, 245, 238);
+color: black;
+font-size: 1.4em;
+}
+ul { background: rgb(246, 245, 238);
+color: black;
+font-size: 1.4em;
+}
+
+table {background:rgb(246, 245, 238);
+    font-size: 1.1em;
+}
+.alt { background: rgb(236, 230, 189);
+
+    width: 100%
+    
+}
+a {
+color: rgb(247, 206, 206);
+}
+a:visited {
+color: rgb(247, 206, 206);
+}
+a:hover, a:active, a:focus {
+color:#c33;
+}
+
+.collapsible {
+background-color: rgb(86, 12, 14);
+color: rgb(252, 190, 190);
+cursor: pointer;
+padding: 6px;
+width: 100%;
+border: none;
+text-align: left;
+outline: none;
+font-size: 28px;
+}
+.active, .collapsible:hover {
+background-color: rgb(148, 33, 33);
+}
+.collapsible:after {
+content: '\02795'; /* Unicode character for "plus" sign (+) */
+font-size: 20px;
+color: rgb(255, 255, 255);
+float: left;
+margin-left: 5px;
+vertical-align: center;
+}
+.active:after {
+content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+.content {
+    
+padding: 0 18px;
+max-height: 0;
+overflow: hidden;
+transition: max-height 0.2s ease-out;
+background-color: #f1f1f1;
+}
+.img-with-text {
+text-align: justify;
+width: [width of img];
+}
+
+.img-with-text img {
+display: block;
+margin: 0 auto;
+}
