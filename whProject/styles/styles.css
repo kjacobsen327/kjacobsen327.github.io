@@ -1,17 +1,16 @@
 body {  font-family:"Verdana", sans-serif;
-    background-image:url(https://png.pngtree.com/background/20211217/original/pngtree-magma-red-texture-lava-background-picture-image_1594993.jpg);
-
+    background-image:url(../images/lavabg.png);
+    background: cover;
     font-size: 100%;
-    width: 100%;
     margin-top: 0px;
-    margin-left: 8px;
-    margin-right: 0px;
+    margin-left: 12px;
+    margin-right: 12px;
 
     }
+
 h1 { background: rgb(132, 48, 51);
     color: rgb(247, 206, 206); 
     font-size: 3em;
-    width: 100%;
     height: 100%;
     text-align: center;
     vertical-align: center;
@@ -21,20 +20,20 @@ h1 { background: rgb(132, 48, 51);
 h2 { background: rgb(86, 12, 14);
     color: rgb(247, 206, 206); 
     font-size: 2em;
-    width: 100%;
     height: 100%;
     text-align: center;
     vertical-align: center;
     padding: 6px;}
-p {     background-image:url(https://img.freepik.com/free-photo/pastel-yellow-vignette-concrete-textured-background_53876-124561.jpg?w=996&t=st=1674831035~exp=1674831635~hmac=4e8195376e4a7c5b7abfcce6cc2f5a4f7659dc5b637a52a369bdf0ad458a6ef0); 
-background: cover;
+p { background-image:url(https://img.freepik.com/free-photo/vintage-grunge-paper-background_1048-10911.jpg?w=360&t=st=1674835885~exp=1674836485~hmac=4b60beaeb518b315da8e5cce22ebe8c7266aac35755e77c382a955c6cb7c465c); 
+background-size: 100vw;
 color: black;
+padding: 6px;
 font-size: 1.4em;
-width: 100%
 }
 ul { background: rgb(246, 245, 238);
 color: black;
 font-size: 1.4em;
+padding: 6px;
 list-style-image: url('../images/icon.png');
 }
 
