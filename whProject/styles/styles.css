@@ -1,6 +1,7 @@
+/* TAG SETTINGS */
 body {  font-family:"Verdana", sans-serif;
-    background-image:url(../images/lavabg.png);
-    background: cover;
+    background-image:url(../images/lavabg.png) ;
+    background-size: 100vw 100vh;
     font-size: 100%;
     margin-top: 0px;
     margin-left: 12px;
@@ -17,7 +18,14 @@ h1 { background: rgb(132, 48, 51);
     padding: 6px;
     border: 6px solid rgb(86, 12, 14);
     }
-h2 { background: rgb(86, 12, 14);
+h2 { background: rgba(86, 12, 14, 0.95);
+    color: rgb(247, 206, 206); 
+    font-size: 2em;
+    height: 100%;
+    text-align: center;
+    vertical-align: center;
+    padding: 6px;}
+h3 { background: rgba(86, 12, 14, 0.95);
     color: rgb(247, 206, 206); 
     font-size: 2em;
     height: 100%;
@@ -25,26 +33,34 @@ h2 { background: rgb(86, 12, 14);
     vertical-align: center;
     padding: 6px;}
 p { background-image:url(https://img.freepik.com/free-photo/vintage-grunge-paper-background_1048-10911.jpg?w=360&t=st=1674835885~exp=1674836485~hmac=4b60beaeb518b315da8e5cce22ebe8c7266aac35755e77c382a955c6cb7c465c); 
-background-size: 100vw;
+background-size: 100;
 color: black;
 padding: 6px;
 font-size: 1.4em;
 }
 ul { background: rgb(246, 245, 238);
-color: black;
+background-image:url(https://img.freepik.com/free-photo/vintage-grunge-paper-background_1048-10911.jpg?w=360&t=st=1674835885~exp=1674836485~hmac=4b60beaeb518b315da8e5cce22ebe8c7266aac35755e77c382a955c6cb7c465c); 
+background-size: cover;
 font-size: 1.4em;
 padding: 6px;
 list-style-image: url('../images/icon.png');
 }
 
-table {background:rgb(246, 245, 238);
+section {background-image:url(https://img.freepik.com/free-photo/vintage-grunge-paper-background_1048-10911.jpg?w=360&t=st=1674835885~exp=1674836485~hmac=4b60beaeb518b315da8e5cce22ebe8c7266aac35755e77c382a955c6cb7c465c); 
+    background-size: cover;
     font-size: 1.1em;
 }
+
+
+/* CLASS SELECTORS */
 .alt { background: rgba(236, 230, 189, 0);
 
-    width: 100%
-    
+    width: 100%;
+    margin-right:12px;
 }
+.text {background-color: rgba(231, 227, 176, 0.475);}
+
+/* HYPERLINK SETTINGS */
 a {
 color: rgb(247, 206, 206);
 }
@@ -55,6 +71,8 @@ a:hover, a:active, a:focus {
 color:#c33;
 }
 
+
+/* COLLAPSIBLE BUTTON SETTINGS */
 .collapsible {
 background-color: rgb(86, 12, 14);
 color: rgb(252, 190, 190);
@@ -85,14 +103,14 @@ content: "\00AB"; /* Unicode character for "<< */
 
 .content {
     
-padding: 0 10px;
 max-height: 0;
 overflow: hidden;
 transition: max-height 0.2s ease-out;
 background-color: #f1f1f1;
 }
 .img-with-text {
-text-align: justify;
+
+text-align: center;
 width: [width of img];
 }
 
