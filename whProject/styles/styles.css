@@ -1,12 +1,12 @@
 body {  font-family:"Verdana", sans-serif;
-    /* to add picture: background-image:url(../images/cmlogo.png); 
- */
-    background: rgb(236, 230, 189);
+    background-image:url(https://png.pngtree.com/background/20211217/original/pngtree-magma-red-texture-lava-background-picture-image_1594993.jpg);
+
     font-size: 100%;
     width: 100%;
     margin-top: 0px;
     margin-left: 8px;
     margin-right: 0px;
+
     }
 h1 { background: rgb(132, 48, 51);
     color: rgb(247, 206, 206); 
@@ -26,7 +26,8 @@ h2 { background: rgb(86, 12, 14);
     text-align: center;
     vertical-align: center;
     padding: 6px;}
-p { background: rgb(246, 245, 238);
+p {     background-image:url(https://img.freepik.com/free-photo/pastel-yellow-vignette-concrete-textured-background_53876-124561.jpg?w=996&t=st=1674831035~exp=1674831635~hmac=4e8195376e4a7c5b7abfcce6cc2f5a4f7659dc5b637a52a369bdf0ad458a6ef0); 
+background: cover;
 color: black;
 font-size: 1.4em;
 width: 100%
@@ -40,7 +41,7 @@ list-style-image: url('../images/icon.png');
 table {background:rgb(246, 245, 238);
     font-size: 1.1em;
 }
-.alt { background: rgb(236, 230, 189);
+.alt { background: rgba(236, 230, 189, 0);
 
     width: 100%
     
@@ -85,7 +86,7 @@ content: "\00AB"; /* Unicode character for "<< */
 
 .content {
     
-padding: 0 18px;
+padding: 0 10px;
 max-height: 0;
 overflow: hidden;
 transition: max-height 0.2s ease-out;
