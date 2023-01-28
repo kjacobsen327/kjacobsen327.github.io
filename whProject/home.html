@@ -118,17 +118,81 @@
 
 <!-- Battleplans -->
     <h1>Battleplans</h1>
+        <br>
 
-    <button class="collapsible">1-1: Battleplan 1 - The Prize of Gallet</button>
-    <div class="content">        
-            <img src="images/bps/bp1.jpg" alt="Battle Plan 1 " width="100%">
-    </div>
-    <br>
-    <button class="collapsible">1-2: Battleplan 2 - The Realmstone Cache</button>
-    <div class="content">        
-            <img src="images/bps/bp3.jpg" alt="Battle Plan 2 " width="100%">
-    </div>
+        <table class="row">
+            <tr><td class="column" onclick="openTab('b1');" >Battleplan 1-1: The Prize of Gallet</td>
+            <td class="column" onclick="openTab('b7');" >Battleplan 2-1: Only the Worthy</td></tr>
+            
+            <tr><td class="column" onclick="openTab('b2');" >Battleplan 1-2: The Realmstone Cache</td>
+            <td class="column" onclick="openTab('b8');" >Battleplan 2-2: Path of a Champion</td></tr>
+            
+            <tr><td class="column" onclick="openTab('b3');" >Battleplan 1-3: Battlelines Drawn</td>
+            <td class="column" onclick="openTab('b9');" >Battleplan 2-3: The Jaws of Gallet</td></tr>
+            
+            <tr><td class="column" onclick="openTab('b4');" >Battleplan 1-4: The Lurkers Below </td>
+            <td class="column" onclick="openTab('b10');" >Battleplan 2-4: Ours for the Taking</td></tr>
+            
+            <tr><td class="column" onclick="openTab('b5');" >Battleplan 1-5: In the Presence of Idols</td>
+            <td class="column" onclick="openTab('b11');" >Battleplan 2-5: Twists and Turns</td></tr>
+            
+            <tr><td class="column" onclick="openTab('b6');" >Battleplan 1-6: The Nidus Paths</td>
+            <td class="column" onclick="openTab('b12');" >Battleplan 2-6: Position over Power</td></tr>
+            </table>
+                                        
 
+          
+          <!-- The expanding grid (hidden by default) -->
+          <div id="b1" class="containerTab" style="display:none;">
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">Close (X)</span>
+            <img src="images/bps/bp1.jpg" alt="Battle Plan 1 " width="100%" >
+          </div>
+          <div id="b2" class="containerTab" style="display:none;">
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">Close (X)</span>
+            <img src="images/bps/bp2.jpg" alt="Battle Plan 2" width="100%" >
+          </div>
+          <div id="b3" class="containerTab" style="display:none;">
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">Close (X)</span>
+            <img src="images/bps/bp3.jpg" alt="Battle Plan 3" width="100%" >
+          </div>         
+          <div id="b4" class="containerTab" style="display:none;">
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">Close (X)</span>
+            <img src="images/bps/bp4.jpg" alt="Battle Plan 4" width="100%" >
+          </div>          
+          <div id="b5" class="containerTab" style="display:none;">
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">Close (X)</span>
+            <img src="images/bps/bp5.jpg" alt="Battle Plan 5" width="100%" >
+          </div>          
+          <div id="b6" class="containerTab" style="display:none;">
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">Close (X)</span>
+            <img src="images/bps/bp6.jpg" alt="Battle Plan 6" width="100%" >
+          </div>          
+          <div id="b7" class="containerTab" style="display:none;">
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">Close (X)</span>
+            <img src="images/bps/bp7.jpg" alt="Battle Plan 7" width="100%" >
+          </div>          
+          <div id="b8" class="containerTab" style="display:none;">
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">Close (X)</span>
+            <img src="images/bps/bp8.jpg" alt="Battle Plan 8" width="100%" >
+          </div>          
+          <div id="b9" class="containerTab" style="display:none;">
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">Close (X)</span>
+            <img src="images/bps/bp9.jpg" alt="Battle Plan 9" width="100%" >
+          </div>          
+          <div id="b10" class="containerTab" style="display:none;">
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">Close (X)</span>
+            <img src="images/bps/bp10.jpg" alt="Battle Plan 10" width="100%" >
+          </div>          
+          <div id="b11" class="containerTab" style="display:none;">
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">Close (X)</span>
+            <img src="images/bps/bp11.jpg" alt="Battle Plan 11" width="100%" >
+          </div>          
+          <div id="b12" class="containerTab" style="display:none;">
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">Close (X)</span>
+            <img src="images/bps/bp12.jpg" alt="Battle Plan 12" width="100%" >
+          </div>
+
+<!-- JAVASCRIPT -->
     <script>
         var coll = document.getElementsByClassName("collapsible");
         var i;
@@ -144,7 +208,16 @@
             } 
             });
         }
+
+        function openTab(tabName) {
+  var i, x;
+  x = document.getElementsByClassName("containerTab");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  document.getElementById(tabName).style.display = "block";
+}
     </script>
 
-        </body>
+    </body>
     </html>
