@@ -10,6 +10,7 @@ body {  font-family:"Verdana", sans-serif;
     }
 
 h1 { background: rgb(132, 48, 51, 0.9);
+
     color: rgb(247, 206, 206); 
     font-size: 3em;
     height: 100%;
@@ -152,4 +153,59 @@ margin: 0 auto;
     color: rgb(255, 255, 255);
     font-size: 2em;
     cursor: pointer;
+  }
+
+  .scoreboard {
+    display: grid;
+    
+    grid-template-columns: repeat(2, 1fr);
+    width: 60vw;
+    background-color: rgba(206, 189, 152, 0.695);
+    border: 8px solid rgb(86, 12, 14);
+
+    font-weight: bold;
+    font-family: 'Quicksand', sans-serif;
+  }
+  
+  .scoreboard__name,
+  .scoreboard__score {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .scoreboard__name {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .scoreboard__name--one {
+    color: #009578;
+  }
+  
+  .scoreboard__name--two {
+    color: #2d0095;
+  }
+  
+  .scoreboard__score {
+    color:rgb(148, 33, 33);
+    font-size: 2em;
+  }
+  
+  .scoreboard__controls {
+    display: flex;
+  }
+  
+  .scoreboard__control-button {
+    flex-grow: 1;
+    border: none;
+    background: rgb(238, 238, 238);
+    cursor: pointer;
+    font-size: 1.2em;
+  }
+  
+  .scoreboard__control-button:hover {
+    background: #ddd;
+  }
+  
+  .scoreboard__control-button:active {
+    background: #ccc;
   }
