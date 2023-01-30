@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+    <html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport content=width=device-width, initial-scale=1">
+    <title>Chaos Mongers</title>
+    <style type = "text/css">
+        .add {font-size: 50px;}
+    </style>
+</head>
+
+<body>
+    <div id="pointsTracker">
+        <div class="cp" id="Command_Points">0</div>
+        <button  class = "minus" id="subtract_cp" onclick="subtractCommand_Points()">-</button>
+        <button class="plus" id="add_cp" onclick="addCommand_Points()">+</button>
+
+        <div class="vp" id="Victory_Points">0</div>
+        <button  class = "minus" id="subtract_vp" onclick="subtractVictory_Points()">-</button>
+        <button class="plus" id="add_vp" onclick="addVictory_Points()">+</button>
+
+        <div><button class = "reset" id="reset" onclick="resetScore()">New</button></div>
+      </div>
+      <script>
+        var Command_Points = 0;
+        var Command_PointsElement = document.getElementById("Command_Points");
+        var Command_PointsStorage = localStorage.getItem("Command_Points");
+        var Victory_Points = 0;
+        var Victory_PointsElement = document.getElementById("Victory_Points");
+        var Victory_PointsStorage = localStorage.getItem("Victory_Points");
+        
+        if (Command_PointsStorage) {
+          Command_Points = parseInt(Command_PointsStorage);
+          Command_PointsElement.innerHTML = Command_Points;
+        }
+        if (Victory_PointsStorage) {
+          Victory_Points = parseInt(Victory_PointsStorage);
+          Victory_PointsElement.innerHTML = Victory_Points;
+        }
+        
+        function subtractCommand_Points() {
+          Command_Points--;
+          Command_PointsElement.innerHTML = Command_Points;
+          localStorage.setItem("Command_Points", Command_Points);
+        }
+        function addCommand_Points() {
+          Command_Points++;
+          Command_PointsElement.innerHTML = Command_Points;
+          localStorage.setItem("Command_Points", Command_Points);
+        }
+        function subtractVictory_Points() {
+          Victory_Points--;
+          Victory_PointsElement.innerHTML = Victory_Points;
+          localStorage.setItem("Victory_Points", Victory_Points);
+        }
+        function addVictory_Points() {
+          Victory_Points++;
+          Victory_PointsElement.innerHTML = Victory_Points;
+          localStorage.setItem("Victory_Points", Victory_Points);
+        }
+
+        
+        function resetScore() {
+          Command_Points = 0;
+          Command_PointsElement.innerHTML = Command_Points;
+          localStorage.setItem("Command_Points", Command_Points);
+          Victory_Points = 0;
+          Victory_PointsElement.innerHTML = Victory_Points;
+          localStorage.setItem("Victory_Points", Victory_Points);
+        }
+      </script>
+</body>
+</html>
