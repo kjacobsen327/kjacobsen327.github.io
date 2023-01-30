@@ -12,37 +12,34 @@
 
 <body>
 
-<header>
-  <div class="TopBar">
-        <!-- Start pointsTracker -->
-      <div class="pointsTracker" id="pointsTracker">
-            <!-- Start Names and Numbers -->
-            <div class="Point_Names">
-                <div class="Command_Points">Command Points</div>
-                <div class="Victory_Points">Victory Points</div>
-            </div>
+<div class="header">
+    <div class="TopBar">
+          <!-- Start pointsTracker -->
+        <div class="pointsTracker" id="pointsTracker">
+              <!-- Start Names and Numbers -->
+              <div class="Point_Names">
+                  <div class="Command_Points">Command Points</div>
+                  <div class="Victory_Points">Victory Points</div>
+              </div>
 
-            <div class="points_numbers">
-                <div class="cp" id="Command_Points">0</div>
-                <div class="vp" id="Victory_Points">0</div>
-            </div>
-            <!-- End Names and Numbers -->
-            <div class="buttons_for_points">
-              <button  class = "minus" id="subtract_cp" onclick="subtractCommand_Points()">-</button>
-              <button class="plus" id="add_cp" onclick="addCommand_Points()">+</button>
-              <button  class = "minus" id="subtract_vp" onclick="subtractVictory_Points()">-</button>
-              <button class="plus" id="add_vp" onclick="addVictory_Points()">+</button>
-            </div>
-      </div>
-      <!-- End pointsTracker -->
+              <div class="points_numbers">
+                  <div class="cp" id="Command_Points">0</div>
+                  <div class="vp" id="Victory_Points">0</div>
+              </div>
+              <!-- End Names and Numbers -->
+              <div class="buttons_for_points">
+                <button  class = "minus" id="subtract_cp" onclick="subtractCommand_Points()">-</button>
+                <button class="plus" id="add_cp" onclick="addCommand_Points()">+</button>
+                <button  class = "minus" id="subtract_vp" onclick="subtractVictory_Points()">-</button>
+                <button class="plus" id="add_vp" onclick="addVictory_Points()">+</button>
+              </div>
+        </div>
+        <!-- End pointsTracker -->
+    </div>
+      <!-- Reset Button -->
       
-  </div>
-    <!-- Reset Button -->
-    
-    <button class = "resetButton" id="reset" onclick="resetScore()">↻</button>
-  
-
-  </header>
+      <button class = "resetButton" id="reset" onclick="resetScore()">↻</button>
+</div>
 
 
 

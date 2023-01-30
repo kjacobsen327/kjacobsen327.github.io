@@ -74,17 +74,7 @@ button {
 
 /* Points Tracker Settings */
 
-header {
-display: grid;
-grid-template-columns: 90% 10%;
-font-size:1.8em;
-height: auto;
-margin-bottom: 12px;
-background-size:100%; 
-background-image: url(https://static.vecteezy.com/system/resources/previews/004/962/062/non_2x/black-stone-texture-dark-slate-background-top-view-free-photo.jpg);
-color: rgb(247, 206, 206);
-text-shadow: -3px -3px black;
-}
+
 
 
 .TopBar {

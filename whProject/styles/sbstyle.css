@@ -1,0 +1,56 @@
+body {
+    background-color:bisque;
+    height: 200vh;
+}
+.top_container {
+    position: fixed;
+    top:0px;
+    left:0px;
+    display: grid;
+    grid-row: 1/2;
+    grid-template-columns: 3fr 3fr 1fr;
+    width:100%;
+    height:200px;
+    background-color: blueviolet;
+    font-size: 2em;
+    text-align: center;
+    z-index: 1;
+}
+.col_1 {
+display:grid;
+grid-column: 1/2;
+grid-template-rows: 1fr 2fr 1fr;
+}
+.col_2 {
+    display:grid;
+    grid-column:2/3;
+    grid-template-rows: 1fr 2fr 1fr;
+
+    background-color:darkgreen
+}
+.col_3 {
+    display: grid;
+    grid-column: 3;
+    height: auto;}
+.pointName {
+    grid-row:1/2;
+}
+.pointNumber {
+    grid-row:2/3;
+}
+.cpButtons {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row: 3/3;
+}
+.vpButtons {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row: 3/3;
+}
+.main {
+    position: absolute;
+    width:100;
+    top: 208px;
+    background-color:aquamarine;
+};

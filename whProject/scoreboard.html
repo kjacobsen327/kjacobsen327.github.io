@@ -3,24 +3,45 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport content=width=device-width, initial-scale=1">
-    <title>Chaos Mongers</title>
+    <title>Points</title>
+    <link rel="stylesheet" href="styles/sbstyle.css">
+
     <style type = "text/css">
-        .add {font-size: 50px;}
+        
     </style>
 </head>
 
 <body>
-    <div id="pointsTracker">
-        <div class="cp" id="Command_Points">0</div>
-        <button  class = "minus" id="subtract_cp" onclick="subtractCommand_Points()">-</button>
-        <button class="plus" id="add_cp" onclick="addCommand_Points()">+</button>
 
-        <div class="vp" id="Victory_Points">0</div>
-        <button  class = "minus" id="subtract_vp" onclick="subtractVictory_Points()">-</button>
-        <button class="plus" id="add_vp" onclick="addVictory_Points()">+</button>
+    <div class="top_container">
 
-        <div><button class = "reset" id="reset" onclick="resetScore()">New</button></div>
-      </div>
+        <div class="col_1">
+                  <div class="pointName">Cp</div>
+                  <div class="pointNumber" id="Command_Points">0</div>
+                  <div class="cpButtons">
+                    <button  class = "minus" id="subtract_cp" onclick="subtractCommand_Points()">-</button>
+                    <button class="plus" id="add_cp" onclick="addCommand_Points()">+</button>
+                  </div>
+        </div>
+        <div class="col_2">
+                  <div class="piontName">Vp</div>
+                  <div class="pointNumber" id="Victory_Points">0</div>
+                  <div class="vpButtons">
+                    <button  class = "minus" id="subtract_vp" onclick="subtractVictory_Points()">-</button>
+                    <button class="plus" id="add_vp" onclick="addVictory_Points()">+</button>
+                  </div>
+        </div>
+
+        <div class="col_3">
+          <button class = "reset" id="reset" onclick="resetScore()">↻</button>
+        </div>
+        </div>
+  <div class="main"> 
+        <div class="text"><h1>aaa</h1>abc</div>
+
+</div>
+
+
       <script>
         var Command_Points = 0;
         var Command_PointsElement = document.getElementById("Command_Points");
