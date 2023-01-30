@@ -12,7 +12,7 @@
 </head>
 
 <body>
-
+  <button class="collapsible">
     <div class="top_container">
 
         <div class="col_1">
@@ -35,11 +35,12 @@
         <div class="col_3">
           <button class = "reset" id="reset" onclick="resetScore()">↻</button>
         </div>
-        </div>
+        
+      </div>
+  </button>
   <div class="main"> 
         <div class="text"><h1>aaa</h1>abc</div>
-
-</div>
+  </div>
 
 
       <script>
@@ -89,6 +90,22 @@
           Victory_PointsElement.innerHTML = Victory_Points;
           localStorage.setItem("Victory_Points", Victory_Points);
         }
+    
+        
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+        content.style.maxHeight = null;
+    } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+    } 
+    });
+}
       </script>
 </body>
 </html>

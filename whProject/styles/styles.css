@@ -1,8 +1,9 @@
 /* TAG SETTINGS */
-body {  font-family:"Verdana", sans-serif;
+body { font-family: 'Rowdies', cursive;
     background-image:url(../images/lavabg.png) ;
     background-size: 100vw 100vh;
     font-size: 100%;
+    font-weight: 300;
     margin-top: 0px;
     margin-left: 12px;
     margin-right: 12px;
@@ -11,7 +12,6 @@ h1 { background: rgb(132, 48, 51, 0.9);
 
     color: rgb(247, 206, 206); 
     font-size: 3em;
-    height: 100%;
     text-align: center;
     vertical-align: center;
     padding: 8px;
@@ -20,7 +20,6 @@ h1 { background: rgb(132, 48, 51, 0.9);
 h2 { background: rgba(86, 12, 14, 0.9);
     color: rgb(247, 206, 206); 
     font-size: 2.2em;
-    height: 100%;
     text-align: center;
     vertical-align: center;
     padding: 8px;}
@@ -38,19 +37,23 @@ color: black;
 padding: 8px;
 font-size: 1.45em;
 }
-ul { background: rgb(246, 245, 238);
+ul {
 background-image:url(https://img.freepik.com/free-photo/vintage-grunge-paper-background_1048-10911.jpg?w=360&t=st=1674835885~exp=1674836485~hmac=4b60beaeb518b315da8e5cce22ebe8c7266aac35755e77c382a955c6cb7c465c);
 background-size: cover;
 font-size: 1.45em;
-padding: 8px;
+text-shadow: -1px -1px rgb(247, 206, 206);
+text-align: justify;
+padding: 12px;
 padding-left: 52px;
+
 list-style-image: url('../images/icon2.png');
 }
+
 section {background-image:url(https://img.freepik.com/free-photo/vintage-grunge-paper-background_1048-10911.jpg?w=360&t=st=1674835885~exp=1674836485~hmac=4b60beaeb518b315da8e5cce22ebe8c7266aac35755e77c382a955c6cb7c465c); 
     background-size: cover;
     font-size: 1.1em;
 }
-header {margin-top: 12px;}
+
 /* HYPERLINK SETTINGS */
 a {
   color: rgb(247, 206, 206);
