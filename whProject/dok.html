@@ -6,12 +6,13 @@
     <meta name="viewport content=width=device-width, initial-scale=1">
     <title>Daughters of Khaine</title>
 
+    <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&family=Nosifer&display=swap" rel="stylesheet">
 
+    <!-- CSS -->
     <link rel="stylesheet" href="styles/styles.css">
-
     <style type = "text/css">
     </style>
 </head>
@@ -23,8 +24,8 @@
       
           <div class="content" id="PointsTrackerBox">
               <div class="col_1">
-                        <div class="pointName">Command Points</div>
-                        <div class="pointNumber" id="Command_Points">0</div>
+                        <div class="pointName">Command<br>Points</div>
+                        <div class="pointNumber, point_number_font" id="Command_Points">0</div>
                         <div class="cpButtons">
                           <button  class = "Button-PointTracker" id="subtract_cp" onclick="subtractCommand_Points()">-</button>
                           <button class="Button-PointTracker" id="add_cp" onclick="addCommand_Points()">+</button>
@@ -32,8 +33,8 @@
               </div>
               
               <div class="col_2">
-                        <div class="pointName">Victory Points</div>
-                        <div class="pointNumber" id="Victory_Points">0</div>
+                        <div class="pointName">Victory<br>Points</div>
+                        <div class="pointNumber, point_number_font" id="Victory_Points">0</div>
                         <div class="vpButtons">
                           <button  class = "Button-PointTracker" onclick="subtractVictory_Points()">-</button>
                           <button class="Button-PointTracker" onclick="addVictory_Points()">+</button>
@@ -48,16 +49,19 @@
 
 
 <!-- MAIN SECTION -->
-<main>
-
+<div class="main">
 <!---- NAV BAR HERE ---->
-    <nav> <h2><a href="/whProject/home">Home</a></h2>
-    </nav>
+    <div class="nav_bar"> 
+        <h3 class="nav_text"><a href="/whProject/home">Home </a></h3>
+        
+        <h3 class="nav_text"><a href="#hero_phase">Hero Phase</a></h3>
+        <h3 class="nav_text"><a href="#movement_phase">Movement Phase</a></h3>
+    </div>
 <!---------------------->
-
-    <h1>Daughters of Khaine
+    <div class="army_name_header">
+    <h1 class="dok_font">Daughters of Khaine
     </h1>
-    
+    </div>
     <h2>Battle Tactics
     </h2>
 
@@ -67,13 +71,13 @@
         <br><br><b>Tide of Blades:</b> You complete this tactic if there are 2 or more units from your starting army wholly within your opponent’s territory at the end of this turn.
     </p>
 
-    <h2>Hero Phase
+    <h2 id="hero_phase">Hero Phase
     </h2>
 
     <button class="collapsible">Heroic Actions</button>
     <div class="content">
         
-        <section><table>
+        <table>
             <tr>
                 <td>
                     <img border="0" src="https://wahapedia.ru/aos3/img/HeroicLeadership.png" style="margin:4px"></td>
@@ -109,7 +113,7 @@
                              you can heal up to D3 wounds allocated to that HERO.</td></tr>
                 </table></td>
             </tr>
-        </table></section>
+        </table>
     </div>
     <p><b>Battle Fury:</b> This is a heroic action that you can carry out with 1 friendly DAUGHTERS OF KHAINE HERO that is not a MONSTER instead of picking 1 from the table in the core rules. 
         If you do so, add 2 to the Attacks characteristic of melee weapons used by that HERO until the end of that turn. This heroic action does not affect the weapons used by that HERO’s mount.
@@ -119,6 +123,6 @@
     <script src="main.js">
 
     </script>
-</main>
+</div>
 </body>
 </html>
