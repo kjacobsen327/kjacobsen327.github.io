@@ -17,15 +17,47 @@
 </head>
 
 <body>
-    
-    <header>
-        <nav>
-            <h2><a href="/whProject/home">Home</a></h2>
-        </nav>
-        <h1>Daughters of Khaine
-        </h1>
-    </header>
+    <!-- POINTS TRACKER FIXED TO TOP -->
+    <div class="pt">
+        <button class="collapsible" id="collapsible_header">Point Tracker</button>
+      
+          <div class="content" id="PointsTrackerBox">
+              <div class="col_1">
+                        <div class="pointName">Command Points</div>
+                        <div class="pointNumber" id="Command_Points">0</div>
+                        <div class="cpButtons">
+                          <button  class = "Button-PointTracker" id="subtract_cp" onclick="subtractCommand_Points()">-</button>
+                          <button class="Button-PointTracker" id="add_cp" onclick="addCommand_Points()">+</button>
+                        </div>
+              </div>
+              
+              <div class="col_2">
+                        <div class="pointName">Victory Points</div>
+                        <div class="pointNumber" id="Victory_Points">0</div>
+                        <div class="vpButtons">
+                          <button  class = "Button-PointTracker" onclick="subtractVictory_Points()">-</button>
+                          <button class="Button-PointTracker" onclick="addVictory_Points()">+</button>
+                        </div>
+              </div>
+      
+              <div class="col_3">
+                <button class = "Button-PointTracker" id="reset" onclick="resetScore()">↻</button>
+              </div>
+            </div>
+          </div>
 
+
+<!-- MAIN SECTION -->
+<main>
+
+<!---- NAV BAR HERE ---->
+    <nav> <h2><a href="/whProject/home">Home</a></h2>
+    </nav>
+<!---------------------->
+
+    <h1>Daughters of Khaine
+    </h1>
+    
     <h2>Battle Tactics
     </h2>
 
@@ -87,5 +119,6 @@
     <script src="main.js">
 
     </script>
+</main>
 </body>
 </html>
