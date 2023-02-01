@@ -112,8 +112,7 @@ button {
 div.pt {
   position:fixed;
   z-index: 1;
-  
-}
+width:98%;}
 button#collapsible_header.collapsible {
 margin-top:-100px;
 }
@@ -128,7 +127,7 @@ div#PointsTrackerBox.content {
   font-weight: bold;
   text-align: center;
   height:100%;
-  width:100vw;
+  width:100%;
   margin-right: -12px;
 }
 
