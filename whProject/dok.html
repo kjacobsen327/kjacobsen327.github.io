@@ -23,29 +23,38 @@
         <button class="collapsible" id="collapsible_header">Point Tracker</button>
       
           <div class="content" id="PointsTrackerBox">
-              <div class="col_1">
+                    <div class="row_1">
                         <div class="pointName">Command<br>Points</div>
-                        <div class="pointNumber, point_number_font" id="Command_Points">0</div>
+                        <div class="pointName">Victory<br>Points</div>
+                    </div>
+                    <div class="row_2">
+                        <div class="pointNumber" id="Command_Points">0</div>
+                        <div class="pointNumber" id="Victory_Points">0</div>
+                    </div>
                         <div class="cpButtons">
-                          <button  class = "Button-PointTracker" id="subtract_cp" onclick="subtractCommand_Points()">-</button>
-                          <button class="Button-PointTracker" id="add_cp" onclick="addCommand_Points()">+</button>
+                          <button  class = "Button-PointTracker" onclick="subtractCommand_Points()">-</button>
+                          <button class="Button-PointTracker" onclick="addCommand_Points()">+</button>
+                          <button  class = "Button-PointTracker" onclick="subtractVictory_Points()">-</button>
+                          <button class="Button-PointTracker" onclick="addVictory_Points()">+</button>
                         </div>
-              </div>
+                    <button class = "Button-PointTracker" id="reset" onclick="resetScore()">↻</button>
+
+            </div>
               
-              <div class="col_2">
+              <!-- <div class="col_2">
                         <div class="pointName">Victory<br>Points</div>
                         <div class="pointNumber, point_number_font" id="Victory_Points">0</div>
                         <div class="vpButtons">
                           <button  class = "Button-PointTracker" onclick="subtractVictory_Points()">-</button>
                           <button class="Button-PointTracker" onclick="addVictory_Points()">+</button>
                         </div>
-              </div>
+              </div> -->
       
-              <div class="col_3">
-                <button class = "Button-PointTracker" id="reset" onclick="resetScore()">↻</button>
-              </div>
+              <!-- <div class="col_3"> -->
+                <!-- <button class = "Button-PointTracker" id="reset" onclick="resetScore()">↻</button> -->
+              <!-- </div> -->
             </div>
-          </div>
+         
 
 
 <!-- MAIN SECTION -->
@@ -61,15 +70,31 @@
     <div class="army_name_header">
     <h1 class="dok_font">Daughters of Khaine
     </h1>
+
     </div>
     <h2>Battle Tactics
     </h2>
 
-    <p>
+    <div><button class="collapsible">Universal Battle Tactics</button>
+    <div class="content">
+        <ul>
+            <li><b>Gaining Momentum:</b> Pick 1 enemy unit. Destroy that unit this turn and control more objectives than your opponent at the end of this turn.</li>
+            <br><li><b>An Eye for an Eye:</b> If 1 or more friendly units were destroyed in the previous turn, destroy 1 or more enemy units this turn.</li>
+            <br><li><b>Desecrate their Lands:</b> Pick 1 terrain feature or faction terrain feature that is partially or wholly within enemy territory. Control that terrain feature at the end of this turn.</li>
+            <br><li><b>This One's Mine:</b> Pick 1 enemy unit on the battlefield. Destroy that unit this turn by an attack made by your general.</li>
+            <br><li><b>A Matter of Honour:</b> Destroy 1 enemy GALLETIAN CHAMPION or Sworn Bodyguard unit with a friendly GALLETIAN CHAMPION or Sworn Bodyguard unit.</li>
+            <br><li><b>Lead the Assault:</b> 2 objectives in enemy territory you control are each contested by a friendly GALLETIAN CHAMPION.</li>
+            <br><li><b>United Offence:</b> Pick 1 objective controlled by your opponent. Control that objective with 2 or more friendly GALLETIAN CHAMPIONS contesting it.</li>
+            <br><li><b>Cunning Manoeuvre:</b> Pick 1 friendly GALLETIAN CHAMPION that is more than 3" from all enemy units. That GALLETIAN CHAMPION must end the turn more than 3" from all enemy units and contest an objective you control wholly outside your territory.</li>
+            </ul>
+    </div>
+    </div>
+    <p> <b>Daughters of Khaine Battle Tactics:</b><br><br>
         <b>Clash of Arms:</b> You complete this tactic if 3 or more friendly units make a charge move this turn.
         <br><br><b>Cruel Delight:</b> You complete this tactic if 2 or more friendly KHINERAI units move using their Fire and Flight ability or Fight and Flight ability this turn.
         <br><br><b>Tide of Blades:</b> You complete this tactic if there are 2 or more units from your starting army wholly within your opponent’s territory at the end of this turn.
     </p>
+
 
     <h2 id="hero_phase">Hero Phase
     </h2>

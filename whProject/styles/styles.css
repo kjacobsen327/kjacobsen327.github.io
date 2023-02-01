@@ -119,62 +119,53 @@ margin-top:-100px;
 div#PointsTrackerBox.content {
   background-image: url(https://w0.peakpx.com/wallpaper/858/307/HD-wallpaper-chalkboard-gray-texture-grey-chalkboard-background-retro-texture-gray-texture-board-chalkboard.jpg);
   background-repeat: no-repeat;
-  background-size:100vh;
+  background-size: 100%;
   display: flex;
+  flex-direction: column;
   line-height: 200px;
-  flex-grow: 1;
-  font-size: 2.9em;
+  font-size: 2.8em;
   font-weight: bold;
   text-align: center;
-  height:100%;
   border: 6px solid black;
 }
 
-.col_1 button, .col_2 button, .col_3 button {
-  flex-grow: 1;
-  font-size: 1.7em;
-  font-weight: bold;
-  color:white;
-  text-shadow: 3px 3px black;
-  border: 3px solid rgb(0, 0, 0);
-
-  
-
-  background-image:url(https://i.pinimg.com/originals/fa/59/3f/fa593ff4aec724adc5bd1b0072146994.jpg);
+.row_1 {
+display:flex;
 }
-div.pointName{
+.pointName{
+  flex:1;
   line-height: 75px;
   color:rgb(247, 206, 206);
   text-shadow: 3px 3px black;
 }
 
-.point_number_font {
+.row_2 {
+display:flex;
+}
+.pointNumber {
+  flex: 1;
   color:rgba(81, 255, 0, 0.498);
   font-weight:400;
   font-size:2.5em;
 }
 
-div.cpButtons,
-div.vpButtons {
+.cpButtons {
   display: flex;
+}
+.Button-PointTracker{
+  flex: 1;
+  font-size: 1.7em;
+  font-weight: bold;
+  color:white;
+  text-shadow: 3px 3px black;
+  border: 3px solid rgb(0, 0, 0);
+  background-image:url(https://i.pinimg.com/originals/fa/59/3f/fa593ff4aec724adc5bd1b0072146994.jpg);
+}
+#reset.Button-PointTracker {
+font-size: 1.2em;
 }
 
-.col_1 {
-border:none;
-flex:1;
-width:40%;
-}
-.col_2 {
-  border: none;
-  flex:1;
-width:40%;
-}
-.col_3 {
-  border: 2px solid rgb(0, 0, 0);
-  display: flex;
-  flex:1;
-width:20%;
-}
+
 
 /* COLLAPSIBLE BUTTON SETTINGS */
 .collapsible {
