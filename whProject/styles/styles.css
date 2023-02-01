@@ -18,8 +18,7 @@ h1 { background: rgb(132, 48, 51, 0.9);
     text-align: center;
     padding: 8px;
     border: 12px solid rgb(86, 12, 14);
-    margin-right:12px;
-
+    
   }
 
 h2 { background: rgba(86, 12, 14, 0.9);
@@ -27,8 +26,7 @@ h2 { background: rgba(86, 12, 14, 0.9);
     font-size: 2.4em;
     text-align: center;
     padding: 8px;
-    margin-right:12px;
-
+    border: 8px solid rgb(132, 48, 51, 0.9)
   }
     
 
@@ -40,16 +38,29 @@ h3 { background: rgba(86, 12, 14, 0.9);
     vertical-align: center;
     padding: 8px;
   }
+  h4 { background: rgba(86, 12, 14, 0.6);
+    color: rgb(247, 206, 206); 
+    border:6px solid rgba(86, 12, 14, 1);
+    font-size: 1.8em;
+    height: 100%;
+    width:60%;
+    text-align: left;
+    vertical-align: center;
+    padding: 8px;
+    border-radius: 20px;
+
+  }
 
 p { background-image:url(https://img.freepik.com/free-photo/vintage-grunge-paper-background_1048-10911.jpg?w=360&t=st=1674835885~exp=1674836485~hmac=4b60beaeb518b315da8e5cce22ebe8c7266aac35755e77c382a955c6cb7c465c); 
   background-size: cover;
-  border: 8px solid rgb(86, 12, 14);
+  border: 6px solid rgb(86, 12, 14);
   font-size: 1.45em;
   text-shadow: -1px -1px rgb(247, 206, 206);
   text-align: justify;
   padding: 12px;
-  margin-right:12px;
-
+  margin-left: 20px;
+  margin-right:20px;
+  border-radius: 20px;
     }
 
 ul {
@@ -60,21 +71,33 @@ ul {
     text-align: justify;
     padding: 12px;
     padding-left: 52px;
-    border: 8px solid rgb(86, 12, 14);
+    border: 6px solid rgb(86, 12, 14);
     list-style-image: url('../images/icon2.png');
     margin-right:12px;
+    border-radius: 20px;
+    margin-left: 20px;
+    margin-right:20px;
+
+
 }
 table {
   background-image:url(https://img.freepik.com/free-photo/vintage-grunge-paper-background_1048-10911.jpg?w=360&t=st=1674835885~exp=1674836485~hmac=4b60beaeb518b315da8e5cce22ebe8c7266aac35755e77c382a955c6cb7c465c); 
   background-size: cover;
-  border: 8px solid rgb(86, 12, 14);
-  font-size: 1.35em;
+  border: 6px solid rgb(86, 12, 14);
+  font-size: 1.5em;
   text-shadow: -1px -1px rgb(247, 206, 206);
   text-align: justify;
   padding: 12px;
-  margin-right:12px;
+  border-radius: 20px;
+  margin-left: 20px;
+  margin-right:20px;
 }
-
+.inner {
+  padding-right:12px;
+  margin-right:-20px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
 /* HYPERLINK SETTINGS */
 a {
   color: rgb(247, 206, 206);
@@ -112,9 +135,14 @@ button {
 div.pt {
   position:fixed;
   z-index: 1;
-width:97.2%;}
+width:97.3%;
+}
 button#collapsible_header.collapsible {
 margin-top:-100px;
+background-color: rgb(178, 0, 6);
+border:6px solid rgba(86, 12, 14, 0.9);
+border-top-left-radius: 0;
+border-top-right-radius: 0;
 }
 div#PointsTrackerBox.content {
   background-image: url(https://w0.peakpx.com/wallpaper/858/307/HD-wallpaper-chalkboard-gray-texture-grey-chalkboard-background-retro-texture-gray-texture-board-chalkboard.jpg);
@@ -126,7 +154,11 @@ div#PointsTrackerBox.content {
   font-size: 2.8em;
   font-weight: bold;
   text-align: center;
-  border: 6px solid black;
+  margin-top:-14px;
+  border-bottom: 4px solid black;
+  border-right: 4px solid black;
+  border-left: 4px solid black;
+
 }
 
 .row_1 {
@@ -169,18 +201,21 @@ font-size: 1.2em;
 
 /* COLLAPSIBLE BUTTON SETTINGS */
 .collapsible {
-background-color: rgb(178, 0, 6);
+background-color: rgba(178, 0, 6, 0.9);
 color: rgb(252, 190, 190);
 cursor: pointer;
-width: 100%;
+width:100%;
 border: none;
 text-align: center;
 outline: none;
 font-family: 'Rowdies', cursive;
 font-size: 2.2em;
+border:6px solid rgba(86, 12, 14, 0.9);
+border-radius: 20px;
+margin-right:12px;
 }
 .active, .collapsible:hover {
-background-color: rgb(148, 33, 33);
+  background-color: rgba(178, 0, 6, 0.9);
 }
 .collapsible:after {
 content: '\00BB'; /* Unicode character for ">> */
