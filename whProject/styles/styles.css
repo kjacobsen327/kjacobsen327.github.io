@@ -161,18 +161,18 @@ div.vpButtons {
 
 .col_1 {
 border:none;
-flex:2;
+flex:1;
 width:40%;
 }
 .col_2 {
   border: none;
-  flex:2;
+  flex:1;
 width:40%;
 }
 .col_3 {
   border: 2px solid rgb(0, 0, 0);
   display: flex;
-  flex:.7;
+  flex:1;
 width:20%;
 }
 
