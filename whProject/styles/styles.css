@@ -122,14 +122,16 @@ button {
 .dok_font {
   font-family: 'Nosifer', cursive;
 }
-.std {
+.std_font {
   font-family: 'New Rocker', cursive;
 }
-.syl {
+.syl_font {
   font-family: 'Rubik Beastly', cursive;
   font-weight:100;
 }
+/* .idk_font {
 
+} */
 
 /* POINTS TRACKER SETTINGS */
 div.pt {
@@ -271,10 +273,11 @@ width: [width of img];
 .img-with-text img {
 display: block;
 margin: 0 auto;
+height:550px;
+width:440px;
 }
   
 
-/* The grid: Three equal columns that floats next to each other */
 .column {
     width: 50%;
     height: auto;
@@ -285,25 +288,67 @@ margin: 0 auto;
     background: rgb(132, 48, 51, 0.9);
     cursor: pointer;
     color: rgb(247, 206, 206);
-
   }
   
-  .containerTab {
-
+.containerTab {
     color: white;
   }
   
   /* Clear floats after the columns */
-  .row:after {
+.row:after {
     content: "";
     display: table;
     clear: both;
   }
   
   /* Closable button inside the image */
-  .closebtn {
+.closebtn {
     float: right;
     color: rgb(255, 255, 255);
     font-size: 2em;
     cursor: pointer;
   }
+
+.armies {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  width:100%;
+  font-size: 2.4em;
+  text-align: center;
+  align-content: space-between;  
+  padding-right:12px;
+  }
+.box1,
+.box2,
+.box3,
+.box4 {
+  width: 100%;
+  justify-self: center;
+  padding-top: 2em;
+
+  }
+.box3 {
+  padding-top: 1.5em;
+}
+.dok_text,
+.std_text,
+.syl_text,
+.idk_text {
+height:3.5em;
+
+}
+.dok_text {
+}
+.syl_text {
+  padding-top: .5em;
+
+  background-image: radial-gradient(rgb(2, 130, 2), rgba(3, 169, 3, 0.347), rgba(0, 0, 0, 0));
+}
+a.syl_text {
+  font-size:1.7em;
+  color:rgb(125, 182, 40);
+  background-image:none;
+  text-shadow: 3px 3px black;
+}
+.idk_text {
+}
