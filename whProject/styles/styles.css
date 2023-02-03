@@ -48,7 +48,6 @@ h3 { background: rgba(86, 12, 14, 0.9);
     vertical-align: center;
     padding: 8px;
     border-radius: 20px;
-
   }
 
 p { background-image:url(https://img.freepik.com/free-photo/vintage-grunge-paper-background_1048-10911.jpg?w=360&t=st=1674835885~exp=1674836485~hmac=4b60beaeb518b315da8e5cce22ebe8c7266aac35755e77c382a955c6cb7c465c); 
@@ -126,12 +125,11 @@ button {
   font-family: 'New Rocker', cursive;
 }
 .syl_font {
-  font-family: 'Rubik Beastly', cursive;
-  font-weight:100;
+  font-family: 'Eater', cursive;
 }
-/* .idk_font {
-
-} */
+.idk_font {
+font-family: 'Metal Mania', cursive;
+}
 
 /* POINTS TRACKER SETTINGS */
 div.pt {
@@ -324,31 +322,70 @@ width:440px;
 .box4 {
   width: 100%;
   justify-self: center;
-  padding-top: 2em;
-
-  }
-.box3 {
   padding-top: 1.5em;
+  }
+
+.img-with-text img{
+  height:560px;
+  width:450px;
+  border: 8px solid black;
 }
 .dok_text,
 .std_text,
 .syl_text,
 .idk_text {
 height:3.5em;
-
 }
 .dok_text {
+  vertical-align: center;  
+  /* background-image: radial-gradient(rgba(130, 9, 9, 0.792), rgba(144, 8, 8, 0.312), rgba(0, 0, 0, 0)); */
+  background-image: url(https://t3.ftcdn.net/jpg/02/89/42/70/360_F_289427042_Q4tqOQpUQs0REeZJdnJra8QUbEpL9TNQ.jpg);
+  background-size: cover;
+  border: 8px solid rgb(132, 48, 51);
+}
+.std_text {
+  vertical-align: center;  
+  background-image: url(https://wallpapercave.com/wp/wp9929411.jpg);
+  background-size: cover;
+  border: 8px solid rgb(187, 96, 4);
 }
 .syl_text {
-  padding-top: .5em;
+  vertical-align: center;  
+  background-image:url(https://media.istockphoto.com/id/182794428/photo/background-comprised-of-small-green-leaves.jpg?b=1&s=170667a&w=0&k=20&c=s7ET3HvHREmOEoDVMwLLim7UqWTtWknzAGwthkhJvRc=);
+background-size:cover;
+border: 8px solid rgb(21, 106, 6);
 
-  background-image: radial-gradient(rgb(2, 130, 2), rgba(3, 169, 3, 0.347), rgba(0, 0, 0, 0));
-}
-a.syl_text {
-  font-size:1.7em;
-  color:rgb(125, 182, 40);
-  background-image:none;
-  text-shadow: 3px 3px black;
 }
 .idk_text {
+  
+  vertical-align: center;  
+  background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20190223/ourmid/pngtree-blue-ocean-deep-sea-background-pattern-material-seabackgroundseawaterwater-surface-image_68068.jpg);
+  background-size: 100% 100%;
+  border: 8px solid rgb(0, 66, 190);
+
+}
+a.dok_font {
+  font-size:1.1em;
+  color:rgb(155, 23, 23);
+  background-image:none;
+  text-shadow: 3px 3px rgb(249, 32, 217);
+}
+a.std_font {
+  
+  font-size:1.4em;
+  color:rgb(0, 0, 0);
+  background-image:none;
+  text-shadow: 3px 3px rgb(255, 221, 0);
+}
+a.syl_font {
+  font-size:1.4em;
+  color:rgb(220, 248, 42);
+  background-image:none;
+  text-shadow: 5px 5px rgb(84, 68, 5);
+}
+a.idk_font {
+  font-size:1.6em;
+  color:rgb(22, 223, 176);
+  background-image:none;
+  text-shadow: 4px 4px rgb(117, 18, 167);
 }
