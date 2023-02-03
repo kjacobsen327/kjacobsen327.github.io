@@ -6,7 +6,7 @@ body {
     background-image:url(../images/lavabg.png) ;
     background-size: 100% 100vh;
     font-weight: 300;
-    width: 100vw;
+    width: 100%;
     height:150vh;
     margin-left:12px;
     margin-top:-12px;
@@ -41,9 +41,8 @@ h3 { background: rgba(86, 12, 14, 0.9);
   h4 { background: rgba(86, 12, 14, 0.6);
     color: rgb(247, 206, 206); 
     border:6px solid rgba(86, 12, 14, 1);
-    font-size: 1.8em;
+    font-size: 1.6em;
     height: 100%;
-    width:60%;
     text-align: left;
     vertical-align: center;
     padding: 8px;
@@ -61,7 +60,21 @@ p { background-image:url(https://img.freepik.com/free-photo/vintage-grunge-paper
   margin-right:20px;
   border-radius: 20px;
     }
-
+div.phase {background-image:url(https://img.freepik.com/free-photo/vintage-grunge-paper-background_1048-10911.jpg?w=360&t=st=1674835885~exp=1674836485~hmac=4b60beaeb518b315da8e5cce22ebe8c7266aac35755e77c382a955c6cb7c465c); 
+  background-size: cover;
+  border: 6px solid rgb(86, 12, 14);
+  font-size: 1.45em;
+  text-shadow: -1px -1px rgb(247, 206, 206);
+  text-align: justify;
+  padding: 12px;
+  margin-left: 20px;
+  margin-right:20px;
+  border-radius: 20px;}
+h4.phase_divider {
+  margin: 0 0 1em 0;
+  font-size: 1.2em;
+  text-shadow: 3px 3px rgb(0, 0, 0);
+}
 ul {
     background-image:url(https://img.freepik.com/free-photo/vintage-grunge-paper-background_1048-10911.jpg?w=360&t=st=1674835885~exp=1674836485~hmac=4b60beaeb518b315da8e5cce22ebe8c7266aac35755e77c382a955c6cb7c465c);
     background-size: cover;
@@ -313,28 +326,31 @@ width:440px;
   width:100%;
   font-size: 2.4em;
   text-align: center;
-  align-content: space-between;  
-  padding-right:12px;
+  align-content: space-around;
+  padding-right:12px;  
   }
 .box1,
 .box2,
 .box3,
 .box4 {
-  width: 100%;
+  width:100%;
   justify-self: center;
-  padding-top: 1.5em;
   }
-
+  .box3,
+  .box4 {
+    padding-top: 1.2em;
+  }
 .img-with-text img{
   height:560px;
-  width:450px;
-  border: 8px solid black;
+width:calc(100% - 16px);  
+border: 8px solid black;
 }
 .dok_text,
 .std_text,
 .syl_text,
 .idk_text {
 height:3.5em;
+width:calc(100% - 16px);  
 }
 .dok_text {
   vertical-align: center;  
