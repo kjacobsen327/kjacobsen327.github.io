@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+    <html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport content=width=device-width, initial-scale=1">
+    <title>Sylvaneth</title>
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&family=Eater&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <style type = "text/css">
+    </style>
+</head>
+
+<body>
+
+
+<!-- POINTS TRACKER FIXED TO TOP -->
+<div class="pt">
+
+<button class="collapsible" id="collapsible_header">Points Tracker</button>
+    <div class="content" id="PointsTrackerBox">
+        <div class="row_1">
+            <div class="pointName">Command<br>Points</div>
+            <div class="pointName">Victory<br>Points</div>
+        </div>
+        <div class="row_2">
+            <div class="pointNumber" id="Command_Points">0</div>
+            <div class="pointNumber" id="Victory_Points">0</div>
+        </div>
+        <div class="cpButtons">
+            <button  class = "Button-PointTracker" onclick="subtractCommand_Points()">-</button>
+            <button class="Button-PointTracker" onclick="addCommand_Points()">+</button>
+            <button  class = "Button-PointTracker" onclick="subtractVictory_Points()">-</button>
+            <button class="Button-PointTracker" onclick="addVictory_Points()">+</button>
+        </div>
+        <button class = "Button-PointTracker" id="reset" onclick="resetScore()">↻</button>
+    </div>
+</div>        
+<!---------------------->
+
+
+<!-- MAIN SECTION -->
+<div class="main">
+
+<!---- NAV BAR HERE ---->
+<div class="nav_bar"> 
+    <h3 class="nav_text"><a href="/whProject/home">Home </a></h3>
+    
+    <h3 class="nav_text"><a href="#hero_phase">Hero Phase</a></h3>
+    <h3 class="nav_text"><a href="#movement_phase">Movement Phase</a></h3>
+</div>
+<!---------------------->
+
+
+<!-- ARMY NAME HEADER HERE -->
+<div class="army_name_header">
+<h1 class="syl_font">Sylvaneth
+</h1>
+<!--------------------------->
+
+
+<!-- BATTLE TACTICS --->
+</div>
+<h2>Battle Tactics
+</h2>
+
+<!-- TACTICS BUTTON -->
+<div><button class="collapsible">Universal Battle Tactics:</button>
+<div class="content">
+    <ul  style="margin-top: -6px">
+        <li><b>Gaining Momentum:</b> Pick 1 enemy unit. Destroy that unit this turn and control more objectives than your opponent at the end of this turn.</li>
+        <br><li><b>An Eye for an Eye:</b> If 1 or more friendly units were destroyed in the previous turn, destroy 1 or more enemy units this turn.</li>
+        <br><li><b>Desecrate their Lands:</b> Pick 1 terrain feature or faction terrain feature that is partially or wholly within enemy territory. Control that terrain feature at the end of this turn.</li>
+        <br><li><b>This One's Mine:</b> Pick 1 enemy unit on the battlefield. Destroy that unit this turn by an attack made by your general.</li>
+        <br><li><b>A Matter of Honour:</b> Destroy 1 enemy GALLETIAN CHAMPION or Sworn Bodyguard unit with a friendly GALLETIAN CHAMPION or Sworn Bodyguard unit.</li>
+        <br><li><b>Lead the Assault:</b> 2 objectives in enemy territory you control are each contested by a friendly GALLETIAN CHAMPION.</li>
+        <br><li><b>United Offence:</b> Pick 1 objective controlled by your opponent. Control that objective with 2 or more friendly GALLETIAN CHAMPIONS contesting it.</li>
+        <br><li><b>Cunning Manoeuvre:</b> Pick 1 friendly GALLETIAN CHAMPION that is more than 3" from all enemy units. That GALLETIAN CHAMPION must end the turn more than 3" from all enemy units and contest an objective you control wholly outside your territory.</li>
+        </ul>
+</div>
+
+<!-- ARMY SPECIFIC TACTICS -->
+</div>
+
+<p> <b>Sylvaneth Battle Tactics:</b>
+    <br><br>
+    <b>Eradicate Trespassers: </b>
+        Pick 1 enemy unit within 6" of a friendly Awakened Wyldwood. You complete this battle tactic if that unit is destroyed during this turn.
+    <br><br>
+    <b>Harness the Spirit Paths: </b>
+    You complete this tactic if 2 or more friendly KHINERAI units move using their Fire and Flight ability or Fight and Flight ability this turn.
+    <br><br>
+    <b>Balance the Cycle: </b>
+    Pick 1 enemy unit within 12" of an overgrown terrain feature or friendly Awakened Wyldwood. You complete this battle tactic if that unit is destroyed by an attack made by a friendly SYLVANETH unit that was added to your army this turn.    <br><br>
+    <b>March of the Forest Lords: </b>
+    Pick 1 enemy MONSTER on the battlefield. You complete this battle tactic if that MONSTER is slain by an attack made by a friendly SPIRIT OF DURTHU, TREELORD ANCIENT or TREELORD during this turn.    <br><br>
+    <b>Unleash Ghyran's Wrath: </b>
+    Pick 1 friendly SYLVANETH WIZARD on the battlefield. You complete this battle tactic if a spell successfully cast by that WIZARD, or an endless spell summoned by that WIZARD, destroys an enemy unit this turn   
+</p>
+<!---------------------->
+
+
+<!-- HERO PHASE HERE -->
+<h2 id="hero_phase">Hero Phase
+</h2>
+
+<button class="collapsible">Heroic Actions:</button>
+<div class="content">
+    
+    <table>
+        <tr>
+            <td>
+                <img border="0" src="https://wahapedia.ru/aos3/img/HeroicLeadership.png" style="margin:4px"></td>
+            <td>
+                <table class="inner">
+                <tr><td><b>Heroic Leadership:</b></td></tr>
+                <tr><td>Pick 1 friendly HERO and roll a dice. Add 2 to the roll if your general has been slain. On a 4+, you receive 1 command point that can only be spent during that turn 
+                        to allow that HERO to issue a command.</td></tr>
+            </table></td>
+        </tr>
+        <tr>
+            <td><img border="0" src="https://wahapedia.ru/aos3/img/HeroicWillpower.png" style="margin:4px"></td>
+            <td><table class="inner">
+                <tr><td><b>Heroic Willpower:</b></td></tr>
+                <tr><td>Pick 1 friendly HERO that is not a WIZARD. If it is the enemy hero phase, that HERO can attempt to unbind 1 spell in that phase as if they were a WIZARD. If it is your 
+                        hero phase, that HERO can attempt to dispel 1 endless spell in that phase as if they were a WIZARD (you can still only attempt to unbind or dispel the same spell or 
+                        endless spell once in the same phase).</td></tr>
+            </table></td>
+        </tr>
+        <tr>
+            <td><img border="0" src="https://wahapedia.ru/aos3/img/TheirFinestHour.png" style="margin:4px"></td>
+            <td><table>
+                <tr><td><b>Their Finest Hour:</b></td></tr>
+                <tr><td>Pick 1 friendly HERO. Add 1 to wound rolls for attacks made by that HERO until the end of that turn, and add 1 to save rolls for attacks that target that HERO until 
+                        the end of that turn. You cannot carry out this heroic action with the same HERO more than once in the same battle.</td></tr>
+            </table></td>
+        </tr>
+        <tr>
+            <td><img border="0" src="https://wahapedia.ru/aos3/img/HeroicRecovery.png" style="margin:4px"></td>
+            <td><table>
+                <tr><td><b>Heroic Recovery:</b></td></tr>
+                <tr><td>Pick 1 friendly HERO that is more than 3" from all enemy units and make a heroic recovery roll by rolling 2D6. If the roll is less than or equal to that HERO’s Bravery characteristic,
+                            you can heal up to D3 wounds allocated to that HERO.</td></tr>
+            </table></td>
+        </tr>
+    </table>
+</div>
+<!-- <p><b>Battle Fury:</b> This is a heroic action that you can carry out with 1 friendly DAUGHTERS OF KHAINE HERO that is not a MONSTER instead of picking 1 from the table in the core rules. 
+    If you do so, add 2 to the Attacks characteristic of melee weapons used by that HERO until the end of that turn. This heroic action does not affect the weapons used by that HERO’s mount.
+</p> -->
+<!-- <div class="phase"><h4 class="phase_divider">
+    - Abilities:</h4>
+
+    <b>Hag Queen Ability - </b>
+        <br> 
+    <b><i>Witchbrew: </i></b>At the start of your hero phase, you can pick 1 friendly DAUGHTERS OF KHAINE unit wholly within 12" of this unit to drink witchbrew. A unit cannot drink witchbrew more than once in the same hero phase.
+        <br><br>
+
+    <b>Bloodwrack Shrine Ability - </b>
+        <br> 
+    <b><i>Aura of Agony: </i></b>At the start of your hero phase, you can roll 1 dice for each enemy unit within 7" of this unit. If the roll is equal to or greater than the Aura of Agony value shown on this unit's damage table, that enemy unit suffers D3 mortal wounds. The same unit cannot be affected by this ability more than once per turn.
+    
+</div> -->
+
+<div class="phase">
+    <h4 class="phase_divider">
+    - Command Abilities:
+    </h4>
+
+    <b>Rally:</b>
+        <br>You can use this command ability at the start of the hero phase. The unit that receives the command must be more than 3" from all enemy units. Roll 1 dice for each slain model from that unit. For each 6, you can return 1 slain model to that unit.
+        <br><br>
+</div>
+
+
+<div class="phase"><h4 class="phase_divider">
+- Spells:
+</h4>
+
+    <!-- <b>Bloodwrack Shrine - (1 Cast / 2 unbinds)</b>
+    <br><br>
+    <b><i>Mindrazor: </i></b>Daemonic Speed is a spell that has a casting value of 7 and a range of 12". If successfully cast, pick 1 friendly SLAVES TO DARKNESS unit that has a Mount and is wholly within range and visible to the caster. Until the start of your next hero phase, you can attempt a charge with that unit if it is within 18" of the enemy instead of 12". In addition, roll 3D6 instead of 2D6 for charge rolls made for that unit until the start of your next hero phase.
+    <br><br>
+    <b><i>Enfeebling Foe: </i> </b>Enfeebling Foe is a spell that has a casting value of 5 and a range of 18". If successfully cast, pick 1 enemy unit within range and visible to the caster. Subtract 1 from wound rolls for attacks made with melee weapons by that unit until your next hero phase. -->
+    
+</div>
+
+<!-- <div class="phase">
+    <h4 class="phase_divider">
+    - Prayers:
+    </h4>
+
+    <b>Sacrament of Blood:</b>
+        <br>Sacrament of Blood is a prayer that has an answer value of 3 and a range of 14". If this prayer is answered, pick 1 friendly DAUGHTERS OF KHAINE unit wholly within range and visible to the chanter. Until your next hero phase, add 1 to the number of the current battle round when determining the abilities gained by that unit from the Blood Rites battle trait. This ability and other similar abilities are cumulative.
+        
+    </div> -->
+
+<h2 id="movement_phase">Movement Phase</h2>
+<div class="phase"><h4 class="phase_divider">- Command Abilities:</h4>
+
+    <b>At the Double:</b>
+    <br>Instead of rolling 1D6 to run, add 6" to unit's Move characteristic. The unit is still considered to have run.
+    <br><br>
+    <b>Redeploy:</b>
+    <br>You can use this command ability in the enemy movement phase after an enemy unit finishes a normal move, run or retreat. The unit that receives the command must be within 9" of that enemy unit and more than 3" from all enemy units. You can make a D6" move with the unit that receives the command, but it must finish the move more than 3" from all enemy units and cannot shoot later in the turn.
+
+</div>
+
+<h2 id="shooting_phase">Shooting Phase</h2>
+
+<div class="phase"><h4 class="phase_divider">
+    - Command Abilities:
+    </h4>
+
+    <b>All Out Attack:</b>
+        <br> +1 to hit rolls for attacks made by that unit until end of that phase.
+</div>
+
+<p>
+  <b>Look Out, Sir!</b>
+      <br>You must subtract 1 from the hit roll for an attack made with a missile weapon if the target is an enemy HERO within 3" of an enemy unit that has 3 or more models. The Look Out, Sir! rule does not apply if the enemy HERO has a Wounds characteristic of 10 or more.
+</p>
+
+
+<h2 id="charge_phase">Charge Phase</h2>
+<div class="phase"><h4 class="phase_divider">
+    - Command Abilities:
+    </h4>
+
+    <b>Forward to Victory:</b>
+    <br> You can re-roll the charge roll for that unit.
+        <br><br>
+    <b>Unleash Hell:</b>
+    <br>You can use this command ability after an enemy unit finishes a charge move. The unit that receives the command must be within 6" of that enemy unit and more than 3" from all other enemy units. Models in the unit that receives the command that are within 6" of the target unit can shoot in that phase, but when they do so, you must subtract 1 from hit rolls for their attacks and they can only target the unit that made the charge move.
+
+</div>
+
+<h2 id="combat_phase">Combat Phase</h2>
+<div class="phase"><h4 class="phase_divider">- Command Abilities:</h4>
+
+    <!-- <b>All-out Slaughter</b>
+    <br>You can use this command ability when a friendly DAUGHTERS OF KHAINE unit is picked to fight in the combat phase. The command must be issued by a friendly DAUGHTERS OF KHAINE unit and received by the unit that has been picked to fight. If the unmodified hit roll for an attack made by that unit in that phase is a 6, that attack scores 2 hits on the target instead of 1. Make a wound roll and save roll for each hit.
+    <br><br> -->
+    <b>All Out Attack:</b>
+    <br> +1 to hit rolls for attacks made by that unit until end of that phase.
+    <br><br>
+    <b>All Out Defense:</b>
+    <br>+1 to save rolls for attacks that target that unit until end of that phase.
+
+
+</div>
+
+<!-- <p><b>Daemon Prince Artifact: Helm of Many Eyes -</b>
+    <br>The strike-first effect applies to the bearer.
+    <br><br>
+    <b>Daemon Prince Command Trait -</b>
+    <br>Once per battle, in the combat phase, after this general has fought for the first time in that phase, you can say that they will deal death. If you do so, this general can fight for a second time in that phase. The strike-last effect applies to this general when they fight for that second time.
+    <br><br>
+    <b>Varanguard -</b>
+    <br>Once per battle, in the combat phase, after this unit has fought in that phase for the first time, when it is your turn to pick a unit to fight, this unit can be picked to fight for a second time if it is within 3" of any enemy units.
+</p> -->
+
+<h2 id="battleshock_phase">Battleshock Phase</h2>
+
+<p>
+    To make a battleshock roll, roll a dice and add the number of models in the unit that were slain in that turn to the roll. If the battleshock roll is greater than the unit's Bravery characteristic, the battleshock test has been failed. If the test is failed, for each point by which the battleshock roll exceeds the unit's Bravery characteristic, 1 model in that unit must flee.
+</p>
+
+<div class="phase">
+    <h4 class="phase_divider">
+    - Command Abilities:
+    </h4>
+
+    <b>Inspiring Presence:</b>
+        <br>The unit that receives the command does not have to take battleshock tests in that phase.
+</div>
+<!--------------------------->
+    <script src="main.js">
+
+    </script>
+</div>
+</body>
+</html>
