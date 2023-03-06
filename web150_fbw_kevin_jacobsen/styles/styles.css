@@ -1,0 +1,124 @@
+/*
+Kevin Jacobsen
+WEB 150, FBW Home Page
+Feb 1, 2023 
+*/
+
+/* Responsive Font Size */
+html {
+    font-size: calc(16px + (24 - 16) * ((100vw - 400px) / (800 - 400)));
+}
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    background-color: black;
+    font-family: 'Fascinate', cursive;
+}
+
+
+
+/* nav bar properties */
+
+nav {
+    /* flexbox container for nav bar */
+    display: flex;
+    justify-content: space-between;
+
+    padding: .4rem;
+    height: 5rem;
+
+    /* Nav bar font properties */
+    font-size: 1.3rem;
+    color: rgb(244, 156, 170);
+}
+
+/* flex containers for nav bar icons with links underneath*/
+.services,
+.drinks {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+/* sets drinks icon and text to right of page */
+.drinks {
+    align-items: flex-end;
+    text-align: right;
+}
+
+.logo {
+    padding: .4rem;
+
+    /* background-color:rgba(0, 0, 0, 0.657);
+    
+    border-radius: 1rem;
+    box-shadow:
+        0 0rem .5rem .5rem rgb(244, 156, 171),
+        inset 0 0 1rem; */
+}
+/* main content properties */
+
+/* background for cta button on homepage */
+.button_container {
+    background-image: url("../images/home_bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 120vh;
+}
+
+/* media query for mobile screen size */
+@media only screen and (max-width: 1280px) {
+    .button_container {
+        height: 77vh;
+
+    }
+}
+
+/* button properties */
+.cta_button {
+    display:flex;
+    justify-content: center;
+    padding-top: 17vh;
+    font-size: 3rem;
+}
+
+button {
+    width: auto;
+    padding: 1rem;
+    font-family: 'Neonderthaw', cursive;    font-size: 2rem;
+    background-color:rgba(0, 0, 0, 0.23);
+    color:rgb(251, 193, 203);
+    border:.2rem solid rgb(246, 203, 210);
+    border-radius: 2rem;
+    box-shadow:
+        0 0 1rem .4rem rgb(244, 156, 170),
+        inset 0 0 1rem;
+}
+button:hover {
+    background-color:rgba(0, 0, 0, 0.23);
+    color:rgb(250, 218, 222);
+    border:.2rem solid rgb(255, 220, 226);
+    border-radius: 2rem;
+    box-shadow:
+        0 0 1.5rem 1rem rgb(244, 156, 170),
+        inset 0 0 1.8rem;
+}
+
+/* footer properties */
+
+/* footer flexbox container */
+footer {
+    background-color: rgb(92, 209, 170);
+
+    display: flex;
+    justify-content: space-evenly;
+    justify-content: flex-end;
+    align-items: center;
+    padding: .2em 1em;
+}
+
+.contact_link {
+    font-family: 'Glass Antiqua', cursive;
+    padding: .2em 2em;
+}
