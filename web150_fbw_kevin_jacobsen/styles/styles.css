@@ -21,14 +21,14 @@ body {
     box-sizing: border-box;
     background-color: black;
     font-family: 'Fascinate', cursive;
-    background-image: url("../images/home_bg.png");
+    /* background-image: url("../images/home_bg.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 0;
     background-attachment: fixed;
     height:100vh;
     max-height: 100vh;
-    overflow-y: hidden;
+    overflow-y: hidden; */
     
 }
 
@@ -54,28 +54,27 @@ nav {
 .spikes {
     content: ''; 
     position: fixed;
-    top: 1.8em;
+    top: 1.8rem;
     width: 100%;
     height: .4rem;
     background: rgb(244, 156, 170);
     -webkit-mask-image: url('../images/triangle.svg');
     -webkit-mask-size: 2rem .4rem;
-    z-index: 1;
 }
 
 /* main content properties */
 
 /* background for logo and cta button */
-/* .main_container {
+.main_container {
     background-image: url("../images/home_bg.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 0;
     background-attachment: fixed;
     height:100vh;
+    /* overflow-y: hidden; */
     
-    
-} */
+}
 
 /* media query for mobile screen size
 @media only screen and (min-width: 1600px) {
@@ -147,18 +146,17 @@ button:hover {
 footer {
     background-color: rgb(44, 178, 133);
     display: flex;
-    flex-direction: row wrap;
+    flex-direction: column wrap;
     justify-content: space-between;
     align-items: center;
-    padding: .2em 1em;
+    padding: 1rem;
     font-family: 'Glass Antiqua', cursive;
-    gap: 1rem .5rem;
-    position:fixed;
-    bottom:0;
+text-align: center;    
+    /* bottom:-1.5rem;
     left: 0;
     right: 0;
     margin-left:auto;
-    margin-right:auto;
+    margin-right:auto; */
     color: rgb(255, 226, 173);
 
 }
