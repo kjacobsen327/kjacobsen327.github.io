@@ -7,10 +7,25 @@ body {
     color: #ffffff;
     font-family: 'Denk One', sans-serif;
     background-color: #000;
-    background: url(../images/main-bg.webp) no-repeat center/cover;
-    background-attachment: fixed;
 }
 
+body .bg-image {
+    /* background: url(../images/main-bg.webp) no-repeat center/cover;
+    position: fixed; */
+
+    top: 0; /* Important */
+    left: 0; /* Important */
+    width: 100%; /* Important */
+    height: 100%; /* Important */
+    background-image: url(../images/main-bg.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+}
 /* ------------------------------ NAVIGATION BAR ------------------------------ */
 nav {
     background-color: rgba(36, 0, 54, 0.803);
