@@ -26,9 +26,9 @@
             <a href="#hero-phase">Hero Phase</a>
         </div>
         <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-        <a href="javascript:void(0);" class="icon" onclick="menu()">
+        <a href="javascript:void(0);" class="icon" onclick="toggle_nav()">
             <!-- <i class="fa fa-bars"></i> -->
-            <div class="container" onclick="myFunction(this)">
+            <div class="container" onclick="open_close(this)">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
@@ -43,7 +43,7 @@
 
     <script>
         /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
-        function menu() {
+        function toggle_nav() {
             var x = document.getElementById("phases");
             if (x.style.display === "block") {
                 x.style.display = "none";
@@ -51,7 +51,7 @@
                 x.style.display = "block";
             }
         }
-        function myFunction(x) {
+        function open_close(x) {
             x.classList.toggle("change");
         }
 
