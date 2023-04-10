@@ -13,7 +13,7 @@ body {
 }
 body{
     background: url(../images/main-bg.webp) no-repeat center/cover;
-    position: fixed;
+    background-attachment: fixed;
 }
 
 #wrapper{
