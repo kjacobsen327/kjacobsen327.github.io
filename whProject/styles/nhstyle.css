@@ -2,29 +2,24 @@
     box-sizing: border-box;
     margin: 0;
 }
-
+html, body{
+	width: 100%;
+	height: 100%;
+}
 body {
     color: #ffffff;
     font-family: 'Denk One', sans-serif;
     background-color: #000;
 }
+body{
+    background: url(../images/main-bg.webp) no-repeat center/cover;
+    position: fixed;
+}
 
-body .bg-image {
-    /* background: url(../images/main-bg.webp) no-repeat center/cover;
-    position: fixed; */
-
-    top: 0; /* Important */
-    left: 0; /* Important */
-    width: 100%; /* Important */
-    height: 100%; /* Important */
-    background-image: url(../images/main-bg.webp);
-    background-repeat: no-repeat;
-    background-position: center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-attachment: fixed;
+#wrapper{
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
 }
 /* ------------------------------ NAVIGATION BAR ------------------------------ */
 nav {
@@ -103,19 +98,19 @@ h1 {
     top: 15vh;
     font-size: 5rem;
     color: #16d98e;
-    /* margin-bottom: 8vh; */
-}
+    background-color: #00000026;
+text-align: center;}
 
 .fade {
 
-    background-image: linear-gradient(transparent 17vh,
-            currentColor 28%,
+    background-image: linear-gradient(transparent 15vh,
+            currentColor 25%,
             currentColor 70%,
             transparent 98%);
     background-clip: text;
     -webkit-background-clip: text;
     background-attachment: fixed;
-    padding: 18vh 20px 0 20px;
+    padding: 20vh 20px 0 20px;
 }
 /* #abilities .fade {
     padding-top: 20vh;
