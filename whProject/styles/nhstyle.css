@@ -16,11 +16,11 @@ body{
     background-attachment: fixed;
 }
 
-#wrapper{
+/* #wrapper{
     width: 100%;
     height: 100%;
     overflow: scroll;
-}
+} */
 /* ------------------------------ NAVIGATION BAR ------------------------------ */
 nav {
     background-color: rgba(36, 0, 54, 0.803);
