@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "source sans pro";
+    font-weight: 400;
+    color: #fdfdfd;
+  }
+  body > section >.footer {
+    overflow: hidden;
+  }
+  
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    background-color: silver;
+    z-index: 999;
+    text-align: center;
+    font-size: 2em;
+    opacity: 0.8;
+  }
+  
+  article {
+    position: relative;
+    font-size: 1em;
+  }
+  
+  section {
+    height: 100vh;
+    padding-top: 5em;
+  }
+  
+  .bg-img::before {
+    position: fixed;
+    content: ' ';
+    display: block;
+    width: 100vw;
+    min-height: 100vh;  
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-position: center;
+    background-size: cover;
+    z-index: -10; 
+  }
+  
+  .bg-img1:before {
+        background-image: url('https://res.cloudinary.com/djhkdplck/image/upload/v1491326836/3balls_1280.jpg');
+  }
+  .bg-img2::before {
+        background-image: url('https://res.cloudinary.com/djhkdplck/image/upload/v1491326840/icebubble-1280.jpg');
+  }
+  .bg-img3::before {
+        background-image: url('https://res.cloudinary.com/djhkdplck/image/upload/v1491326844/soap-bubbles_1280.jpg');
+  }
+  
+  h1, h2, h3 {
+    font-family: lato;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .content {
+    max-width: 50rem;
+    margin: 0 auto;
+  }
+  .solid {
+    min-height: 100vh;
+    width: 100%;
+    margin: auto;
+    border: 1px solid white;
+    background: rgba(255, 255, 255, 0.6);
+  }
+  
+  .footer {
+    background: rgba(2, 2, 2, 0.5);
+  }
