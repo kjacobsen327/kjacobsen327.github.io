@@ -5,15 +5,21 @@
   body {
     font-family: 'Denk One', sans-serif;
     color: #fdfdfd;
+    margin: 0;
   }
-  body > section >.footer {
-    overflow: hidden;
-  }
+.dimmer {
+    background-color: #0000002b;
+    position: absolute;    
+    top: 0;
+    width: 100%;
+    
+}
   
 /* ------------------------------ NAVIGATION BAR ------------------------------ */
 nav {
     background-color: rgba(36, 0, 54, 0.803);
     position: fixed;
+    top: 0;
     width: 100%;
     z-index: 10;
 }
@@ -76,23 +82,16 @@ nav a.icon {
     background-color: rgb(255, 0, 0);
 }
 
+/* ------------------------------ MAIN CONTENT PROPERTIES ------------------------------ */
 
-  
-  article {
+  main {
     position: relative;
-    font-size: 1em;
   }
-  
-  /* section {
-    height: 100vh;
-    padding-top: 5em;
-  } */
-  
   .bg-img::before {
     position: fixed;
     content: ' ';
     display: block;
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;  
     top: 0;
     bottom: 0;
@@ -106,64 +105,23 @@ nav a.icon {
   .bg-img1:before {
         background-image: url(../images/main-bg.webp);
   }
-  .bg-img2::before {
-        background-image: url('https://res.cloudinary.com/djhkdplck/image/upload/v1491326840/icebubble-1280.jpg');
-  }
-  .bg-img3::before {
-        background-image: url('https://res.cloudinary.com/djhkdplck/image/upload/v1491326844/soap-bubbles_1280.jpg');
-  }
-  
-  h1, h2, h3 {
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-  
-  .content {
-    max-width: 50rem;
-    margin: 0 auto;
-  }
-  .solid {
-    min-height: 100vh;
-    width: 100%;
-    margin: auto;
-    border: 1px solid white;
-    background: rgba(255, 255, 255, 0.6);
-  }
-  
-  .footer {
-    background: rgba(2, 2, 2, 0.5);
-  }
-  /* ------------------------------ MAIN CONTENT PROPERTIES ------------------------------ */
-main {
-    background-color: #3600313e;
-
-}
 
 h1 {
     position: sticky;
-    top: 15vh;
+    top: 10vh;
     font-size: 5rem;
     color: #16d98e;
     background-color: #00000026;
-text-align: center;}
-
-.fade {
-
-    background-image: linear-gradient(transparent 15vh,
-            currentColor 25%,
-            currentColor 70%,
-            transparent 98%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    background-attachment: fixed;
-    padding: 20vh 20px 0 20px;
+    text-align: center;
 }
-/* #abilities .fade {
-    padding-top: 20vh;
-} */
 
+.text {
+    position: relative;
+top: 10vh;
+margin-bottom: 10vh;
+}
 .text * {
-    color: transparent;
+    color: white;
     padding: 30px;
     text-justify: auto;
 }
@@ -179,5 +137,59 @@ text-align: center;}
 .text p {
     font-size: 1.4rem;
     border-bottom: thin solid #ffffff;
+}
 
+/* ------------------------------ COLLAPSIBLE BATTLE TACTICS BUTTON ------------------------------ */
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+    background-color: #4909595c;
+    color: #ffffff;
+    position: relative;
+    cursor: pointer;
+    width: 90%;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 5rem;
+    margin: 10vh 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.collapsible:hover {
+    background-color: #490959;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    font-size: 2.5rem;
+}
+
+.collapsible:after {
+    content: '\02795';
+    /* Unicode character for "plus" sign (+) */
+    color: white;
+    position: absolute;
+    top: 25%;
+right: 0;
+    font-size: 4rem;
+}
+
+.active:after {
+    content: "\2796";
+    /* Unicode character for "minus" sign (-) */
+}
+
+.content ul {
+    background-color: #00000074;
+}
+.content li {
+    padding: 20px;
 }
