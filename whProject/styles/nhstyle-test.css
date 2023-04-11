@@ -3,36 +3,90 @@
   }
   
   body {
-    font-family: "source sans pro";
-    font-weight: 400;
+    font-family: 'Denk One', sans-serif;
     color: #fdfdfd;
   }
   body > section >.footer {
     overflow: hidden;
   }
   
-  nav {
+/* ------------------------------ NAVIGATION BAR ------------------------------ */
+nav {
+    background-color: rgba(36, 0, 54, 0.803);
     position: fixed;
-    top: 0;
-    left: 0;
-    height: 70px;
     width: 100%;
-    background-color: silver;
-    z-index: 999;
-    text-align: center;
-    font-size: 2em;
-    opacity: 0.8;
-  }
+    z-index: 10;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+nav #phases {
+    display: none;
+}
+
+/* Style navigation menu links */
+nav #phases a {
+    color: rgb(22, 217, 142);
+    font-family: 'Aclonica', sans-serif;
+    padding: 18px;
+    text-decoration: none;
+    display: block;
+    font-size: 3.5rem;
+}
+
+/* Style the hamburger menu */
+nav a.icon {
+    background: #000;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 80px;
+    height: 70px;
+}
+
+#hamburger {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 60px;
+    height: 10px;
+    background-color: #16d98e;
+    margin: 10px 10px;
+    transition: 0.6s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+    transform: translate(0, 20px) rotate(45deg);
+    background-color: rgb(255, 0, 0);
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+    opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+    transform: translate(0, -20px) rotate(-45deg);
+    background-color: rgb(255, 0, 0);
+}
+
+
   
   article {
     position: relative;
     font-size: 1em;
   }
   
-  section {
+  /* section {
     height: 100vh;
     padding-top: 5em;
-  }
+  } */
   
   .bg-img::before {
     position: fixed;
@@ -50,7 +104,7 @@
   }
   
   .bg-img1:before {
-        background-image: url('https://res.cloudinary.com/djhkdplck/image/upload/v1491326836/3balls_1280.jpg');
+        background-image: url(../images/main-bg.webp);
   }
   .bg-img2::before {
         background-image: url('https://res.cloudinary.com/djhkdplck/image/upload/v1491326840/icebubble-1280.jpg');
@@ -60,8 +114,6 @@
   }
   
   h1, h2, h3 {
-    font-family: lato;
-    font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 1px;
   }
@@ -81,3 +133,51 @@
   .footer {
     background: rgba(2, 2, 2, 0.5);
   }
+  /* ------------------------------ MAIN CONTENT PROPERTIES ------------------------------ */
+main {
+    background-color: #3600313e;
+
+}
+
+h1 {
+    position: sticky;
+    top: 15vh;
+    font-size: 5rem;
+    color: #16d98e;
+    background-color: #00000026;
+text-align: center;}
+
+.fade {
+
+    background-image: linear-gradient(transparent 15vh,
+            currentColor 25%,
+            currentColor 70%,
+            transparent 98%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-attachment: fixed;
+    padding: 20vh 20px 0 20px;
+}
+/* #abilities .fade {
+    padding-top: 20vh;
+} */
+
+.text * {
+    color: transparent;
+    padding: 30px;
+    text-justify: auto;
+}
+
+.text h4 {
+    font-size: 2.5rem;
+}
+
+.text em {
+    font-size: .8rem;
+}
+
+.text p {
+    font-size: 1.4rem;
+    border-bottom: thin solid #ffffff;
+
+}
