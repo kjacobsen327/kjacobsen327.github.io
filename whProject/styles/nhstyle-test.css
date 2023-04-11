@@ -7,13 +7,14 @@
     color: #fdfdfd;
     margin: 0;
   }
-.dimmer {
+
+/* .dimmer {
     background-color: #0000002b;
     position: absolute;    
     top: 0;
     width: 100%;
     
-}
+} */
   
 /* ------------------------------ NAVIGATION BAR ------------------------------ */
 nav {
