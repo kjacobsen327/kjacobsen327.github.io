@@ -14,13 +14,116 @@
 
 </head>
 
-<body>
-    <nav>Nav to nowhere</nav>
+<body class="bg-img bg-img1">
+    <nav>
+        <!-- Navigation links (hidden by default) -->
+        <div id="phases">
+            <a href="#abilities" onclick="toggle_nav(); open_close()">Army Abilities</a>
+            <a href="#battle-tactics" onclick="toggle_nav(); open_close()">Battle Tactics</a>
+            <a href="#hero-phase" onclick="toggle_nav(); open_close()">Hero Phase</a>
+        </div>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="icon" onclick="toggle_nav()">
+            <div id="hamburger" onclick="open_close()">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </a>
+    </nav>
     <article>
 
-        <section class="bg-img bg-img1">
-            <div class="content">
-                <h1>Fixed backgrounds on a mobile browser</h1>
+        <section >
+            <div class="main">
+                <main>
+                    <section id="abilities">
+                        <h1>NIGHTHAUNT ABILITIES</h1>
+            
+                        <div class="text fade">
+                            <h4>Aura of Dread:</h4>
+                            <em>The very existence of the Nighthaunt is a stark reminder of the terrible fate that awaits the
+                                living.</em>
+                            <p>Enemy units are terrified while they are within 3" of any friendly NIGHTHAUNT units. While a unit is
+                                terrified, it cannot issue or receive the Inspiring Presence command. This ability has no effect on
+                                NIGHTHAUNT units.
+                            </p>
+            
+                            <h4>Ethereal:</h4>
+                                <em>Nighthaunt spirits are nigh on impossible to land a blow upon and can pass through the corporeal
+                                    at will.</em>
+                            <p>Friendly NIGHTHAUNT units have a ward of 6+. In addition, friendly NIGHTHAUNT units can retreat and
+                                still charge in the same turn. Ignore modifiers (positive and negative) to save rolls for attacks
+                                that target friendly NIGHTHAUNT units.
+                            </p>
+                            <h4>Vanishing Phantasms:</h4>
+                                <em>The Nighthaunt appear and disappear from sight to torment their prey.</em>
+                            <p>At the end of deployment, before determining control of objectives, you can remove up to 3 friendly
+                                NIGHTHAUNT units from the battlefield and place them to one side to be set up in ambush as reserve
+                                units. At the end of your movement phase, you can set up 1 or more of the reserve units in ambush on
+                                the battlefield, more than 9" from all enemy units.
+                            </p>
+                        </div>
+                    </section>
+            
+                    <button id="battle-tactics" type="button" class="collapsible">Universal<br>Battle Tactics:</button>
+                    <div class="content">
+                        <ul>
+                            <li><b>Gaining Momentum:</b> Pick 1 enemy unit. Destroy that unit this turn and control more
+                                objectives than your opponent at the end of this turn.</li>
+                            <li><b>An Eye for an Eye:</b> If 1 or more friendly units were destroyed in the previous turn,
+                                destroy 1 or more enemy units this turn.</li>
+                            <li><b>Desecrate their Lands:</b> Pick 1 terrain feature or faction terrain feature that is
+                                partially or wholly within enemy territory. Control that terrain feature at the end of this
+                                turn.</li>
+                            <li><b>This One's Mine:</b> Pick 1 enemy unit on the battlefield. Destroy that unit this turn by
+                                an attack made by your general.</li>
+                            <li><b>A Matter of Honour:</b> Destroy 1 enemy GALLETIAN CHAMPION or Sworn Bodyguard unit with a
+                                friendly GALLETIAN CHAMPION or Sworn Bodyguard unit.</li>
+                            <li><b>Lead the Assault:</b> 2 objectives in enemy territory you control are each contested by a
+                                friendly GALLETIAN CHAMPION.</li>
+                            <li><b>United Offence:</b> Pick 1 objective controlled by your opponent. Control that objective
+                                with 2 or more friendly GALLETIAN CHAMPIONS contesting it.</li>
+                            <li><b>Cunning Manoeuvre:</b> Pick 1 friendly GALLETIAN CHAMPION that is more than 3" from all
+                                enemy units. That GALLETIAN CHAMPION must end the turn more than 3" from all enemy units and
+                                contest an objective you control wholly outside your territory.</li>
+                        </ul>
+                    </div>
+                    <section id="hero-phase">
+                        <h1>HERO PHASE</h1>
+            
+                        <div class="text fade">
+                            <h4>Aura of Dread</h4>
+                            <p>
+                                <em>The very existence of the Nighthaunt is a stark reminder of the terrible fate that awaits the
+                                    living.</em>
+                            </p>
+                            <p>Enemy units are terrified while they are within 3" of any friendly NIGHTHAUNT units. While a unit is
+                                terrified, it cannot issue or receive the Inspiring Presence command. This ability has no effect on
+                                NIGHTHAUNT units.
+                            </p>
+            
+                            <h4>Ethereal</h4>
+                            <p>
+                                <em>Nighthaunt spirits are nigh on impossible to land a blow upon and can pass through the corporeal
+                                    at will.</em>
+                            </p>
+                            <p>Friendly NIGHTHAUNT units have a ward of 6+. In addition, friendly NIGHTHAUNT units can retreat and
+                                still charge in the same turn. Ignore modifiers (positive and negative) to save rolls for attacks
+                                that target friendly NIGHTHAUNT units.
+                            </p>
+                            <h4>Vanishing Phantasms</h4>
+                            <p>
+                                <em>The Nighthaunt appear and disappear from sight to torment their prey.</em>
+                            </p>
+                            <p>At the end of deployment, before determining control of objectives, you can remove up to 3 friendly
+                                NIGHTHAUNT units from the battlefield and place them to one side to be set up in ambush as reserve
+                                units. At the end of your movement phase, you can set up 1 or more of the reserve units in ambush on
+                                the battlefield, more than 9" from all enemy units.</p>
+                        </div>
+                    </section>
+            
+                </main>
+            
             </div>
         </section>
 
@@ -105,7 +208,38 @@
                     }
                 }
             }
-        } // removeBg()</script>
+        } // removeBg()
+        
+                // Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon 
+                function toggle_nav() {
+            var x = document.getElementById("phases");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+        function open_close() {
+            var element = document.getElementById("hamburger");
+            element.classList.toggle("change");
+        }
+
+        // Battle Tactics buttons script 
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+</script>
 </body>
 
 </html>
