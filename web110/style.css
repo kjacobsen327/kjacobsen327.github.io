@@ -1,11 +1,37 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
 body {
-    background-color: rgb(255, 241, 219);
+    background-color: #ffdfb4;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+header {
+
+    background-color: #54a884;
+    border-bottom: 2px solid #000;
+    padding: 20px;
 }
 h1 {
     text-align: center;
-    border-bottom: 2px solid #000;
-padding: 18px;}
+}
+
+h2 {
+    text-align: center;
+    padding: 20px;
+}
 p {
     font-size: 18px;
 }
+
+section p {
+    padding: 0 20px;
+}
+
+img, audio, iframe {
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }
