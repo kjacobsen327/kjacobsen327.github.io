@@ -1,21 +1,14 @@
 * {
     box-sizing: border-box;
-  }
-  
-  body {
+}
+
+body {
     font-family: 'Denk One', sans-serif;
     color: #fdfdfd;
     margin: 0;
-  }
+}
 
-/* .dimmer {
-    background-color: #0000002b;
-    position: absolute;    
-    top: 0;
-    width: 100%;
-    
-} */
-  
+
 /* ------------------------------ NAVIGATION BAR ------------------------------ */
 nav {
     background-color: rgba(36, 0, 54, 0.803);
@@ -85,60 +78,60 @@ nav a.icon {
 
 /* ------------------------------ MAIN CONTENT PROPERTIES ------------------------------ */
 
-  main {
+main {
     position: relative;
-  }
-  .bg-img::before {
+}
+
+.bg-img::before {
+    background-image: url(../images/main-bg.webp);
     position: fixed;
     content: ' ';
     display: block;
     width: 100%;
-    min-height: 100vh;  
+    min-height: 100%;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     background-position: center;
     background-size: cover;
-    z-index: -10; 
-  }
-  
-  .bg-img1:before {
-        background-image: url(../images/main-bg.webp);
-  }
+    z-index: -10;
+}
 
 h1 {
     position: sticky;
-    top: 10vh;
+    top: 0;
+    margin-top: 0;
     font-size: 5rem;
     color: #16d98e;
-    background-color: #00000026;
+    background: linear-gradient(to right, transparent 5%, #000 50%, transparent 95%);
     text-align: center;
+    z-index: 10;
 }
 
 .text {
     position: relative;
-top: 10vh;
-margin-bottom: 10vh;
-}
+    margin: 5vh 5vw;}
+
 .text * {
-    color: white;
-    padding: 30px;
+    color: #fff;
     text-justify: auto;
 }
 
 .text h4 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
 }
 
 .text em {
-    font-size: .8rem;
+    font-size: .9rem;
 }
 
 .text p {
-    font-size: 1.4rem;
-    border-bottom: thin solid #ffffff;
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-bottom: 2px solid #ffffff;
 }
+
 
 /* ------------------------------ COLLAPSIBLE BATTLE TACTICS BUTTON ------------------------------ */
 
@@ -152,7 +145,7 @@ margin-bottom: 10vh;
     border-radius: 30px;
     text-align: center;
     font-size: 5rem;
-    margin: 10vh 0;
+    margin: 4vh 0;
     left: 50%;
     transform: translateX(-50%);
 
@@ -174,13 +167,13 @@ margin-bottom: 10vh;
 }
 
 .collapsible:after {
-    content: '\02795';
+    content: '\021E9';
     /* Unicode character for "plus" sign (+) */
     color: white;
     position: absolute;
-    top: 25%;
-right: 0;
-    font-size: 4rem;
+    top: 0;
+    right: 20px;
+    font-size: 9.5rem;
 }
 
 .active:after {
@@ -191,6 +184,7 @@ right: 0;
 .content ul {
     background-color: #00000074;
 }
+
 .content li {
     padding: 20px;
 }
