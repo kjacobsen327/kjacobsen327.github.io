@@ -8,10 +8,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Denk+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Stylish&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles/nhstyle-test.css">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 
 </head>
 
@@ -38,7 +37,7 @@
             <h1>NIGHTHAUNT ABILITIES</h1>
 
             <div class="text">
-                <h4>Aura of Dread:</h4>
+                <h3>Aura of Dread:</h3>
                 <em>The very existence of the Nighthaunt is a stark reminder of the terrible fate that awaits the
                     living.</em>
                 <p>Enemy units are terrified while they are within 3" of any friendly NIGHTHAUNT units. While a unit
@@ -48,7 +47,7 @@
                     NIGHTHAUNT units.
                 </p>
 
-                <h4>Ethereal:</h4>
+                <h3>Ethereal:</h3>
                 <em>Nighthaunt spirits are nigh on impossible to land a blow upon and can pass through the corporeal
                     at will.</em>
                 <p>Friendly NIGHTHAUNT units have a ward of 6+.
@@ -58,7 +57,7 @@
                     attacks that target friendly NIGHTHAUNT units.
                 </p>
 
-                <h4>Vanishing Phantasms:</h4>
+                <h3>Vanishing Phantasms:</h3>
                 <em>The Nighthaunt appear and disappear from sight to torment their prey.</em>
                 <p>At the end of deployment, before determining control of objectives, you can remove up to 3
                     friendly NIGHTHAUNT units from the battlefield and place them to one side to be set up in ambush as
@@ -69,9 +68,34 @@
         </section>
 
 
-        <button id="battle-tactics" type="button" class="collapsible">Universal<br>Battle Tactics:
-        </button>
+        <div id="battle-tactics" class="btn">Battle Tactics:</div>
         <div class="content">
+            <section>
+                <h2>UNIVERSAL BATTLE TACTICS</h2>
+                <ul>
+                    <li><b>Gaining Momentum:</b> Pick 1 enemy unit. Destroy that unit this turn and control more
+                        objectives than your opponent at the end of this turn.</li>
+                    <li><b>An Eye for an Eye:</b> If 1 or more friendly units were destroyed in the previous turn,
+                        destroy 1 or more enemy units this turn.</li>
+                    <li><b>Desecrate their Lands:</b> Pick 1 terrain feature or faction terrain feature that is
+                        partially or wholly within enemy territory. Control that terrain feature at the end of this
+                        turn.</li>
+                    <li><b>This One's Mine:</b> Pick 1 enemy unit on the battlefield. Destroy that unit this turn by
+                        an attack made by your general.</li>
+                    <li><b>A Matter of Honour:</b> Destroy 1 enemy GALLETIAN CHAMPION or Sworn Bodyguard unit with a
+                        friendly GALLETIAN CHAMPION or Sworn Bodyguard unit.</li>
+                    <li><b>Lead the Assault:</b> 2 objectives in enemy territory you control are each contested by a
+                        friendly GALLETIAN CHAMPION.</li>
+                    <li><b>United Offence:</b> Pick 1 objective controlled by your opponent. Control that objective
+                        with 2 or more friendly GALLETIAN CHAMPIONS contesting it.</li>
+                    <li><b>Cunning Manoeuvre:</b> Pick 1 friendly GALLETIAN CHAMPION that is more than 3" from all
+                        enemy units. That GALLETIAN CHAMPION must end the turn more than 3" from all enemy units and
+                        contest an objective you control wholly outside your territory.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>NIGHTHAUNT BATTLE TACTICS</h2>
             <ul>
                 <li><b>Gaining Momentum:</b> Pick 1 enemy unit. Destroy that unit this turn and control more
                     objectives than your opponent at the end of this turn.</li>
@@ -155,7 +179,7 @@
         }
 
         // -------------------- BATTLE TACTICS BUTTON --------------------
-        var coll = document.getElementsByClassName("collapsible");
+        var coll = document.getElementsByClassName("btn");
         var i;
 
         for (i = 0; i < coll.length; i++) {
