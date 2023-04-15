@@ -6,7 +6,6 @@ body {
     font-family: 'Stylish', sans-serif;
     color: #fdfdfd;
     margin: 0;
-    height: 100vh;
 }
 
 
@@ -89,7 +88,7 @@ main {
     content: ' ';
     display: block;
     width: 100%;
-    min-height: 100%;
+    min-height: 100vh;
     top: 0;
     bottom: 0;
     left: 0;
@@ -103,7 +102,7 @@ h1 {
     position: sticky;
     top: 0;
     margin-top: 0;
-    font-size: 4.8rem;
+    font-size: 4.5rem;
     color: #16d98e;
     background: linear-gradient(to right, transparent 5%, #000 50%, transparent 95%);
     text-align: center;
@@ -120,16 +119,16 @@ h1 {
 }
 
 .text h3 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     text-shadow: 3px 3px #000;
 }
 
 .text em {
-    font-size: .95rem;
+    font-size: 1.1rem;
 }
 
 .text p {
-    font-size: 1.7rem;
+    font-size: 2rem;
     padding: 1rem 1rem 2rem 3rem;
     border-bottom: 2px solid #ffffff;
 }
