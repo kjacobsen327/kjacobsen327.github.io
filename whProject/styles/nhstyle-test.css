@@ -117,18 +117,22 @@ h1 {
     color: #fff;
     text-justify: auto;
 }
-
+.text h2 {
+    font-size: 4rem;
+    text-shadow: 4px 4px #000;
+    text-align: center;
+}
 .text h3 {
     font-size: 3.5rem;
     text-shadow: 3px 3px #000;
 }
 
 .text em {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
 }
 
 .text p {
-    font-size: 2rem;
+    font-size: 2.2rem;
     padding: 1rem 1rem 2rem 3rem;
     border-bottom: 2px solid #ffffff;
 }
@@ -140,7 +144,6 @@ h1 {
 .btn {
     background-color: #4909595c;
     color: #ffffff;
-    position: relative;
     cursor: pointer;
     width: 90%;
     border-radius: 30px;
@@ -154,21 +157,21 @@ h1 {
 /* Arrows for collapsible button */
 .btn::before,
 .btn::after {
-    content: '\02B9F';
+    content: '↓';
     color: rgba(255, 255, 255, 0.845);
     position: absolute;
 }
 .btn::before {
-    left: 20px;
+    left: 10vw;
 }
 
 .btn::after {
-    right: 20px;
+    right: 10vw;
 }
 
 .active::before,
 .active::after {
-    content: "\02B9D";
+    content: "↑";
 }
 
 .content {
@@ -190,6 +193,7 @@ h1 {
 
 .content h2 {
     font-size: 4rem;
+    background: linear-gradient(to right, transparent 5%, #000 50%, transparent 95%);
     text-align: center;
     position: sticky;
     top: 0;
