@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <!-- 
 Kevin Jacobsen
-Web150
+Web150, ASN 5
+Business Name: Salon Saloon
  -->
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Salon Saloon">
+    <meta name="description" content="Salon Saloon: come in for a snip and a sip! Look your best in the west!">
     <title>Salon Saloon | Home</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,137 +20,168 @@ Web150
 </head>
 
 <body>
-    <header>
-        <!-- nav bar that is a flex container holding links for services, drinks, and contact us  -->
-        <nav>
-            <div class="nav_logo">
-                <a href="index.html" alt="link to home page">
-                    <img src="images/nav_logo.png">
-                </a>
-            </div>
-            <div>
-                <a href="services.html" alt="link to services web page">
-                    SERVICES
-                </a>
-            </div>
-            <div>
-                <a href="drink_menu.html" alt="link to drink menu web page">
-                    DRINKS
-                </a>
-            </div>
-            <div>
-                <a href="products.html" alt="link to products web page">
-                    PRODUCTS
-                </a>
-            </div>
-            <div>
-                <a href="contact.html" alt="link to contact web page">
-                    CONTACT
-                </a>
-            </div>
-        </nav>
-    </header>
+    <!-- nav bar that is a flex container holding links for services, drinks, and contact us  -->
+    <nav>
+        <!-- small logo of a cowboy hat that is also the link to the home page -->
+        <div class="nav_logo current_page">
+            <a href="index.html" class="current_page">
+                <img src="images/nav_logo.png"
+                    alt="Small logo of a cowboy hat for Salon Saloon that links to the home page">
+            </a>
+        </div>
+        <a href="#">
+            SERVICES
+        </a>
+        <!-- this will end up linking to my services/products page for the final product -->
+        <a href="drink_menu.html">
+            DRINKS
+        </a>
+
+        <a href="#">
+            PRODUCTS
+        </a>
+
+        <!-- this will end up linking to my contact page for the final project -->
+        <a href="contact.html">
+            CONTACT
+        </a>
+    </nav>
 
     <main>
-        <div class="hero_section">
-            <div class="logo_area">
-                <img class="logo" src="images/ss_logo.png">
+        <!-- this is the main hero section of the page, a flexbox container holding the logo as the first flex item,
+        and an arched container holding an image, slogan, and buttons underneath -->
+        <header class="hero_section">
 
+            <!-- the first flex item containing the logo -->
+            <div class="logo_area">
+                <img class="logo" src="images/ss_logo.png"
+                    alt="Salon Saloon: Saddle up for a snip and a sip! Voted number one salon and saloon in the west!">
             </div>
 
+            <!-- the 2nd flex item containing the arched box -->
             <div class="cta_area">
+
                 <!-- container with arched top with image of people in background and text in front -->
                 <div class="cta_container">
                     <div class="container_text">
-                        <h1>SALON SALOON
-                        </h1>
-                        <h2>WHERE WHISKEY FLOWS &amp; BEAUTY GLOWS
-                        </h2>
+                        <!-- <h1>WHERE WHISKEY FLOWS &amp; BEAUTY GLOWS</h1> -->
+                        <h1>Schedule your appointment or check out our menu</h1>
                     </div>
 
                 </div>
-                <!-- this is a flexbox container containing two buttons to the services and drink menu pages -->
+                <!-- this is a flexbox container underneath the arched box containing two buttons to the services and drink menu pages -->
                 <div class="btn_container">
-                    <a class="btn" href="services.html" alt="link to services web page">SNIP IT</a>
-                    <a class="btn" href="drink_menu.html" alt="link to drink menu web page">SIP IT</a>
+                    <a class="btn" href="#.html">SNIP IT</a>
+                    <a class="btn" href="drink_menu.html">SIP IT</a>
                 </div>
             </div>
-        </div>
+        </header>
         <!-- end hero section -->
 
-        <h3>THE WESTERN BAR THAT'S GOT THE STYLE</h3>
 
-        <!-- this is the about us section for the salon with an image to the right for desktop view, and the image underneath for tablet / mobile view -->
-        <div class="about_us_section">
+        <!-- this is a section with an about us section for both the salon and saloon with an image underneath
+        and circles describing some of the offerings the buisiness has -->
 
-            <div class="salon">
-                <h4>OUR FULL SERVICE SALON:</h4>
-                <div class="description">
+        <!--  I changed this from my original sketch of having stylists here so I could add more text -->
+
+        <section class="about_us_sections">
+            <h2>THE WESTERN BAR THAT'S GOT THE STYLE!</h2>
+            <!-- this is the about us section for the salon -->
+            <section class="about_salon">
+                <h3>OUR FULL SERVICE SALON</h3>
+                <div class="about_us_text_container">
                     <p>Our salon is as striking as the desert sunset and our talented hair stylists are ready
                         to give you the rootin' tootin' look you've been dreaming of. Our team of experts is
                         dedicated to making you look your best, whether it's a classic cut or a wild-western
                         transformation.
                     </p>
                 </div>
-                <div class="image_container">
-                    <div>
-                        <p>FULL LENGTH EXTENSIONS</p>
-                    </div>
-                    <div>
-                        <p>HAIR COLORING</p>
-                    </div>
-                    <div>
-                        <p>HAIR CUTS &amp; BLOW OUTS</p>
-                    </div>
-                    <div>
-                        <p>SPECIAL OCCASIONS</p>
-                    </div>
+                <!-- flex container underneath the text holding an image of the salon with green circles as flex items -->
+                <div class="about_us_image_container">
+                    <p>FULL LENGTH EXTENSIONS</p>
+                    <p>HAIR COLORING</p>
+                    <p>HAIR CUTS &amp; BLOW OUTS</p>
+                    <p>SPECIAL OCCASIONS</p>
                 </div>
-            </div>
-            <h3>KICK OFF YOUR BOOTS AND STAY A WHILE!</h3>
-            <h4>OUR MODERN SALOON:</h4>
-            <!-- this is the about us section for the saloon with an image to the left for desktop view, and the image underneath for tablet / mobile view -->
-            <div class="saloon">
-                <div class="description">
+            </section>
+
+            <h2>KICK OFF YOUR BOOTS AND STAY A WHILE!</h2>
+
+
+            <!-- this is the about us section for the saloon -->
+            <section class="about_saloon">
+                <h3>OUR MODERN SALOON</h3>
+                <div class="about_us_text_container">
                     <p>Our saloon offers a variety of unique, southwest-inspired cocktails to enjoy
                         during or after your salon experience. Whether you want to sip while getting styled or come
                         back for a drink with friends, our saloon is the perfect spot to enjoy a fun and relaxed
                         atmosphere!
                     </p>
                 </div>
-                <div class="image_container">
-                    <div>
-                        <p>UNIQUE HANDCRAFTED COCKTAILS</p>
-                    </div>
-                    <div>
-                        <p>CRAFT BEERS FROM LOCAL BREWERIES</p>
-                    </div>
-                    <div>
-                        <p>OVER 20 VARIETIES OF WHISKEY</p>
-                    </div>
-                    <div>
-                        <p>LIVE MUSIC WEEKLY</p>
-                    </div>
+
+                <!-- flex container underneath the text holding an image of the salon with pink circles as flex items -->
+                <div class="about_us_image_container">
+                    <p>UNIQUE HANDCRAFTED COCKTAILS</p>
+                    <p>CRAFT BEERS FROM LOCAL BREWERIES</p>
+                    <p>OVER 20 VARIETIES OF WHISKEY</p>
+                    <p>LIVE MUSIC WEEKLY</p>
                 </div>
-            </div>
+            </section>
+        </section>
+        <!-- end about us section -->
+
+        <!-- Stylists and Merch section -->
+        <!-- This section was not in my sketches but I wanted to add it to get some more practice
+            It is a flexbox container for the stylists and merch sections
+            each
+            the whole section also holds the background image of the desert -->
+        <div class="stylists_and_merch">
+            <a class="stylist_image" href="#" title="Meet our stylists">
+                <p>MEET OUR STYLISTS</p>
+            </a>
+            <a class="merch_image" href="#" title="Shop our merch">
+                <p>SHOP OUR MERCH</p>
+            </a>
         </div>
     </main>
+    <!-- end main section -->
 
-    <footer class="reviews">
-        <div>123-456-7890</div>
-        <div>123 Saloon Ln<br>Tombstone, AZ 85638</div>
 
-        <div class="social_media_icons">
-            <i class="fa-brands fa-facebook"></i> <!-- Instagram Icon -->
-            <i class="fa-brands fa-instagram"></i>
+    <!-- footer is a flexbox container containing 3 flex items -->
+    <footer>
+
+        <!-- this is a flex container so the phone icon and phone number line up nicely -->
+        <div class="footer_flex_item phone_number">
+            <i class="icon fa-solid fa-square-phone"></i>
+            <div>123-456-7890</div>
+        </div>
+
+        <!-- flex item #2 and flex container so the address looks nicer split into two lines of text-->
+        <div class="footer_flex_item address">
+            <div>123 Saloon Ln</div>
+            <div>Tombstone AZ 85638</div>
+        </div>
+
+        <!-- social media icon links-->
+        <div class="footer_flex_item sm_icons">
+            <a href="https://www.facebook.com/" target="_blank" title="Visit our Facebook page!">
+                <i class="icon fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" title="Check out our Instagram!">
+                <i class="icon fa-brands fa-instagram"></i>
+            </a>
         </div>
     </footer>
 
+    <!-- background behind the footer -->
+    <div class="footer-background"></div>
+
+    <!-- Font Awesome script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.js"
+        integrity="sha512-jdM4CX13QmorrIpE3U+2hOxEO+j6hy9nZFUMIIC8LvNS699p7mxonP7z//UnPGs3Vkn299GKD9FWN60m1tZGxg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+        </script>
+
 </body>
-<!-- Font Awesome Link -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.js"
-    integrity="sha512-jdM4CX13QmorrIpE3U+2hOxEO+j6hy9nZFUMIIC8LvNS699p7mxonP7z//UnPGs3Vkn299GKD9FWN60m1tZGxg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer">
-    </script>
 
 </html>
