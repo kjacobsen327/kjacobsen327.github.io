@@ -378,6 +378,7 @@ h2 {
 
 }
 
+/* flex item holding the drink image, drink text, and header */
 .drink_item {
     width: 45%;
     max-width: 800px;
@@ -388,6 +389,7 @@ h2 {
     position: relative;
 }
 
+/* drink name */
 .drink_item h3 {
     font-family: 'Hammersmith One', sans-serif;
     background-color: #fcbaa7;
@@ -406,16 +408,17 @@ h2 {
     box-shadow: -6px 5px #e09485;
 }
 
+/* drink price */
 .drink_item div.price {
+    color: #4b6468;
     font-size: 1.4em;
     position: absolute;
     bottom: -25px;
-    right: -10px;
+    right: 20px;
     padding: 5px 5%;
-    background-color: #fcbaa7;
+    background-color: #ffe8c8;
     border-radius: 10px;
-    box-shadow: -6px 5px #e09485;
-
+    box-shadow: -4px 4px #e09485;
 }
 
 
@@ -445,6 +448,7 @@ h2 {
     border-bottom-right-radius: 20px;
 }
 
+/* blue background behind the text container and the drink image */
 .drink_bg {
     background-color: #93c0b2;
     position: absolute;
@@ -525,7 +529,7 @@ div.footer-background {
 
 /* ------------------------------ MEDIA QUERY SETTINGS ------------------------------ */
 
-/* tablet settings  */
+/* tablet settings  for home page*/
 @media screen and (max-width: 1000px) {
 
     .hero_section .logo_area,
@@ -564,7 +568,7 @@ div.footer-background {
     }
 }
 
-/* mobile device settings */
+/* mobile device settings for home page */
 
 @media screen and (max-width: 600px) {
 
@@ -610,7 +614,7 @@ div.footer-background {
 }
 
 
-
+/* media query settings to make the drink menu items responsive */
 /* 2xl */
 @media (max-width: 1536px) {
     .container {
