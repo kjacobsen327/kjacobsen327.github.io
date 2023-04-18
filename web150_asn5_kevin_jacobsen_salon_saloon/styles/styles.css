@@ -670,6 +670,10 @@ div.footer-background {
         font-size: .51em;
         height: 95px;
     }
+    .drink_item_text_container h3 {
+        width: 60%;
+        font-size: 1.22em;
+    }
 
     .drink_item_image_container img {
         height: 107px;
