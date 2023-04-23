@@ -1,0 +1,646 @@
+/*
+Kevin Jacobsen
+Web150, ASN 5
+Business Name: Salon Saloon
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /* responsive font size setting from class: max font size is 19px */
+    font-size: calc(16px + (19 - 16) * ((100vw - 400px) / (800 - 400)));
+
+    /* default font color for text */
+    color: #fff8ea;
+
+    background-color: #fcf3e2;
+
+    /* changed the font I chose, I felt like this one was more easily readable */
+    font-family: 'BioRhyme', serif;
+
+    /* for positioning footer at bottom, but still able to see the background image of the section before it */
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* ------------------------------ NAV BAR PROPERTIES ------------------------------ */
+
+/* flex container holding a small logo linking to the home page called "nav_logo"
+and  links to "services" "drinks" "products" and "contact"*/
+nav {
+    /* nav bar layout settings */
+    font-family: 'Hammersmith One', sans-serif;
+    text-align: center;
+    background-color: #fcbaa7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding: 8px 20px;
+}
+
+/* properties of container holding the small hat logo */
+nav .nav_logo {
+    background-color: #fcf3e2;
+    height: 55px;
+    width: 55px;
+    min-width: 55px;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+/* set small logo image to fit into container in nav bar */
+nav .nav_logo img {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+}
+
+nav .cta {
+    background-color: #93c0b2;
+    display: flex;
+    align-items: center;
+    height: 55px;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+/* hyperlink properties for nav bar*/
+
+nav a:link,
+nav a:visited {
+    color: #fff8ea;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #e09485;
+    border-bottom: 3px solid #e09485;
+}
+
+nav a:active {
+    color: #4b6468;
+    border-bottom: solid #4b6468;
+}
+
+nav a.current_page {
+    color: #e09485;
+    border-bottom: 3px solid #e09485;
+}
+
+.nav_logo a:hover,
+.nav_logo a.current_page {
+    border-bottom: 0;
+}
+
+.nav_logo:hover,
+div.nav_logo.current_page {
+    background-color: #fff8ea;
+    box-shadow: 0 0 10px 10px #e09485;
+}
+
+
+/* ------------------------------ HOME PAGE MAIN PROPERTIES ------------------------------ */
+
+/* hero section that is a flex item holding two flex items: "logo_area" and "cta_area" */
+.hero_section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    background-image: url(../images/bg_home.png);
+    background-size: cover;
+    background-position: center 55%;
+}
+
+/* set size for each of the two flexbox items*/
+.hero_section .logo_area,
+.hero_section .arch_area {
+    height: 500px;
+    width: 50%;
+    min-width: 300px;
+    padding: 10px;
+}
+
+/* properties for logo image */
+.logo {
+    display: block;
+    max-height: 400px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+}
+
+.arch_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 65%;
+    max-width: 400px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.arch_container * {
+    width: 100%;
+    margin: 0;
+}
+
+/* settings for top of arch with image of people in background and text in front  */
+.arch_img {
+    height: 65%;
+    background-image: url(../images/western_ppl.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 0;
+    border: thick solid #fcf3e2;
+    border-radius: 50% 50% 0 0;
+}
+
+/* properties for text in front of people image */
+.arch_container h1 {
+    font-size: .95em;
+    text-align: center;
+    background-color: #fcf3e261;
+    padding: 4px 8px;
+}
+
+/* this is a flexbox container holding the "snip it" and "sip it" div buttons */
+.btn_container {
+    font-family: 'Hammersmith One', sans-serif;
+    background-color: #fcf3e261;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 8px 8px 8px;
+    border-radius: 0 0 10px 10px;
+}
+
+/* style properties for "snip it" and "sip it" buttons */
+.btn_container .btn {
+    font-size: 1.2em;
+    background-color: #fcf3e2c7;
+    width: 45%;
+    text-align: center;
+    border: thick solid #e09485;
+    border-radius: 10px;
+    padding: 8px;
+}
+
+.book_it.btn_container {
+    background-color: transparent;
+    padding: 8px 0;
+
+}
+
+.book_it .btn {
+    width: 100%;
+    border: none;
+    margin-top: 8px;
+    box-shadow: 0 0 8px 8px #e094859b;
+
+}
+
+/* hyperlink settings for cta buttons */
+.btn:link,
+.btn:visited {
+    color: #e09485;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #fff8ea;
+}
+
+.btn:active {
+    color: #fcf3e2;
+    background-color: #e09485;
+}
+
+/* ---------- end of hero section ---------- */
+
+h2 {
+    color: #e09485;
+    font-family: 'Hammersmith One', sans-serif;
+    text-align: center;
+    font-size: 1.8em;
+    margin: 16px 35px 0 35px;
+    ;
+}
+
+/* heading that floats in center a little bit above the paragraph content */
+.about_us_sections h3 {
+    font-family: 'Hammersmith One', sans-serif;
+    background-color: #fcbaa7;
+    position: relative;
+    top: 16px;
+    left: 5px;
+    right: 0;
+    margin: auto;
+    width: fit-content;
+    padding: 10px 10px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: -8px 6px #e09485;
+}
+
+.about_salon,
+.about_saloon {
+    margin: 0 35px;
+    border-radius: 10px;
+}
+
+.about_us_text_container {
+    background-color: #93c0b2;
+    height: fit-content;
+    padding: 10px 15%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    text-align: center;
+}
+
+/* flexbox container of image that holds 4 circles */
+.about_us_image_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 400px;
+    background-size: cover;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+/* background image of salon for "about_salon" flexbox container */
+.about_salon .about_us_image_container {
+    background-image: url(../images/salon_img.png);
+    background-position: center 60%;
+}
+
+/* background image of bar for "about_saloon" flexbox container */
+.about_saloon .about_us_image_container {
+    background-image: url(../images/saloon_img.png);
+    background-position: center 70%;
+}
+
+/* these are the circle flexbox items */
+.about_us_image_container p {
+    color: #fff;
+    font-family: 'Hammersmith One', sans-serif;
+    background-color: #93c0b2c6;
+    height: 8.2em;
+    width: 8.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 6px solid #a5d2c3;
+    border-radius: 50%;
+    text-align: center;
+    text-shadow: -1.5px 1.5px #4b6468;
+}
+
+/* change the circles to a pink color for the saloon section*/
+.about_saloon .about_us_image_container p {
+    background-color: #fcb9a7b9;
+    text-shadow: -1.5px 1.5px #b77a6d;
+    border: 6px solid #fcbaa7;
+
+
+}
+
+/* --------------------  HOME PAGE STYLISTS AND MERCH SECTION -------------------- */
+
+/* flexbox container that holds the stylists and merch section with a desert background */
+.stylists_and_merch {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    height: 650px;
+    width: 100%;
+    padding: 70px 35px;
+    gap: 35px;
+}
+
+/* flex items with images set as background */
+.stylist_image,
+.merch_image {
+    background-image: url("../images/stylists.jpg");
+    height: 400px;
+    width: 50%;
+    background-size: cover;
+    background-position: top;
+    border-radius: 20px;
+    position: relative;
+}
+
+/* to change the image of the merch section */
+.merch_image {
+    background-image: url("../images/tshirts.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* settings for the text box that is under the image */
+.stylists_and_merch p {
+    font-family: 'Hammersmith One', sans-serif;
+    background-color: #93c0b2;
+    position: absolute;
+    bottom: -16px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 60%;
+    padding: 10px 10px;
+    border-radius: 10px;
+    box-shadow: -8px 6px #4b6468;
+    text-align: center;
+}
+
+/* settings for hyperlink */
+
+.stylists_and_merch a:link,
+.stylists_and_merch a:visited {
+    color: #fff;
+}
+
+.stylist_image:hover p,
+.merch_image:hover p {
+    color: #fff;
+    background-color: #a5d2c3;
+}
+
+/* settings to make the text look like the button is being pressed down */
+.stylist_image:active p,
+.merch_image:active p {
+    background-color: #93c0b2;
+    box-shadow: -6px 4px #4b6468;
+    bottom: -20px;
+}
+
+/* ------------------------------ DRINK MENU PAGE PROPERTIES ------------------------------ */
+
+body.drink_menu {
+    min-height: 100vh;
+}
+
+body.drink_menu main {
+    margin-bottom: 0;
+    padding-bottom: 100px;
+}
+
+section.drink_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px;
+}
+
+/* flex item holding the drink image, drink text, and header */
+.drink_item {
+    width: 45%;
+    max-width: 800px;
+    height: 150px;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+
+/* drink name */
+.drink_item h3 {
+    font-family: 'Hammersmith One', sans-serif;
+    background-color: #fcbaa7;
+    font-size: 1.3em;
+    width: 55%;
+    min-width: 150px;
+    position: absolute;
+    top: -25%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 8px 0;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: -6px 5px #e09485;
+}
+
+/* drink price */
+.drink_item div.price {
+    color: #4b6468;
+    font-size: 1.4em;
+    position: absolute;
+    bottom: -25px;
+    right: 20px;
+    padding: 5px 5%;
+    background-color: #ffe8c8;
+    border-radius: 10px;
+    box-shadow: -4px 4px #e09485;
+}
+
+.drink_item_image_container {
+    align-self: center;
+    z-index: 2;
+}
+
+.drink_item_image_container img {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border: thick solid #e09485;
+    border-radius: 50%;
+}
+
+.drink_item_text_container {
+    position: relative;
+    align-self: center;
+    display: flex;
+    z-index: 1;
+    background-color: #93c0b2;
+    font-size: .55em;
+    height: 120px;
+    width: 90%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+/* blue background behind the text container and the drink image */
+.drink_bg {
+    background-color: #93c0b2;
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    left: -45px;
+    height: 100%;
+    width: 100%;
+}
+
+.drink_item_text_container p {
+    align-self: center;
+    padding: 0 1em;
+}
+
+/* ------------------------------ FOOTER PROPERTIES ------------------------------ */
+footer div.footer-background {
+    position: absolute;
+    bottom: 0;
+    z-index: -10;
+    width: 100%;
+    height: 600px;
+    background-image: url(../images/desert_bg.png);
+    background-size: cover;
+    background-position: bottom;
+}
+
+footer {
+    /* for positioning footer at bottom relative to body */
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size: .7em;
+}
+
+footer .footer_flex_item {
+    width: 33.33%;
+    text-align: center;
+    padding: 8px;
+}
+
+footer .phone_number {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .address {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .icon {
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+}
+
+/* properties for footer hyperlinks - gives the icons a blue glow when hovered over, and a darker blue when clicked on */
+footer a {
+    display: inline-block;
+    z-index: 2;
+}
+
+footer a:link,
+footer a:visited {
+    color: #fff8ea;
+    text-decoration: none;
+}
+
+footer .sm_icons .icon:hover {
+    border-radius: 50%;
+    background-color: #93c0b2;
+    box-shadow: 0 0 6px 6px #93c0b2;
+}
+
+footer .sm_icons .icon:active {
+    border-radius: 50%;
+    background-color: #4b6468;
+    box-shadow: 0 0 6px 6px #4b6468;
+}
+
+/* ------------------------------ MEDIA QUERY SETTINGS ------------------------------ */
+
+/* tablet */
+@media (max-width: 1024px) {
+
+    .hero_section {
+        flex-direction: column;
+    }
+
+    .hero_section .logo_area,
+    .hero_section .arch_area {
+        width: 100%;
+    }
+
+    .hero_section .logo_area {
+        height: 250px;
+    }
+
+    .hero_section .arch_area {
+        height: 450px;
+    }
+
+    .logo {
+        max-height: 250px;
+        max-width: 90%;
+    }
+
+    .stylists_and_merch {
+        flex-direction: column;
+        align-items: center;
+        height: fit-content;
+        gap: 70px;
+        padding-bottom: 140px;
+    }
+
+    .stylist_image,
+    .merch_image {
+        width: 75%;
+        height: 350px;
+    }
+
+
+}
+
+
+/* mobile */
+@media (max-width: 640px) {
+
+    nav {
+        padding: 8px;
+        font-size: .9em;
+    }
+    .arch_container {
+        width: 90%;
+    }
+
+    .drink_container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .drink_item {
+        height: 150px;
+        width: 92%;
+    }
+
+    .drink_item_image_container img {
+        height: 150px;
+        width: 150px;
+    }
+
+    .drink_item_text_container {
+        font-size: .72em;
+        height: 130px;
+    }
+
+    .drink_item_text_container h3 {
+        width: 85%;
+        font-size: 1.24em;
+    }
+}
