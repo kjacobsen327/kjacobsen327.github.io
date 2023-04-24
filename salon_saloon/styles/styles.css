@@ -496,13 +496,6 @@ section.drink_container {
 }
 
 
-
-
-
-
-
-
-
 /* ------------------------------ CONTACT PROPERTIES ------------------------------ */
 
 .outer_container {
@@ -527,7 +520,6 @@ form .info h3 {
     font-size: 2.4em;
     align-self: center;
     text-align: center;
-
     padding-bottom: 10px;
 }
 
@@ -601,20 +593,12 @@ input.text:focus {
     justify-content: space-evenly;
 }
 
-
-/* radio button style I liked that I found online */
-/* I changed the code a little bit to make it more styled to my site */
-/* https://www.sliderrevolution.com/resources/styling-radio-buttons/ */
-.radio input {
-    display: none;
-}
-
-.radio div.button_option {
+.contact_option div.button_option {
     display: flex;
     justify-content: center;
 }
 
-.radio label {
+.contact_option label {
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -623,7 +607,14 @@ input.text:focus {
     margin: 10px;
 }
 
-.radio label:before {
+/* radio button style I liked that I found online */
+/* I changed the code a little bit to make it more styled to my site */
+/* https://www.sliderrevolution.com/resources/styling-radio-buttons/ */
+.contact_option input {
+    display: none;
+}
+
+.contact_option label:before {
     content: '';
     display: inline-block;
     height: 30px;
@@ -635,11 +626,10 @@ input.text:focus {
         background .3s ease;
 }
 
-input:checked+label:before {
+.contact_option input:checked+label:before {
     box-shadow: inset 0px 3px 0 2px #4b6468;
     background: #93c0b2;
 }
-
 /* end radio button styling */
 
 
@@ -756,13 +746,45 @@ section.booking_options {
 }
 
 
+.stylist_option_selection {
+    position: relative;
+    width: 500px;
+    height: 75px;
+    overflow: hidden;
+}
 
+.stylist_option_selection:hover {
+    overflow: visible;
+}
 
+.stylist_options {
+position: absolute;
+top: 75px;
+}
+.stylist_options input {
+display: none;
+}
+.stylist_options input + div img{
+    display: inline-block;
+}
+.stylist_options input:checked + div {
+    position: absolute;
+    top: -75px;
+}
 
+.stylist_options label {
+    display: block;
+    background-color: red;
+    width: 500px;
+}
 
+.stylist_options label img {
+    height: 75px;
+    width: 75px;
+}
 
-
-
+.stylist_options input[type="radio"]:checked {
+}
 
 /* ------------------------------ FOOTER PROPERTIES ------------------------------ */
 footer div.footer-background {
