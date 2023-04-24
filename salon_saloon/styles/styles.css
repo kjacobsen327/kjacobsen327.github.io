@@ -508,7 +508,7 @@ section.drink_container {
 form .info {
     display: flex;
     width: 100%;
-    font-size: .7em;
+    font-size: .85em;
 }
 
 form .info * {
@@ -630,6 +630,7 @@ input.text:focus {
     box-shadow: inset 0px 3px 0 2px #4b6468;
     background: #93c0b2;
 }
+
 /* end radio button styling */
 
 
@@ -691,6 +692,7 @@ section.booking_options {
 
 
 
+
 .option_top_container {
     display: flex;
     width: 50%;
@@ -726,9 +728,11 @@ section.booking_options {
 
 .option_middle_container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     width: 50%;
+    height: 80px;
     border: thin solid red;
+    position: relative;
 }
 
 .option_middle_container select {
@@ -736,7 +740,7 @@ section.booking_options {
     color: #b77a6d;
     font-size: 1.1em;
     background-color: #ffffe7;
-    width: 40%;
+    width: 50%;
     border: 0;
     border-radius: 10px;
     padding: 4px 8px;
@@ -748,42 +752,75 @@ section.booking_options {
 
 .stylist_option_selection {
     position: relative;
-    width: 500px;
-    height: 75px;
+    width: 50%;
+    height: 80px;
     overflow: hidden;
 }
 
 .stylist_option_selection:hover {
     overflow: visible;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 80px;
 }
 
 .stylist_options {
-position: absolute;
-top: 75px;
-}
-.stylist_options input {
-display: none;
-}
-.stylist_options input + div img{
-    display: inline-block;
-}
-.stylist_options input:checked + div {
     position: absolute;
-    top: -75px;
+    bottom: 80px;
+    width: 100%;
+    font-size: .8em;
+}
+
+.stylist_options input {
+    display: none;
+}
+
+.stylist_options input+div {
+    display: inline-block;
+    margin: 0;
+}
+
+.stylist_options input:checked+div {
+    position: absolute;
+    bottom: -80px;
+    width: 100%;
+    /* height: 75px; */
+    background-color: #e09485;
 }
 
 .stylist_options label {
     display: block;
     background-color: red;
-    width: 500px;
+    width: 100%;
 }
 
-.stylist_options label img {
-    height: 75px;
-    width: 75px;
+.stylist_options label:focus {
+    height: 0;
 }
 
-.stylist_options input[type="radio"]:checked {
+.stylist_options label .stylist {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.stylist div {
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    margin-left: 10px;
+}
+
+.stylist img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.stylist span {
+    margin-right: 10px;
 }
 
 /* ------------------------------ FOOTER PROPERTIES ------------------------------ */
@@ -986,6 +1023,11 @@ footer .sm_icons .icon:active {
     }
 
     div.contact_info_container .inner_container div {
+        width: 100%;
+    }
+
+    .option_top_container,
+    .option_middle_container {
         width: 100%;
     }
 }
