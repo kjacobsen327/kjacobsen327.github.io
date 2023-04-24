@@ -24,6 +24,7 @@ body {
     position: relative;
     min-height: 100vh;
     margin: 0;
+    padding-bottom: 100px;
 }
 
 /* ------------------------------ NAV BAR PROPERTIES ------------------------------ */
@@ -91,6 +92,15 @@ nav a:active {
 nav a.current_page {
     color: #e09485;
     border-bottom: 3px solid #e09485;
+}
+
+nav .cta.current_page {
+    box-shadow: 0 0 10px 10px #e09485;
+}
+
+nav .cta.current_page a {
+    color: #fcf3e2;
+    border: none;
 }
 
 .nav_logo a:hover,
@@ -324,10 +334,10 @@ h2 {
     display: flex;
     justify-content: space-evenly;
     align-items: flex-start;
-    height: 650px;
     width: 100%;
-    padding: 70px 35px;
+    padding: 70px 35px 0 35px;
     gap: 35px;
+    margin-bottom: 60px;
 }
 
 /* flex items with images set as background */
@@ -347,6 +357,7 @@ h2 {
     background-image: url("../images/tshirts.png");
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: center center;
 }
 
 /* settings for the text box that is under the image */
@@ -387,15 +398,6 @@ h2 {
 }
 
 /* ------------------------------ DRINK MENU PAGE PROPERTIES ------------------------------ */
-
-body.drink_menu {
-    min-height: 100vh;
-}
-
-body.drink_menu main {
-    margin-bottom: 0;
-    padding-bottom: 100px;
-}
 
 section.drink_container {
     display: flex;
@@ -492,6 +494,275 @@ section.drink_container {
     align-self: center;
     padding: 0 1em;
 }
+
+
+
+
+
+
+
+
+
+/* ------------------------------ CONTACT PROPERTIES ------------------------------ */
+
+.outer_container {
+    background-color: #fcbaa7;
+    margin: 0 35px 100px 35px;
+}
+
+
+/* top part of form: contact info / hours section */
+form .info {
+    display: flex;
+    width: 100%;
+    font-size: .7em;
+}
+
+form .info * {
+    margin: 0;
+}
+
+form .info h3 {
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: 2.4em;
+    align-self: center;
+    text-align: center;
+
+    padding-bottom: 10px;
+}
+
+form .info h4 {
+    font-size: 1.4em;
+}
+
+div.contact_info_container,
+div.hours_container {
+    padding: 10px;
+}
+
+div.contact_info_container {
+    width: 60%;
+    color: #fcbaa7;
+}
+
+div.contact_info_container .inner_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #fcf3e2;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+div.contact_info_container .inner_container * {
+    width: 100%;
+}
+
+div.contact_info_container .inner_container div {
+    display: flex;
+    width: 70%;
+}
+
+div.contact_info_container .inner_container div label {
+    font-family: 'Hammersmith One', sans-serif;
+    width: 100px;
+    align-self: center;
+    text-align: center;
+}
+
+div.contact_info_container input.text {
+    font-family: 'Hammersmith One', sans-serif;
+    color: #b77a6d;
+    font-size: 1.2em;
+    background-color: #ffffe7;
+    border: 0;
+    border-radius: 10px;
+    padding: 4px 8px;
+    margin: 10px;
+    outline: none;
+    text-align: center;
+}
+
+input.text:focus {
+    outline: 3px solid #fcbaa7;
+    background-color: #fffff4;
+}
+
+.contact_info_container p {
+    text-align: center;
+    font-size: 1.6em;
+}
+
+.inner_container div.radio {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+/* radio button style I liked that I found online */
+/* I changed the code a little bit to make it more styled to my site */
+/* https://www.sliderrevolution.com/resources/styling-radio-buttons/ */
+.radio input {
+    display: none;
+}
+
+.radio div.button_option {
+    display: flex;
+    justify-content: center;
+}
+
+.radio label {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 10px;
+}
+
+.radio label:before {
+    content: '';
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    background: #a5d2c3;
+    border-radius: 50%;
+    z-index: 2;
+    transition: box-shadow .4s ease,
+        background .3s ease;
+}
+
+input:checked+label:before {
+    box-shadow: inset 0px 3px 0 2px #4b6468;
+    background: #93c0b2;
+}
+
+/* end radio button styling */
+
+
+
+/* properties for hours section */
+div.hours_container {
+    width: 40%;
+    align-items: center;
+}
+
+div.hours {
+    text-align: center;
+}
+
+div.hours_container ul {
+    padding: 0;
+}
+
+div.hours_container li {
+    list-style-type: none;
+    padding: 4px;
+}
+
+/* properties for line spacer in hours section */
+.spacer {
+    height: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spacer .line {
+    height: 1px;
+    width: 90%;
+    background-color: #fff;
+    position: relative;
+}
+
+.spacer .square {
+    height: 9px;
+    width: 9px;
+    background-color: #fff;
+    position: absolute;
+    top: -4px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: rotate(45deg);
+}
+
+/* end  contact info / hours section */
+
+
+section.booking_options {
+    background-color: #fcbaa7;
+    padding: 20px;
+}
+
+
+
+.option_top_container {
+    display: flex;
+    width: 50%;
+    border: thin solid blue;
+}
+
+.booking_options img {
+    height: 150px;
+    width: 150px;
+    position: relative;
+    margin-left: 0;
+    margin-right: 0;
+    margin: auto;
+
+    border-radius: 50%;
+    border: thick solid #fff;
+}
+
+.checkbox_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+.booking_options h4 {
+    font-size: 1.1;
+    width: 50%;
+    text-align: center;
+    margin: 0;
+    padding: 20px 0 8px 0;
+}
+
+.option_middle_container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+    border: thin solid red;
+}
+
+.option_middle_container select {
+    font-family: 'Hammersmith One', sans-serif;
+    color: #b77a6d;
+    font-size: 1.1em;
+    background-color: #ffffe7;
+    width: 40%;
+    border: 0;
+    border-radius: 10px;
+    padding: 4px 8px;
+    outline: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
 
 /* ------------------------------ FOOTER PROPERTIES ------------------------------ */
 footer div.footer-background {
@@ -600,7 +871,6 @@ footer .sm_icons .icon:active {
         align-items: center;
         height: fit-content;
         gap: 70px;
-        padding-bottom: 140px;
     }
 
     .stylist_image,
@@ -622,6 +892,7 @@ footer .sm_icons .icon:active {
         padding: 8px;
         font-size: .9em;
     }
+
     .arch_container {
         width: 90%;
     }
@@ -635,6 +906,7 @@ footer .sm_icons .icon:active {
     .merch_image {
         height: 175px;
     }
+
     .drink_container {
         flex-direction: column;
         align-items: center;
@@ -658,5 +930,40 @@ footer .sm_icons .icon:active {
     .drink_item_text_container h3 {
         width: 85%;
         font-size: 1.24em;
+    }
+
+    form .info {
+        flex-direction: column-reverse;
+    }
+
+    .flexbox_hours_for_mobile {
+        display: flex;
+        position: relative;
+    }
+
+    div.hours_container {
+        width: 100%;
+    }
+
+    .hours {
+        width: 50%;
+        font-size: .8em;
+    }
+
+    .spacer {
+        position: absolute;
+        bottom: -15px;
+    }
+
+    div.contact_info_container {
+        width: 100%;
+    }
+
+    .contact_info_container .inner_container {
+        width: 100%;
+    }
+
+    div.contact_info_container .inner_container div {
+        width: 100%;
     }
 }
