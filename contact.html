@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<!-- 
+Kevin Jacobsen
+Web150, ASN 5
+Business Name: Salon Saloon
+ -->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Salon Saloon: come in for a snip and a sip! Look your best in the west!">
+    <title>Salon Saloon | Drink Menu</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Pacifico&family=BioRhyme:wght@400;700&display=swap"
+        rel="stylesheet">
+
+
+</head>
+
+<body class="contact">
+    <!-- nav bar that is a flex container holding links for services, drinks, and contact us  -->
+    <nav>
+        <!-- small logo of a cowboy hat that is also the link to the home page -->
+        <div class="nav_logo">
+            <a href="index.html">
+                <img src="images/nav_logo.png"
+                    alt="Small logo of a cowboy hat for Salon Saloon that links to the home page">
+            </a>
+        </div>
+        <a href="#">
+            SALON
+        </a>
+        <!-- this will end up linking to my services/products page for the final product -->
+        <a href="drink_menu.html">
+            SALOON
+        </a>
+
+        <a href="#">
+            MERCH
+        </a>
+
+        <!-- this will end up linking to my contact page for the final project -->
+        <div class="cta current_page">
+            <a href="contact.html" class="current_page">
+                BOOK / CONTACT
+            </a>
+        </div>
+    </nav>
+    <main>
+        <h2>Contact</h2>
+        <section class="featured_services">
+
+        </section>
+        <form class="outer_container" action="#" method="post">
+
+            <section class="info">
+                <div class="contact_info_container">
+                    <div class="inner_container">
+                        <h3>CONTACT INFO</h3>
+                        <div>
+                            <label for="fname">Name</label>
+                            <input class="text" type="text" id="fname" name="fname">
+                        </div>
+
+                        <div>
+                            <label for="phone">Phone</label>
+                            <input class="text" type="tel" id="phone" name="phone">
+                        </div>
+                        <div>
+                            <label for="email">Email</label>
+                            <input class="text" type="email" id="email" name="email">
+                        </div>
+
+                        <p>Best way to contact</p>
+                        <div class="contact_option">
+                            <div class="button_option">
+                                <input type="radio" id="phone_option" name="contact_option">
+                                <label for="phone_option">Phone</label>
+                            </div>
+                            <div class="button_option">
+                                <input type="radio" id="email_option" name="contact_option">
+                                <label for="email_option">Email</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hours_container">
+                    <h3>HOURS</h3>
+                    <div class="flexbox_hours_for_mobile">
+                        <div class="hours">
+                            <h4>SALON</h4>
+                            <ul>
+                                <li>MON - FRI: 9AM - 9PM</li>
+                                <li>SAT - SUN: 10AM - 7PM</li>
+                            </ul>
+                        </div>
+                        <div class="spacer">
+                            <div class="line">
+                                <div class="square"></div>
+                            </div>
+                        </div>
+
+                        <div class="hours">
+                            <h4>SALOON</h4>
+                            <ul>
+                                <li>MON - FRI: 9AM - 11PM</li>
+                                <li>SAT - SUN: 10AM - 2AM</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- zig zag divider -->
+            <div class="divider">
+                <div>
+                    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                </div>
+            </div>
+
+            <section class="salon booking_options">
+                <div class="option_outer_container">
+
+                    <div class="option_top_container">
+                        <div class="checkbox_container">
+                            <label for="salon_option">
+                                <input type="checkbox" id="salon_option" name="salon_option">
+                                <span>Need to get your hair wrangled?</span>
+                            </label>
+                        </div>
+                    </div>
+
+
+
+                    <div class="option_choice_container">
+
+                        <div class="choose_text">
+                            <p>Stylist:</p>
+                        </div>
+                        <div class="option_selection_container">Choose a stylist
+                            <div class="options_menu">
+
+                                <label for="stylist_1">
+                                    <input type="radio" id="stylist_1" name="stylist">
+                                    <div class="option">
+                                        <div>
+                                            <img src="images/bobby.jpg">
+                                        </div>
+                                        <span class="name">Bobby</span>
+                                    </div>
+                                </label>
+                                <label for="stylist_2">
+                                    <input type="radio" id="stylist_2" name="stylist">
+                                    <div class="option">
+                                        <div>
+                                            <img src="images/contact/ruby.png">
+                                        </div>
+                                        <span class="name">Ruby Rodeo</span>
+                                    </div>
+                                </label>
+                                <label for="stylist_3">
+                                    <input type="radio" id="stylist_3" name="stylist">
+                                    <div class="option">
+                                        <div>
+                                            <img src="images/contact/sara.png">
+                                        </div>
+                                        <span class="name">Sara Sarsparilla</span>
+                                    </div>
+                                </label>
+                                <label for="stylist_4">
+                                    <input type="radio" id="stylist_4" name="stylist">
+                                    <div class="option">
+                                        <div>
+                                            <img src="images/contact/billy.png">
+                                        </div>
+                                        <span class="name">Billy Buckle</span>
+                                    </div>
+                                </label>
+                                <label for="stylist_5">
+                                    <input type="radio" id="stylist_5" name="stylist">
+                                    <div class="option">
+                                        <div>
+                                            <img src="images/contact/lily.png">
+                                        </div>
+                                        <span class="name">Lily Lasso</span>
+                                    </div>
+                                </label>
+
+                                <label for="any_stylist">
+                                    <input type="radio" id="any_stylist" name="stylist">
+                                    <div class="option">
+                                        <div>
+                                            <img src="images/contact/silhouette.png">
+                                        </div>
+                                        <span class="name">Pick for me!</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="multi_checkbox_outer_container">
+                    <h4>What would you like done?</h4>
+                    <div class="multi_checkbox_container">
+                        <div>
+                            <input type="checkbox" id="service-1" />
+                            <label for="service-1">
+                                Womens Cut
+                            </label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="service-2" />
+                            <label for="service-2">
+                                Color
+                            </label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="service-3" />
+                            <label for="service-3">
+                                Blowout
+                            </label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="service-4" />
+                            <label for="service-4">
+                                Texture
+                            </label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="service-5" />
+
+                            <label for="service-5">
+                                Extensions
+                            </label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="service-6" />
+
+                            <label for="service-6">
+                                Bridal
+                            </label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="service-7" />
+                            <label for="service-7">
+                                Mens Cut
+                            </label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="service-8" />
+
+                            <label for="service-8">
+                                Other
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="spacer">
+                <div class="line">
+                    <div class="square"></div>
+                </div>
+            </div>
+
+            <section class="saloon booking_options">
+                <div class="option_outer_container">
+
+                    <div class="option_top_container">
+                        <div class="checkbox_container">
+                            <label for="saloon_option">
+                                <input type="checkbox" id="saloon_option" name="saloon_option">
+                                <span>Looking to round up some people for an event?</span>
+                            </label>
+                        </div>
+                    </div>
+
+
+
+                    <div class="option_choice_container">
+
+                        <div class="choose_text">
+                            <p>Event:</p>
+                        </div>
+                        <div class="option_selection_container">Choose an event
+                            <div class="options_menu">
+
+                                <label for="event_1">
+                                    <input type="radio" id="event_1" name="event">
+                                    <div class="option">
+                                        <div>
+                                            <img src="images/contact/party-hat.png">
+                                        </div>
+                                        <span class="name">Private Party</span>
+                                    </div>
+                                </label>
+                                <label for="event_2">
+                                    <input type="radio" id="event_2" name="event">
+                                    <div class="option">
+                                        <div>
+                                            <img src="images/contact/ring.png">
+                                        </div>
+                                        <span class="name">Bridal Event</span>
+                                    </div>
+                                </label>
+                                <label for="event_3">
+                                    <input type="radio" id="event_3" name="event">
+                                    <div class="option">
+                                        <div>
+                                            <img src="images/contact/briefcase.png">
+                                        </div>
+                                        <span class="name">Corporate Event</span>
+                                    </div>
+                                </label>
+                                <label for="event_4">
+                                    <input type="radio" id="event_4" name="event">
+                                    <div class="option">
+                                        <div>
+                                            <img src="images/contact/music.png">
+                                        </div>
+                                        <span class="name">Live Music / Karaoke</span>
+                                    </div>
+                                </label>
+
+                                <label for="any_event">
+                                    <input type="radio" id="any_event" name="event">
+                                    <div class="option">
+                                        <div>
+                                            <img src="images/contact/confetti.png">
+                                        </div>
+                                        <span class="name">Other</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="multi_checkbox_outer_container">
+                    <h4>How many people?</h4>
+                    <div class="multi_checkbox_container">
+                        <div>
+                            <input type="checkbox" id="guest_option-1" />
+                            <label for="guest_option-1">
+                                4 - 8
+                            </label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="guest_option-2" />
+                            <label for="guest_option-2">
+                                9 - 15
+                            </label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="guest_option-3" />
+                            <label for="guest_option-3">
+                                16 - 24
+                            </label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="guest_option-4" />
+                            <label for="guest_option-4">
+                                25 +
+                            </label>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="date_and_time">
+                <label for="date">
+                    <span>Choose a date:</span>
+                    <input type="date" id="date" name="date">
+                </label>
+                <label for="time">Choose a time:
+                    <select id="time" name="time">
+                        <option value="10am">10 AM</option>
+                    </select>
+
+                </label>
+            </section>
+
+        </form>
+    </main>
+    <!-- end main section -->
+
+    <!------------------------------ FOOTER ------------------------------>
+
+    <!-- footer is a flexbox container containing 3 flex items -->
+    <footer>
+
+        <!-- background behind the footer -->
+        <div class="footer-background"></div>
+
+        <!-- this is a flex container so the phone icon and phone number line up nicely -->
+        <div class="footer_flex_item phone_number">
+            <i class="icon fa-solid fa-square-phone"></i>
+            <div>123-456-7890</div>
+        </div>
+
+        <!-- flex item #2 and flex container so the address looks nicer split into two lines of text-->
+        <div class="footer_flex_item address">
+            <div>123 Saloon Ln</div>
+            <div>Tombstone AZ 85638</div>
+        </div>
+
+        <!-- social media icon links-->
+        <div class="footer_flex_item sm_icons">
+            <a href="https://www.facebook.com/" target="_blank" title="Visit our Facebook page!">
+                <i class="icon fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" title="Check out our Instagram!">
+                <i class="icon fa-brands fa-instagram"></i>
+            </a>
+        </div>
+    </footer>
+
+    <!-- Font Awesome script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.js"
+        integrity="sha512-jdM4CX13QmorrIpE3U+2hOxEO+j6hy9nZFUMIIC8LvNS699p7mxonP7z//UnPGs3Vkn299GKD9FWN60m1tZGxg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+        </script>
+
+
+
+</body>
+
+</html>
