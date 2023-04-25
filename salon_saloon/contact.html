@@ -114,7 +114,14 @@ Business Name: Salon Saloon
                 </div>
             </section>
 
-            <section class="booking_options">
+            <!-- zig zag divider -->
+            <div class="divider">
+                <div>
+                    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                </div>
+            </div>
+
+            <section class="salon booking_options">
                 <div class="option_outer_container">
 
                     <div class="option_top_container">
@@ -122,28 +129,23 @@ Business Name: Salon Saloon
                             <label for="salon_option">
                                 <input type="checkbox" id="salon_option" name="salon_option">
                                 <span>Need to get your hair wrangled?</span>
-
                             </label>
                         </div>
-
-
-
-
                     </div>
-                    <div class="option_middle_container">
 
 
-                        <div class="choose_stylist">
+
+                    <div class="option_choice_container">
+
+                        <div class="choose_text">
                             <p>Stylist:</p>
                         </div>
-
-
-                        <div class="stylist_option_selection">Choose a stylist
-                            <div class="stylist_options">
+                        <div class="option_selection_container">Choose a stylist
+                            <div class="options_menu">
 
                                 <label for="stylist_1">
                                     <input type="radio" id="stylist_1" name="stylist">
-                                    <div class="stylist">
+                                    <div class="option">
                                         <div>
                                             <img src="images/bobby.jpg">
                                         </div>
@@ -152,37 +154,46 @@ Business Name: Salon Saloon
                                 </label>
                                 <label for="stylist_2">
                                     <input type="radio" id="stylist_2" name="stylist">
-                                    <div class="stylist">
+                                    <div class="option">
                                         <div>
-                                            <img src="images/bobby.jpg">
+                                            <img src="images/contact/ruby.png">
                                         </div>
-                                        <span class="name">Tuna</span>
+                                        <span class="name">Ruby Rodeo</span>
                                     </div>
                                 </label>
                                 <label for="stylist_3">
                                     <input type="radio" id="stylist_3" name="stylist">
-                                    <div class="stylist">
+                                    <div class="option">
                                         <div>
-                                            <img src="images/bobby.jpg">
+                                            <img src="images/contact/sara.png">
                                         </div>
-                                        <span class="name">Jennifer</span>
+                                        <span class="name">Sara Sarsparilla</span>
                                     </div>
                                 </label>
                                 <label for="stylist_4">
                                     <input type="radio" id="stylist_4" name="stylist">
-                                    <div class="stylist">
+                                    <div class="option">
                                         <div>
-                                            <img src="images/bobby.jpg">
+                                            <img src="images/contact/billy.png">
                                         </div>
-                                        <span class="name">Kevin</span>
+                                        <span class="name">Billy Buckle</span>
+                                    </div>
+                                </label>
+                                <label for="stylist_5">
+                                    <input type="radio" id="stylist_5" name="stylist">
+                                    <div class="option">
+                                        <div>
+                                            <img src="images/contact/lily.png">
+                                        </div>
+                                        <span class="name">Lily Lasso</span>
                                     </div>
                                 </label>
 
                                 <label for="any_stylist">
                                     <input type="radio" id="any_stylist" name="stylist">
-                                    <div class="stylist">
+                                    <div class="option">
                                         <div>
-                                            <img src="images/bobby.jpg">
+                                            <img src="images/contact/silhouette.png">
                                         </div>
                                         <span class="name">Pick for me!</span>
                                     </div>
@@ -194,77 +205,177 @@ Business Name: Salon Saloon
 
                 </div>
 
-                <div class="services_checkbox_outer_container">
-                    <h4>CHOOSE YOUR OPTIONS</h4>
-                    <div class="services_checkbox_container">
+                <div class="multi_checkbox_outer_container">
+                    <h4>What would you like done?</h4>
+                    <div class="multi_checkbox_container">
                         <div>
-                            <input type="checkbox" id="box-1" />
-
-                            <label for="box-1">
-                                label 1
+                            <input type="checkbox" id="service-1" />
+                            <label for="service-1">
+                                Womens Cut
                             </label>
                         </div>
                         <div>
-                            <input type="checkbox" id="box-2" />
-
-                            <label for="box-2">
-                                label 2
+                            <input type="checkbox" id="service-2" />
+                            <label for="service-2">
+                                Color
                             </label>
                         </div>
                         <div>
-                            <input type="checkbox" id="box-3"/>
-
-                            <label for="box-3">
-                                label 3
+                            <input type="checkbox" id="service-3" />
+                            <label for="service-3">
+                                Blowout
                             </label>
                         </div>
                         <div>
-                            <input type="checkbox" id="box-4" />
-
-                            <label for="box-4">
-                                label 4
+                            <input type="checkbox" id="service-4" />
+                            <label for="service-4">
+                                Texture
                             </label>
                         </div>
-
                         <div>
-                            <input type="checkbox" id="box-5" />
+                            <input type="checkbox" id="service-5" />
 
-                            <label for="box-5">
-                                label 5
+                            <label for="service-5">
+                                Extensions
                             </label>
                         </div>
-
                         <div>
-                            <input type="checkbox" id="box-6" />
+                            <input type="checkbox" id="service-6" />
 
-                            <label for="box-6">
-                                label 6
+                            <label for="service-6">
+                                Bridal
                             </label>
                         </div>
-
                         <div>
-                            <input type="checkbox" id="box-7" />
-
-                            <label for="box-7">
-                                label 7
+                            <input type="checkbox" id="service-7" />
+                            <label for="service-7">
+                                Mens Cut
                             </label>
                         </div>
-
                         <div>
-                            <input type="checkbox" id="box-8" />
+                            <input type="checkbox" id="service-8" />
 
-                            <label for="box-8">
-                                label 8
+                            <label for="service-8">
+                                Other
                             </label>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section>
+            <div class="spacer">
+                <div class="line">
+                    <div class="square"></div>
+                </div>
+            </div>
+
+            <section class="saloon booking_options">
+                <div class="option_outer_container">
+
+                    <div class="option_top_container">
+                        <div class="checkbox_container">
+                            <label for="saloon_option">
+                                <input type="checkbox" id="saloon_option" name="saloon_option">
+                                <span>Looking to round up some people for an event?</span>
+                            </label>
+                        </div>
+                    </div>
 
 
+
+                    <div class="option_choice_container">
+
+                        <div class="choose_text">
+                            <p>Event:</p>
+                        </div>
+                        <div class="option_selection_container">Choose an event
+                            <div class="options_menu">
+
+                                <label for="event_1">
+                                    <input type="radio" id="event_1" name="event">
+                                    <div class="option">
+                                        <div>
+                                            <img src="images/contact/party-hat.png">
+                                        </div>
+                                        <span class="name">Private Party</span>
+                                    </div>
+                                </label>
+                                <label for="event_2">
+                                    <input type="radio" id="event_2" name="event">
+                                    <div class="option">
+                                        <div>
+                                            <img src="images/contact/ring.png">
+                                        </div>
+                                        <span class="name">Bridal Event</span>
+                                    </div>
+                                </label>
+                                <label for="event_3">
+                                    <input type="radio" id="event_3" name="event">
+                                    <div class="option">
+                                        <div>
+                                            <img src="images/contact/briefcase.png">
+                                        </div>
+                                        <span class="name">Corporate Event</span>
+                                    </div>
+                                </label>
+                                <label for="event_4">
+                                    <input type="radio" id="event_4" name="event">
+                                    <div class="option">
+                                        <div>
+                                            <img src="images/contact/music.png">
+                                        </div>
+                                        <span class="name">Live Music / Karaoke</span>
+                                    </div>
+                                </label>
+
+                                <label for="any_event">
+                                    <input type="radio" id="any_event" name="event">
+                                    <div class="option">
+                                        <div>
+                                            <img src="images/contact/confetti.png">
+                                        </div>
+                                        <span class="name">Other</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="multi_checkbox_outer_container">
+                    <h4>How many people?</h4>
+                    <div class="multi_checkbox_container">
+                        <div>
+                            <input type="checkbox" id="guest_option-1" />
+                            <label for="guest_option-1">
+                                4 - 8
+                            </label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="guest_option-2" />
+                            <label for="guest_option-2">
+                                9 - 15
+                            </label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="guest_option-3" />
+                            <label for="guest_option-3">
+                                16 - 24
+                            </label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="guest_option-4" />
+                            <label for="guest_option-4">
+                                25 +
+                            </label>
+                        </div>
+                        
+                    </div>
+                </div>
             </section>
+
         </form>
     </main>
     <!-- end main section -->

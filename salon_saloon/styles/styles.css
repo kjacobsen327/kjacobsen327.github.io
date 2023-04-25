@@ -457,7 +457,6 @@ section.drink_container {
     align-self: center;
     z-index: 2;
 }
-
 .drink_item_image_container img {
     height: 150px;
     width: 150px;
@@ -465,7 +464,6 @@ section.drink_container {
     border: thick solid #e09485;
     border-radius: 50%;
 }
-
 .drink_item_text_container {
     position: relative;
     align-self: center;
@@ -478,7 +476,6 @@ section.drink_container {
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
 }
-
 /* blue background behind the text container and the drink image */
 .drink_bg {
     background-color: #93c0b2;
@@ -489,7 +486,6 @@ section.drink_container {
     height: 100%;
     width: 100%;
 }
-
 .drink_item_text_container p {
     align-self: center;
     padding: 0 1em;
@@ -510,11 +506,9 @@ form .info {
     width: 100%;
     font-size: .85em;
 }
-
 form .info * {
     margin: 0;
 }
-
 form .info h3 {
     font-family: 'Hammersmith One', sans-serif;
     font-size: 2.4em;
@@ -522,21 +516,17 @@ form .info h3 {
     text-align: center;
     padding-bottom: 10px;
 }
-
 form .info h4 {
     font-size: 1.4em;
 }
-
 div.contact_info_container,
 div.hours_container {
     padding: 10px;
 }
-
 div.contact_info_container {
     width: 60%;
     color: #fcbaa7;
 }
-
 div.contact_info_container .inner_container {
     display: flex;
     flex-direction: column;
@@ -548,23 +538,19 @@ div.contact_info_container .inner_container {
     padding: 10px;
     border-radius: 20px;
 }
-
 div.contact_info_container .inner_container * {
     width: 100%;
 }
-
 div.contact_info_container .inner_container div {
     display: flex;
     width: 70%;
 }
-
 div.contact_info_container .inner_container div label {
     font-family: 'Hammersmith One', sans-serif;
     width: 100px;
     align-self: center;
     text-align: center;
 }
-
 div.contact_info_container input.text {
     font-family: 'Hammersmith One', sans-serif;
     color: #b77a6d;
@@ -577,27 +563,22 @@ div.contact_info_container input.text {
     outline: none;
     text-align: center;
 }
-
 input.text:focus {
     outline: 3px solid #fcbaa7;
     background-color: #fffff4;
 }
-
 .contact_info_container p {
     text-align: center;
     font-size: 1.6em;
 }
-
 .inner_container div.radio {
     display: flex;
     justify-content: space-evenly;
 }
-
 .contact_option div.button_option {
     display: flex;
     justify-content: center;
 }
-
 .contact_option label {
     cursor: pointer;
     display: flex;
@@ -613,7 +594,6 @@ input.text:focus {
 .contact_option input {
     display: none;
 }
-
 .contact_option label:before {
     content: '';
     display: inline-block;
@@ -625,12 +605,10 @@ input.text:focus {
     transition: box-shadow .4s ease,
         background .3s ease;
 }
-
 .contact_option input:checked+label:before {
     box-shadow: inset 0px 3px 0 2px #4b6468;
     background: #93c0b2;
 }
-
 /* end radio button styling */
 
 
@@ -640,19 +618,17 @@ div.hours_container {
     width: 40%;
     align-items: center;
 }
-
 div.hours {
     text-align: center;
 }
-
 div.hours_container ul {
     padding: 0;
 }
-
 div.hours_container li {
     list-style-type: none;
     padding: 4px;
 }
+
 
 /* properties for line spacer in hours section */
 .spacer {
@@ -662,14 +638,12 @@ div.hours_container li {
     justify-content: center;
     align-items: center;
 }
-
 .spacer .line {
     height: 1px;
     width: 90%;
     background-color: #fff;
     position: relative;
 }
-
 .spacer .square {
     height: 9px;
     width: 9px;
@@ -681,30 +655,55 @@ div.hours_container li {
     margin: auto;
     transform: rotate(45deg);
 }
-
 /* end  contact info / hours section */
 
 
+
+/* zig zag divider */
+.divider {
+    height: 40px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+.divider div {
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+.divider span {
+    display: inline-block;
+    flex: 0 0 40px;
+    height: 40px;
+    width: 40px;
+    transform: rotate(45deg);
+    box-shadow: -6px -6px #b77a6d inset;
+    margin: -8px 4px 0 4px;
+}
+
+
+/* properties for both salon / event booking sections */
 section.booking_options {
     background-color: #fcbaa7;
     display: flex;
     padding: 10px;
 }
-
 section.booking_options .option_outer_container {
     width: 60%;
 }
 
+
+/* large checkbox sections for booking options */
 .option_top_container {
     width: 100%;
-    margin: 30px 0;
+    margin: 10px 0;
 }
-
 .checkbox_container {
     width: 100%;
     padding-left: 8px;
 }
-
 .checkbox_container label {
     font-size: 1.2em;
     width: 100%;
@@ -719,20 +718,17 @@ section.booking_options .option_outer_container {
     background-color: #93c0b2;
     cursor: pointer;
 }
-
 .checkbox_container span {
     width: 70%;
 }
-
 .checkbox_container input {
     accent-color: #def9f0;
-    transform: scale(4);
-    outline-offset: -2.1px;
-    outline: 2px solid #4b6468;
+    transform: scale(3);
 }
 
 
-.option_middle_container {
+/* pop up menu for stylist / event choices */
+.option_choice_container {
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -742,8 +738,7 @@ section.booking_options .option_outer_container {
     background-color: #fcf3e2;
     border-radius: 40px
 }
-
-.choose_stylist {
+.choose_text {
     font-family: 'Hammersmith One', sans-serif;
     color: #b77a6d;
     font-size: 1.1em;
@@ -752,15 +747,12 @@ section.booking_options .option_outer_container {
     align-items: center;
     width: 50%;
 }
-
-.choose_stylist p {
-    background-color: #fcf3e2;
+.choose_text p {
     padding: 5% 10%;
     border-radius: 5rem;
     font-size: 1.3em;
 }
-
-.stylist_option_selection {
+.option_selection_container {
     background-color: #a5d2c377;
     position: relative;
     width: 50%;
@@ -772,8 +764,7 @@ section.booking_options .option_outer_container {
     justify-content: center;
     align-items: center;
 }
-
-.stylist_option_selection:hover {
+.option_selection_container:hover {
     overflow: visible;
     position: absolute;
     top: 0;
@@ -781,23 +772,21 @@ section.booking_options .option_outer_container {
     bottom: 80px;
     z-index: 11;
 }
-
-.stylist_options {
+.options_menu {
     position: absolute;
     bottom: 80px;
     width: 100%;
-    font-size: .8em;
+    font-size: .9em;
+    background-color: #def9f095;
+    border-radius: 30px;
 }
-
-.stylist_options input {
+.options_menu input {
     display: none;
 }
-
-.stylist_options input+div {
+.options_menu input+div {
     display: inline-block;
 }
-
-.stylist_options input:checked+div {
+.options_menu input:checked+div {
     position: absolute;
     bottom: -80px;
     width: 100%;
@@ -805,81 +794,95 @@ section.booking_options .option_outer_container {
     background-color: #a5d2c3;
     border-radius: 40px;
 }
-
-.stylist_options label {
+.options_menu label {
     display: block;
     background: #a5d2c3;
     width: 100%;
     border-radius: 40px;
-    margin: 20px 0;
-
+    margin: 15px 0;
+    text-align: right;
 }
-
-.stylist_options label .stylist {
+.options_menu label .option {
     height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-
-.stylist div {
+.option div {
     display: inline-block;
-    height: 60px;
-    width: 60px;
-    margin-left: 10px;
+    height: 70px;
+    width: 70px;
+    margin-left: 5px;
 }
-
-.stylist img {
+.option img {
     object-fit: cover;
     height: 100%;
     width: 100%;
     border-radius: 50%;
-
 }
 
-.stylist span {
+.option img:last-of-type {
+    background-color: #fcbaa7;
+}
+.option span {
     margin-right: 10px;
 }
 
-.services_checkbox_outer_container {
+
+/* multiple checkbox container for salon services / guest numbers */
+.multi_checkbox_outer_container {
     background-color: #fcf3e2;
     width: 40%;
-    margin-left: 10px;
+    margin: 10px 0 0 10px;
     border-radius: 20px;
     height: 200px;
     overflow-y: scroll;
     color: #e09485;
 }
-
-.services_checkbox_container {
+.multi_checkbox_outer_container h4 {
+    margin: 10px 0 20px 0;
+    font-size: 1.1em;
+    text-align: center;
+}
+.multi_checkbox_container {
     width: 100%;
     height: 50px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
 }
-
-.services_checkbox_container div {
+.multi_checkbox_container div {
     display: flex;
     align-items: center;
     height: 50px;
+    width: 180px;
 }
-
-.services_checkbox_container label {
-    width: 120px;
+.multi_checkbox_container label {
+    font-size: .85em;
     display: block;
+    padding-left: 8px;
 }
-
-.services_checkbox_container input {
+.multi_checkbox_container input {
     display: block;
-    width: 50px;
-    height: 25px;
-
-
+    width: 30px;
+    accent-color: #def9f0;
+    transform: scale(3);
 }
 
 
+form > .spacer {
+    margin: 12px 0;
+}
 
+/* section for saloon booking options */
+section.saloon .multi_checkbox_outer_container {
+    overflow: visible;
+    height: auto;
+}
+
+section.saloon .options_menu img {
+    background-color: #fcbaa7;
+}
 
 
 
@@ -1019,8 +1022,10 @@ footer .sm_icons .icon:active {
     section.booking_options .option_outer_container {
         width: 100%;
     }
-    .services_checkbox_outer_container {
+
+    .multi_checkbox_outer_container {
         width: 100%;
+        margin-left: 0;
     }
 }
 
@@ -1112,7 +1117,7 @@ footer .sm_icons .icon:active {
     }
 
     .option_top_container,
-    .option_middle_container {
+    .option_choice_container {
         width: 100%;
     }
 }
