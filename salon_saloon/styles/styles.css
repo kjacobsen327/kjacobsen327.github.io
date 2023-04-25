@@ -745,7 +745,7 @@ section.booking_options .option_outer_container {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 40%;
 }
 .choose_text p {
     padding: 5% 10%;
@@ -755,8 +755,8 @@ section.booking_options .option_outer_container {
 .option_selection_container {
     background-color: #a5d2c377;
     position: relative;
-    width: 50%;
-    max-width: 50%;
+    width: 60%;
+    max-width: 60%;
     height: 80px;
     overflow: hidden;
     border-radius: 40px;
@@ -836,9 +836,14 @@ section.booking_options .option_outer_container {
     margin: 10px 0 0 10px;
     border-radius: 20px;
     height: 200px;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     color: #e09485;
 }
+.salon .multi_checkbox_outer_container {
+    overflow-y: scroll;
+
+}
+
 .multi_checkbox_outer_container h4 {
     margin: 10px 0 20px 0;
     font-size: 1.1em;
@@ -850,6 +855,8 @@ section.booking_options .option_outer_container {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
+    
+    padding-left: 20px;
 }
 .multi_checkbox_container div {
     display: flex;
@@ -860,13 +867,13 @@ section.booking_options .option_outer_container {
 .multi_checkbox_container label {
     font-size: .85em;
     display: block;
-    padding-left: 8px;
+    padding-left: 4px;
 }
 .multi_checkbox_container input {
     display: block;
     width: 30px;
     accent-color: #def9f0;
-    transform: scale(3);
+    transform: scale(1.8);
 }
 
 
@@ -876,10 +883,12 @@ form > .spacer {
 
 /* section for saloon booking options */
 section.saloon .multi_checkbox_outer_container {
-    overflow: visible;
     height: auto;
 }
 
+section.saloon .multi_checkbox_container {
+    height: auto;
+}
 section.saloon .options_menu img {
     background-color: #fcbaa7;
 }
@@ -1095,7 +1104,7 @@ footer .sm_icons .icon:active {
         font-size: .8em;
     }
 
-    .spacer {
+    .flexbox_hours_for_mobile .spacer {
         position: absolute;
         bottom: -15px;
     }
