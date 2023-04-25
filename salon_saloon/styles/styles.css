@@ -687,74 +687,90 @@ div.hours_container li {
 
 section.booking_options {
     background-color: #fcbaa7;
-    padding: 20px;
+    display: flex;
+    padding: 10px;
 }
 
-
-
+section.booking_options .option_outer_container {
+    width: 60%;
+}
 
 .option_top_container {
-    display: flex;
-    width: 50%;
-    border: thin solid blue;
-}
-
-.booking_options img {
-    height: 150px;
-    width: 150px;
-    position: relative;
-    margin-left: 0;
-    margin-right: 0;
-    margin: auto;
-
-    border-radius: 50%;
-    border: thick solid #fff;
+    width: 100%;
+    margin: 30px 0;
 }
 
 .checkbox_container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50%;
+    width: 100%;
+    padding-left: 8px;
 }
 
-.booking_options h4 {
-    font-size: 1.1;
-    width: 50%;
+.checkbox_container label {
+    font-size: 1.2em;
+    width: 100%;
     text-align: center;
-    margin: 0;
-    padding: 20px 0 8px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 8px 0;
+    border-radius: 20px;
+    box-shadow: -8px 6px #4b6468;
+    background-color: #93c0b2;
+    cursor: pointer;
 }
+
+.checkbox_container span {
+    width: 70%;
+}
+
+.checkbox_container input {
+    accent-color: #def9f0;
+    transform: scale(4);
+    outline-offset: -2.1px;
+    outline: 2px solid #4b6468;
+}
+
 
 .option_middle_container {
     display: flex;
     justify-content: space-between;
-    width: 50%;
+    width: 100%;
     height: 80px;
-    border: thin solid red;
     position: relative;
+    margin: 20px 0;
+    background-color: #fcf3e2;
+    border-radius: 40px
 }
 
-.option_middle_container select {
+.choose_stylist {
     font-family: 'Hammersmith One', sans-serif;
     color: #b77a6d;
     font-size: 1.1em;
-    background-color: #ffffe7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 50%;
-    border: 0;
-    border-radius: 10px;
-    padding: 4px 8px;
-    outline: none;
-    text-align: center;
-    cursor: pointer;
 }
 
+.choose_stylist p {
+    background-color: #fcf3e2;
+    padding: 5% 10%;
+    border-radius: 5rem;
+    font-size: 1.3em;
+}
 
 .stylist_option_selection {
+    background-color: #a5d2c377;
     position: relative;
     width: 50%;
+    max-width: 50%;
     height: 80px;
     overflow: hidden;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .stylist_option_selection:hover {
@@ -763,6 +779,7 @@ section.booking_options {
     top: 0;
     right: 0;
     bottom: 80px;
+    z-index: 11;
 }
 
 .stylist_options {
@@ -778,25 +795,24 @@ section.booking_options {
 
 .stylist_options input+div {
     display: inline-block;
-    margin: 0;
 }
 
 .stylist_options input:checked+div {
     position: absolute;
     bottom: -80px;
     width: 100%;
-    /* height: 75px; */
-    background-color: #e09485;
+    height: 80px;
+    background-color: #a5d2c3;
+    border-radius: 40px;
 }
 
 .stylist_options label {
     display: block;
-    background-color: red;
+    background: #a5d2c3;
     width: 100%;
-}
+    border-radius: 40px;
+    margin: 20px 0;
 
-.stylist_options label:focus {
-    height: 0;
 }
 
 .stylist_options label .stylist {
@@ -817,11 +833,65 @@ section.booking_options {
     object-fit: cover;
     height: 100%;
     width: 100%;
+    border-radius: 50%;
+
 }
 
 .stylist span {
     margin-right: 10px;
 }
+
+.services_checkbox_outer_container {
+    background-color: #fcf3e2;
+    width: 40%;
+    margin-left: 10px;
+    border-radius: 20px;
+    height: 200px;
+    overflow-y: scroll;
+    color: #e09485;
+}
+
+.services_checkbox_container {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+.services_checkbox_container div {
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+.services_checkbox_container label {
+    width: 120px;
+    display: block;
+}
+
+.services_checkbox_container input {
+    display: block;
+    width: 50px;
+    height: 25px;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ------------------------------ FOOTER PROPERTIES ------------------------------ */
 footer div.footer-background {
@@ -941,6 +1011,17 @@ footer .sm_icons .icon:active {
     .merch_image {
         height: 250px;
     }
+
+    section.booking_options {
+        flex-direction: column;
+    }
+
+    section.booking_options .option_outer_container {
+        width: 100%;
+    }
+    .services_checkbox_outer_container {
+        width: 100%;
+    }
 }
 
 
@@ -1024,6 +1105,10 @@ footer .sm_icons .icon:active {
 
     div.contact_info_container .inner_container div {
         width: 100%;
+    }
+
+    .outer_container {
+        margin: 0 10px 100px 10px;
     }
 
     .option_top_container,
