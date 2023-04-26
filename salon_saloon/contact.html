@@ -136,7 +136,6 @@ Business Name: Salon Saloon
                     </div>
 
 
-
                     <div class="option_choice_container">
 
                         <div class="choose_text">
@@ -207,9 +206,9 @@ Business Name: Salon Saloon
 
                 </div>
 
-                <div class="multi_checkbox_outer_container">
+                <div class="multi_option_outer_container">
                     <h4>What would you like done?</h4>
-                    <div class="multi_checkbox_container">
+                    <div class="multi_option_container">
                         <div>
                             <input type="checkbox" id="service-1" />
                             <label for="service-1">
@@ -284,7 +283,6 @@ Business Name: Salon Saloon
                     </div>
 
 
-
                     <div class="option_choice_container">
 
                         <div class="choose_text">
@@ -346,29 +344,29 @@ Business Name: Salon Saloon
 
                 </div>
 
-                <div class="multi_checkbox_outer_container">
+                <div class="multi_option_outer_container">
                     <h4>How many people?</h4>
-                    <div class="multi_checkbox_container">
+                    <div class="multi_option_container">
                         <div>
-                            <input type="checkbox" id="guest_option-1" />
+                            <input type="radio" id="guest_option-1" name="guest_number" value="4 - 8">
                             <label for="guest_option-1">
                                 4 - 8
                             </label>
                         </div>
                         <div>
-                            <input type="checkbox" id="guest_option-2" />
+                            <input type="radio" id="guest_option-2" name="guest_number" value="9 - 15">
                             <label for="guest_option-2">
                                 9 - 15
                             </label>
                         </div>
                         <div>
-                            <input type="checkbox" id="guest_option-3" />
+                            <input type="radio" id="guest_option-3" name="guest_number" value="16 - 24">
                             <label for="guest_option-3">
                                 16 - 24
                             </label>
                         </div>
                         <div>
-                            <input type="checkbox" id="guest_option-4" />
+                            <input type="radio" id="guest_option-4" name="guest_number" value="25 +">
                             <label for="guest_option-4">
                                 25 +
                             </label>
@@ -378,20 +376,23 @@ Business Name: Salon Saloon
                 </div>
             </section>
 
-            <section class="date_and_time">
-                <label for="date">
-                    <span>Choose a date:</span>
-                    <input type="date" id="date" name="date">
-                </label>
-                <label for="time">
-                    <span>Choose a time:</span>
-                    <select id="time" name="time">
-                        <option value="10am">10 AM</option>
-                    </select>
 
+            <section class="date_and_time">
+                <label for="booking_time">
+                    <span>When are you looking to book?</span>
+                    <input id="booking_time" type="datetime-local" name="booking_time" min="2023-05-03T09:00"
+                        max="2023-12-31T23:59">
                 </label>
             </section>
 
+            <section class="text_area">
+                <div>
+                    <label for="comments_section">
+                        <input type="checkbox" id="comments_section" name="comments_section">
+                        <span>I have other other questions / comments / concerns!</span>
+                    </label>
+                </div>
+            </section>
         </form>
     </main>
     <!-- end main section -->

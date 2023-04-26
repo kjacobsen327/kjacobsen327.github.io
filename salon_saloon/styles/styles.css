@@ -757,7 +757,7 @@ section.booking_options .option_outer_container {
 }
 
 .checkbox_container input {
-    accent-color: #def9f0;
+    accent-color: #d3fcee;
     transform: scale(3);
 }
 
@@ -771,7 +771,7 @@ section.booking_options .option_outer_container {
     position: relative;
     margin-top: 20px;
     background-color: #fcf3e2;
-    border-radius: 40px
+    border-radius: 40px;
 }
 
 .choose_text {
@@ -878,37 +878,33 @@ section.booking_options .option_outer_container {
 
 
 /* multiple checkbox container for salon services / guest numbers */
-.multi_checkbox_outer_container {
+.multi_option_outer_container {
     background-color: #fcf3e2;
     width: 40%;
     margin: 10px 0 0 10px;
     border-radius: 20px;
-    height: 200px;
-    /* overflow-y: scroll; */
+    max-height: 200px;
     color: #e09485;
 }
 
-.salon .multi_checkbox_outer_container {
+.salon .multi_option_outer_container {
     overflow-y: scroll;
-
 }
 
-.multi_checkbox_outer_container h4 {
+.multi_option_outer_container h4 {
     margin: 10px 0 20px 0;
     font-size: 1.1em;
     text-align: center;
 }
 
-.multi_checkbox_container {
+.multi_option_container {
     width: 100%;
-    height: 50px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
-
 }
 
-.multi_checkbox_container div {
+.multi_option_container div {
     display: flex;
     align-items: center;
     height: 50px;
@@ -916,32 +912,42 @@ section.booking_options .option_outer_container {
     padding-left: 20px;
 }
 
-.multi_checkbox_container label {
+.multi_option_container label {
     font-size: .85em;
     display: block;
     padding-left: 4px;
 }
 
-.multi_checkbox_container input {
+.multi_option_container input {
     display: block;
     width: 20px;
-    accent-color: #def9f0;
+    accent-color: #d3fcee;
     transform: scale(1.7);
 }
 
 
 /* section for saloon booking options */
-section.saloon .multi_checkbox_outer_container {
+section.saloon.booking_options {
+    margin-bottom: 20px;
+}
+
+section.saloon .multi_option_outer_container {
     height: auto;
 }
 
-section.saloon .multi_checkbox_container {
+section.saloon .multi_option_container {
     height: auto;
+}
+
+/* section.saloon .multi_option_container input:focus, */
+section.saloon .multi_option_container input:checked {
+    transform: scale(2.2);
 }
 
 section.saloon .options_menu img {
     background-color: #fcbaa7;
 }
+
 
 /* properties for date and time selection */
 section.date_and_time {
@@ -950,53 +956,66 @@ section.date_and_time {
     justify-content: center;
     align-items: center;
     background-color: #93c0b2;
+    border-bottom: 6px solid #4b6468;
 }
 
-/* section.date_and_time div {
-    width: 50%;
-
-} */
-label[for="date"],
-label[for="time"] {
-    width: 50%;
+label[for="booking_time"] {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     gap: 8px;
-    padding: 20px 0;
-}
-.date span,
-.time span {
-    max-width: 75px;
+    padding: 20px;
+    font-size: 1.1em;
 }
 
-input[type="date"] {
+input#booking_time {
     font-family: 'Hammersmith One', sans-serif;
     font-size: 1.1em;
     color: #b77a6d;
     background-color: #fcf3e2;
-    border-radius: 20px;
+    border-radius: 15px;
     border: none;
-    padding: 6px 0 6px 0;
+    padding: 10px;
     text-align: center;
 }
 
-input[type="date"]:focus {
+input#booking_time:focus {
     outline: none;
 
 }
 
-select[name="time"] {
-    font-family: 'Hammersmith One', sans-serif;
-    font-size: 1.1em;
-    color: #b77a6d;
-    background-color: #fcf3e2;
-    border-radius: 20px;
-    border: none;
-    padding: 6px 0 6px 0;
-    text-align: center;
+/* start of text area section */
+section.text_area {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
+
+.text_area label {
+    font-size: 1.2em;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 30px 0 20px 0;
+    gap: 10px;
+}
+
+.text_area label span {
+    font-family: 'Hammersmith One', sans-serif;
+    text-transform: uppercase;
+    width: 80%;
+}
+
+.text_area input {
+    accent-color: #d3fcee;
+    transform: scale(3);
+}
+
 
 
 
@@ -1135,7 +1154,7 @@ footer .sm_icons .icon:active {
         width: 100%;
     }
 
-    .multi_checkbox_outer_container {
+    .multi_option_outer_container {
         width: 100%;
         margin-left: 0;
     }
