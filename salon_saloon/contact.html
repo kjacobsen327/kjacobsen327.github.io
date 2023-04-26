@@ -385,14 +385,22 @@ Business Name: Salon Saloon
                 </label>
             </section>
 
-            <section class="text_area">
-                <div>
-                    <label for="comments_section">
-                        <input type="checkbox" id="comments_section" name="comments_section">
-                        <span>I have other other questions / comments / concerns!</span>
-                    </label>
-                </div>
+            <section class="comments">
+                <label for="comments_check">
+                    <input type="checkbox" id="comments_check" name="comments">
+                    <span>I have other other questions / comments / concerns!</span>
+                </label>
+                <textarea id="text_area" name="text_area"
+                    placeholder="Leave your questions or comments here"></textarea>
             </section>
+
+            <div class="spacer">
+                <div class="line">
+                    <div class="square"></div>
+                </div>
+            </div>
+
+            <input type="submit" value="SEND">
         </form>
     </main>
     <!-- end main section -->
