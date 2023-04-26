@@ -129,7 +129,8 @@ Business Name: Salon Saloon
                     <div class="option_top_container">
                         <div class="checkbox_container">
                             <label for="salon_option">
-                                <input type="checkbox" id="salon_option" name="salon_option">
+                                <input type="checkbox" id="salon_option" name="salon_option"
+                                    onchange="changeThis(this)">
                                 <span>Need to get your hair wrangled?</span>
                             </label>
                         </div>
@@ -139,13 +140,13 @@ Business Name: Salon Saloon
                     <div class="option_choice_container">
 
                         <div class="choose_text">
-                            <p>Stylist:</p>
+                            Stylist:
                         </div>
                         <div class="option_selection_container">Choose a stylist
                             <div class="options_menu">
 
                                 <label for="stylist_1">
-                                    <input type="radio" id="stylist_1" name="stylist">
+                                    <input type="radio" id="stylist_1" name="stylist" disabled>
                                     <div class="option">
                                         <div>
                                             <img src="images/bobby.jpg">
@@ -154,7 +155,7 @@ Business Name: Salon Saloon
                                     </div>
                                 </label>
                                 <label for="stylist_2">
-                                    <input type="radio" id="stylist_2" name="stylist">
+                                    <input type="radio" id="stylist_2" name="stylist" disabled>
                                     <div class="option">
                                         <div>
                                             <img src="images/contact/ruby.png">
@@ -441,6 +442,25 @@ Business Name: Salon Saloon
         integrity="sha512-jdM4CX13QmorrIpE3U+2hOxEO+j6hy9nZFUMIIC8LvNS699p7mxonP7z//UnPGs3Vkn299GKD9FWN60m1tZGxg=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
         </script>
+
+    <script>
+        function changeThis(sender) {
+            if (document.getElementById('salon_option').checked) {
+                document.getElementById("stylist_1").removeAttribute('disabled');
+                document.getElementById("stylist_2").removeAttribute('disabled');
+
+            }
+            else {
+                document.getElementById("stylist_1").disabled = true;
+                document.getElementById("stylist_2").checked = false;
+
+                document.getElementById("stylist_1").disabled = true;
+                document.getElementById("stylist_2").checked = false;
+
+
+            }
+        }
+    </script>
 
 
 

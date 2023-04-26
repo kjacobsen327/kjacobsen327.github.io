@@ -497,7 +497,6 @@ section.drink_container {
 
 
 /* ------------------------------ CONTACT PROPERTIES ------------------------------ */
-
 .outer_container {
     background-color: #fcbaa7;
     margin: 0 35px 160px 35px;
@@ -505,7 +504,6 @@ section.drink_container {
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
 }
-
 
 /* top part of form: contact info / hours section */
 form .info {
@@ -566,6 +564,7 @@ div.contact_info_container .inner_container div label {
     width: 100px;
     align-self: center;
     text-align: center;
+    color: #e09485;
 }
 
 div.contact_info_container input.text {
@@ -628,10 +627,12 @@ input.text:focus {
     transition: box-shadow .4s ease,
         background .3s ease;
 }
+
 .contact_option input:checked+label:before {
     box-shadow: inset 0px 3px 0 2px #4b6468;
     background: #93c0b2;
 }
+
 /* end radio button styling */
 
 
@@ -641,12 +642,15 @@ div.hours_container {
     width: 40%;
     align-items: center;
 }
+
 div.hours {
     text-align: center;
 }
+
 div.hours_container ul {
     padding: 0;
 }
+
 div.hours_container li {
     list-style-type: none;
     padding: 4px;
@@ -661,12 +665,14 @@ div.hours_container li {
     justify-content: center;
     align-items: center;
 }
+
 .spacer .line {
     height: 1px;
     width: 90%;
     background-color: #fff;
     position: relative;
 }
+
 .spacer .square {
     height: 9px;
     width: 9px;
@@ -678,6 +684,7 @@ div.hours_container li {
     margin: auto;
     transform: rotate(45deg);
 }
+
 /* end  contact info / hours section */
 
 
@@ -690,12 +697,14 @@ div.hours_container li {
     justify-content: center;
     margin-bottom: 10px;
 }
+
 .divider div {
     margin: 0 10px;
     display: flex;
     justify-content: center;
     overflow: hidden;
 }
+
 .divider span {
     display: inline-block;
     flex: 0 0 40px;
@@ -713,6 +722,7 @@ section.booking_options {
     display: flex;
     padding: 10px;
 }
+
 section.booking_options .option_outer_container {
     width: 60%;
 }
@@ -722,10 +732,12 @@ section.booking_options .option_outer_container {
 .option_top_container {
     width: 100%;
 }
+
 .checkbox_container {
     width: 100%;
     padding-left: 8px;
 }
+
 .checkbox_container label {
     font-size: 1.2em;
     width: 100%;
@@ -747,9 +759,6 @@ section.booking_options .option_outer_container {
     accent-color: #b77a6d;
     transform: scale(3);
 }
-.checkbox_container input:checked {
-    outline: hidden;
-}
 
 /* pop up menu for stylist / event choices */
 .option_choice_container {
@@ -765,16 +774,11 @@ section.booking_options .option_outer_container {
 .choose_text {
     font-family: 'Hammersmith One', sans-serif;
     color: #b77a6d;
-    font-size: 1.1em;
+    font-size: 1.3em;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 40%;
-}
-.choose_text p {
-    padding: 5% 10%;
-    border-radius: 5rem;
-    font-size: 1.3em;
 }
 .option_selection_container {
     background-color: #a5d2c377;
@@ -787,6 +791,7 @@ section.booking_options .option_outer_container {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #4b6468;
 }
 .option_selection_container:hover {
     overflow: visible;
@@ -817,8 +822,12 @@ section.booking_options .option_outer_container {
     height: 80px;
     background-color: #a5d2c3;
     border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 0 4px 4px #d3fcee inset;
+
 }
 .options_menu label {
+    box-sizing: border-box;
     display: block;
     background: #a5d2c3;
     width: 100%;
@@ -831,6 +840,12 @@ section.booking_options .option_outer_container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-right: 8px;
+    gap: 8px;
+
+}
+.options_menu label:hover {
+    box-shadow: 0 0 4px 4px #d3fcee inset;
 }
 .option div {
     display: inline-block;
@@ -847,7 +862,6 @@ section.booking_options .option_outer_container {
 .option img:last-of-type {
     background-color: #fcbaa7;
 }
-
 .option span {
     margin-right: 10px;
 }
@@ -857,7 +871,7 @@ section.booking_options .option_outer_container {
 .multi_option_outer_container {
     background-color: #fcf3e2;
     width: 40%;
-    margin: 10px 0 0 10px;
+    margin-left: 10px;
     border-radius: 20px;
     max-height: 200px;
     color: #e09485;
@@ -1013,7 +1027,7 @@ textarea:focus {
     outline: none;
 }
 
-form > .spacer {
+form>.spacer {
     margin: 10px 0;
 }
 
@@ -1034,7 +1048,8 @@ input[type="submit"] {
 
 
 input[type="submit"]:focus {
-outline: 3px solid #d3fcee}
+    outline: 3px solid #d3fcee
+}
 
 
 
@@ -1172,7 +1187,9 @@ footer .sm_icons .icon:active {
 
     .multi_option_outer_container {
         width: 100%;
+        margin-top: 10px;
         margin-left: 0;
+
     }
 }
 
