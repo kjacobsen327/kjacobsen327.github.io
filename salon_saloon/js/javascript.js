@@ -19,6 +19,11 @@ function unlockStylistOptions() {
         servicesBlocker.style.zIndex = "-1";
     }
     else {
+
+stylistsBlocker.style.zIndex = "1";
+
+servicesBlocker.style.zIndex = "1";
+
         // unlockStylists.style.display = "none";
 
 // document.getElementById("stylist_1").checked = false;
