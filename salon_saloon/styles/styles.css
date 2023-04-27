@@ -812,11 +812,10 @@ section.booking_options .option_outer_container {
 .options_menu {
     position: absolute;
     bottom: 80px;
-    width: 100%;
     font-size: .9em;
     background-color: #def9f095;
     border-radius: 30px;
-    display: none;
+    /* display: block; */
 }
 .options_menu input {
     display: none;

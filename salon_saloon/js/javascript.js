@@ -14,12 +14,12 @@ function unlockStylistOptions() {
     servicesBlocker.style.zIndex = "1";
 
     if (document.getElementById("salon_check").checked) {
-        unlockStylists.style.display = "block";
+        // unlockStylists.style.display = "block";
         stylistsBlocker.style.zIndex = "-1";
         servicesBlocker.style.zIndex = "-1";
     }
     else {
-        unlockStylists.style.display = "none";
+        // unlockStylists.style.display = "none";
     }
 }
 
