@@ -21,7 +21,7 @@ function unlockStylistOptions() {
     else {
         // unlockStylists.style.display = "none";
 
-document.getElementById("salon_check").checked = false;
+document.getElementById("service_1").checked = false;
 
     }
 }
