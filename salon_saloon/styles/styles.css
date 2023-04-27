@@ -587,7 +587,8 @@ input.text:focus {
 
 .contact_info_container p {
     text-align: center;
-    font-size: 1.6em;
+    font-size: 1.2em;
+    padding: 10px;
 }
 
 .inner_container div.radio {
@@ -595,28 +596,28 @@ input.text:focus {
     justify-content: space-evenly;
 }
 
-.contact_option div.button_option {
+.subscribe_option div.button_option {
     display: flex;
     justify-content: center;
 }
 
-.contact_option label {
+.subscribe_option label {
     cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    margin: 10px;
+    min-width: 110px;
 }
 
 /* radio button style I liked that I found online */
 /* I changed the code a little bit to make it more styled to my site */
 /* https://www.sliderrevolution.com/resources/styling-radio-buttons/ */
-.contact_option input {
+.subscribe_option input {
     display: none;
 }
 
-.contact_option label:before {
+.subscribe_option label:before {
     content: '';
     display: inline-block;
     height: 30px;
@@ -628,7 +629,7 @@ input.text:focus {
         background .3s ease;
 }
 
-.contact_option input:checked+label:before {
+.subscribe_option input:checked+label:before {
     box-shadow: inset 0px 3px 0 2px #4b6468;
     background: #93c0b2;
 }
@@ -640,13 +641,11 @@ input.text:focus {
 /* properties for hours section */
 div.hours_container {
     width: 40%;
-    align-items: center;
-}
-
-div.hours {
+    /* align-items: center; */
+    display: flex;
+    flex-direction: column;
     text-align: center;
 }
-
 div.hours_container ul {
     padding: 0;
 }
@@ -771,6 +770,15 @@ section.booking_options .option_outer_container {
     background-color: #fcf3e2;
     border-radius: 40px;
 }
+
+.option_choice_container .blocker {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #fcf3e2af;
+    z-index: 1;
+    border-radius: 40px;
+}
 .choose_text {
     font-family: 'Hammersmith One', sans-serif;
     color: #b77a6d;
@@ -808,6 +816,7 @@ section.booking_options .option_outer_container {
     font-size: .9em;
     background-color: #def9f095;
     border-radius: 30px;
+    display: none;
 }
 .options_menu input {
     display: none;
@@ -868,7 +877,7 @@ section.booking_options .option_outer_container {
 
 
 /* multiple checkbox container for salon services / guest numbers */
-.multi_option_outer_container {
+.multi_check_outer_container {
     background-color: #fcf3e2;
     width: 40%;
     margin-left: 10px;
@@ -877,24 +886,33 @@ section.booking_options .option_outer_container {
     color: #e09485;
 }
 
-.salon .multi_option_outer_container {
+.salon .multi_check_outer_container {
     overflow-y: scroll;
 }
 
-.multi_option_outer_container h4 {
+.multi_check_outer_container h4 {
     margin: 10px 0 20px 0;
     font-size: 1.1em;
     text-align: center;
 }
 
-.multi_option_container {
+.multi_check_container {
     width: 100%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
+    position: relative;
 }
 
-.multi_option_container div {
+.multi_check_container .blocker {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #fcf3e2af;
+    z-index: 1;
+}
+
+.multi_check_container div {
     display: flex;
     align-items: center;
     height: 50px;
@@ -902,13 +920,13 @@ section.booking_options .option_outer_container {
     padding-left: 20px;
 }
 
-.multi_option_container label {
+.multi_check_container label {
     font-size: .95em;
     display: block;
     padding-left: 4px;
 }
 
-.multi_option_container input {
+.multi_check_container input {
     display: block;
     width: 20px;
     accent-color: #b77a6d;
@@ -916,25 +934,25 @@ section.booking_options .option_outer_container {
 }
 
 
-/* section for saloon booking options */
-section.saloon.booking_options {
+/* section for event booking options */
+section.event.booking_options {
     margin-bottom: 20px;
 }
 
-section.saloon .multi_option_outer_container {
+section.event .multi_check_outer_container {
     height: auto;
 }
 
-section.saloon .multi_option_container {
+section.event .multi_check_container {
     height: auto;
 }
 
-/* section.saloon .multi_option_container input:focus, */
-section.saloon .multi_option_container input:checked {
+/* section.event .multi_check_container input:focus, */
+section.event .multi_check_container input:checked {
     transform: scale(2.2);
 }
 
-section.saloon .options_menu img {
+section.event .options_menu img {
     background-color: #fcbaa7;
 }
 
@@ -1185,7 +1203,7 @@ footer .sm_icons .icon:active {
         width: 100%;
     }
 
-    .multi_option_outer_container {
+    .multi_check_outer_container {
         width: 100%;
         margin-top: 10px;
         margin-left: 0;
