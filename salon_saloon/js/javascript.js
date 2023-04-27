@@ -21,7 +21,7 @@ function unlockStylistOptions() {
     else {
         // unlockStylists.style.display = "none";
 
-document.getElementById("service_1").checked = false;
+document.getElementById("stylist_1").checked = false;
 
     }
 }
