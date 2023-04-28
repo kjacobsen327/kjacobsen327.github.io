@@ -10,8 +10,8 @@ function unlockStylistOptions() {
     for (var i = 0; i < serviceCheck.length; i++) {
         serviceCheck[i].checked = false;
     }
-    stylistsBlocker.style.zIndex = "1";
-    servicesBlocker.style.zIndex = "1";
+   // stylistsBlocker.style.zIndex = "1";
+   // servicesBlocker.style.zIndex = "1";
 
     if (document.getElementById("salon_check").checked) {
         // unlockStylists.style.display = "block";
