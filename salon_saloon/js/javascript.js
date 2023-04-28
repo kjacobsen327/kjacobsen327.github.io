@@ -10,8 +10,8 @@ function unlockStylistOptions() {
     for (var i = 0; i < serviceCheck.length; i++) {
         serviceCheck[i].checked = false;
     }
-   // stylistsBlocker.style.zIndex = "1";
-   // servicesBlocker.style.zIndex = "1";
+    stylistsBlocker.style.zIndex = "1";
+    servicesBlocker.style.zIndex = "1";
 
     if (document.getElementById("salon_check").checked) {
         // unlockStylists.style.display = "block";
@@ -19,15 +19,7 @@ function unlockStylistOptions() {
         servicesBlocker.style.zIndex = "-1";
     }
     else {
-
-stylistsBlocker.style.zIndex = "1";
-
-servicesBlocker.style.zIndex = "1";
-
-        // unlockStylists.style.display = "none";
-
-// document.getElementById("stylist_1").checked = false;
-
+        unlockStylists.style.display = "none";
     }
 }
 
@@ -45,7 +37,7 @@ function unlockEventOptions() {
     guestsBlocker.style.zIndex = "1";
 
     if (document.getElementById("event_check").checked) {
-        // unlockEvents.style.display = "block";
+        unlockEvents.style.display = "block";
         eventsBlocker.style.zIndex = "-1";
         guestsBlocker.style.zIndex = "-1";
     }
