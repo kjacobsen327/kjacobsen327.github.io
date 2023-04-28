@@ -34,6 +34,7 @@ function unlockStylistOptions() {
     }
 }
 
+// same function as above, just with different names
 function unlockEventOptions() {
 
     let eventsBlocker = document.getElementById("eventsBlocker");
