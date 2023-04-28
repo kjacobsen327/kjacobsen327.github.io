@@ -9,16 +9,14 @@ Business Name: Salon Saloon
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Salon Saloon: come in for a snip and a sip! Look your best in the west!">
-    <title>Salon Saloon | Drink Menu</title>
+    <meta name="description" content="Salon Saloon: Book appointments and events online, or get in touch with us with any other questions or concerns! ">
+    <title>Salon Saloon | Book / Contact</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Pacifico&family=BioRhyme:wght@400;700&display=swap"
         rel="stylesheet">
-
-
 </head>
 
 <body class="contact">
@@ -156,7 +154,7 @@ Business Name: Salon Saloon
                             <!-- menu is hidden until the salon booking checkmark is checked -->
                             <div class="options_menu" id="stylist_options">
                                 <label for="stylist_1">
-                                    <input class="stylist" type="radio" id="stylist_1" name="stylist">
+                                    <input class="stylist_choice" type="radio" id="stylist_1" name="stylist">
                                     <div class="option">
                                         <div>
                                             <img src="images/bobby.jpg">
@@ -165,7 +163,7 @@ Business Name: Salon Saloon
                                     </div>
                                 </label>
                                 <label for="stylist_2">
-                                    <input type="radio" id="stylist_2" name="stylist">
+                                    <input class="stylist_choice" type="radio" id="stylist_2" name="stylist">
                                     <div class="option">
                                         <div>
                                             <img src="images/contact/ruby.png">
@@ -174,7 +172,7 @@ Business Name: Salon Saloon
                                     </div>
                                 </label>
                                 <label for="stylist_3">
-                                    <input type="radio" id="stylist_3" name="stylist">
+                                    <input class="stylist_choice" type="radio" id="stylist_3" name="stylist">
                                     <div class="option">
                                         <div>
                                             <img src="images/contact/sara.png">
@@ -183,7 +181,7 @@ Business Name: Salon Saloon
                                     </div>
                                 </label>
                                 <label for="stylist_4">
-                                    <input type="radio" id="stylist_4" name="stylist">
+                                    <input class="stylist_choice" type="radio" id="stylist_4" name="stylist">
                                     <div class="option">
                                         <div>
                                             <img src="images/contact/billy.png">
@@ -192,7 +190,7 @@ Business Name: Salon Saloon
                                     </div>
                                 </label>
                                 <label for="stylist_5">
-                                    <input type="radio" id="stylist_5" name="stylist">
+                                    <input class="stylist_choice" type="radio" id="stylist_5" name="stylist">
                                     <div class="option">
                                         <div>
                                             <img src="images/contact/lily.png">
@@ -202,7 +200,7 @@ Business Name: Salon Saloon
                                 </label>
 
                                 <label for="any_stylist">
-                                    <input type="radio" id="any_stylist" name="stylist">
+                                    <input class="stylist_choice" type="radio" id="any_stylist" name="stylist">
                                     <div class="option">
                                         <div>
                                             <img src="images/contact/silhouette.png">
@@ -226,50 +224,50 @@ Business Name: Salon Saloon
                         <span id="servicesBlocker" class="blocker"></span>
 
                         <div>
-                            <input type="checkbox" id="service_1" class="serviceCheck">
+                            <input type="checkbox" id="service_1" class="service_choice">
                             <label for="service_1">
                                 Womens Cut
                             </label>
                         </div>
                         <div>
-                            <input type="checkbox" id="service_2" class="serviceCheck">
+                            <input type="checkbox" id="service_2" class="service_choice">
                             <label for="service_2">
                                 Color
                             </label>
                         </div>
                         <div>
-                            <input type="checkbox" id="service_3" class="serviceCheck">
+                            <input type="checkbox" id="service_3" class="service_choice">
                             <label for="service_3">
                                 Blowout
                             </label>
                         </div>
                         <div>
-                            <input type="checkbox" id="service_4" class="serviceCheck">
+                            <input type="checkbox" id="service_4" class="service_choice">
                             <label for="service_4">
                                 Texture
                             </label>
                         </div>
                         <div>
-                            <input type="checkbox" id="service_5" class="serviceCheck">
+                            <input type="checkbox" id="service_5" class="service_choice">
                             <label for="service_5">
                                 Extensions
                             </label>
                         </div>
                         <div>
-                            <input type="checkbox" id="service_6" class="serviceCheck">
+                            <input type="checkbox" id="service_6" class="service_choice">
 
                             <label for="service_6">
                                 Bridal
                             </label>
                         </div>
                         <div>
-                            <input type="checkbox" id="service_7" class="serviceCheck">
+                            <input type="checkbox" id="service_7" class="service_choice">
                             <label for="service_7">
                                 Mens Cut
                             </label>
                         </div>
                         <div>
-                            <input type="checkbox" id="service_8" class="serviceCheck">
+                            <input type="checkbox" id="service_8" class="service_choice">
                             <label for="service_8">
                                 Other
                             </label>
@@ -312,7 +310,7 @@ Business Name: Salon Saloon
 
                             <div class="options_menu" id="event_options">
                                 <label for="event_1">
-                                    <input type="radio" id="event_1" name="event">
+                                    <input type="radio" id="event_1" name="event" class="event_choice">
                                     <div class="option">
                                         <div>
                                             <img src="images/contact/party-hat.png">
@@ -321,7 +319,7 @@ Business Name: Salon Saloon
                                     </div>
                                 </label>
                                 <label for="event_2">
-                                    <input type="radio" id="event_2" name="event">
+                                    <input type="radio" id="event_2" name="event" class="event_choice">
                                     <div class="option">
                                         <div>
                                             <img src="images/contact/ring.png">
@@ -330,7 +328,7 @@ Business Name: Salon Saloon
                                     </div>
                                 </label>
                                 <label for="event_3">
-                                    <input type="radio" id="event_3" name="event">
+                                    <input type="radio" id="event_3" name="event" class="event_choice">
                                     <div class="option">
                                         <div>
                                             <img src="images/contact/briefcase.png">
@@ -339,7 +337,7 @@ Business Name: Salon Saloon
                                     </div>
                                 </label>
                                 <label for="event_4">
-                                    <input type="radio" id="event_4" name="event">
+                                    <input type="radio" id="event_4" name="event" class="event_choice">
                                     <div class="option">
                                         <div>
                                             <img src="images/contact/music.png">
@@ -349,7 +347,7 @@ Business Name: Salon Saloon
                                 </label>
 
                                 <label for="any_event">
-                                    <input type="radio" id="any_event" name="event">
+                                    <input type="radio" id="any_event" name="event" class="event_choice">
                                     <div class="option">
                                         <div>
                                             <img src="images/contact/confetti.png">
@@ -373,25 +371,25 @@ Business Name: Salon Saloon
                         <span id="guestsBlocker" class="blocker"></span>
 
                         <div>
-                            <input type="radio" id="guest_option-1" name="guest_number" value="4 - 8" class="guestCheck">
+                            <input type="radio" id="guest_option-1" name="guest_number" value="4 - 8" class="guest_choice">
                             <label for="guest_option-1">
                                 4 - 8
                             </label>
                         </div>
                         <div>
-                            <input type="radio" id="guest_option-2" name="guest_number" value="9 - 15" class="guestCheck">
+                            <input type="radio" id="guest_option-2" name="guest_number" value="9 - 15" class="guest_choice">
                             <label for="guest_option-2">
                                 9 - 15
                             </label>
                         </div>
                         <div>
-                            <input type="radio" id="guest_option-3" name="guest_number" value="16 - 24" class="guestCheck">
+                            <input type="radio" id="guest_option-3" name="guest_number" value="16 - 24" class="guest_choice">
                             <label for="guest_option-3">
                                 16 - 24
                             </label>
                         </div>
                         <div>
-                            <input type="radio" id="guest_option-4" name="guest_number" value="25 +" class="guestCheck">
+                            <input type="radio" id="guest_option-4" name="guest_number" value="25 +" class="guest_choice">
                             <label for="guest_option-4">
                                 25 +
                             </label>

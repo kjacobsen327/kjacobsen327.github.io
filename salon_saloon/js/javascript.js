@@ -1,47 +1,59 @@
-
-
+// this function is to allow the selection of the stylist and options
+// when the checkmark to book an appointment for the salon is checked
+// and will clear all the selections when unclicked
 function unlockStylistOptions() {
-
-    let unlockStylists = document.getElementById("stylist_options");
+    
+    // get the semi-transparent blocker span elements positioned on top of the choices
     let stylistsBlocker = document.getElementById("stylistsBlocker");
     let servicesBlocker = document.getElementById("servicesBlocker");
 
-    var serviceCheck = document.querySelectorAll(".serviceCheck");
-    for (var i = 0; i < serviceCheck.length; i++) {
-        serviceCheck[i].checked = false;
-    }
+    // set the blocker to be positioned on top of the choices if checkmark is unchecked
     stylistsBlocker.style.zIndex = "1";
     servicesBlocker.style.zIndex = "1";
 
+    // if the checkmark is checked the blocker will be hidden behind the choices
     if (document.getElementById("salon_check").checked) {
-        // unlockStylists.style.display = "block";
         stylistsBlocker.style.zIndex = "-1";
         servicesBlocker.style.zIndex = "-1";
     }
-    else {
-        // unlockStylists.style.display = "none";
+
+    // this will clear the stylist choice when the checkmark is unchecked
+    let stylistChoice = document.querySelectorAll(".stylist_choice");
+        // get all intances of class="stylist_choice"
+    for (let i = 0; i < stylistChoice.length; i++) {
+        // remove checked option
+        stylistChoice[i].checked = false;
+    }
+
+    // this will clear the service choices when the checkmark is unchecked
+    let serviceChoice = document.querySelectorAll(".service_choice");
+        // get all instances of class="service_choice"
+    for (let i = 0; i < serviceChoice.length; i++) {
+        // remove checked options
+        serviceChoice[i].checked = false;
     }
 }
 
 function unlockEventOptions() {
 
-    let unlockEvents = document.getElementById("event_options");
     let eventsBlocker = document.getElementById("eventsBlocker");
     let guestsBlocker = document.getElementById("guestsBlocker");
 
-    var guestCheck = document.querySelectorAll(".guestCheck");
-    for (var i = 0; i < guestCheck.length; i++) {
-        guestCheck[i].checked = false;
-    }
     eventsBlocker.style.zIndex = "1";
     guestsBlocker.style.zIndex = "1";
 
     if (document.getElementById("event_check").checked) {
-        // unlockEvents.style.display = "block";
         eventsBlocker.style.zIndex = "-1";
         guestsBlocker.style.zIndex = "-1";
     }
-    else {
-        // unlockEvents.style.display = "none";
+
+    let eventChoice = document.querySelectorAll(".event_choice");
+    for (let i = 0; i < eventChoice.length; i++) {
+        eventChoice[i].checked = false;
+    }
+
+    let guestChoice = document.querySelectorAll(".guest_choice");
+    for (let i = 0; i < guestChoice.length; i++) {
+        guestChoice[i].checked = false;
     }
 }
