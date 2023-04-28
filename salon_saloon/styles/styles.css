@@ -844,6 +844,7 @@ section.booking_options .option_outer_container {
     text-align: right;
 }
 .options_menu label .option {
+Width: 100%;
     height: 80px;
     display: flex;
     align-items: center;
