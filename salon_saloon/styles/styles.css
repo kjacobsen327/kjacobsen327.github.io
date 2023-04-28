@@ -816,7 +816,7 @@ section.booking_options .option_outer_container {
     font-size: .9em;
     background-color: #def9f095;
     border-radius: 30px;
-    /* display: ; */
+    display: block;
 }
 .options_menu input {
     display: none;

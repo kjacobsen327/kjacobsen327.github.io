@@ -19,7 +19,7 @@ function unlockStylistOptions() {
         servicesBlocker.style.zIndex = "-1";
     }
     else {
-        unlockStylists.style.display = "none";
+        // unlockStylists.style.display = "none";
     }
 }
 
@@ -37,11 +37,11 @@ function unlockEventOptions() {
     guestsBlocker.style.zIndex = "1";
 
     if (document.getElementById("event_check").checked) {
-        unlockEvents.style.display = "block";
+        // unlockEvents.style.display = "block";
         eventsBlocker.style.zIndex = "-1";
         guestsBlocker.style.zIndex = "-1";
     }
     else {
-        unlockEvents.style.display = "none";
+        // unlockEvents.style.display = "none";
     }
 }
