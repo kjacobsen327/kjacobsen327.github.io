@@ -82,7 +82,9 @@ nav a:visited {
 nav a:hover {
     color: #e09485;
     border-bottom: 3px solid #e09485;
-}
+
+    transform: scale(1.1);
+transition: .2s;}
 
 nav a:active {
     color: #4b6468;
@@ -92,10 +94,13 @@ nav a:active {
 nav a.current_page {
     color: #e09485;
     border-bottom: 3px solid #e09485;
+    transform: scale(1.05);
+
 }
 
 nav .cta.current_page {
     box-shadow: 0 0 10px 10px #e09485;
+
 }
 
 nav .cta.current_page a {
@@ -106,12 +111,15 @@ nav .cta.current_page a {
 .nav_logo a:hover,
 .nav_logo a.current_page {
     border-bottom: 0;
+
 }
 
 .nav_logo:hover,
 div.nav_logo.current_page {
     background-color: #fff8ea;
     box-shadow: 0 0 10px 10px #e09485;
+    transform: scale(1.05);
+
 }
 
 
@@ -229,6 +237,7 @@ div.nav_logo.current_page {
 
 .btn:hover {
     background-color: #fff8ea;
+    transform: scale(1.05);
 }
 
 .btn:active {
@@ -384,6 +393,9 @@ h2 {
 .merch_image:hover p {
     color: #fff;
     background-color: #a5d2c3;
+    transform: scale(1.05);
+    transition: .3s;
+    
 }
 
 /* settings to make the text look like the button is being pressed down */
@@ -416,11 +428,13 @@ h2 {
     height: 100%;
     width: 100%;
 }
+
 .drinks header div:last-child {
     display: flex;
     flex-direction: column;
     width: 55%;
 }
+
 .drinks header h1 {
     font-family: 'Pacifico', cursive;
     font-size: 2.5em;
@@ -431,6 +445,7 @@ h2 {
     text-shadow: 3px 3px #b77a6d;
     z-index: 2;
 }
+
 .drinks div:last-child img {
     height: 83%;
 }
@@ -1074,7 +1089,7 @@ input#booking_time {
 }
 
 input#booking_time:focus {
-    outline: none;
+    /* outline: none; */
 
 }
 
@@ -1317,7 +1332,7 @@ footer .sm_icons .icon:active {
         background-position: -500px center;
     }
 
-    .drinks header div{
+    .drinks header div {
         width: 100%;
         height: 50%;
     }
