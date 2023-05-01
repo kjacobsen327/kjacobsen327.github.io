@@ -323,8 +323,6 @@ h2 {
     background-color: #fcb9a7b9;
     text-shadow: -1.5px 1.5px #b77a6d;
     border: 6px solid #fcbaa7;
-
-
 }
 
 /* --------------------  HOME PAGE STYLISTS AND MERCH SECTION -------------------- */
@@ -376,8 +374,7 @@ h2 {
     text-align: center;
 }
 
-/* settings for hyperlink */
-
+/* settings for hyperlinks */
 .stylists_and_merch a:link,
 .stylists_and_merch a:visited {
     color: #fff;
@@ -398,6 +395,66 @@ h2 {
 }
 
 /* ------------------------------ DRINK MENU PAGE PROPERTIES ------------------------------ */
+.drinks header {
+    display: flex;
+    height: 500px;
+    width: 100%;
+    background: url(../images/drink_menu/header_bg.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.drinks header div {
+    width: 45%;
+    height: 100%;
+}
+
+
+.drinks header div img {
+    object-fit: scale-down;
+    height: 100%;
+    width: 100%;
+}
+.drinks header div:last-child {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+}
+.drinks header h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.5em;
+    font-weight: 100;
+    height: 15%;
+    margin: 6px;
+    text-align: center;
+    text-shadow: 3px 3px #b77a6d;
+    z-index: 2;
+}
+.drinks div:last-child img {
+    height: 83%;
+}
+
+.drinks h2 {
+    font-family: 'Pacifico', cursive;
+    color: #fcbaa7;
+    font-weight: 100;
+
+}
+
+.drinks .spacer .line,
+.drinks .spacer .square {
+    background-color: #fcbaa7;
+    height: 5px;
+}
+
+.drinks .spacer .square {
+    height: 15px;
+    width: 15px;
+}
+
+
+
 
 section.drink_container {
     display: flex;
@@ -497,6 +554,16 @@ section.drink_container {
 
 
 /* ------------------------------ CONTACT PROPERTIES ------------------------------ */
+.contact h1 {
+    font-family: 'Pacifico', cursive;
+    color: #e09485;
+    font-size: 2.5em;
+    font-weight: 100;
+    height: 15%;
+    margin: 6px;
+    text-align: center;
+}
+
 .outer_container {
     background-color: #fcbaa7;
     margin: 0 35px 160px 35px;
@@ -646,6 +713,7 @@ div.hours_container {
     flex-direction: column;
     text-align: center;
 }
+
 div.hours_container ul {
     padding: 0;
 }
@@ -751,9 +819,11 @@ section.booking_options .option_outer_container {
     background-color: #93c0b2;
     cursor: pointer;
 }
+
 .checkbox_container span {
     width: 70%;
 }
+
 .checkbox_container input {
     accent-color: #b77a6d;
     transform: scale(3);
@@ -779,6 +849,7 @@ section.booking_options .option_outer_container {
     z-index: 1;
     border-radius: 40px;
 }
+
 .choose_text {
     font-family: 'Hammersmith One', sans-serif;
     color: #b77a6d;
@@ -788,6 +859,7 @@ section.booking_options .option_outer_container {
     align-items: center;
     width: 40%;
 }
+
 .option_selection_container {
     background-color: #a5d2c377;
     position: relative;
@@ -801,6 +873,7 @@ section.booking_options .option_outer_container {
     align-items: center;
     color: #4b6468;
 }
+
 .option_selection_container:hover {
     overflow: visible;
     position: absolute;
@@ -809,6 +882,7 @@ section.booking_options .option_outer_container {
     bottom: 80px;
     z-index: 11;
 }
+
 .options_menu {
     position: absolute;
     width: 100%;
@@ -818,12 +892,15 @@ section.booking_options .option_outer_container {
     border-radius: 30px;
     display: block;
 }
+
 .options_menu input {
     display: none;
 }
+
 .options_menu input+div {
     display: inline-block;
 }
+
 .options_menu input:checked+div {
     position: absolute;
     bottom: -80px;
@@ -835,6 +912,7 @@ section.booking_options .option_outer_container {
     box-shadow: 0 0 4px 4px #d3fcee inset;
 
 }
+
 .options_menu label {
     box-sizing: border-box;
     display: block;
@@ -844,6 +922,7 @@ section.booking_options .option_outer_container {
     margin: 15px 0;
     text-align: right;
 }
+
 .options_menu label .option {
     height: 80px;
     display: flex;
@@ -853,24 +932,29 @@ section.booking_options .option_outer_container {
     gap: 8px;
 
 }
+
 .options_menu label:hover {
     box-shadow: 0 0 4px 4px #d3fcee inset;
 }
+
 .option div {
     display: inline-block;
     height: 70px;
     width: 70px;
     margin-left: 5px;
 }
+
 .option img {
     object-fit: cover;
     height: 100%;
     width: 100%;
     border-radius: 50%;
 }
+
 .option img:last-of-type {
     background-color: #fcbaa7;
 }
+
 .option span {
     margin-right: 10px;
 }
@@ -1069,13 +1153,6 @@ input[type="submit"]:focus {
     outline: 3px solid #d3fcee
 }
 
-
-
-
-
-
-
-
 /* ------------------------------ FOOTER PROPERTIES ------------------------------ */
 footer div.footer-background {
     position: absolute;
@@ -1232,6 +1309,21 @@ footer .sm_icons .icon:active {
 
     .merch_image {
         height: 175px;
+    }
+
+    .drinks header {
+        height: 725px;
+        flex-direction: column;
+        background-position: -500px center;
+    }
+
+    .drinks header div{
+        width: 100%;
+        height: 50%;
+    }
+
+    .drinks header div:last-child {
+        width: 100%;
     }
 
     .drink_container {

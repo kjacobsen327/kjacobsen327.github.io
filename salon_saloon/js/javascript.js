@@ -1,6 +1,11 @@
-// this function is to allow the selection of the stylist and options
-// when the checkmark to book an appointment for the salon is checked
-// and will clear all the selections when unclicked
+/* 
+This function is to allow the selection of the stylist and options
+when the checkmark to book an appointment for the salon is checked
+and will clear all the selections when unclicked
+
+I made this just to play around with learning javascript some more
+*/
+
 function unlockStylistOptions() {
     
     // get the semi-transparent blocker span elements positioned on top of the choices
@@ -26,15 +31,17 @@ function unlockStylistOptions() {
     }
 
     // this will clear the service choices when the checkmark is unchecked
+
+    // check page for a class of "service_choice"
     let serviceChoice = document.querySelectorAll(".service_choice");
-        // get all instances of class="service_choice"
+    // run a for loop to get all instances of class "service_choice"
     for (let i = 0; i < serviceChoice.length; i++) {
         // remove checked options
         serviceChoice[i].checked = false;
     }
 }
 
-// same function as above, just with different names
+// same function as above, just with different names for the event booking options
 function unlockEventOptions() {
 
     let eventsBlocker = document.getElementById("eventsBlocker");
