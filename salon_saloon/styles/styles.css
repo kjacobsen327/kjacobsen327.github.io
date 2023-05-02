@@ -84,7 +84,8 @@ nav a:hover {
     border-bottom: 3px solid #e09485;
 
     transform: scale(1.1);
-transition: .2s;}
+    transition: .2s;
+}
 
 nav a:active {
     color: #4b6468;
@@ -395,7 +396,7 @@ h2 {
     background-color: #a5d2c3;
     transform: scale(1.05);
     transition: .3s;
-    
+
 }
 
 /* settings to make the text look like the button is being pressed down */
@@ -569,22 +570,27 @@ section.drink_container {
 
 
 /* ------------------------------ CONTACT PROPERTIES ------------------------------ */
+
 .contact h1 {
     font-family: 'Pacifico', cursive;
     color: #e09485;
-    font-size: 2.5em;
+    font-size: 2.2em;
     font-weight: 100;
-    height: 15%;
-    margin: 6px;
     text-align: center;
+    margin: 0;
+}
+
+.contact .phone {
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
 }
 
 .outer_container {
     background-color: #fcbaa7;
     margin: 0 35px 160px 35px;
     padding-bottom: 30px;
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
+    border-radius: 30px;
 }
 
 /* top part of form: contact info / hours section */
@@ -723,11 +729,21 @@ input.text:focus {
 /* properties for hours section */
 div.hours_container {
     width: 40%;
-    /* align-items: center; */
     display: flex;
     flex-direction: column;
     text-align: center;
 }
+
+.contact .phone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
 
 div.hours_container ul {
     padding: 0;
@@ -1088,10 +1104,6 @@ input#booking_time {
     text-align: center;
 }
 
-input#booking_time:focus {
-    /* outline: none; */
-
-}
 
 /* start of text area section */
 section.comments {
