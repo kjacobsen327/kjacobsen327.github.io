@@ -162,8 +162,8 @@ div.nav_logo.current_page {
     flex-direction: column;
     align-items: center;
     height: 100%;
-    width: 65%;
-    max-width: 400px;
+    width: 70%;
+    max-width: 425px;
     left: 0;
     right: 0;
     margin: auto;
@@ -190,7 +190,7 @@ div.nav_logo.current_page {
     font-size: .95em;
     text-align: center;
     background-color: #fcf3e261;
-    padding: 4px 8px;
+    padding: 4px;
 }
 
 /* this is a flexbox container holding the "snip it" and "sip it" div buttons */
@@ -586,10 +586,10 @@ section.drink_container {
     justify-content: space-between;
 }
 
-.outer_container {
+.contact .outer_container {
     background-color: #fcbaa7;
-    margin: 0 35px 160px 35px;
-    padding-bottom: 30px;
+    margin: 0 35px;
+    padding-bottom: 20px;
     border-radius: 30px;
 }
 
@@ -698,6 +698,12 @@ input.text:focus {
     min-width: 110px;
 }
 
+.subscribe_option label:hover,
+.subscribe_option input:checked+label {
+    transform: scale(1.1);
+
+}
+
 /* radio button style I liked that I found online */
 /* I changed the code a little bit to make it more styled to my site */
 /* https://www.sliderrevolution.com/resources/styling-radio-buttons/ */
@@ -728,20 +734,36 @@ input.text:focus {
 
 /* properties for hours section */
 div.hours_container {
-    width: 40%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    height: stretch;
+    width: 40%;
     text-align: center;
+    margin-top: 10px;
 }
 
-.contact .phone {
+.hours_container h2 {
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: 2.2em;
+    align-self: center;
+}
+
+.hours_container .phone {
+    width: 100%;
+}
+
+.phone h2 {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
     gap: 10px;
-    margin-bottom: 10px;
-    font-size: 1.2em;
+    font-size: 1.65em;
+}
+
+.phone svg {
+    color: #fcf3e2;
 }
 
 
@@ -941,7 +963,6 @@ section.booking_options .option_outer_container {
     border-radius: 40px;
     overflow: hidden;
     box-shadow: 0 0 4px 4px #d3fcee inset;
-
 }
 
 .options_menu label {
@@ -952,6 +973,7 @@ section.booking_options .option_outer_container {
     border-radius: 40px;
     margin: 15px 0;
     text-align: right;
+    cursor: pointer;
 }
 
 .options_menu label .option {
@@ -961,11 +983,11 @@ section.booking_options .option_outer_container {
     justify-content: space-between;
     padding-right: 8px;
     gap: 8px;
-
 }
 
 .options_menu label:hover {
     box-shadow: 0 0 4px 4px #d3fcee inset;
+    transform: scale(1.05);
 }
 
 .option div {
@@ -1039,13 +1061,16 @@ section.booking_options .option_outer_container {
     font-size: .95em;
     display: block;
     padding-left: 4px;
+    cursor: pointer;
 }
+
 
 .multi_check_container input {
     display: block;
     width: 20px;
     accent-color: #b77a6d;
     transform: scale(1.7);
+    cursor: pointer;
 }
 
 
@@ -1102,6 +1127,7 @@ input#booking_time {
     border: none;
     padding: 10px;
     text-align: center;
+    cursor: pointer;
 }
 
 
@@ -1172,12 +1198,51 @@ input[type="submit"] {
     border-radius: 20px;
     border: none;
     box-shadow: -8px 6px #4b6468;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    transform: scale(1.05);
 
 }
 
+section.location h2 {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.4em;
+    font-weight: 100;
+}
 
-input[type="submit"]:focus {
-    outline: 3px solid #d3fcee
+.location .outer_container {
+    background-color: transparent;
+    margin: 35px 10px 140px 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.location img {
+    height: 200px;
+}
+
+.location ul {
+    color: #e09485;
+    padding: 0;
+    margin: 0;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.location li {
+    color: #e09485;
+    list-style-type: none;
+}
+
+iframe {
+    outline: 6px solid #e09485;
+    border-radius: 20px;
 }
 
 /* ------------------------------ FOOTER PROPERTIES ------------------------------ */
@@ -1311,7 +1376,21 @@ footer .sm_icons .icon:active {
         width: 100%;
         margin-top: 10px;
         margin-left: 0;
+    }
 
+    .location .outer_container {
+        flex-direction: column-reverse;
+        margin-bottom: 60px;
+    }
+
+    iframe {
+        width: 90%;
+        max-width: 600px;
+    }
+
+    .location img {
+        width: 200px;
+        height: auto;
     }
 }
 
@@ -1401,6 +1480,10 @@ footer .sm_icons .icon:active {
         bottom: -15px;
     }
 
+    .hours_container .phone {
+        margin-top: 20px;
+    }
+
     div.contact_info_container {
         width: 100%;
     }
@@ -1414,7 +1497,7 @@ footer .sm_icons .icon:active {
     }
 
     .outer_container {
-        margin: 0 10px 100px 10px;
+        margin: 0 10px;
     }
 
     .option_top_container,
