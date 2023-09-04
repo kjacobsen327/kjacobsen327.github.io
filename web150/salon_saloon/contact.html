@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<!-- 
+Kevin Jacobsen
+Web150, ASN 6
+Business Name: Salon Saloon
+ -->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Salon Saloon: Book appointments and events online, or get in touch with us with any other questions or concerns! ">
+    <title>Salon Saloon | Book / Contact</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Pacifico&family=BioRhyme:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="contact">
+    <!-- nav bar that is a flex container holding links for services, drinks, and contact us  -->
+    <nav>
+        <!-- small logo of a cowboy hat that is also the link to the home page -->
+        <div class="nav_logo">
+            <a href="index.html">
+                <img src="images/nav_logo.png"
+                    alt="Small logo of a cowboy hat for Salon Saloon that links to the home page">
+            </a>
+        </div>
+        <a href="#">
+            SALON
+        </a>
+        <!-- this will end up linking to my services/products page for the final product -->
+        <a href="drinks.html">
+            SALOON
+        </a>
+
+        <a href="#">
+            MERCH
+        </a>
+
+        <!-- this will end up linking to my contact page for the final project -->
+        <div class="cta current_page">
+            <a href="contact.html" class="current_page">
+                BOOK / CONTACT
+            </a>
+        </div>
+    </nav>
+    <main>
+        <header>
+            <h1>Contact Us</h1>
+        </header>
+
+        <form class="outer_container" action="#" method="post">
+
+            <div class="info">
+                <div class="contact_info_container">
+                    <div class="inner_container">
+                        <h3>CONTACT INFO</h3>
+                        <div>
+                            <label for="fname">NAME</label>
+                            <input class="text" type="text" id="fname" name="fname">
+                        </div>
+
+                        <div>
+                            <label for="phone">PHONE</label>
+                            <input class="text" type="tel" id="phone" name="phone">
+                        </div>
+                        <div>
+                            <label for="email">EMAIL</label>
+                            <input class="text" type="email" id="email" name="email">
+                        </div>
+
+                        <p>Can we lasso you in here with news about events and great deals? </p>
+                        <div class="subscribe_option">
+                            <div class="button_option">
+                                <input type="radio" id="yes_option" name="subscribe_option">
+                                <label for="yes_option">Yes please</label>
+                            </div>
+                            <div class="button_option">
+                                <input type="radio" id="no_option" name="subscribe_option">
+                                <label for="no_option">No thanks</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hours_container">
+                    <h2>HOURS</h2>
+                    <div class="flexbox_hours_for_mobile">
+                        <div class="hours">
+                            <h4>SALON</h4>
+                            <ul>
+                                <li>MON - FRI: 9AM - 9PM</li>
+                                <li>SAT - SUN: 10AM - 7PM</li>
+                            </ul>
+                        </div>
+
+                        <!-- this is the line separating the salon and saloon hours -->
+                        <div class="spacer">
+                            <div class="line">
+                                <div class="square"></div>
+                            </div>
+                        </div>
+
+                        <div class="hours">
+                            <h4>SALOON</h4>
+                            <ul>
+                                <li>MON - FRI: 9AM - 11PM</li>
+                                <li>SAT - SUN: 10AM - 2AM</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="phone">
+                        <h2><i class="fa-solid fa-phone"></i>123-456-7890</h2>
+                    </div>
+                </div>
+            </div>
+
+            <!-- zig zag divider -->
+            <!-- I made it by using box shadow on squares that are rotated 45 degrees -->
+            <div class="divider">
+                <div>
+                    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                </div>
+            </div>
+
+            <!-- option to book a salon appointment -->
+            <div class="salon booking_options">
+                <div class="option_outer_container">
+
+                    <div class="option_top_container">
+                        <div class="checkbox_container">
+                            <label for="salon_check">
+                                <input type="checkbox" id="salon_check" name="salon_check"
+                                    onchange="unlockStylistOptions()">
+                                <span>Need to get your hair wrangled?</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="option_choice_container">
+
+                        <!-- this is to block the stylists selection until the book salon checkmark is checked -->
+                        <span id="stylistsBlocker" class="blocker"></span>
+
+                        <div class="choose_text">
+                            Stylist:
+                        </div>
+
+                        <div class="option_selection_container">
+                            Choose a stylist
+
+                            <!-- menu positioned above the selection container when hovered over -->
+                            <!-- menu is hidden until the salon booking checkmark is checked -->
+                            <div class="options_menu" id="stylist_options">
+                                <label for="stylist_1">
+                                    <input class="stylist_choice" type="radio" id="stylist_1" name="stylist">
+                                    <span class="option">
+                                        <span>
+                                            <img src="images/bobby.jpg" alt="Bobby">
+                                        </span>
+                                        <span class="name">Bobby</span>
+                                    </span>
+                                </label>
+                                <label for="stylist_2">
+                                    <input class="stylist_choice" type="radio" id="stylist_2" name="stylist">
+                                    <span class="option">
+                                        <span>
+                                            <img src="images/contact/ruby.png" alt="Ruby">
+                                        </span>
+                                        <span class="name">Ruby Rodeo</span>
+                                    </span>
+                                </label>
+                                <label for="stylist_3">
+                                    <input class="stylist_choice" type="radio" id="stylist_3" name="stylist">
+                                    <span class="option">
+                                        <span>
+                                            <img src="images/contact/sara.png" alt="Sara">
+                                        </span>
+                                        <span class="name">Sara Sarsparilla</span>
+                                    </span>
+                                </label>
+                                <label for="stylist_4">
+                                    <input class="stylist_choice" type="radio" id="stylist_4" name="stylist">
+                                    <span class="option">
+                                        <span>
+                                            <img src="images/contact/billy.png" alt="Billy">
+                                        </span>
+                                        <span class="name">Billy Buckle</span>
+                                    </span>
+                                </label>
+                                <label for="stylist_5">
+                                    <input class="stylist_choice" type="radio" id="stylist_5" name="stylist">
+                                    <span class="option">
+                                        <span>
+                                            <img src="images/contact/lily.png" alt="Lily">
+                                        </span>
+                                        <span class="name">Lily Lasso</span>
+                                    </span>
+                                </label>
+
+                                <label for="any_stylist">
+                                    <input class="stylist_choice" type="radio" id="any_stylist" name="stylist">
+                                    <span class="option">
+                                        <span>
+                                            <img src="images/contact/silhouette.png" alt="Pick for me!">
+                                        </span>
+                                        <span class="name">Pick for me!</span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="multi_check_outer_container">
+
+                    <h4>What would you like done?</h4>
+                    <div class="multi_check_container">
+
+                        <!-- this will block the salon services multiple checkbox until the salon booking option is checked -->
+                        <span id="servicesBlocker" class="blocker"></span>
+
+                        <div>
+                            <input type="checkbox" id="service_1" class="service_choice">
+                            <label for="service_1">
+                                Womens Cut
+                            </label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="service_2" class="service_choice">
+                            <label for="service_2">
+                                Color
+                            </label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="service_3" class="service_choice">
+                            <label for="service_3">
+                                Blowout
+                            </label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="service_4" class="service_choice">
+                            <label for="service_4">
+                                Texture
+                            </label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="service_5" class="service_choice">
+                            <label for="service_5">
+                                Extensions
+                            </label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="service_6" class="service_choice">
+
+                            <label for="service_6">
+                                Bridal
+                            </label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="service_7" class="service_choice">
+                            <label for="service_7">
+                                Mens Cut
+                            </label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="service_8" class="service_choice">
+                            <label for="service_8">
+                                Other
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="spacer">
+                <div class="line">
+                    <div class="square"></div>
+                </div>
+            </div>
+
+            <div class="event booking_options">
+                <div class="option_outer_container">
+
+                    <div class="option_top_container">
+
+                        <div class="checkbox_container">
+                            <label for="event_check">
+                                <input type="checkbox" id="event_check" name="event_check"
+                                    onchange="unlockEventOptions(this)">
+                                <span>Looking to round up some people for an event?</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="option_choice_container">
+
+                        <!-- this is to block the events selection until the book salon checkmark is checked -->
+                        <span id="eventsBlocker" class="blocker"></span>
+
+                        <div class="choose_text">
+                            <p>Event:</p>
+                        </div>
+
+                        <div class="option_selection_container">
+                            Choose an event
+
+                            <div class="options_menu" id="event_options">
+                                <label for="event_1">
+                                    <input type="radio" id="event_1" name="event" class="event_choice">
+                                    <span class="option">
+                                        <span>
+                                            <img src="images/contact/party-hat.png" alt="Party Hat">
+                                        </span>
+                                        <span class="name">Private Party</span>
+                                    </span>
+                                </label>
+                                <label for="event_2">
+                                    <input type="radio" id="event_2" name="event" class="event_choice">
+                                    <span class="option">
+                                        <span>
+                                            <img src="images/contact/ring.png" alt="Wedding Ring">
+                                        </span>
+                                        <span class="name">Bridal Event</span>
+                                    </span>
+                                </label>
+                                <label for="event_3">
+                                    <input type="radio" id="event_3" name="event" class="event_choice">
+                                    <span class="option">
+                                        <span>
+                                            <img src="images/contact/briefcase.png" alt="Briefcase">
+                                        </span>
+                                        <span class="name">Corporate Event</span>
+                                    </span>
+                                </label>
+                                <label for="event_4">
+                                    <input type="radio" id="event_4" name="event" class="event_choice">
+                                    <span class="option">
+                                        <span>
+                                            <img src="images/contact/music.png" alt="Music Notes">
+                                        </span>
+                                        <span class="name">Live Music / Karaoke</span>
+                                    </span>
+                                </label>
+
+                                <label for="any_event">
+                                    <input type="radio" id="any_event" name="event" class="event_choice">
+                                    <span class="option">
+                                        <span>
+                                            <img src="images/contact/confetti.png" alt="Confetti">
+                                        </span>
+                                        <span class="name">Other</span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="multi_check_outer_container">
+                    <h4>How many people?</h4>
+
+                    <div class="multi_check_container">
+
+                        <!-- this will block the guest number multiple checkbox until the salon booking option is checked -->
+                        <span id="guestsBlocker" class="blocker"></span>
+
+                        <div>
+                            <input type="radio" id="guest_option-1" name="guest_number" value="4 - 8"
+                                class="guest_choice">
+                            <label for="guest_option-1">
+                                4 - 8
+                            </label>
+                        </div>
+                        <div>
+                            <input type="radio" id="guest_option-2" name="guest_number" value="9 - 15"
+                                class="guest_choice">
+                            <label for="guest_option-2">
+                                9 - 15
+                            </label>
+                        </div>
+                        <div>
+                            <input type="radio" id="guest_option-3" name="guest_number" value="16 - 24"
+                                class="guest_choice">
+                            <label for="guest_option-3">
+                                16 - 24
+                            </label>
+                        </div>
+                        <div>
+                            <input type="radio" id="guest_option-4" name="guest_number" value="25 +"
+                                class="guest_choice">
+                            <label for="guest_option-4">
+                                25 +
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="date_and_time">
+                <label for="booking_time">
+                    <span>When are you looking to book?</span>
+                    <input id="booking_time" type="datetime-local" name="booking_time" min="2023-05-03T09:00"
+                        max="2023-12-31T23:59">
+                </label>
+            </div>
+
+            <div class="comments">
+                <label for="comments_check">
+                    <input type="checkbox" id="comments_check" name="comments">
+                    <span>I have some questions / comments / concerns</span>
+                </label>
+                <textarea id="text_area" name="text_area"
+                    placeholder="Leave your questions or comments here"></textarea>
+            </div>
+
+            <div class="spacer">
+                <div class="line">
+                    <div class="square"></div>
+                </div>
+            </div>
+
+            <input type="submit" value="SEND">
+        </form>
+
+        <div class="location">
+            <!-- <h2>Our Location</h2> -->
+            <div class="outer_container">
+                <img src="images/contact/ss.png" alt="Salon Saloon Logo">
+                <ul>
+                    <li>123 Dusty Dr</li>
+                    <li>Tombstone, AZ</li>
+                    <li>85638</li>
+                </ul>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6461.617936397996!2d-110.0635530033331!3d31.70665297110271!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86d73b5123a4adc3%3A0xa8e95ebe9ecb422c!2sAbandoned%20mill%20shack!5e1!3m2!1sen!2sus!4v1683049166191!5m2!1sen!2sus"
+                    width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </main>
+    <!-- end main section -->
+
+    <!-- FOOTER -->
+    <!-- footer is a flexbox container containing 3 flex items -->
+    <footer>
+
+        <!-- background behind the footer -->
+        <div class="footer-background"></div>
+
+        <!-- this is a flex container so the phone icon and phone number line up nicely -->
+        <div class="footer_flex_item phone_number">
+            <i class="icon fa-solid fa-square-phone"></i>
+            <div>123-456-7890</div>
+        </div>
+
+        <!-- flex item #2 and flex container so the address looks nicer split into two lines of text-->
+        <div class="footer_flex_item address">
+            <div>123 Dusty Dr</div>
+            <div>Tombstone AZ 85638</div>
+        </div>
+
+        <!-- social media icon links-->
+        <div class="footer_flex_item sm_icons">
+            <a href="https://www.facebook.com/" target="_blank" title="Visit our Facebook page!">
+                <i class="icon fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" title="Check out our Instagram!">
+                <i class="icon fa-brands fa-instagram"></i>
+            </a>
+        </div>
+    </footer>
+
+    <!-- Font Awesome script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.js"
+        integrity="sha512-jdM4CX13QmorrIpE3U+2hOxEO+j6hy9nZFUMIIC8LvNS699p7mxonP7z//UnPGs3Vkn299GKD9FWN60m1tZGxg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+        </script>
+
+    <script src="js/javascript.js">
+    </script>
+
+
+
+</body>
+
+</html>

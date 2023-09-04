@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport content=width=device-width, initial-scale=1">
+    <title>Assignment 15</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1 id="heading"></h1>
+    </header>
+    <main>
+        <p>The current time is:</p>
+        <p id="text"></p>
+
+
+        <canvas id="name" width="360" height="240">
+            This text is displayed if your browser does not support HTML5 Canvas.
+        </canvas>
+
+        <canvas id="line" width="360" height="240">
+            This text is displayed if your browser does not support HTML5 Canvas.
+        </canvas>
+
+        <canvas id="circle" width="360" height="240">
+            This text is displayed if your browser does not support HTML5 Canvas.
+        </canvas>
+        
+        <canvas id="square" width="360" height="240">
+            This text is displayed if your browser does not support HTML5 Canvas.
+        </canvas>
+
+        <h2>Assignment Summary:</h2>
+        <p>What I learned this week is that javascript is an essential tool to know to build web pages. These are just
+            some basic examples, but I know it can get way more advanced about the possibilities you can use it for. Now
+            having learned some of the basics of html and css, I can see how javascript can add some useful functions
+            like changing things on the page on click, or when certain events happen. I am not sure whether I will want
+            to focus more on front-end or back-end web development in the future, but for either one of these paths,
+            learning javascript is crucial.
+        </p>
+        <p>I am excited to learn more about how to use javascript, and will be taking the scripting class at Harper in
+            the fall!
+        </p>
+    </main>
+
+    <script>
+        document.getElementById("heading").innerHTML = "Kevin Jacobsen<br>Web 110: Spring 2023<br>Assignment 15";
+
+        document.getElementById("text").innerHTML = Date();
+
+        // NAME
+        var example = document.getElementById("name");
+        var context = example.getContext("2d");
+        // Set stroke and fill to blue
+        context.strokeStyle = "black";
+        context.fillStyle = "#54a884";
+        // Select font, alignment, draw text, and fill characters
+        context.font = "36px sans-serif";
+        context.textAlign = "center";
+        context.strokeText("Kevin Jacobsen", 160, 50);
+        context.fillText("Kevin Jacobsen", 160, 50);
+
+        // LINE
+        var example = document.getElementById("line");
+        var context = example.getContext("2d");
+        // Draw a line, width 4
+        context.lineWidth = 4;
+        context.moveTo(30, 65);
+        context.lineTo(290, 65);
+        context.stroke();
+
+        // CIRCLE
+        var example = document.getElementById("circle");
+        var context = example.getContext("2d");
+        // Draw a circle, radius 35
+        context.beginPath();
+        context.fillStyle = '#54a884';
+        context.arc(60, 140, 35, 0, 2 * Math.PI, false);
+        context.fill();
+        context.closePath();
+
+        // SQUARE
+        var example = document.getElementById("square");
+        var context = example.getContext("2d");
+        // Draw a green square, side 70
+        context.beginPath();
+        context.fillStyle = '#54a884';
+        context.fillRect(130, 105, 70, 70);
+        context.closePath();
+    </script>
+</body>
+
+</html>
