@@ -1,0 +1,1 @@
+document.getElementById("javascriptTest").innerHTML = "If you can read this, JavaScript is still working..."

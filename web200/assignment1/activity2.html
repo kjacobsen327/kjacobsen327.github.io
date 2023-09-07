@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Activity 2</title>
     <script>
-        document.write("testing script in head... lets see what this does");
+        document.write("Testing... this was written with JavaScript in the head tag");
     </script>
 </head>
 <body>
-    <p id="myName">Hello, Kevin!</p>  <!-- This will get overwritten with getElementById -->
+    <p id="someText"></p>
     <script>
-        window.alert("Hello, Kevin! Testing script in body for window.alert");
+        document.getElementById('someText').innerHTML;
+        someText.innerHTML = "This was written with JavaScript in the body tag";
     </script>
     <script src="activity2.js">
 

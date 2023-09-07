@@ -1,14 +1,9 @@
-window.alert("The first way to generate output: Hello, my name is Kevin!");
+window.alert("The first way to generate output: Hello Michael, my name is Kevin!");
 
 
-document.write("The second way: Hello, Kevin!");
+document.write("This is a 2nd way to generate output, with document.write");
 
-let greeting = "Hello, ";
-let myName = "Kevin!!!";
-document.write("<p>");
-document.write("A third way: " + greeting + myName);
-document.write("</p>");
 
-document.getElementById("myName").innerText = "This is actually the fourth way: I am changing the text of the <p> element";
+document.getElementById("myName").innerHTML = "This is actually the third way: I am changing the text of this paragraph element";
 
 console.log("Hello! My name is Kevin!");
