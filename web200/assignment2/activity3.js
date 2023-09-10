@@ -5,11 +5,11 @@ if (Number.isNaN(miles)) {
 }
 
 let yards = miles * 1760;
-formattedYards = yards.toLocaleString("en-US");
+formattedYards = yards.toLocaleString();
 let feet = yards * 3;
-formattedFeet = feet.toLocaleString("en-US");
+formattedFeet = feet.toLocaleString();
 let inches = feet * 12;
-formattedInches = inches.toLocaleString("en-US");
+formattedInches = inches.toLocaleString();
 /*
 I found this page:
 https://sabe.io/blog/javascript-format-numbers-commas#:~:text=The%20best%20way%20to%20format,format%20the%20number%20with%20commas.
