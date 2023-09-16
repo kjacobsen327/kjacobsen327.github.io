@@ -1,7 +1,6 @@
-let a = document.getElementById("hoursWorked");
-let b = document.getElementById("hourlyPay");
-
 function calculatePay(){
-    let paycheck = a.value * b.value;
+    let hours = document.getElementById("hoursWorked").value;
+    let wage = document.getElementById("hourlyPay").value;
+    let paycheck = hours * wage;
     document.getElementById("result").innerHTML = "Your paycheck will be: $" + paycheck.toFixed(2);
 }
