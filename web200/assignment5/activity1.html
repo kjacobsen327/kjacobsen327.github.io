@@ -59,26 +59,26 @@
 
 </head>
 
-<!-- I did the paycheck calculator activity again, but changed it to add events -->
+<!-- I did the paycheck calculator activity once again, but changed it to add conditionals for overtime -->
 
 <body>
-    <h1>Paycheck calculator using events</h1>
+    <h1>Paycheck calculator using conditionals</h1>
 
     <section>
         <label for="hoursWorked"> How many hours did you work?
             <input type="text" id="hoursWorked" name="hoursWorked">
         </label>
+        <span id="msg1"></span>
 
 
         <label for="hourlyPay">How much are you paid per hour?
             <input type="text" id="hourlyPay" name="hourlyPay">
         </label>
     </section>
-
+    
     <!-- removed the onclick event and changed it to addeventlistener -->
-    <input class="calculate" type="button" value="Calculate Pay" id="calcBtn">
 
-    <p>Your paycheck will be: <span id="result"></span></p>
+    <p id="resultNumber"></p>
     <script src="activity1.js"></script>
 </body>
 

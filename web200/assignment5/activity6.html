@@ -4,20 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment 4, Activity 1</title>
+    <title>Assignment 4, Activity 6</title>
     <style>
         * {
             box-sizing: border-box;
             margin: 0;
         }
-
         h1 {
             text-align: center;
             border-bottom: 3px solid black;
             padding: 10px;
             font-size: 40px;
         }
-
         section {
             display: flex;
             flex-direction: column;
@@ -26,21 +24,18 @@
             font-size: 20px;
             margin: 10px 0;
         }
-
         label {
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 10px;
         }
-
         input {
             width: 80px;
             text-align: right;
             font-size: 20px;
             margin: 0 3px;
         }
-
         .calculate {
             display: block;
             margin-left: auto;
@@ -49,37 +44,44 @@
             height: 50px;
             cursor: pointer;
         }
-
         p {
             text-align: center;
             margin: 10px 0;
             font-size: 30px;
         }
     </style>
-
 </head>
 
-<!-- I did the paycheck calculator activity again, but changed it to add events -->
-
 <body>
-    <h1>Paycheck calculator using events</h1>
-
+    <h1>Room Painting Calculator</h1>
     <section>
-        <label for="hoursWorked"> How many hours did you work?
-            <input type="text" id="hoursWorked" name="hoursWorked">
+        <h2>Room size:</h2>
+        <label for="roomLength">Enter the length of the room:
+            <input type="number" id="roomLength" name="roomLength">ft.
         </label>
 
-
-        <label for="hourlyPay">How much are you paid per hour?
-            <input type="text" id="hourlyPay" name="hourlyPay">
+        <label for="roomWidth">Enter the width of the room:
+            <input type="number" id="roomWidth" name="roomWidth">ft.
         </label>
+            <label for="roomHeight">Enter the height of the room:
+            <input type="number" id="roomHeight" name="roomHeight">ft.
+        </label>
+        
     </section>
+    <section>
+        <h2>Paint:</h2>
+        <label for="paintCoverage">Enter paint coverage:
+            <input type="number" id="paintCoverage" name="paintCost">sq/ft per gallon.
+        </label>
+        <label for="paintCost">Enter the cost of paint: $
+            <input type="number" id="paintCost" name="paintCost">per gallon.
+        </label>
 
-    <!-- removed the onclick event and changed it to addeventlistener -->
-    <input class="calculate" type="button" value="Calculate Pay" id="calcBtn">
-
-    <p>Your paycheck will be: <span id="result"></span></p>
-    <script src="activity1.js"></script>
+    </section>
+    <input class="calculate" type="button" value="Calculate" id="calcBtn">
+    <p id="paintNeeded"></p>
+    <p id="cost"></p>
+    <script src="activity6.js"></script>
 </body>
 
 </html>
