@@ -4,16 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment 4, Activity 1</title>
+    <title>Assignment 5, Activity 1</title>
     <style>
         * {
             box-sizing: border-box;
             margin: 0;
+            background-color: rgb(119, 163, 119);
+            color: rgb(251, 252, 230);
         }
+
 
         h1 {
             text-align: center;
-            border-bottom: 3px solid black;
+            border-bottom: 4px solid black;
             padding: 10px;
             font-size: 40px;
         }
@@ -31,7 +34,6 @@
         div.userSelection {
             display: flex;
             flex-direction: row;
-
             justify-content: space-evenly;
             width: 100%;
             font-size: 24px;
@@ -44,12 +46,22 @@
             justify-content: center;
             width: 300px;
             padding: 20px;
-            background-color: green;
+            background-color: #4b8d4c;
+            border: 4px solid #000;
+            border-radius: 6px;
+        }
 
+        .payPeriod label:hover {
+            background-color: #4fa950;
+            cursor: pointer;
         }
 
         .payPeriod input {
-            /* display: none; */
+            display: none;
+        }
+
+        section.userInput {
+            border-top: 4px solid #000;
 
         }
 
@@ -58,19 +70,22 @@
             align-items: center;
             justify-content: center;
             margin: 10px;
+            font-size: 28px;
         }
 
         .userInput input {
             width: 80px;
             text-align: right;
-            font-size: 20px;
+            font-size: 24px;
             margin: 0 3px;
+            background-color: rgb(251, 252, 230);
+            color: #000;
         }
 
         p {
             text-align: center;
-            margin: 10px 0;
-            font-size: 30px;
+            padding: 20px 0;
+            font-size: 36px;
         }
     </style>
 
@@ -81,14 +96,14 @@
 <body>
     <h1>Paycheck calculator using conditionals (and adding overtime)</h1>
     <section class="payPeriod">
-        <p>Are you paid weekly or bi-weekly?</p>
+        <p>How often are you paid?</p>
 
         <div class="userSelection">
-            <label for="weekly">Weekly
+            <label id="weeklyBtn" for="weekly">Weekly
                 <input type="radio" id="weekly" name="payPeriod" value="weekly">
             </label>
 
-            <label for="biweekly">Bi-weekly
+            <label id="biweeklyBtn" for="biweekly">Bi-weekly
                 <input type="radio" id="biweekly" name="payPeriod" value="biweekly">
             </label>
         </div>
@@ -96,15 +111,14 @@
 
 
     <section class="userInput">
-
-        <label id="week1Hours" for="hoursWeek1">How many hours did you work?
+        <label id="week1Hours" for="hoursWeek1"><span id="textForWeek1"></span>
             <input type="number" id="inputHours1" name="hoursWeek1">
         </label>
-        <label id="week2Hours" for="hoursWeek2">How many hours did you work for week 2?
+        <label id="week2Hours" for="hoursWeek2"><span id="textForWeek2">Enter hours worked for week 2:</span>
             <input type="number" id="inputHours2" name="hoursWeek2">
         </label>
 
-        <label id="wage" for="wage">How much are you paid per hour?
+        <label id="wage" for="wage">Enter your hourly rate:
             <input type="number" id="inputWage" name="wage">
         </label>
     </section>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5, Activity 3</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fasthand&family=Love+Ya+Like+A+Sister&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            background-color: rgb(228, 152, 218);
+
+        }
+
+        h1 {
+            text-align: center;
+            padding: 40px;
+            font-size: 60px;
+            background-color: #fcccff;
+            color: #ba699c;
+            font-family: 'Love Ya Like A Sister', cursive;
+        }
+
+        h2,
+        p {
+            text-align: center;
+            font-family: 'Fasthand', cursive;
+
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 40px;
+            gap: 20px;
+        }
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+            font-size: 20px;
+            width: 80vw;
+            gap: 25px;
+        }
+
+        label {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 150px;
+            width: 150px;
+            background-color: rgb(173, 103, 184);
+            /* box-shadow: -6px 6px black; */
+            border-left: 6px solid black;
+            border-top: 6px solid black;
+            border-radius: 50%;
+            font-size: 30px;
+            color: #fccbff;
+            font-family: 'Love Ya Like A Sister', cursive;
+        }
+
+        input {
+            display: none;
+        }
+
+        p {
+            font-family: 'Fasthand', cursive;
+            font-size: 60px;
+        }
+        #sockSize {
+            font-size: 70px;
+            font-family: 'Love Ya Like A Sister', cursive;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Sock size calculator using switch statemets</h1>
+    <main>
+        <h2>What is your shoe size?</h2>
+
+        <section id="shoeSize">
+
+
+            <input type="radio" id="xs" name="shoeSize">
+            <label for="xs">&lt; 4</label>
+
+            <input type="radio" id="s" name="shoeSize">
+            <label for="s">4 to 6</label>
+
+            <input type="radio" id="m" name="shoeSize">
+            <label for="m">7 to 9</label>
+
+            <input type="radio" id="l" name="shoeSize">
+            <label for="l">10 to 12</label>
+
+            <input type="radio" id="xl" name="shoeSize">
+            <label for="xl">13+ </label>
+
+        </section>
+
+        <p>Your sock size will be:</p>
+        <p id="sockSize"></p>
+    </main>
+    <script src="activity3.js"></script>
+</body>
+
+</html>

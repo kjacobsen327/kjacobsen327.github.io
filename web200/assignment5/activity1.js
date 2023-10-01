@@ -25,6 +25,11 @@ function toggleInput() {
 
     if (payPeriods == 1) {
         hours1Display.style.display = "block";
+        document.getElementById("weeklyBtn").style.backgroundColor = "#4fa950";
+        document.getElementById("biweeklyBtn").style.backgroundColor = "#4b8d4c";
+
+        document.getElementById("textForWeek1").innerHTML = "Enter hours worked:";
+
         hours2Display.style.display = "none";
 
         // to reset the 2nd input and recalculate the pay if user changes from biweekly back to weekly
@@ -36,7 +41,12 @@ function toggleInput() {
     }
     else if (payPeriods == 2) {
         hours1Display.style.display = "block";
+        document.getElementById("weeklyBtn").style.backgroundColor = "#4b8d4c";
+
+        document.getElementById("textForWeek1").innerHTML = "Enter hours worked for week 1:";
         hours2Display.style.display = "block";
+        document.getElementById("biweeklyBtn").style.backgroundColor = "#4fa950";
+
     }
     wageDisplay.style.display = "block";
 }
@@ -97,11 +107,12 @@ function calculatePay() {
     }
     else {
         paycheckFormatted = paycheck.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        
         //found a fix to add the comma to any number over 1,000, and also set the decimal places to 2.
         //I kept having issues with the paycheck coming out to something like $100.1 which looked weird.
 
         document.getElementById("resultNumber").innerHTML = "Your paycheck will be: $" + paycheckFormatted;
-
-        document.getElementById("millionaire").innerHTML = "If you don't spend a single penny, it will take " + millionaire.toFixed(1) + " years till you are a millionaire!"
+        document.getElementById("resultNumber").style.borderTop = "4px solid #000";
+        document.getElementById("millionaire").innerHTML = "If you don't spend a single penny, at this rate it will take " + millionaire.toFixed(1) + " years till you are a millionaire!"
     }
 }
