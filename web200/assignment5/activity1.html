@@ -4,12 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Holtwood+One+SC&family=Lilita+One&display=swap" rel="stylesheet">
     <title>Assignment 5, Activity 1</title>
     <style>
         * {
+            font-family: 'Lilita One', cursive;
             box-sizing: border-box;
             margin: 0;
-            background-color: rgb(119, 163, 119);
+            background-color: #fbfce6;
             color: rgb(251, 252, 230);
         }
 
@@ -18,7 +22,10 @@
             text-align: center;
             border-bottom: 4px solid black;
             padding: 10px;
-            font-size: 40px;
+            font-size: 50px;
+            background-color: #77a377;
+            /* font-family: 'Holtwood One SC', serif; */
+          letter-spacing: 2px;
         }
 
         section {
@@ -26,10 +33,27 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            font-size: 20px;
-            margin: 10px 0;
+            font-size: 30px;
             width: 100%;
         }
+
+        p {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 36px;
+            color: #4b8d4c;
+            background-color: #fbfce6;
+            font-size: 48px;
+        }
+        section p {
+            font-family: 'Holtwood One SC', serif;
+        }
+
+        section.payPeriod {
+            background-color: #fbfce6;
+            padding: 20px;
+        }
+
 
         div.userSelection {
             display: flex;
@@ -37,7 +61,7 @@
             justify-content: space-evenly;
             width: 100%;
             font-size: 24px;
-
+            background-color: rgb(251, 252, 230);
         }
 
         .payPeriod label {
@@ -62,6 +86,7 @@
 
         section.userInput {
             border-top: 4px solid #000;
+            background-color: #77a377;
 
         }
 
@@ -70,7 +95,10 @@
             align-items: center;
             justify-content: center;
             margin: 10px;
-            font-size: 28px;
+            font-size: 35px;
+            background-color: #77a377;
+
+
         }
 
         .userInput input {
@@ -82,10 +110,14 @@
             color: #000;
         }
 
-        p {
-            text-align: center;
-            padding: 20px 0;
-            font-size: 36px;
+        span {
+            background-color: #77a377;
+        }
+
+        #resultNumber {
+            color: #40b842;
+            font-family: 'Holtwood One SC', serif;
+
         }
     </style>
 
@@ -94,7 +126,7 @@
 <!-- I did the paycheck calculator activity once again, but changed it to add conditionals for overtime -->
 
 <body>
-    <h1>Paycheck calculator using conditionals (and adding overtime)</h1>
+    <h1>Paycheck  calculator  using  conditionals  (and  adding  overtime)</h1>
     <section class="payPeriod">
         <p>How often are you paid?</p>
 
@@ -111,7 +143,7 @@
 
 
     <section class="userInput">
-        <label id="week1Hours" for="hoursWeek1"><span id="textForWeek1"></span>
+        <label id="week1Hours" for="hoursWeek1"><span id="textForWeek1">Enter hours worked:</span>
             <input type="number" id="inputHours1" name="hoursWeek1">
         </label>
         <label id="week2Hours" for="hoursWeek2"><span id="textForWeek2">Enter hours worked for week 2:</span>
