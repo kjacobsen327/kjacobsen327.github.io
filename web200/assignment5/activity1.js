@@ -1,37 +1,107 @@
+window.addEventListener("load", hideInput);
+
+document.getElementById("weekly").addEventListener("click", toggleInput);
+document.getElementById("biweekly").addEventListener("click", toggleInput);
+
+let inputHours1 = document.getElementById("inputHours1").value;
+let inputHours2 = document.getElementById("inputHours2").value;
 // both input boxes will update the paycheck if changed.
-hours = document.getElementById("hoursWorked");
-hours.addEventListener("input", calculatePay);
+document.getElementById("inputHours1").addEventListener("input", calculatePay);
+document.getElementById("inputHours2").addEventListener("input", calculatePay);
+document.getElementById("inputWage").addEventListener("input", calculatePay);
 
-wage = document.getElementById("hourlyPay");
-wage.addEventListener("input", calculatePay);
+hours1Display = document.getElementById("week1Hours");
+hours2Display = document.getElementById("week2Hours");
+wageDisplay = document.getElementById("wage");
 
-window.addEventListener("load", calculatePay);
+function hideInput() {
+    hours1Display.style.display = "none";
+    hours2Display.style.display = "none";
+    wageDisplay.style.display = "none";
+}
+
+function toggleInput() {
+    let payPeriods = getPaySelection();
+
+    if (payPeriods == 1) {
+        hours1Display.style.display = "block";
+        hours2Display.style.display = "none";
+
+        // to reset the 2nd input and recalculate the pay if user changes from biweekly back to weekly
+        new function clearWeek2() {
+        document.getElementById("inputHours2").value = undefined;
+        calculatePay();
+        }
+        
+    }
+    else if (payPeriods == 2) {
+        hours1Display.style.display = "block";
+        hours2Display.style.display = "block";
+    }
+    wageDisplay.style.display = "block";
+}
+
+function getPaySelection() {
+    if (document.getElementById("weekly").checked == true) {
+        return 1;
+    }
+    else if (document.getElementById("biweekly").checked == true) {
+        return 2;
+    }
+}
 
 
-function getHours() {
-    let hours = document.getElementById("hoursWorked").value;
-    let msg = document.getElementById("msg1");
+function getInput() {
+    let inputHours1 = document.getElementById("inputHours1").value;
+    let inputHours2 = document.getElementById("inputHours2").value;
+    let wage = document.getElementById("inputWage").value;
+    let overtimePay = wage * 1.5;
 
-    if (isNaN(hours)) {
-        msg.innerHTML = "Please enter a number into the input box";
+    let pay = undefined;
+
+
+    // will display an error message if user enters a negative number
+    let msg = document.getElementById("errorMsg");
+        msg.style.display = "none";
+    if (inputHours1 < 0 || inputHours2 < 0 || wage < 0) {
+        msg.innerHTML = "Please enter only positive numbers into the input box";
         msg.style.display = "block";
         msg.style.color = "red";
     }
-    else {
-        msg.style.display = "none";
-        return hours;
+    else if (inputHours1 > 40 && inputHours2 > 40) {
+        pay = (((inputHours1 - 40) * overtimePay) + (40 * wage)) + (((inputHours2 - 40) * overtimePay) + (40 * wage));
+        return pay;
     }
+    else if (inputHours1 > 40 && inputHours2 <= 40) {
+        pay = (((inputHours1 - 40) * overtimePay) + (40 * wage)) + (inputHours2 * wage);
+        return pay;
+    }
+    else if (inputHours1 <= 40 && inputHours2 > 40) {
+        pay = (inputHours1 * wage) + (((inputHours2 - 40) * overtimePay) + (40 * wage));
+        return pay;
+    }
+    else {
+    pay = (inputHours1 * wage) + (inputHours2 * wage);
+    return pay;
 }
-function getWage() {
-    let wage = document.getElementById("hourlyPay").value;
-    return wage;
 }
 function calculatePay() {
-    let paycheck = getHours() * getWage();
+    // gets the value of pay from the getInput() function.
+    let paycheck = getInput();
+    let millionaire = 1000000 / (paycheck * 26);
+
+    // won't display paycheck if it is not a number, or equal to 0
     if (isNaN(paycheck) || paycheck == 0) {
         document.getElementById("resultNumber").innerHTML = "";
+        document.getElementById("millionaire").innerHTML = "";
     }
     else {
-        document.getElementById("resultNumber").innerHTML = "Your paycheck will be: $" + paycheck.toFixed(2);
+        paycheckFormatted = paycheck.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        //found a fix to add the comma to any number over 1,000, and also set the decimal places to 2.
+        //I kept having issues with the paycheck coming out to something like $100.1 which looked weird.
+
+        document.getElementById("resultNumber").innerHTML = "Your paycheck will be: $" + paycheckFormatted;
+
+        document.getElementById("millionaire").innerHTML = "If you don't spend a single penny, it will take " + millionaire.toFixed(1) + " years till you are a millionaire!"
     }
-    }
+}

@@ -25,29 +25,46 @@
             justify-content: center;
             font-size: 20px;
             margin: 10px 0;
+            width: 100%;
         }
 
-        label {
+        div.userSelection {
+            display: flex;
+            flex-direction: row;
+
+            justify-content: space-evenly;
+            width: 100%;
+            font-size: 24px;
+
+        }
+
+        .payPeriod label {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            width: 300px;
+            padding: 20px;
+            background-color: green;
+
+        }
+
+        .payPeriod input {
+            /* display: none; */
+
+        }
+
+        .userInput label {
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 10px;
         }
 
-        input {
+        .userInput input {
             width: 80px;
             text-align: right;
             font-size: 20px;
             margin: 0 3px;
-        }
-
-        .calculate {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 100px;
-            height: 50px;
-            cursor: pointer;
         }
 
         p {
@@ -62,23 +79,41 @@
 <!-- I did the paycheck calculator activity once again, but changed it to add conditionals for overtime -->
 
 <body>
-    <h1>Paycheck calculator using conditionals</h1>
+    <h1>Paycheck calculator using conditionals (and adding overtime)</h1>
+    <section class="payPeriod">
+        <p>Are you paid weekly or bi-weekly?</p>
 
-    <section>
-        <label for="hoursWorked"> How many hours did you work?
-            <input type="text" id="hoursWorked" name="hoursWorked">
+        <div class="userSelection">
+            <label for="weekly">Weekly
+                <input type="radio" id="weekly" name="payPeriod" value="weekly">
+            </label>
+
+            <label for="biweekly">Bi-weekly
+                <input type="radio" id="biweekly" name="payPeriod" value="biweekly">
+            </label>
+        </div>
+    </section>
+
+
+    <section class="userInput">
+
+        <label id="week1Hours" for="hoursWeek1">How many hours did you work?
+            <input type="number" id="inputHours1" name="hoursWeek1">
         </label>
-        <span id="msg1"></span>
+        <label id="week2Hours" for="hoursWeek2">How many hours did you work for week 2?
+            <input type="number" id="inputHours2" name="hoursWeek2">
+        </label>
 
-
-        <label for="hourlyPay">How much are you paid per hour?
-            <input type="text" id="hourlyPay" name="hourlyPay">
+        <label id="wage" for="wage">How much are you paid per hour?
+            <input type="number" id="inputWage" name="wage">
         </label>
     </section>
-    
+
     <!-- removed the onclick event and changed it to addeventlistener -->
+    <p id="errorMsg"></p>
 
     <p id="resultNumber"></p>
+    <p id="millionaire"></p>
     <script src="activity1.js"></script>
 </body>
 
