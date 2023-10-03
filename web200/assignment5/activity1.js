@@ -2,6 +2,10 @@ window.addEventListener("load", hideInput);
 
 document.getElementById("weekly").addEventListener("click", toggleInput);
 document.getElementById("biweekly").addEventListener("click", toggleInput);
+document.getElementById("weekly").addEventListener("change", calculatePay);
+
+document.getElementById("biweekly").addEventListener("change", calculatePay);
+
 
 let inputHours1 = document.getElementById("inputHours1").value;
 let inputHours2 = document.getElementById("inputHours2").value;
@@ -73,7 +77,7 @@ function getInput() {
     // will display an error message if user enters a negative number
     let msg = document.getElementById("errorMsg");
         msg.style.display = "none";
-    if (inputHours1 < 0 || inputHours2 < 0 || wage < 0) {
+    if ( isNaN(inputHours1 || inputHours2) || inputHours1 < 0 || inputHours2 < 0 || wage < 0) {
         msg.innerHTML = "Please enter only positive numbers into the input box";
         msg.style.display = "block";
         msg.style.color = "red";
@@ -95,10 +99,22 @@ function getInput() {
     return pay;
 }
 }
+function calculatePaychecks() {
+    let yearlyPaychecks = getPaySelection();
+    if (yearlyPaychecks == 1) {
+        return yearlyPaychecks = 52;
+    }
+    else {
+        return yearlyPaychecks = 26;
+    }
+    }
+
+
 function calculatePay() {
     // gets the value of pay from the getInput() function.
     let paycheck = getInput();
-    let millionaire = 1000000 / (paycheck * 26);
+    let yearlyPaychecks = calculatePaychecks();
+    let millionaire = 1000000 / (paycheck * yearlyPaychecks);
 
     // won't display paycheck if it is not a number, or equal to 0
     if (isNaN(paycheck) || paycheck == 0) {
