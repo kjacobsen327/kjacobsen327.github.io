@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 6, Activity 3</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            border-bottom: 3px solid black;
+            padding: 10px;
+            font-size: 40px;
+            width: 100%;
+        }
+
+        p {
+            text-align: center;
+            margin: 10px 0;
+            font-size: 30px;
+        }
+
+        input {
+            display: block;
+            width: 80px;
+            text-align: right;
+            font-size: 20px;
+            margin: 0 3px;
+        }
+        .addRemoveBtns {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 30px;
+        }
+        .inputContainer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .btn {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 200px;
+            height: 50px;
+            cursor: pointer;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Calculate average grade score using a while loop</h1>
+
+    <p>Enter grade scores</p>
+
+    <div class="addRemoveBtns">
+        <input class="btn" type="button" value="Add grade" id="addGrade">
+        <input class="btn" type="button" value="Remove Last Grade" id="removeGrade">
+    </div>
+
+    <div id="inputContainer">
+        <input type="number" id="grade1" name="grade">
+    </div>
+
+    <input class="btn" type="button" value="Calculate Average" id="calcBtn">
+
+    <p id="averageGrade"></p>
+
+    <script src="activity3.js"></script>
+</body>
+
+</html>
