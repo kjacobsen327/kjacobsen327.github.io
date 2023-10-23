@@ -62,5 +62,6 @@ function guessLower() {
 function winningMessage() {
     text.style.display = "none";
     document.getElementById("winningMessage").innerHTML = "I knew it was " + guessedNumber + "!\n It only took me " + guessCounter + " guesses.";
+    num.innerHTML = "";
 }
 
