@@ -36,7 +36,7 @@ function guessHigher() {
     text.innerHTML = "I guess your number is: ";
 
     if (isNaN(guessedNumber)) {
-        num.innerHTML = "Hey you're cheating!";
+        num.innerHTML = "You are a cheater!";
     }
     else {
         num.innerHTML = guessedNumber;
@@ -46,13 +46,13 @@ function guessHigher() {
 
 function guessLower() {
     let index = possibleNumbers.indexOf(guessedNumber);
-    possibleNumbers.splice(index, possibleNumbers.length - 1); //splice array, removing the values of the array starting from the index value of the number guessed to the last index value
+    possibleNumbers.splice(index, possibleNumbers.length); //splice array, removing the values of the array starting from the index value of the number guessed to the last index value
     let min = possibleNumbers[0];
     let max = possibleNumbers[possibleNumbers.length - 1];
     guessedNumber = Math.floor(Math.random() * (max - min + 1) + min);
     text.innerHTML = "I guess your number is: ";
     if (isNaN(guessedNumber)) {
-        num.innerHTML = "Hey you're cheating!";
+        num.innerHTML = "You are a cheater!";
     }
     else {
         num.innerHTML = guessedNumber;
@@ -60,8 +60,9 @@ function guessLower() {
     }
 }
 function winningMessage() {
+    if(!isNaN(guessedNumber)) {
     text.style.display = "none";
     document.getElementById("winningMessage").innerHTML = "I knew it was " + guessedNumber + "!\n It only took me " + guessCounter + " guesses.";
-    num.innerHTML = "";
+    }
 }
 
