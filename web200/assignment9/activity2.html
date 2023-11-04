@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 9, Activity 2</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+
+        }
+
+        body {
+            background-color: #faf5e7;
+
+        }
+
+        h1 {
+            text-align: center;
+            border-bottom: 3px solid black;
+            padding: 10px;
+            font-size: 40px;
+            background-color: #ccc9b3;
+
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 30px;
+            gap: 40px;
+            padding-top: 40px;
+        }
+
+        h2 {
+            font-size: 35px;
+        }
+
+        section.datePicker {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 100px;
+            width: 100%;
+        }
+
+        .datePicker div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .datePicker input {
+            height: 40px;
+            font-size: 24px;
+            text-align: center;
+            border: 2px solid black;
+            background-color: #fff;
+        }
+
+        #calculate {
+            border: 2px solid black;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: -2px 2px;
+            background-color: #fff;
+        }
+
+        #calculate:hover {
+            background-color: #ccc9b3;
+            cursor: pointer;
+        }
+
+        #output {
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Date and Time</h1>
+    <main>
+        <h2>Calculate time between 2 dates:</h2>
+        <section class="datePicker">
+            <div>
+                <p>Enter the first date:</p>
+                <input id="date1" type="date">
+            </div>
+            <div>
+                <p>Enter the second date:</p>
+                <input id="date2" type="date">
+            </div>
+        </section>
+        <div id="calculate">Calculate</div>
+        <p id="output"></p>
+
+    </main>
+
+    <script src="activity2.js"></script>
+</body>
+
+</html>
