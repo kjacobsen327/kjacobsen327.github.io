@@ -1,11 +1,16 @@
-
 document.getElementById("addBook").addEventListener("click", createBook);
 document.getElementById("addBook").addEventListener("click", checkInput);
 document.getElementById("apa").addEventListener("click", displayBook);
 
+function Book(title, lName, fName, mInitial) {
+    this.title = title;
+    this.lName = lName;
+    this.year = year;
+  }
+
 let bookList = [];
 function createBook() {
-    book = {
+    let book = new {
         title: document.getElementById("title").value,
         lName: document.getElementById("lName").value,
         fName: document.getElementById("fName").value,

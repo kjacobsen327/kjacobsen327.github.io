@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment 10, Activity 1</title>
+    <title>Assignment 10, Activity 2</title>
     <style>
         * {
+            box-sizing: border-box;
             margin: 0;
         }
 
@@ -22,7 +23,8 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            background-color: #fffdee;
+            background-color: #fffdee; 
+            width: 100%;
         }
 
         div.info {
@@ -39,17 +41,23 @@
             width: 100%;
         }
 
-        .info p {
+        h2 {
             width: 100%;
             text-align: center;
             font-size: 24px;
+        }
+        .info p {
+            height: 20px;
+            font-size: 18px;
+            text-align: center;
+            color: rgb(247, 93, 93);
         }
 
         .author,
         .location {
             display: flex;
             flex-direction: row;
-            width: 500px;
+            width: 484px;
             gap: 8px;
         }
 
@@ -89,7 +97,8 @@
     <h1>Objects</h1>
     <section class="top">
         <div class="info">
-            <p>Enter book information</p>
+            <h2>Enter book information</h2>
+            <p id="error"></p>
             <input id="title" type="text" placeholder="Title">
             <div class="author">
                 <input id="lName" type="text" placeholder="Last Name">
@@ -156,16 +165,17 @@
                 </select>
             </div>
             <input id="publisher" type="text" placeholder="Publisher">
+
         </div>
         <button id="addBook">Add Book to List</button>
+        <button id="apa">Display APA format</button>
 
     </section>
-    <section class="bottom">
-        <p id="list"></p>
+    <section id="bottom">
     </section>
 
 
-    <script src="activity1.js"></script>
+    <script src="testing.js"></script>
 </body>
 
 </html>
