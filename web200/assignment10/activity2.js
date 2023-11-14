@@ -1,59 +1,50 @@
-
+document.getElementById("addBook").addEventListener("click", collectInfo);
 document.getElementById("addBook").addEventListener("click", createBook);
-document.getElementById("addBook").addEventListener("click", checkInput);
-document.getElementById("apa").addEventListener("click", displayBook);
+document.getElementById("displayAPA").addEventListener("click", displayAPA);
+document.getElementById("displayMLA").addEventListener("click", displayMLA);
 
-let bookList = [];
+
+function collectInfo() {
+bookTitle = document.getElementById("title").value;
+lastName = document.getElementById("lName").value;
+firstName = document.getElementById("fName").value;
+midInitial = (document.getElementById("mInitial").value).toUpperCase();
+year = parseInt(document.getElementById("year").value);
+city = document.getElementById("city").value;
+state = document.getElementById("state").value;
+publisher = document.getElementById("publisher").value;
+}
+
+let book = {};
 function createBook() {
     book = {
-        title: document.getElementById("title").value,
-        lName: document.getElementById("lName").value,
-        fName: document.getElementById("fName").value,
-        mInitial: (document.getElementById("mInitial").value).toUpperCase(),
-        year: parseInt(document.getElementById("year").value),
-        city: document.getElementById("city").value,
-        state: document.getElementById("state").value,
-        publisher: document.getElementById("publisher").value,
-        apa: function () {
+        title: bookTitle,
+        lName: lastName,
+        fName: firstName,
+        mInitial: midInitial,
+        year: year,
+        city: city,
+        state: state,
+        publisher: publisher,
+        apaFormat: function () {
             return this.lName + ", " + this.fName[0] + ". " + this.mInitial + ". (" + this.year + ") " + this.title + ". "
-                + this.city + ", " + this.state + ": " + this.publisher;
+                + this.city + ", " + this.state + ": " + this.publisher + ".";
+        },
+        mlaFormat: function () {
+            return this.lName + ", " + this.fName + ". " + this.mInitial + ". " + this.title + ". " + this.publisher + ", "
+                + this.year + ".";
         }
     }
 }
-function checkInput() {
-    if ((book.title, book.lName, book.fName, book.mInitial, book.city, book.state, book.publisher == "") || (isNaN(book.year) == true)) {
-        document.getElementById("error").innerHTML = "Please enter info in all fields"
-    }
 
-    else {
-        document.getElementById("error").innerHTML = ""
-        addBook();
-        resetFields();
-    }
+let apaList = document.getElementById("apa");
+let mlaList = document.getElementById("mla");
+
+function displayAPA() {
+    apaList.innerHTML = book.apaFormat();
+    mlaList.innerHTML = "";
 }
-function addBook() {
-        bookList.push(book);
-    }
-
-function displayBook() {
-
-
-
-
-    let listings = document.getElementById("bottom");
-    let newBook = document.createElement("p");
-    listings.appendChild(newBook);
-    for (i = 0; i < bookList.length; i++) {
-    }
-}
-
-function resetFields() {
-    document.getElementById("title").value = "";
-    document.getElementById("lName").value = "";
-    document.getElementById("fName").value = "";
-    document.getElementById("mInitial").value = "";
-    document.getElementById("year").value = "";
-    document.getElementById("city").value = "";
-    document.getElementById("state").value = "";
-    document.getElementById("publisher").value = "";
+function displayMLA() {
+    mla.innerHTML = book.mlaFormat();
+    apaList.innerHTML = "";
 }

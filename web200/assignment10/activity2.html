@@ -4,16 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment 10, Activity 2</title>
+    <title>Assignment 10, Activity 3</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <h1>Objects</h1>
+    <h1>Objects: Adding MLA format to book object</h1>
     <section class="top">
         <div class="info">
-            <h2>Enter book information</h2>
-            <p id="error"></p>
+            <p>Enter book information</p>
             <input id="title" type="text" placeholder="Title">
             <div class="author">
                 <input id="lName" type="text" placeholder="Last Name">
@@ -80,13 +79,17 @@
                 </select>
             </div>
             <input id="publisher" type="text" placeholder="Publisher">
-
         </div>
+        <p id="error"></p>
         <button id="addBook">Add Book to List</button>
-        <button id="apa">Display APA format</button>
+
 
     </section>
-    <section id="bottom">
+    <section class="bottom">
+        <button id="displayAPA">ALA</button>
+        <button id="displayMLA">MLA</button>
+        <p id="apa"></p>
+        <p id="mla"></p>
     </section>
 
 
