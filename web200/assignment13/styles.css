@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    border-bottom: 3px solid black;
+    padding: 10px;
+    font-size: 35px;
+    background-color: #efefef;
+}
+
+body {
+    background-color: #faf5e7;
+
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 24px;
+    margin-top: 100px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    text-decoration: underline;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+.formField {
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+label {
+    width: 200px;
+    font-weight: 600;
+    text-align: right;
+    padding-right: 10px;
+    font-size: 18px;
+}
+
+input {
+    font-size: 14px;
+    width: 200px;
+}
+
+.formField.error input {
+    border: 3px solid red;
+    background-color: rgb(255, 228, 228);
+
+}
+
+.formField.success input {
+    border: 3px solid green;
+    background-color: rgb(213, 245, 213);
+}
+
+small {
+    text-align: center;
+    width: 300px;
+    align-self: flex-end;
+    color: red;
+    height: 12px;
+    text-align: left;
+    margin-top: 3px;
+    font-size: 14px;
+}
+
+button[type=submit] {
+    background-color: #000085;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    width: 150px;
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button[type=submit]:disabled {
+    background-color: #a0a0c4;
+    color: #dcdbdb;
+
+}
