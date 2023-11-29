@@ -4,14 +4,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment 13, Activity </title>
+    <title>Assignment 14, Activity 1</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <h1></h1>
+    <h1>JSON and AJAX:<br>Submit form data using AJAX AND JSON</h1>
 
-    
+    <h2>Enter information</h2>
+
+    <form id="myForm">
+        <div class="row">
+            <div class="formField">
+                <label for="fName">First Name:</label>
+                <input type="text" id="fName" name="fName" autofocus required>
+            </div>
+            <small></small>
+        </div>
+        <div class="row">
+            <div class="formField">
+
+                <label for="lName">Last Name:</label>
+                <input type="text" id="lName" name="lName" required>
+            </div>
+            <small></small>
+        </div>
+        <div class="row">
+            <div class="formField">
+
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+            <small></small>
+        </div>
+        <div class="row">
+            <div class="formField">
+
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required>
+            </div>
+            <small></small>
+        </div>
+        <div class="row">
+            <div class="formField">
+
+                <label for="state">State:</label>
+                <input type="text" id="state" name="state" required>
+            </div>
+            <small></small>
+        </div>
+        <div class="row">
+            <div class="formField">
+
+                <label for="zipCode">Zip Code:</label>
+                <input type="num" id="zipCode" name="zipCode" required>
+            </div>
+            <small></small>
+        </div>
+
+        <div class="row">
+            <div class="formField">
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <small></small>
+        </div>
+        <div class="row">
+            <div class="formField">
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+            <small></small>
+        </div>
+        <div class="row">
+            <div class="formField">
+
+                <label for="bDay">Birthday:</label>
+                <input type="date" id="bDay" name="bDay" min="1900-01-01" max="2023-12-31" required>
+            </div>
+            <small></small>
+        </div>
+        <div class="row">
+            <button type="submit" id="submit" disabled>Submit</button>
+        </div>
+    </form>
 
 
     <script src="activity1.js"></script>
