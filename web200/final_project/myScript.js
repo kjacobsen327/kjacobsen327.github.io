@@ -6,6 +6,10 @@ let order = {
     pizzasBuilt: [],
     customer: {}
 };
+let selectedCrustSize = "";
+let iPrice = 0;
+let selectedToppings = [];
+let price = 0;
 let pizzaCounter = 1; //to keep track of and name pizzas in order
 
 let pizzaOptions = document.getElementById("pizzaOptions").getElementsByTagName("input");
@@ -22,10 +26,7 @@ addPizzaBtn.addEventListener("click", addPizzaToOrder);
 
 // window.addEventListener("load", createNewPizza);
 // function createNewPizza() {
-let selectedCrustSize = "";
-let iPrice = 0;
-let selectedToppings = [];
-let price = 0;
+
 
 for (let i = 0; i < crustSizeOptions.length; i++) {
     if (crustSizeOptions[i].checked == false) {
