@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,49 +19,50 @@
                 <!-- need form name and id for JS to reference -->
                 <form name="form" id="form">
                     <h1>What kinda' pizza do you want?!!</h1>
-                    <div>
-                        <h3>Size</h3>
+                    <div id="pizzaOptions">
                         <div>
-                            <!-- radio buttons force only one selection -->
-
-                            <input type="radio" name="crust-size" value="small" id="small" />
-                            <label for="small"><span>Small</span><span>$5.00</span>
-                            </label>
-                        </div>
-                        <div>
-                            <input type="radio" name="crust-size" value="medium" id="medium" />
-                            <label for="medium">
-                                <span>Medium</span><span>$7.50</span>
-                            </label>
-                        </div>
-                        <div>
-                            <input type="radio" name="crust-size" value="large" id="large" />
-                            <label for="large">
-                                <span>Large</span><span>$10.00</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <!-- ************** TOPPINGS **************** -->
-                    <div>
-                        <h3>Toppings <span id="toppingsCost"></span></h3>
-                        <div id="toppings">
+                            <h3>Size</h3>
                             <div>
-                                <!-- checkbox options allow for multiple values -->
-                                <input type="checkbox" id="0" name="toppings" value="Sausage" />
-                                <label for="0">
-                                    <span>Sausage</span>
+                                <!-- radio buttons force only one selection -->
+
+                                <input type="radio" name="crust-size" value="small" id="small" />
+                                <label for="small"><span>Small</span><span>$5.00</span>
                                 </label>
                             </div>
                             <div>
-                                <input type="checkbox" id="1" name="toppings" value="epperoni" />
-                                <label for="1">
-                                    <span>Pepperoni</span>
+                                <input type="radio" name="crust-size" value="medium" id="medium" />
+                                <label for="medium">
+                                    <span>Medium</span><span>$7.50</span>
+                                </label>
+                            </div>
+                            <div>
+                                <input type="radio" name="crust-size" value="large" id="large" />
+                                <label for="large">
+                                    <span>Large</span><span>$10.00</span>
                                 </label>
                             </div>
                         </div>
-                    </div>
 
+                        <!-- ************** TOPPINGS **************** -->
+                        <div>
+                            <h3>Toppings <span id="toppingsCost"></span></h3>
+                            <div id="toppings">
+                                <div>
+                                    <!-- checkbox options allow for multiple values -->
+                                    <input type="checkbox" id="0" name="toppings" value="Sausage" />
+                                    <label for="0">
+                                        <span>Sausage</span>
+                                    </label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="1" name="toppings" value="Pepperoni" />
+                                    <label for="1">
+                                        <span>Pepperoni</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <!-- ***************** COST ***************** -->
                     <div>
                         <div>
@@ -75,24 +77,25 @@
                             <h3>Total <span id="total">$--.--</span></h3>
 
                         </div>
-                        <button type="submit" value="Submit" id="add-pizza" aria-label="Submit">Add Pizza</button>
+                        
+                        <button id="addPizza">Add Pizza</button>
                     </div>
-                    <div>
+                    <!-- <div>
                         <h1>Customer's Info</h1>
                         <div>
                             <label for="name">Full Name:</label>
                             <input type="text" name="fullname" id="fullname" placeholder="Full Name" required />
                         </div>
-                    </div>
+                    </div> -->
 
 
                     <div id="errors"></div>
-            </form>
+                </form>
             </div>
 
             <div class="col">
                 <h1>Order</h1>
-                <div id="orders-list">
+                <div id="ordersList">
                     <!-- Added Pizza's will go here... -->
                 </div>
                 <button id="confirm">Confirm Order</button>
@@ -112,4 +115,5 @@
 
     <script src="myScript.js"></script>
 </body>
+
 </html>
