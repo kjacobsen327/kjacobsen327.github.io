@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pizza Starter File</title>
+    <script src="pizza_start.js"></script>
+    <link rel="stylesheet" href="pizza_start.css" />
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Pizza Order Starter File</h1>
+        </header>
+        <main>
+
+            <div class="col">
+                <!-- need form name and id for JS to reference -->
+                <form name="form" id="form">
+                    <h1>What kinda' pizza do you want?!!</h1>
+                    <div>
+                        <h3>Size</h3>
+                        <div>
+                            <!-- radio buttons force only one selection -->
+
+                            <input type="radio" name="crust-size" value="small" id="small" checked />
+                            <label for="small"><span>Small</span><span>$ 5.00</span>
+                            </label>
+                        </div>
+                        <div>
+                            <input type="radio" name="crust-size" value="medium" id="medium" />
+                            <label for="medium">
+                                <span>Medium</span><span>$ 7.50</span>
+                            </label>
+                        </div>
+                        <div>
+                            <input type="radio" name="crust-size" value="large" id="large" />
+                            <label for="large">
+                                <span>Large</span><span>$ 10.00</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- ************** TOPPINGS **************** -->
+                    <div>
+                        <h3>Toppings</h3>
+                        <div id="toppings">
+                            <div>
+                                <!-- checkbox options allow for multiple values -->
+                                <h3 id="toppingsCost"></h3>
+                                <input type="checkbox" id="0" name="toppings" value="Extra Cheese" />
+                                <label for="0">
+                                    <span>Extra cheese</span>
+                                </label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="1" name="toppings" value="Pepperoni" />
+                                <label for="1">
+                                    <span>Pepperoni</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ***************** COST ***************** -->
+                    <div>
+                        <div>
+                            <h2>Price <span id="price">$-.--</span></h2>
+
+                        </div>
+                        <div class="tax">
+                            <h3>Tax <span id="tax">$-.--</span></h3>
+
+                        </div>
+                        <div class="total">
+                            <h3>Total <span id="total">$--.--</span></h3>
+
+                        </div>
+                        <button type="submit" value="Submit" id="add-pizza" aria-label="Submit">Add Pizza</button>
+                    </div>
+                    <div>
+                        <h1>Customer's Info</h1>
+                        <div>
+                            <label for="name">Full Name:</label>
+                            <input type="text" name="fullname" id="fullname" placeholder="Full Name" required />
+                        </div>
+                    </div>
+
+
+                    <div id="errors"></div>
+            </form>
+            </div>
+
+            <div class="col">
+                <h1>Order</h1>
+                <div id="orders-list">
+                    <!-- Added Pizza's will go here... -->
+                </div>
+                <button id="confirm">Confirm Order</button>
+            </div>
+            <div class="col">
+                <h1>Order object</h1>
+                <pre id="ord-object">
+
+          {
+  
+          }
+
+          </pre>
+            </div>
+        </main>
+    </div>
+
+    <footer></footer>
+</body>
+
+</html>
