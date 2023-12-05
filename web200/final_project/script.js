@@ -7,10 +7,11 @@ let ingredientPrices = {
     Peppers: { small: 1, medium: 1.5, large: 2 },
     olives: { small: 1, medium: 1.5, large: 2 }
 };
+
 let crustPrices = {
-    small: 5,
-    medium: 8,
-    large: 12
+    small: 14,
+    medium: 16,
+    large: 20
 };
 
 let taxRate = 0.08;
@@ -20,27 +21,21 @@ function addToOrder() {
     let selectedIngredients = [];
     let ingredientCheckboxes = document.querySelectorAll('input[name="ingredients"]:checked');
     
+    // Push all checked ingredients into selectedIngredients array
     for (let i = 0; i < ingredientCheckboxes.length; i++) {
         selectedIngredients.push(ingredientCheckboxes[i].value);
     }
+
+    // Pizza object contains checked crust size value and selectedIngredients array from above
     let pizza = {
         crustSize: crustSize,
         ingredients: selectedIngredients
     };
 
-    // let customer = {
-    //     name: document.getElementById('name').value,
-    //     address: document.getElementById('address').value,
-    //     city: document.getElementById('city').value,
-    //     state: document.getElementById('state').value,
-    //     zip: document.getElementById('zip').value,
-    //     phone: document.getElementById('phone').value,
-    //     email: document.getElementById('email').value
-    // };
-
     // Calculate total price for the pizza
     let totalPrice = calculateTotalPrice(pizza);
 
+    // Order object contains pizza object and total price
     let order = {
         pizza: pizza,
         // customer: customer,
@@ -51,8 +46,6 @@ function addToOrder() {
     displayOrderSummary();
     updateOrderTotals();
 }
-
-
 
 function calculateTotalPrice(pizza) {
     let crustPrice = crustPrices[pizza.crustSize];
@@ -66,10 +59,10 @@ function calculateTotalPrice(pizza) {
 }
 
 function displayOrderSummary() {
-    let summaryList = document.getElementById('orderSummary');
+    let summaryList = document.getElementById("orderSummary");
     summaryList.innerHTML = "";
 
-    // Get each order from orderList array
+    // Get each order by index value from orderList array as a list item
     orderList.forEach(function (order, index) {
         let listItem = document.createElement('li');
         listItem.innerHTML = `
@@ -78,12 +71,14 @@ function displayOrderSummary() {
             Ingredients: ${order.pizza.ingredients.join(', ')}<br>
 
             Total Price: $${order.totalPrice.toFixed(2)}
-            <button class="removeButton" onclick="removePizza(${index})">Remove</button>
+
+            <button class="removeButton" onclick="removePizza(${index})">X</button>
         `;
+        // Add each list item as a child elemenet to <ul id="orderSummary"
         summaryList.appendChild(listItem);
     });
 }
-
+// Function to remove pizza from the remove button created on each list item
 function removePizza(index) {
     orderList.splice(index, 1);
     displayOrderSummary();
@@ -91,6 +86,7 @@ function removePizza(index) {
 }
 
 function updateOrderTotals() {
+    // Get totalPrice from each order object
     let subtotal = orderList.reduce(function (acc, order) {
         return acc + order.totalPrice;
     }, 0);

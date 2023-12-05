@@ -13,18 +13,21 @@
     <div id="order-form">
         <h2>Pizza Order Form</h2>
         <form id="pizzaForm">
-            <label>Select Crust Size:</label>
-            <label><input type="radio" name="crustSize" value="small" required> Small</label>
-            <label><input type="radio" name="crustSize" value="medium"> Medium</label>
-            <label><input type="radio" name="crustSize" value="large"> Large</label>
-
-            <label>Select Ingredients (up to 3):</label>
-            <label><input type="checkbox" name="ingredients" value="pepperoni"> Pepperoni</label>
-            <label><input type="checkbox" name="ingredients" value="sausage"> Sausage</label>
-            <label><input type="checkbox" name="ingredients" value="mushrooms"> Mushrooms</label>
-            <label><input type="checkbox" name="ingredients" value="onions"> Onions</label>
-            <label><input type="checkbox" name="ingredients" value="Peppers"> Bell Peppers</label>
-            <label><input type="checkbox" name="ingredients" value="olives"> Olives</label>
+            <div class="pickSize">
+                <label>Select Crust Size:</label>
+                <label><input type="radio" name="crustSize" value="small" required>Small</label>
+                <label><input type="radio" name="crustSize" value="medium">Medium</label>
+                <label><input type="radio" name="crustSize" value="large">Large</label>
+            </div>
+            <div class="pickIngredients">
+                <label>Select Ingredients</label>
+                <label><input type="checkbox" name="ingredients" value="pepperoni">Pepperoni</label>
+                <label><input type="checkbox" name="ingredients" value="sausage">Sausage</label>
+                <label><input type="checkbox" name="ingredients" value="mushrooms">Mushrooms</label>
+                <label><input type="checkbox" name="ingredients" value="onions">Onions</label>
+                <label><input type="checkbox" name="ingredients" value="Peppers">Peppers</label>
+                <label><input type="checkbox" name="ingredients" value="olives">Olives</label>
+            </div>
 
             <input type="button" value="Add to Order" onclick="addToOrder()">
         </form>
