@@ -1,10 +1,24 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
 #order-form {
     max-width: 400px;
-    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2, h3 {
+    color: #333;
 }
 
 label {
@@ -12,18 +26,16 @@ label {
     margin-bottom: 5px;
 }
 
-input[type="text"],
-select,
-input[type="radio"],
-input[type="checkbox"] {
+input[type="text"], select, input[type="radio"], input[type="checkbox"] {
     width: 100%;
     padding: 8px;
     margin-bottom: 10px;
     box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-input[type="submit"],
-input[type="button"] {
+input[type="submit"], input[type="button"] {
     background-color: #4CAF50;
     color: white;
     padding: 10px 15px;
@@ -32,8 +44,7 @@ input[type="button"] {
     cursor: pointer;
 }
 
-input[type="submit"]:hover,
-input[type="button"]:hover {
+input[type="submit"]:hover, input[type="button"]:hover {
     background-color: #45a049;
 }
 
@@ -43,4 +54,32 @@ input[type="button"]:hover {
 
 #totals {
     margin-top: 20px;
+}
+
+.removeButton {
+    background-color: #f44336;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.removeButton:hover {
+    background-color: #d32f2f;
+}
+
+#submitOrder {
+    background-color: #008CBA;
+}
+
+#submitOrder:hover {
+    background-color: #0077A7;
+}
+
+#customerInfo {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
 }
