@@ -6,43 +6,96 @@
 body {
     background-color: #f6efe3;
     width: 100%;
-}
 
-h2,
+}
+h1 {
+    height: 100px;
+}
+h2 {
+    height: 50px;
+    font-size: 30px;
+}
 h3 {
-    color: #333;
+    height: 40px;
+    font-size: 25px;
 }
-
-.pickSize {
-    border: thin solid red;
-    width: 50%;
-    
+.orderFormContainer {
+    padding: 0 3%;
+    width: 94%;
+    display: flex;
+    flex-direction: row;
 }
+h3.orderFormContainer {
+    height: 50px;
+}
+#customerInfo {
+    width: 31%;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.cityStateZipOuterContainer {
+    display: flex;
+}
+.stateContainer {
+    width: 50px;
+}
+.createPizzaContainer {
+    border: 3px solid red;
+    width: 42%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+.pickSizeContainer,
+.pickIngredientsContainer {
+    border: 2px solid green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.pickSizeContainer {
+    height: 150px;
+}
+.pickIngredientsContainer {
+    height: 350px;
 
+}
+.radioButtonsContainer,
+.meatsContainer,
+.veggiesContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
 label {
     display: block;
-    margin-bottom: 5px;
 }
 
 input[type="text"],
-select,
-input[type="radio"],
-input[type="checkbox"] {
+input[type="num"],
+input[type="email"],
+select {
     width: 100%;
     padding: 8px;
     margin-bottom: 10px;
     box-sizing: border-box;
-    border: 1px solid #ccc;
     border-radius: 4px;
 }
 
 input[type="button"] {
+    height: 50px;
+    width: 100px;
+    align-self: center;
     background-color: #4CAF50;
     color: white;
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+
 }
 
 input[type="submit"]:hover,
@@ -71,17 +124,11 @@ input[type="button"]:hover {
     background-color: #d32f2f;
 }
 
-#submitOrder {
+/* #submitOrder {
     background-color: #008CBA;
 }
 
 #submitOrder:hover {
     background-color: #0077A7;
-}
+} */
 
-#customerInfo {
-    margin-top: 20px;
-    border: 1px solid #ddd;
-    padding: 10px;
-    border-radius: 5px;
-}

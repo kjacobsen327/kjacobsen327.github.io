@@ -11,71 +11,137 @@
 <body>
 
     <div id="order-form">
-        <h2>Pizza Order Form</h2>
+        <h1>Pizza Order Form</h1>
         <form id="pizzaForm">
-            <div class="midPizzaCreator">
-                <div class="pickSize">
-                    <div class="sizeRadioButtons">
-                        <label>Select Crust Size:</label>
-                        <label><input type="radio" name="crustSize" value="small">Small</label>
-                        <label><input type="radio" name="crustSize" value="medium">Medium</label>
-                        <label><input type="radio" name="crustSize" value="large">Large</label>
+            <div class="orderFormContainer">
+                <div id="customerInfo">
+                    <h3>Customer Information</h3>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="address">Street Address:</label>
+                    <input type="text" id="address" name="address" required>
+                    <div class="cityStateZipOuterContainer">
+                        <div class="cityContainer">
+                            <label for="city">City:</label>
+                            <input type="text" id="city" name="city" required>
+                        </div>
+                        <div class="stateContainer">
+                            <label for="state">State:</label>
+                            <select id="state" name="state" required>
+                                <option value="AL">AL</option>
+                                <option value="AK">AK</option>
+                                <option value="AR">AR</option>
+                                <option value="AZ">AZ</option>
+                                <option value="CA">CA</option>
+                                <option value="CO">CO</option>
+                                <option value="CT">CT</option>
+                                <option value="DC">DC</option>
+                                <option value="DE">DE</option>
+                                <option value="FL">FL</option>
+                                <option value="GA">GA</option>
+                                <option value="HI">HI</option>
+                                <option value="IA">IA</option>
+                                <option value="ID">ID</option>
+                                <option value="IL">IL</option>
+                                <option value="IN">IN</option>
+                                <option value="KS">KS</option>
+                                <option value="KY">KY</option>
+                                <option value="LA">LA</option>
+                                <option value="MA">MA</option>
+                                <option value="MD">MD</option>
+                                <option value="ME">ME</option>
+                                <option value="MI">MI</option>
+                                <option value="MN">MN</option>
+                                <option value="MO">MO</option>
+                                <option value="MS">MS</option>
+                                <option value="MT">MT</option>
+                                <option value="NC">NC</option>
+                                <option value="NE">NE</option>
+                                <option value="NH">NH</option>
+                                <option value="NJ">NJ</option>
+                                <option value="NM">NM</option>
+                                <option value="NV">NV</option>
+                                <option value="NY">NY</option>
+                                <option value="ND">ND</option>
+                                <option value="OH">OH</option>
+                                <option value="OK">OK</option>
+                                <option value="OR">OR</option>
+                                <option value="PA">PA</option>
+                                <option value="RI">RI</option>
+                                <option value="SC">SC</option>
+                                <option value="SD">SD</option>
+                                <option value="TN">TN</option>
+                                <option value="TX">TX</option>
+                                <option value="UT">UT</option>
+                                <option value="VT">VT</option>
+                                <option value="VA">VA</option>
+                                <option value="WA">WA</option>
+                                <option value="WI">WI</option>
+                                <option value="WV">WV</option>
+                                <option value="WY">WY</option>
+                            </select>
+                        </div>
+                        <div class="zipContainer"><label for="zip">Zip Code:</label>
+                            <input type="text" id="zip" name="zip" required>
+                        </div>
                     </div>
+                    <label for="phone">Phone Number:</label>
+                    <input type="text" id="phone" name="phone" required>
+
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email" required>
                 </div>
 
-                <div class="pickIngredients">
-                    <label>Select Ingredients</label>
-                    <label><input type="checkbox" name="ingredients" value="pepperoni">Pepperoni</label>
-                    <label><input type="checkbox" name="ingredients" value="sausage">Sausage</label>
-                    <label><input type="checkbox" name="ingredients" value="mushrooms">Mushrooms</label>
-                    <label><input type="checkbox" name="ingredients" value="onions">Onions</label>
-                    <label><input type="checkbox" name="ingredients" value="Peppers">Peppers</label>
-                    <label><input type="checkbox" name="ingredients" value="olives">Olives</label>
-                </div>
+                <div class="createPizzaContainer">
+                    <div class="pickSizeContainer">
+                        <h2>CHOOSE YOUR SIZE</h2>
+                        <div class="radioButtonsContainer">
+                            <label><input type="radio" name="crustSize" value="small">Small</label>
+                            <label><input type="radio" name="crustSize" value="medium">Medium</label>
+                            <label><input type="radio" name="crustSize" value="large">Large</label>
+                        </div>
+                    </div>
 
-                <input type="button" value="Add to Order" onclick="addToOrder()">
+                    <div class="pickIngredientsContainer">
+                        <h2>ADD TOPPINGS</h2>
+                        <h3>MEATS</h3>
+                        <div class="meatsContainer">
+                            <label><input type="checkbox" name="ingredients" value="pepperoni">Pepperoni<div>PRICE</div></label>
+                            <label><input type="checkbox" name="ingredients" value="sausage">Sausage</label>
+                            <label><input type="checkbox" name="ingredients" value="bacon">Bacon</label>
+                        </div>
+                        <h3>Veggies</h3>
+                        <div class="veggiesContainer">
+                            <label><input type="checkbox" name="ingredients" value="mushrooms">Mushrooms</label>
+                            <label><input type="checkbox" name="ingredients" value="onions">Onions</label>
+                            <label><input type="checkbox" name="ingredients" value="peppers">Peppers</label>
+                        </div>
+                    </div>
+
+                    <input type="button" value="Add to Order" onclick="addToOrder()">
+                </div>
+                <div class="orderContainer">
+
+                    <h3>Order Summary</h3>
+                    <ul id="orderSummary"></ul>
+
+
+
+
+                    <div id="totals">
+                        <h3>Order Totals</h3>
+                        <p id="subtotal">Subtotal: $0.00</p>
+                        <p id="tax">Tax (8%): $0.00</p>
+                        <p id="grandTotal">Grand Total: $0.00</p>
+                    </div>
+
+
+
+                    <input type="submit" id="submitOrder" value="Submit Order">
+                </div>
             </div>
-       
-
-        <h3>Order Summary</h3>
-        <ul id="orderSummary"></ul>
-
-
-
-        <div id="customerInfo">
-            <h3>Customer Information</h3>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="address">Address:</label>
-            <input type="text" id="address" name="address" required>
-
-            <label for="city">City:</label>
-            <input type="text" id="city" name="city" required>
-
-            <label for="state">State:</label>
-            <input type="text" id="state" name="state" required>
-
-            <label for="zip">Zip Code:</label>
-            <input type="text" id="zip" name="zip" required>
-
-            <label for="phone">Phone Number:</label>
-            <input type="text" id="phone" name="phone" required>
-
-            <label for="email">Email:</label>
-            <input type="text" id="email" name="email" required>
-        </div>
-
-        <div id="totals">
-            <h3>Order Totals</h3>
-            <p id="subtotal">Subtotal: $0.00</p>
-            <p id="tax">Tax (8%): $0.00</p>
-            <p id="grandTotal">Grand Total: $0.00</p>
-        </div>
-
-        
-        <input type="submit" id="submitOrder" value="Submit Order">
-    </form>
+        </form>
     </div>
 
     <script src="script.js"></script>

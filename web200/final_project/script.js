@@ -1,11 +1,11 @@
 let orderList = [];
 let ingredientPrices = {
     pepperoni: { small: 1.5, medium: 2, large: 2.5 },
+    sausage: { small: 2, medium: 2.5, large: 3 },
+    bacon: { small: 1, medium: 1.5, large: 2 },
     mushrooms: { small: 1, medium: 1.5, large: 2 },
     onions: { small: 0.5, medium: 1, large: 1.5 },
-    sausage: { small: 2, medium: 2.5, large: 3 },
-    Peppers: { small: 1, medium: 1.5, large: 2 },
-    olives: { small: 1, medium: 1.5, large: 2 }
+    peppers: { small: 1, medium: 1.5, large: 2 },
 };
 
 let crustPrices = {
@@ -16,6 +16,25 @@ let crustPrices = {
 
 let taxRate = 0.08;
 
+
+let crustSizeChoices = document.querySelectorAll('input[name="crustSize"]');
+
+for (let i = 0; i < crustSizeChoices.length; i++) {
+    crustSizeChoices[i].addEventListener('click', function () {
+        let crustSize = document.querySelector('input[name="crustSize"]:checked').value;
+        let ingredients = document.querySelectorAll('input[name="ingredients"]');
+
+        let ingredientPriceDiv = ingredients[0].nextSibling.nextSibling;
+        if (crustSize = 'small') {
+            for (iii = 0; iii < Object.entries(ingredientPrices).length; iii++) {
+                console.log(Object.entries(ingredientPrices));
+                ingredientPriceDiv.innerHTML = Object.entries(ingredientPrices)[iii][1].small
+            }
+        }
+    })
+}
+
+console.log();
 function addToOrder() {
     let crustSize = document.querySelector('input[name="crustSize"]:checked').value;
     let selectedIngredients = [];
