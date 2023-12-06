@@ -20,7 +20,7 @@ function addToOrder() {
     let crustSize = document.querySelector('input[name="crustSize"]:checked').value;
     let selectedIngredients = [];
     let ingredientCheckboxes = document.querySelectorAll('input[name="ingredients"]:checked');
-    
+
     // Push all checked ingredients into selectedIngredients array
     for (let i = 0; i < ingredientCheckboxes.length; i++) {
         selectedIngredients.push(ingredientCheckboxes[i].value);
@@ -99,6 +99,9 @@ function updateOrderTotals() {
     document.getElementById('grandTotal').textContent = `Grand Total: $${grandTotal.toFixed(2)}`;
 }
 
+let submit = document.getElementById('submitOrder');
+submit.addEventListener('click', submitOrder);
+
 function submitOrder() {
     // Check if customer information is complete
     if (
@@ -116,7 +119,7 @@ function submitOrder() {
 
     // Create a complete order object
     let completeOrder = {
-        
+
         customerInfo: {
             name: document.getElementById('name').value,
             address: document.getElementById('address').value,

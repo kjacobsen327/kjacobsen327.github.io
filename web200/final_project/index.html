@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pizza Order</title>
-    <style src="style.css"></style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -13,24 +13,29 @@
     <div id="order-form">
         <h2>Pizza Order Form</h2>
         <form id="pizzaForm">
-            <div class="pickSize">
-                <label>Select Crust Size:</label>
-                <label><input type="radio" name="crustSize" value="small" required>Small</label>
-                <label><input type="radio" name="crustSize" value="medium">Medium</label>
-                <label><input type="radio" name="crustSize" value="large">Large</label>
-            </div>
-            <div class="pickIngredients">
-                <label>Select Ingredients</label>
-                <label><input type="checkbox" name="ingredients" value="pepperoni">Pepperoni</label>
-                <label><input type="checkbox" name="ingredients" value="sausage">Sausage</label>
-                <label><input type="checkbox" name="ingredients" value="mushrooms">Mushrooms</label>
-                <label><input type="checkbox" name="ingredients" value="onions">Onions</label>
-                <label><input type="checkbox" name="ingredients" value="Peppers">Peppers</label>
-                <label><input type="checkbox" name="ingredients" value="olives">Olives</label>
-            </div>
+            <div class="midPizzaCreator">
+                <div class="pickSize">
+                    <div class="sizeRadioButtons">
+                        <label>Select Crust Size:</label>
+                        <label><input type="radio" name="crustSize" value="small">Small</label>
+                        <label><input type="radio" name="crustSize" value="medium">Medium</label>
+                        <label><input type="radio" name="crustSize" value="large">Large</label>
+                    </div>
+                </div>
 
-            <input type="button" value="Add to Order" onclick="addToOrder()">
-        </form>
+                <div class="pickIngredients">
+                    <label>Select Ingredients</label>
+                    <label><input type="checkbox" name="ingredients" value="pepperoni">Pepperoni</label>
+                    <label><input type="checkbox" name="ingredients" value="sausage">Sausage</label>
+                    <label><input type="checkbox" name="ingredients" value="mushrooms">Mushrooms</label>
+                    <label><input type="checkbox" name="ingredients" value="onions">Onions</label>
+                    <label><input type="checkbox" name="ingredients" value="Peppers">Peppers</label>
+                    <label><input type="checkbox" name="ingredients" value="olives">Olives</label>
+                </div>
+
+                <input type="button" value="Add to Order" onclick="addToOrder()">
+            </div>
+       
 
         <h3>Order Summary</h3>
         <ul id="orderSummary"></ul>
@@ -68,8 +73,11 @@
             <p id="grandTotal">Grand Total: $0.00</p>
         </div>
 
-        <input type="submit" id="submitOrder" value="Submit Order" onclick="submitOrder()">
+        
+        <input type="submit" id="submitOrder" value="Submit Order">
+    </form>
     </div>
+
     <script src="script.js"></script>
 </body>
 
