@@ -14,43 +14,34 @@ let crustPrices = {
     large: 20
 };
 
-let taxRate = 0.08;
+let taxRate = 0.1;
 
 
 let crustSizeChoices = document.querySelectorAll('input[name="crustSize"]');
-
 for (let i = 0; i < crustSizeChoices.length; i++) {
     crustSizeChoices[i].addEventListener('click', displayIngredientPrices);
 }
 function displayIngredientPrices() {
-    let crustSize = document.querySelector('input[name="crustSize"]:checked').value;
+    let crustSize = document.querySelectorAll('input[name="crustSize"]');
     let ingredients = document.querySelectorAll('input[name="ingredients"]');
-    console.log(ingredients);
-    let ingredientPriceDiv = [];
+    let ingredientPriceDivElement = [];
 
+    for (let i = 0; i < ingredients.length; i++) {
+        ingredientPriceDivElement.push(ingredients[i].nextSibling.nextSibling);
+        ingredientPriceDivElement[i].innerHTML = '';
 
-
-    if (crustSize == 'small') {
-        for (let i = 0; i < ingredients.length; i++) {
-            ingredientPriceDiv.push(ingredients[i].nextSibling.nextSibling);
-            console.log(ingredientPriceDiv);
-            console.log(Object.entries(ingredientPrices));
-
-            ingredientPriceDiv[i].innerHTML = '$' + Object.entries(ingredientPrices)[i][1].small.toFixed(2);
+        if (crustSize[0].checked) {
+            ingredientPriceDivElement[i].innerHTML = '$' + Object.entries(ingredientPrices)[i][1].small.toFixed(2);
         }
-    }
-    if (crustSize == 'medium') {
-        for (let i = 0; i < ingredients.length; i++) {
-            ingredientPriceDiv.push(ingredients[i].nextSibling.nextSibling);
-            console.log(ingredientPriceDiv);
-            console.log(Object.entries(ingredientPrices));
-            console.log('medium');
-            ingredientPriceDiv[i].innerHTML = '$' + Object.entries(ingredientPrices)[i][1].medium.toFixed(2);
+        if (crustSize[1].checked) {
+            ingredientPriceDivElement[i].innerHTML = '$' + Object.entries(ingredientPrices)[i][1].medium.toFixed(2);
+        }
+        if (crustSize[2].checked) {
+            ingredientPriceDivElement[i].innerHTML = '$' + Object.entries(ingredientPrices)[i][1].large.toFixed(2);
         }
     }
 }
 
-console.log();
 function addToOrder() {
     let crustSize = document.querySelector('input[name="crustSize"]:checked').value;
     let selectedIngredients = [];
@@ -80,7 +71,21 @@ function addToOrder() {
     orderList.push(order);
     displayOrderSummary();
     updateOrderTotals();
+
+    var radioBtns = document.getElementsByTagName("input");
+
+    for (let i = 0; i < radioBtns.length; i++) {
+        if (radioBtns[i].type == "radio") {
+            radioBtns[i].checked = false;
+        }
+    }
+    for (i = 0; i < ingredientCheckboxes.length; i++) {
+
+        ingredientCheckboxes[i].checked = false;
+    }
+    displayIngredientPrices();
 }
+
 
 function calculateTotalPrice(pizza) {
     let crustPrice = crustPrices[pizza.crustSize];
@@ -130,11 +135,14 @@ function updateOrderTotals() {
     let grandTotal = subtotal + tax;
 
     document.getElementById('subtotal').textContent = `Subtotal: $${subtotal.toFixed(2)}`;
-    document.getElementById('tax').textContent = `Tax (8%): $${tax.toFixed(2)}`;
+    document.getElementById('tax').textContent = `Tax (10%): $${tax.toFixed(2)}`;
     document.getElementById('grandTotal').textContent = `Grand Total: $${grandTotal.toFixed(2)}`;
 }
 
 let submit = document.getElementById('submitOrder');
+submit.addEventListener('click', function (e) {
+    e.preventDefault()
+});
 submit.addEventListener('click', submitOrder);
 
 function submitOrder() {

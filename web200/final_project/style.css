@@ -8,26 +8,30 @@ body {
     width: 100%;
 
 }
+
 h1 {
     height: 100px;
 }
+
 h2 {
-    height: 50px;
-    font-size: 30px;
+    height: 60px;
+    font-size: 25px;
+    text-align: center;
+    display: flex;
+    align-items: center;
 }
+
 h3 {
-    height: 40px;
     font-size: 25px;
 }
+
 .orderFormContainer {
     padding: 0 3%;
     width: 94%;
     display: flex;
     flex-direction: row;
 }
-h3.orderFormContainer {
-    height: 50px;
-}
+
 #customerInfo {
     width: 31%;
     padding: 10px;
@@ -35,12 +39,25 @@ h3.orderFormContainer {
     display: flex;
     flex-direction: column;
 }
+
 .cityStateZipOuterContainer {
     display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
 }
-.stateContainer {
-    width: 50px;
+
+#state {
+    min-width: 45px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+
 }
+
+#zip {
+    min-width: 65px;
+}
+
 .createPizzaContainer {
     border: 3px solid red;
     width: 42%;
@@ -48,6 +65,7 @@ h3.orderFormContainer {
     display: flex;
     flex-direction: column;
 }
+
 .pickSizeContainer,
 .pickIngredientsContainer {
     border: 2px solid green;
@@ -55,13 +73,16 @@ h3.orderFormContainer {
     flex-direction: column;
     align-items: center;
 }
+
 .pickSizeContainer {
     height: 150px;
 }
+
 .pickIngredientsContainer {
     height: 350px;
 
 }
+
 .radioButtonsContainer,
 .meatsContainer,
 .veggiesContainer {
@@ -70,6 +91,11 @@ h3.orderFormContainer {
     justify-content: space-evenly;
     width: 100%;
 }
+
+.meatsContainer {
+    border: thin solid blue;
+}
+
 label {
     display: block;
 }
@@ -83,6 +109,7 @@ select {
     margin-bottom: 10px;
     box-sizing: border-box;
     border-radius: 4px;
+    border: 2px solid black;
 }
 
 input[type="button"] {
@@ -124,11 +151,17 @@ input[type="button"]:hover {
     background-color: #d32f2f;
 }
 
-/* #submitOrder {
-    background-color: #008CBA;
+@media only screen and (max-width: 768px) {
+    .orderFormContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #customerInfo,
+    .createPizzaContainer {
+        width: 100%;
+        max-width: 450px;
+        border: thin yellow line;
+    }
+
 }
-
-#submitOrder:hover {
-    background-color: #0077A7;
-} */
-

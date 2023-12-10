@@ -15,9 +15,9 @@
         <form id="pizzaForm">
             <div class="orderFormContainer">
                 <div id="customerInfo">
-                    <h3>Customer Information</h3>
+                    <h2>Customer Information</h2>
                     <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
+                    <input type="text" id="name" name="name" required autofocus>
 
                     <label for="address">Street Address:</label>
                     <input type="text" id="address" name="address" required>
@@ -29,6 +29,7 @@
                         <div class="stateContainer">
                             <label for="state">State:</label>
                             <select id="state" name="state" required>
+                                <option value="none" selected disabled hidden></option>
                                 <option value="AL">AL</option>
                                 <option value="AK">AK</option>
                                 <option value="AR">AR</option>
@@ -93,7 +94,7 @@
                     <input type="text" id="email" name="email" required>
                 </div>
 
-                <div class="createPizzaContainer">
+                <div id="createPizza" class="createPizzaContainer">
                     <div class="pickSizeContainer">
                         <h2>CHOOSE YOUR SIZE</h2>
                         <div class="radioButtonsContainer">
@@ -105,7 +106,7 @@
 
                     <div class="pickIngredientsContainer">
                         <h2>ADD TOPPINGS</h2>
-                        <h3>MEATS</h3>
+                        <h3>Meats</h3>
                         <div class="meatsContainer">
                             <label><input type="checkbox" name="ingredients" value="pepperoni">Pepperoni<div>PRICE</div></label>
                             <label><input type="checkbox" name="ingredients" value="sausage">Sausage<div>PRICE</div></label>
@@ -132,7 +133,7 @@
                     <div id="totals">
                         <h3>Order Totals</h3>
                         <p id="subtotal">Subtotal: $0.00</p>
-                        <p id="tax">Tax (8%): $0.00</p>
+                        <p id="tax">Tax (10%): $0.00</p>
                         <p id="grandTotal">Grand Total: $0.00</p>
                     </div>
 
