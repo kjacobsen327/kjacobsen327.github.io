@@ -7,15 +7,29 @@
     <title>Pizza Order</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
 
 <body>
 
     <div id="order-form">
-        <h1>Pizza Order Form</h1>
+        <header>
+            <h1><span>Bobby's</span>
+                <div class="logo">
+                    <img src="images\bobbyspizzalogo.png">
+                    <div class="logoInnerShadow"></div>
+                </div>
+                <span>Pizzeria</span>
+            </h1>
+        </header>
         <form id="pizzaForm">
             <div class="orderFormContainer">
                 <div id="customerInfo">
-                    <h2>Customer Information</h2>
+                    <h2>CUSTOMER INFORMATION</h2>
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required autofocus>
 
@@ -98,9 +112,13 @@
                     <div class="pickSizeContainer">
                         <h2>CHOOSE YOUR SIZE</h2>
                         <div class="radioButtonsContainer">
-                            <label><input type="radio" name="crustSize" value="small">Small</label>
-                            <label><input type="radio" name="crustSize" value="medium">Medium</label>
-                            <label><input type="radio" name="crustSize" value="large">Large</label>
+                            <label><input type="radio" name="crustSize" value="small">
+                                12" Small Cheese<span>$13.99</span></label>
+                            <label><input type="radio" name="crustSize" value="medium">
+                                14" Medium Cheese<span>$15.99</span></label>
+                            <label><input type="radio" name="crustSize" value="large">
+                                16" Large Cheese<span>$19.99</span>
+                            </label>
                         </div>
                     </div>
 
@@ -108,30 +126,36 @@
                         <h2>ADD TOPPINGS</h2>
                         <h3>Meats</h3>
                         <div class="meatsContainer">
-                            <label><input type="checkbox" name="ingredients" value="pepperoni">Pepperoni<div>PRICE</div></label>
-                            <label><input type="checkbox" name="ingredients" value="sausage">Sausage<div>PRICE</div></label>
-                            <label><input type="checkbox" name="ingredients" value="bacon">Bacon<div>PRICE</div></label>
+                            <label><input type="checkbox" name="ingredients" value="pepperoni">Pepperoni<div></div>
+                            </label>
+                            <label><input type="checkbox" name="ingredients" value="sausage">Sausage<div></div>
+                            </label>
+                            <label><input type="checkbox" name="ingredients" value="bacon">Bacon<div></div></label>
                         </div>
                         <h3>Veggies</h3>
                         <div class="veggiesContainer">
-                            <label><input type="checkbox" name="ingredients" value="mushrooms">Mushrooms<div>PRICE</div></label>
-                            <label><input type="checkbox" name="ingredients" value="onions">Onions<div>PRICE</div></label>
-                            <label><input type="checkbox" name="ingredients" value="peppers">Peppers<div>PRICE</div></label>
+                            <label><input type="checkbox" name="ingredients" value="mushrooms">Mushrooms<div></div>
+                            </label>
+                            <label><input type="checkbox" name="ingredients" value="onions">Onions<div></div>
+                            </label>
+                            <label><input type="checkbox" name="ingredients" value="peppers">Peppers<div></div>
+                            </label>
                         </div>
                     </div>
-
                     <input type="button" value="Add to Order" onclick="addToOrder()">
+
                 </div>
+
                 <div class="orderContainer">
 
-                    <h3>Order Summary</h3>
+                    <h2>MY PIZZAS</h2>
                     <ul id="orderSummary"></ul>
 
 
 
 
                     <div id="totals">
-                        <h3>Order Totals</h3>
+                        <h2>ORDER TOTAL</h2>
                         <p id="subtotal">Subtotal: $0.00</p>
                         <p id="tax">Tax (10%): $0.00</p>
                         <p id="grandTotal">Grand Total: $0.00</p>

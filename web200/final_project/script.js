@@ -1,4 +1,7 @@
 let orderList = [];
+
+// created an object for ingredient prices, so that each ingredient could have a different price based
+// on size, and could be updated easily
 let ingredientPrices = {
     pepperoni: { small: 1.5, medium: 2, large: 2.5 },
     sausage: { small: 1.5, medium: 2, large: 2.5 },
@@ -9,9 +12,9 @@ let ingredientPrices = {
 };
 
 let crustPrices = {
-    small: 14,
-    medium: 16,
-    large: 20
+    small: 13.99,
+    medium: 15.99,
+    large: 19.99
 };
 
 let taxRate = 0.1;
@@ -30,12 +33,17 @@ function displayIngredientPrices() {
         ingredientPriceDivElement.push(ingredients[i].nextSibling.nextSibling);
         ingredientPriceDivElement[i].innerHTML = '';
 
+        // small
         if (crustSize[0].checked) {
             ingredientPriceDivElement[i].innerHTML = '$' + Object.entries(ingredientPrices)[i][1].small.toFixed(2);
         }
+
+        // medium
         if (crustSize[1].checked) {
             ingredientPriceDivElement[i].innerHTML = '$' + Object.entries(ingredientPrices)[i][1].medium.toFixed(2);
         }
+
+        //large
         if (crustSize[2].checked) {
             ingredientPriceDivElement[i].innerHTML = '$' + Object.entries(ingredientPrices)[i][1].large.toFixed(2);
         }
@@ -106,8 +114,8 @@ function displayOrderSummary() {
     orderList.forEach(function (order, index) {
         let listItem = document.createElement('li');
         listItem.innerHTML = `
-            Pizza ${index + 1}:<br>
-            Crust Size: ${order.pizza.crustSize}<br>
+            <strong>Pizza ${index + 1}:</strong><br>
+            Size: ${order.pizza.crustSize}<br>
             Ingredients: ${order.pizza.ingredients.join(', ')}<br>
 
             Total Price: $${order.totalPrice.toFixed(2)}
@@ -159,33 +167,56 @@ function submitOrder() {
         alert('Please complete all customer information before submitting the order.');
         return;
     }
+    if (orderList.length > 0) {
+        // Create a complete order object
+        let completeOrder = {
 
-    // Create a complete order object
-    let completeOrder = {
+            customerInfo: {
+                name: document.getElementById('name').value,
+                address: document.getElementById('address').value,
+                city: document.getElementById('city').value,
+                state: document.getElementById('state').value,
+                zip: document.getElementById('zip').value,
+                phone: document.getElementById('phone').value,
+                email: document.getElementById('email').value
+            },
+            pizzas: orderList,
+            orderTotals: {
+                subtotal: parseFloat(document.getElementById('subtotal').textContent.replace('Subtotal: $', '')),
+                tax: parseFloat(document.getElementById('tax').textContent.replace('Tax (10%): $', '')),
+                grandTotal: parseFloat(document.getElementById('grandTotal').textContent.replace('Grand Total: $', ''))
+            }
+        };
 
-        customerInfo: {
-            name: document.getElementById('name').value,
-            address: document.getElementById('address').value,
-            city: document.getElementById('city').value,
-            state: document.getElementById('state').value,
-            zip: document.getElementById('zip').value,
-            phone: document.getElementById('phone').value,
-            email: document.getElementById('email').value
-        },
-        pizzas: orderList,
-        orderTotals: {
-            subtotal: parseFloat(document.getElementById('subtotal').textContent.replace('Subtotal: $', '')),
-            tax: parseFloat(document.getElementById('tax').textContent.replace('Tax (8%): $', '')),
-            grandTotal: parseFloat(document.getElementById('grandTotal').textContent.replace('Grand Total: $', ''))
+        // send order
+        let url = 'https://jsonplaceholder.typicode.com/posts';
+        let req = new XMLHttpRequest();
+        console.log(req)
+        req.open('POST', url, true);
+        req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+        req.onreadystatechange = () => {
+            if (req.readyState === 4 && req.status === 201) {
+                let object = JSON.parse(req.response);
+                // console.log(object);
+                alert(`
+            Thank you ${completeOrder.customerInfo.name}!
+            Your order has been placed!
+            Bobby will be working hard on making your pizza purr-fect!
+            `);
+            }
         }
-    };
+        let body = JSON.stringify(completeOrder);
+        req.send(body);
 
-    // Log the complete order object to the console
-    console.log(completeOrder);
 
-    // Reset the form and order list
-    document.getElementById('pizzaForm').reset();
-    orderList = [];
-    displayOrderSummary();
-    updateOrderTotals();
+
+        // Reset the form and order list
+        document.getElementById('pizzaForm').reset();
+        orderList = [];
+        displayOrderSummary();
+        updateOrderTotals();
+    }
+    else {
+        alert('No pizzas have been added to your order!')
+    }
 }
