@@ -19,7 +19,7 @@ let crustPrices = {
 
 let taxRate = 0.1;
 
-
+// Add event listener to each size input, to display and change the ingredient prices under each extra ingredient
 let crustSizeChoices = document.querySelectorAll('input[name="crustSize"]');
 for (let i = 0; i < crustSizeChoices.length; i++) {
     crustSizeChoices[i].addEventListener('click', displayIngredientPrices);
@@ -80,7 +80,7 @@ function addToOrder() {
     displayOrderSummary();
     updateOrderTotals();
 
-    var radioBtns = document.getElementsByTagName("input");
+    let radioBtns = document.getElementsByTagName("input");
 
     for (let i = 0; i < radioBtns.length; i++) {
         if (radioBtns[i].type == "radio") {
@@ -197,18 +197,16 @@ function submitOrder() {
         req.onreadystatechange = () => {
             if (req.readyState === 4 && req.status === 201) {
                 let object = JSON.parse(req.response);
-                // console.log(object);
+                console.log(object);
                 alert(`
-            Thank you ${completeOrder.customerInfo.name}!
-            Your order has been placed!
-            Bobby will be working hard on making your pizza purr-fect!
-            `);
+                    Thank you ${completeOrder.customerInfo.name}!
+                    Your order has been placed!
+                    Bobby will be working hard on making your pizza purr-fect!
+                `);
             }
         }
         let body = JSON.stringify(completeOrder);
         req.send(body);
-
-
 
         // Reset the form and order list
         document.getElementById('pizzaForm').reset();
