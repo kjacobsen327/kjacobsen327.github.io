@@ -6,6 +6,7 @@
 body {
     background-color: #f6efe3;
     width: 100%;
+    font-family: 'Handlee', cursive;
 
 }
 
@@ -70,7 +71,9 @@ h2 {
 }
 
 h3 {
-    font-size: 25px;
+    font-family: 'Lilita One', sans-serif;
+    color: #000;
+    font-size: 24px;
 }
 
 .orderFormContainer {
@@ -112,7 +115,7 @@ h3 {
 
 #customerInfo label {
     display: block;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 input[type="text"],
@@ -145,23 +148,28 @@ select {
 
 .pickSizeContainer label,
 .pickIngredientsContainer label {
-    font-size: 16px;
+    font-size: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 5px;
 }
+.radioButtonsContainer span {
+    font-size: 22px;
+    font-weight: 800;
+}
 
 .pickIngredientsContainer label div {
     height: 25px;
-    font-size: 18px;
+    font-size: 22px;
+    font-weight: 800;
 }
 
 input:is([type="checkbox"], [type="radio"]) {
     -webkit-appearance: none;
     width: 2em;
     height: 2em;
-    background: #f6efe3;
+    background: #FFF;
     border: 3px solid #1A731A;
     border-radius: 0.3em;
     transition: background-color 300ms, border-color 300ms;
@@ -198,13 +206,15 @@ input:is([type="radio"]) {
     flex-direction: row;
     justify-content: space-evenly;
     width: 100%;
+    margin-bottom: 10px;
 }
+
 
 input[type="button"],
 input[type="submit"] {
     font-family: 'Lilita One', sans-serif;
 
-    font-size: 16px;
+    font-size: 19px;
     height: 40px;
     width: 130px;
     align-self: center;
@@ -255,19 +265,24 @@ input[type="button"]:hover {
 
 
 #orderSummary li {
+    font-size: 20px;
     position: relative;
     margin-right: 2em;
     margin-bottom: 10px;
+    background-color: #FFF;
+    padding-left: 5px;
+    border-radius: 5px;
+    
 }
 
-.removeButton {
+.removeButton {font-size: 20px;
     background-color: #CC2E28;
     color: white;
     border: none;
     border-radius: 3px;
     cursor: pointer;
-    height: 2em;
-    width: 2em;
+    height: 1.5em;
+    width: 1.5em;
     position: absolute;
     right: -30px;
     top: 0;
@@ -278,7 +293,13 @@ input[type="button"]:hover {
 .removeButton:hover {
     background-color: #ff0000;
 }
-
+#totals {
+    font-size: 20px;
+}
+#grandTotal {
+    font-weight: 800;
+    font-size: 22px;
+}
 @media only screen and (max-width: 768px) {
     .orderFormContainer {
         flex-direction: column;
@@ -296,6 +317,7 @@ input[type="button"]:hover {
         border-right: none;
         padding-bottom: 20px;
     }
+
     .orderContainer {
         border-bottom: none;
         padding-bottom: 0;
