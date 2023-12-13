@@ -26,8 +26,16 @@ submit.addEventListener('click', function (e) {
 submit.addEventListener('click', submitOrder);
 
 let customerInput = document.getElementsByTagName('input');
+let stateSelect = document.getElementById('state');
 customerInput[0].addEventListener('blur', checkName);
 customerInput[1].addEventListener('blur', checkAddress);
+customerInput[2].addEventListener('blur', checkCity);
+stateSelect.addEventListener('blur', checkState);
+customerInput[3].addEventListener('blur', checkZip);
+customerInput[4].addEventListener('blur', checkPhone);
+customerInput[5].addEventListener('blur', checkEmail);
+
+
 let errorMsg = document.getElementById('errorMsg');
 
 // Add event listener to each size input, to display and change the ingredient prices under each extra ingredient
@@ -105,18 +113,6 @@ function addToOrder() {
     displayIngredientPrices();
 }
 
-
-function calculateTotalPrice(pizza) {
-    let crustPrice = crustPrices[pizza.crustSize];
-    let ingredientPrice = 0;
-
-    pizza.ingredients.forEach(function (ingredient) {
-        ingredientPrice += ingredientPrices[ingredient][pizza.crustSize];
-    });
-
-    return crustPrice + ingredientPrice;
-}
-
 function displayOrderSummary() {
     let summaryList = document.getElementById("orderSummary");
     summaryList.innerHTML = "";
@@ -144,6 +140,17 @@ function removePizza(index) {
     updateOrderTotals();
 }
 
+function calculateTotalPrice(pizza) {
+    let crustPrice = crustPrices[pizza.crustSize];
+    let ingredientPrice = 0;
+
+    pizza.ingredients.forEach(function (ingredient) {
+        ingredientPrice += ingredientPrices[ingredient][pizza.crustSize];
+    });
+
+    return crustPrice + ingredientPrice;
+}
+
 function updateOrderTotals() {
     // Get totalPrice from each order object
     let subtotal = orderList.reduce(function (acc, order) {
@@ -158,13 +165,15 @@ function updateOrderTotals() {
     document.getElementById('grandTotal').textContent = `Grand Total: $${grandTotal.toFixed(2)}`;
 }
 
+// Customer info validation
 function checkName() {
     let name = document.getElementById('name').value;
     if (
         name === '' ||
+        // Check input: no numbers allowed
         /^[a-zA-Z\s,-]+$/.test(name) == false
     ) {
-        errorMsg.innerHTML = "Please correct these fields.";
+        errorMsg.innerHTML = "Please correct these fields:";
         customerInput[0].classList.remove('success');
         customerInput[0].classList.add('error');
         return false;
@@ -179,7 +188,7 @@ function checkName() {
 function checkAddress() {
     let address = document.getElementById('address').value;
     if (address === '') {
-        errorMsg.innerHTML = "Please correct these fields.";
+        errorMsg.innerHTML = "Please correct these fields:";
         customerInput[1].classList.remove('success');
         customerInput[1].classList.add('error');
         return false;
@@ -191,8 +200,100 @@ function checkAddress() {
         return true;
     }
 }
-function valid() {
+function checkCity() {
+    let city = document.getElementById('city').value;
+    if (
+        city === '' ||
+        // Check input: no numbers allowed
+        /^[a-zA-Z\s,-]+$/.test(city) == false
+    ) {
+        errorMsg.innerHTML = "Please correct these fields:";
+        customerInput[2].classList.remove('success');
+        customerInput[2].classList.add('error');
+        return false;
+    }
+    else {
+        customerInput[2].classList.remove('error');
+        customerInput[2].classList.add('success');
+        errorMsg.innerHTML = "";
+        return true;
+    }
+}
+function checkState() {
+    let state = document.getElementById('state').value;
+    let stateSelectBox = document.getElementById('state');
 
+    if (state === 'none') {
+        errorMsg.innerHTML = "Please correct these fields:";
+        stateSelectBox.classList.remove('success');
+        stateSelectBox.classList.add('error');
+        return false;
+    }
+    else {
+        stateSelectBox.classList.remove('error');
+        stateSelectBox.classList.add('success');
+        errorMsg.innerHTML = "";
+        return true;
+    }
+}
+function checkZip() {
+    let zip = document.getElementById('zip').value;
+    if (
+        zip === '' ||
+        // Check input: only numbers in XXXXX or XXXXX-XXXX pattern allowed
+        /^[0-9]{5}(?:-[0-9]{4})?$/.test(zip) == false
+    ) {
+        errorMsg.innerHTML = "Please correct these fields:";
+        customerInput[3].classList.remove('success');
+        customerInput[3].classList.add('error');
+        return false;
+    }
+    else {
+        customerInput[3].classList.remove('error');
+        customerInput[3].classList.add('success');
+        errorMsg.innerHTML = "";
+        return true;
+    }
+}
+function checkPhone() {
+    let phone = document.getElementById('phone').value;
+    if (
+        phone === '' ||
+        // Check input for valid phone formats
+        /^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$/.test(phone) == false
+    ) {
+        errorMsg.innerHTML = "Please correct these fields:";
+        customerInput[4].classList.remove('success');
+        customerInput[4].classList.add('error');
+        return false;
+    }
+    else {
+        customerInput[4].classList.remove('error');
+        customerInput[4].classList.add('success');
+        errorMsg.innerHTML = "";
+        return true;
+    }
+}
+function checkEmail() {
+    let email = document.getElementById('email').value;
+    if (
+        email === '' ||
+        // Check input: email pattern must be XXXX + @ + XXX + . + XXX
+        /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email) == false
+    ) {
+        errorMsg.innerHTML = "Please correct these fields.";
+        customerInput[5].classList.remove('success');
+        customerInput[5].classList.add('error');
+        return false;
+    }
+    else {
+        customerInput[5].classList.remove('error');
+        customerInput[5].classList.add('success');
+        errorMsg.innerHTML = "";
+        return true;
+    }
+}
+function valid() {
     if (
         checkName() == false ||
         checkAddress() == false
@@ -200,7 +301,7 @@ function valid() {
         return false;
     }
     else {
-        errorMsg[i].innerHTML = '';
+        errorMsg.innerHTML = '';
         return true;
     }
 }
@@ -256,8 +357,8 @@ function submitOrder() {
             displayOrderSummary();
             updateOrderTotals();
         }
-        // else {
-        //     alert('No pizzas have been added to your order!')
-        // }
+        else {
+            alert('No pizzas have been added to your order!')
+        }
     }
 }
