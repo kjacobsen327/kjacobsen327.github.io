@@ -8,38 +8,37 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link
-    href="https://fonts.googleapis.com/css2?family=Handlee&family=Lilita+One&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Handlee&family=Lilita+One&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Roboto&display=swap"
     rel="stylesheet">
 
 <body>
 
     <div id="order-form">
         <header>
-            <h1><span>Bobby's</span>
-                <div class="logo">
-                    <img src="images\bobbyspizzalogo.png">
-                    <div class="logoInnerShadow"></div>
-                </div>
-                <span>Pizzeria</span>
-            </h1>
+            <h1>Bobby's Pizzeria</h1>
+            <!-- <div class="logo"> -->
+            <img src="images/PIZZA.png">
+            <!-- <div class="arch"></div> -->
+
         </header>
         <form id="pizzaForm">
             <div class="orderFormContainer">
                 <div id="customerInfo">
                     <h2>CUSTOMER INFORMATION</h2>
+                    <small id="errorMsg" class="errorMsg"></small>
+
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required autofocus>
-
                     <label for="address">Street Address:</label>
                     <input type="text" id="address" name="address" required>
+
                     <div class="cityStateZipOuterContainer">
                         <div class="cityContainer">
                             <label for="city">City:</label>
                             <input type="text" id="city" name="city" required>
+
                         </div>
                         <div class="stateContainer">
                             <label for="state">State:</label>
@@ -114,11 +113,11 @@
                         <h2>CHOOSE YOUR SIZE</h2>
                         <div class="radioButtonsContainer">
                             <label><input type="radio" name="crustSize" value="small">
-                                12" Small Cheese<span>$13.99</span></label>
+                                12" Small<br>Cheese<span>$13.99</span></label>
                             <label><input type="radio" name="crustSize" value="medium">
-                                14" Medium Cheese<span>$15.99</span></label>
+                                14" Medium<br>Cheese<span>$15.99</span></label>
                             <label><input type="radio" name="crustSize" value="large">
-                                16" Large Cheese<span>$19.99</span>
+                                16" Large<br>Cheese<span>$19.99</span>
                             </label>
                         </div>
                     </div>

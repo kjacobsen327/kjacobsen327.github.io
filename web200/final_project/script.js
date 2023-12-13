@@ -19,6 +19,17 @@ let crustPrices = {
 
 let taxRate = 0.1;
 
+let submit = document.getElementById('submitOrder');
+submit.addEventListener('click', function (e) {
+    e.preventDefault()
+});
+submit.addEventListener('click', submitOrder);
+
+let customerInput = document.getElementsByTagName('input');
+customerInput[0].addEventListener('blur', checkName);
+customerInput[1].addEventListener('blur', checkAddress);
+let errorMsg = document.getElementById('errorMsg');
+
 // Add event listener to each size input, to display and change the ingredient prices under each extra ingredient
 let crustSizeChoices = document.querySelectorAll('input[name="crustSize"]');
 for (let i = 0; i < crustSizeChoices.length; i++) {
@@ -147,74 +158,106 @@ function updateOrderTotals() {
     document.getElementById('grandTotal').textContent = `Grand Total: $${grandTotal.toFixed(2)}`;
 }
 
-let submit = document.getElementById('submitOrder');
-submit.addEventListener('click', function (e) {
-    e.preventDefault()
-});
-submit.addEventListener('click', submitOrder);
+function checkName() {
+    let name = document.getElementById('name').value;
+    if (
+        name === '' ||
+        /^[a-zA-Z\s,-]+$/.test(name) == false
+    ) {
+        errorMsg.innerHTML = "Please correct these fields.";
+        customerInput[0].classList.remove('success');
+        customerInput[0].classList.add('error');
+        return false;
+    }
+    else {
+        customerInput[0].classList.remove('error');
+        customerInput[0].classList.add('success');
+        errorMsg.innerHTML = "";
+        return true;
+    }
+}
+function checkAddress() {
+    let address = document.getElementById('address').value;
+    if (address === '') {
+        errorMsg.innerHTML = "Please correct these fields.";
+        customerInput[1].classList.remove('success');
+        customerInput[1].classList.add('error');
+        return false;
+    }
+    else {
+        customerInput[1].classList.remove('error');
+        customerInput[1].classList.add('success');
+        errorMsg.innerHTML = "";
+        return true;
+    }
+}
+function valid() {
+
+    if (
+        checkName() == false ||
+        checkAddress() == false
+    ) {
+        return false;
+    }
+    else {
+        errorMsg[i].innerHTML = '';
+        return true;
+    }
+}
 
 function submitOrder() {
     // Check if customer information is complete
-    if (
-        document.getElementById('name').value === '' ||
-        document.getElementById('address').value === '' ||
-        document.getElementById('city').value === '' ||
-        document.getElementById('state').value === '' ||
-        document.getElementById('zip').value === '' ||
-        document.getElementById('phone').value === '' ||
-        document.getElementById('email').value === ''
-    ) {
-        alert('Please complete all customer information before submitting the order.');
-        return;
-    }
-    if (orderList.length > 0) {
-        // Create a complete order object
-        let completeOrder = {
+    if (valid()) {
+        if (orderList.length > 0) {
+            // Create a complete order object
+            let completeOrder = {
 
-            customerInfo: {
-                name: document.getElementById('name').value,
-                address: document.getElementById('address').value,
-                city: document.getElementById('city').value,
-                state: document.getElementById('state').value,
-                zip: document.getElementById('zip').value,
-                phone: document.getElementById('phone').value,
-                email: document.getElementById('email').value
-            },
-            pizzas: orderList,
-            orderTotals: {
-                subtotal: parseFloat(document.getElementById('subtotal').textContent.replace('Subtotal: $', '')),
-                tax: parseFloat(document.getElementById('tax').textContent.replace('Tax (10%): $', '')),
-                grandTotal: parseFloat(document.getElementById('grandTotal').textContent.replace('Grand Total: $', ''))
-            }
-        };
+                customerInfo: {
+                    name: document.getElementById('name').value,
+                    address: document.getElementById('address').value,
+                    city: document.getElementById('city').value,
+                    state: document.getElementById('state').value,
+                    zip: document.getElementById('zip').value,
+                    phone: document.getElementById('phone').value,
+                    email: document.getElementById('email').value
+                },
+                pizzas: orderList,
+                orderTotals: {
+                    subtotal: parseFloat(document.getElementById('subtotal').textContent.replace('Subtotal: $', '')),
+                    tax: parseFloat(document.getElementById('tax').textContent.replace('Tax (10%): $', '')),
+                    grandTotal: parseFloat(document.getElementById('grandTotal').textContent.replace('Grand Total: $', ''))
+                }
+            };
 
-        // send order
-        let url = 'https://jsonplaceholder.typicode.com/posts';
-        let req = new XMLHttpRequest();
-        console.log(req)
-        req.open('POST', url, true);
-        req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
-        req.onreadystatechange = () => {
-            if (req.readyState === 4 && req.status === 201) {
-                let object = JSON.parse(req.response);
-                console.log(object);
-                alert(`
+            // send order
+            let url = 'https://jsonplaceholder.typicode.com/posts';
+            let req = new XMLHttpRequest();
+            console.log(req)
+            req.open('POST', url, true);
+            req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+            req.onreadystatechange = () => {
+                if (req.readyState === 4 && req.status === 201) {
+                    let object = JSON.parse(req.response);
+                    alert(`
                     Thank you ${completeOrder.customerInfo.name}!
                     Your order has been placed!
                     Bobby will be working hard on making your pizza purr-fect!
                 `);
+                }
             }
-        }
-        let body = JSON.stringify(completeOrder);
-        req.send(body);
+            let body = JSON.stringify(completeOrder);
+            req.send(body);
 
-        // Reset the form and order list
-        document.getElementById('pizzaForm').reset();
-        orderList = [];
-        displayOrderSummary();
-        updateOrderTotals();
-    }
-    else {
-        alert('No pizzas have been added to your order!')
+            //
+            console.log(body);
+            // Reset the form and order list
+            document.getElementById('pizzaForm').reset();
+            orderList = [];
+            displayOrderSummary();
+            updateOrderTotals();
+        }
+        // else {
+        //     alert('No pizzas have been added to your order!')
+        // }
     }
 }
