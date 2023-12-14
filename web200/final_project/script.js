@@ -37,6 +37,8 @@ customerInput[5].addEventListener('blur', checkEmail);
 
 
 let errorMsg = document.getElementById('errorMsg');
+let errorAsterisks = document.getElementsByClassName('asterisk');
+console.log(errorAsterisks);
 
 // Add event listener to each size input, to display and change the ingredient prices under each extra ingredient
 let crustSizeChoices = document.querySelectorAll('input[name="crustSize"]');
@@ -174,6 +176,7 @@ function checkName() {
         /^[a-zA-Z\s,-]+$/.test(name) == false
     ) {
         errorMsg.innerHTML = "Please correct these fields:";
+        errorAsterisks[0].innerHTML = " *";
         customerInput[0].classList.remove('success');
         customerInput[0].classList.add('error');
         return false;
@@ -182,6 +185,8 @@ function checkName() {
         customerInput[0].classList.remove('error');
         customerInput[0].classList.add('success');
         errorMsg.innerHTML = "";
+        errorAsterisks[0].innerHTML = "";
+
         return true;
     }
 }
@@ -189,6 +194,7 @@ function checkAddress() {
     let address = document.getElementById('address').value;
     if (address === '') {
         errorMsg.innerHTML = "Please correct these fields:";
+        errorAsterisks[1].innerHTML = " *";
         customerInput[1].classList.remove('success');
         customerInput[1].classList.add('error');
         return false;
@@ -197,6 +203,7 @@ function checkAddress() {
         customerInput[1].classList.remove('error');
         customerInput[1].classList.add('success');
         errorMsg.innerHTML = "";
+        errorAsterisks[1].innerHTML = "";
         return true;
     }
 }
@@ -208,6 +215,7 @@ function checkCity() {
         /^[a-zA-Z\s,-]+$/.test(city) == false
     ) {
         errorMsg.innerHTML = "Please correct these fields:";
+        errorAsterisks[2].innerHTML = " *";
         customerInput[2].classList.remove('success');
         customerInput[2].classList.add('error');
         return false;
@@ -216,6 +224,7 @@ function checkCity() {
         customerInput[2].classList.remove('error');
         customerInput[2].classList.add('success');
         errorMsg.innerHTML = "";
+        errorAsterisks[2].innerHTML = "";
         return true;
     }
 }
@@ -225,6 +234,7 @@ function checkState() {
 
     if (state === 'none') {
         errorMsg.innerHTML = "Please correct these fields:";
+        errorAsterisks[3].innerHTML = " *";
         stateSelectBox.classList.remove('success');
         stateSelectBox.classList.add('error');
         return false;
@@ -233,6 +243,7 @@ function checkState() {
         stateSelectBox.classList.remove('error');
         stateSelectBox.classList.add('success');
         errorMsg.innerHTML = "";
+        errorAsterisks[3].innerHTML = "";
         return true;
     }
 }
@@ -244,6 +255,7 @@ function checkZip() {
         /^[0-9]{5}(?:-[0-9]{4})?$/.test(zip) == false
     ) {
         errorMsg.innerHTML = "Please correct these fields:";
+        errorAsterisks[4].innerHTML = " *";
         customerInput[3].classList.remove('success');
         customerInput[3].classList.add('error');
         return false;
@@ -252,6 +264,7 @@ function checkZip() {
         customerInput[3].classList.remove('error');
         customerInput[3].classList.add('success');
         errorMsg.innerHTML = "";
+        errorAsterisks[4].innerHTML = "";
         return true;
     }
 }
@@ -263,6 +276,7 @@ function checkPhone() {
         /^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$/.test(phone) == false
     ) {
         errorMsg.innerHTML = "Please correct these fields:";
+        errorAsterisks[5].innerHTML = " *";
         customerInput[4].classList.remove('success');
         customerInput[4].classList.add('error');
         return false;
@@ -271,6 +285,7 @@ function checkPhone() {
         customerInput[4].classList.remove('error');
         customerInput[4].classList.add('success');
         errorMsg.innerHTML = "";
+        errorAsterisks[5].innerHTML = "";
         return true;
     }
 }
@@ -281,7 +296,8 @@ function checkEmail() {
         // Check input: email pattern must be XXXX + @ + XXX + . + XXX
         /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email) == false
     ) {
-        errorMsg.innerHTML = "Please correct these fields.";
+        errorMsg.innerHTML = "Please correct these fields:";
+        errorAsterisks[6].innerHTML = " *";
         customerInput[5].classList.remove('success');
         customerInput[5].classList.add('error');
         return false;
@@ -290,13 +306,26 @@ function checkEmail() {
         customerInput[5].classList.remove('error');
         customerInput[5].classList.add('success');
         errorMsg.innerHTML = "";
+        errorAsterisks[5].innerHTML = "";
         return true;
     }
 }
 function valid() {
+    checkName();
+    checkAddress();
+    checkCity();
+    checkState();
+    checkZip();
+    checkPhone();
+    checkEmail();
     if (
         checkName() == false ||
-        checkAddress() == false
+        checkAddress() == false ||
+        checkCity() == false ||
+        checkState() == false ||
+        checkZip() == false ||
+        checkPhone() == false ||
+        checkEmail() == false
     ) {
         return false;
     }
@@ -341,8 +370,11 @@ function submitOrder() {
                     let object = JSON.parse(req.response);
                     alert(`
                     Thank you ${completeOrder.customerInfo.name}!
+
                     Your order has been placed!
-                    Bobby will be working hard on making your pizza purr-fect!
+
+                    My cat Bobby will be working hard
+                    making your pizza purr-fect!
                 `);
                 }
             }
@@ -356,6 +388,7 @@ function submitOrder() {
             orderList = [];
             displayOrderSummary();
             updateOrderTotals();
+            
         }
         else {
             alert('No pizzas have been added to your order!')
