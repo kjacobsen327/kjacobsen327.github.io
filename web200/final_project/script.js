@@ -441,12 +441,10 @@ function submitOrder() {
     // send order
     let url = 'https://jsonplaceholder.typicode.com/posts';
     let req = new XMLHttpRequest();
-    console.log(req)
     req.open('POST', url, true);
     req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
     req.onreadystatechange = () => {
         if (req.readyState === 4 && req.status === 201) {
-            // let object = JSON.parse(req.response);
             alert(`
                     Thank you ${completeOrder.customerInfo.name}!
 
@@ -459,8 +457,9 @@ function submitOrder() {
     }
     let body = JSON.stringify(completeOrder);
     req.send(body);
-
     console.log(body);
+
+
     // Reset the form inputs and order lists
     document.getElementById('pizzaForm').reset();
     orderList = [];
