@@ -163,11 +163,33 @@
 
 
 
-                    <input type="submit" id="submitOrder" value="Place Order">
+                    <input id="checkBtn" type="button" value="Next">
+                </div>
+            </div>
+            <div id="confirmationScreen">
+                <div class="innerContainer">
+                    <h2>Does everything look correct?</h2>
+                    <div>
+                        <h4>Delivering to:</h4>
+                        <div id="showCustomerInfo"></div>
+                    </div>
+                    <div>
+                        <h4>Order:</h4>
+                        <ul id="showPizzas"></ul>
+                    </div>
+                    <div>
+                        <h4>Total:</h4>
+                        <div id="showTotals"></div>
+                    </div>
+                    <div>
+                        <input type="button" id="backBtn" value="No, Go Back">
+                        <input type="submit" id="submitOrder" value="Yes, Place Order!">
+                    </div>
                 </div>
             </div>
         </form>
     </div>
+
 
     <script src="script.js"></script>
 </body>

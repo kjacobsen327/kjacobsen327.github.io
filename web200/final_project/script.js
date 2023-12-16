@@ -17,16 +17,19 @@ let crustPrices = {
     large: 19.99
 };
 
-let taxRate = 0.1;
-
-let submit = document.getElementById('submitOrder');
-submit.addEventListener('click', function (e) {
-    e.preventDefault()
-});
-submit.addEventListener('click', submitOrder);
-
 let customerInput = document.getElementsByTagName('input');
 let stateSelect = document.getElementById('state');
+
+let errorMsg = document.getElementById('errorMsg');
+let errorAsterisks = document.getElementsByClassName('asterisk');
+
+let taxRate = 0.1;
+
+let confirmationScreen = document.getElementById("confirmationScreen");
+let checkBtn = document.getElementById("checkBtn");
+let backBtn = document.getElementById("backBtn");
+let submit = document.getElementById('submitOrder');
+
 customerInput[0].addEventListener('blur', checkName);
 customerInput[1].addEventListener('blur', checkAddress);
 customerInput[2].addEventListener('blur', checkCity);
@@ -35,10 +38,13 @@ customerInput[3].addEventListener('blur', checkZip);
 customerInput[4].addEventListener('blur', checkPhone);
 customerInput[5].addEventListener('blur', checkEmail);
 
+checkBtn.addEventListener('click', getConfirmation);
+backBtn.addEventListener('click', goBack);
+submit.addEventListener('click', function (e) {
+    e.preventDefault()
+});
+submit.addEventListener('click', submitOrder);
 
-let errorMsg = document.getElementById('errorMsg');
-let errorAsterisks = document.getElementsByClassName('asterisk');
-console.log(errorAsterisks);
 
 // Add event listener to each size input, to display and change the ingredient prices under each extra ingredient
 let crustSizeChoices = document.querySelectorAll('input[name="crustSize"]');
@@ -334,11 +340,14 @@ function valid() {
         return true;
     }
 }
+function getConfirmation() {
 
-function submitOrder() {
     // Check if customer information is complete
     if (valid()) {
+        // Check to make sure that at least 1 pizza has been added to the order
         if (orderList.length > 0) {
+            confirmationScreen.style.display = 'block';
+
             // Create a complete order object
             let completeOrder = {
 
@@ -358,17 +367,87 @@ function submitOrder() {
                     grandTotal: parseFloat(document.getElementById('grandTotal').textContent.replace('Grand Total: $', ''))
                 }
             };
+            let showCustomerInfo = document.getElementById("showCustomerInfo");
+            let showPizzas = document.getElementById("showPizzas");
+            let showTotals = document.getElementById("showTotals");
 
-            // send order
-            let url = 'https://jsonplaceholder.typicode.com/posts';
-            let req = new XMLHttpRequest();
-            console.log(req)
-            req.open('POST', url, true);
-            req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
-            req.onreadystatechange = () => {
-                if (req.readyState === 4 && req.status === 201) {
-                    let object = JSON.parse(req.response);
-                    alert(`
+            showCustomerInfo.innerHTML = `
+            ${completeOrder.customerInfo.name}<br>
+            ${completeOrder.customerInfo.address}<br>
+            ${completeOrder.customerInfo.city} ${completeOrder.customerInfo.state}, ${completeOrder.customerInfo.zip}<br>
+            Phone: ${formatPhoneNumber(completeOrder.customerInfo.phone)}
+            `;
+
+            orderList.forEach(function (order, index) {
+                let listItem = document.createElement('li');
+                listItem.innerHTML = `
+                    <strong>Pizza ${index + 1}:</strong><br>
+                    Size: ${order.pizza.crustSize}<br>
+                    Ingredients: ${order.pizza.ingredients.join(', ')}<br>
+                `;
+                showPizzas.appendChild(listItem);
+            });
+            showTotals.innerHTML = `
+            Subtotal: $${completeOrder.orderTotals.subtotal}<br>
+            Tax: $${(completeOrder.orderTotals.tax).toFixed(2)}
+            <Strong>Grand Total: $${(completeOrder.orderTotals.grandTotal).toFixed(2)}
+            `;
+
+        }
+        else {
+            alert('No pizzas have been added to your order!')
+        }
+    }
+}
+let formatPhoneNumber = (str) => {
+    //Filter only numbers from the input
+    let cleaned = ('' + str).replace(/\D/g, '');
+
+    //Check if the input is of correct length
+    let match = cleaned.match(/^(\d{3})(\d{3})(\d{4})$/);
+
+    if (match) {
+        return '(' + match[1] + ') ' + match[2] + '-' + match[3]
+    };
+    return null
+};
+
+function goBack() {
+    let showPizzas = document.getElementById("showPizzas");
+    showPizzas.innerHTML = "";
+    confirmationScreen.style.display = 'none';
+}
+function submitOrder() {
+    // Create a complete order object
+    let completeOrder = {
+
+        customerInfo: {
+            name: document.getElementById('name').value,
+            address: document.getElementById('address').value,
+            city: document.getElementById('city').value,
+            state: document.getElementById('state').value,
+            zip: document.getElementById('zip').value,
+            phone: document.getElementById('phone').value,
+            email: document.getElementById('email').value
+        },
+        pizzas: orderList,
+        orderTotals: {
+            subtotal: parseFloat(document.getElementById('subtotal').textContent.replace('Subtotal: $', '')),
+            tax: parseFloat(document.getElementById('tax').textContent.replace('Tax (10%): $', '')),
+            grandTotal: parseFloat(document.getElementById('grandTotal').textContent.replace('Grand Total: $', ''))
+        }
+    };
+
+    // send order
+    let url = 'https://jsonplaceholder.typicode.com/posts';
+    let req = new XMLHttpRequest();
+    console.log(req)
+    req.open('POST', url, true);
+    req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+    req.onreadystatechange = () => {
+        if (req.readyState === 4 && req.status === 201) {
+            // let object = JSON.parse(req.response);
+            alert(`
                     Thank you ${completeOrder.customerInfo.name}!
 
                     Your order has been placed!
@@ -376,22 +455,23 @@ function submitOrder() {
                     My cat Bobby will be working hard
                     making your pizza purr-fect!
                 `);
-                }
-            }
-            let body = JSON.stringify(completeOrder);
-            req.send(body);
-
-            //
-            console.log(body);
-            // Reset the form and order list
-            document.getElementById('pizzaForm').reset();
-            orderList = [];
-            displayOrderSummary();
-            updateOrderTotals();
-            
-        }
-        else {
-            alert('No pizzas have been added to your order!')
         }
     }
+    let body = JSON.stringify(completeOrder);
+    req.send(body);
+
+    console.log(body);
+    // Reset the form inputs and order lists
+    document.getElementById('pizzaForm').reset();
+    orderList = [];
+    displayOrderSummary();
+    updateOrderTotals();
+    let showPizzas = document.getElementById("showPizzas");
+    showPizzas.innerHTML = "";
+    confirmationScreen.style.display = 'none';
+    for (let i = 0; i < customerInput.length; i++) {
+        customerInput[i].classList.remove('success');
+    }
+    stateSelect.classList.remove('success');
 }
+

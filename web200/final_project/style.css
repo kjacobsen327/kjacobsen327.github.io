@@ -146,9 +146,11 @@ input:autofill,
 select:autofill {
     box-shadow: inset 0 0 0 100px #badeba;
 }
+
 .asterisk {
     color: #ff0000;
 }
+
 .error {
     background-color: #fddbdb;
 }
@@ -333,6 +335,49 @@ input[type="button"]:hover {
 #grandTotal {
     font-weight: 800;
     font-size: 22px;
+}
+
+#confirmationScreen {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 10px;
+    width: 94%;
+    background-color: #f6efe3;
+    border: 4px solid #CC2E28;
+    border-radius: 10px;
+}
+
+.innerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.innerContainer > div {
+    width: 275px;
+}
+.innerContainer div:nth-child(3) {
+    max-height: 295px;
+    overflow-y: scroll;
+}
+.innerContainer:last-of-type div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.innerContainer input[type="button"] {
+    background-color: #CC2E28;
+}
+.innerContainer input[type="button"]:hover {
+    background-color: #ff0000;
 }
 
 @media only screen and (max-width: 850px) {
