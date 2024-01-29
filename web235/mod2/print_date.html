@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <!--
 Kevin Jacobsen WEB 235
-Module 1 Lab
-Jan 24, 2024
+Module 2 Lab 2
+Jan 28, 2024
 -->
 <html>
 
 <head>
   <meta charset="UTF-8">
-  <title>Slide Down</title>
-  <link href="/mod1/site.css" rel="stylesheet">
-  <script src="/mod1/jquery.min.js"></script>
+  <title>Using Functions</title>
+  <link href="/web235/mod2/site.css" rel="stylesheet">
   <script>
-    $(document).ready(function () {
-      $('header').hide().slideDown(2000);
-    });
-
+    function printToday() {
+      var today = new Date();
+      document.write(today.toDateString());
+    }
   </script>
 </head>
 
@@ -26,10 +25,13 @@ Jan 24, 2024
     </header>
     <div class="content">
       <div class="main">
-        <h1>Sliding Down</h1>
-        <p>Here comes the header!</p>
+        <h1>Using Functions</h1>
+        <p>Today is <strong>
+            <script>
+              printToday();
+            </script>
+          </strong></p>
       </div>
-      <div class="aside"> </div>
     </div>
     <footer>
       <p>JavaScript &amp; jQuery: The Missing Manual, 3rd Edition, by <a href="http://sawmac.com/">David McFarland</a>.
