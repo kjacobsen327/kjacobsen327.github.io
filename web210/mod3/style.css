@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    font-size: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    background-color: #f6f5e3;
+
+}
+header {
+    color: #f6f5e3;
+    text-align: center;
+    border-bottom: 4px solid black;
+    background-color: #31312f;
+}
+
+h1 {
+    font-size: 30px
+}
+h2,h3 {
+    font-size: 24px;
+    text-align: center;
+    padding: 10px;
+}
+p {
+    padding: 10px;
+}
+main > div:first-of-type {
+    text-align: center;
+    font-weight: 800;
+}
+.cssExample {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+margin-left: auto;
+margin-right: auto;
+padding: 10px;
+}
+.indent {
+    margin-left: 30px;
+}
+
+*:focus {
+    /* inner indicator */
+    outline: 2px white solid;
+    outline-offset: 0;
+    /* outer indicator */
+    box-shadow: 0 0 0 4px black;
+}
+
+a {
+    color: #fff;
+    padding: 4px;
+}
+.testBox {
+    color: #000;
+    text-align: center;
+    padding: 20px;
+}
+.one {
+    background-color: black;
+    text-align: center;
+    color: #ffffff;
+}
+
+.two {
+    background-color: blue;
+    color: #ffffff;
+}
+
+.three {
+    background-color: white;
+}
+
+.three a {
+    color: #000;
+}
+
+.four {
+    background-color: #9b2201;
+    color: #ffffff;
+}
+footer {
+    text-align: center;
+    padding: 5px;
+}

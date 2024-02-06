@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--
+Kevin Jacobsen WEB 210
+Module 3
+Feb 6, 2024
+-->
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Module 3: </title>
+    <link href="/web210/mod3/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>WCAG Principle: Operable<br>
+            Guideline 2.4: Navigable<br>
+            Success Criterion 2.4.7 Focus Visible
+        </h1>
+    </header>
+    <main>
+
+        <p>The purpose of this success criterion is to help a person know which element has the keyboard focus. This can
+            be achieved in different ways.</p>
+        <p> One option is to use CSS to create a two tone focus indicator. In CSS,
+            two-color indicators can be implemented by combining the outline and box-shadow properties with the :focus
+            or :focus-visible pseudo-classes.</p>
+        <div>
+            <p>Here is an example of using CSS to create a focus indicator with a white inner border, and a black outer
+                border.</p>
+        </div>
+        <div class="cssExample">
+            <div>*:focus {</div>
+            <div class="indent">/* inner white indicator */</div>
+            <div class="indent">outline: 2px #FFF solid;</div>
+            <div class="indent">outline-offset: 0;</div>
+            <div class="indent">/* outer black indicator */</div>
+            <div class="indent">box-shadow: 0 0 0 4px #000;</div>
+            }
+        </div>
+
+        <h3>Below are some examples of inputs and links that show the same focus indicator on multiple background
+            colors.<br>
+            Click or tab on the different examples to show how it is easy to see which element has the focus.</h3>
+
+        <div class="testBox one">
+            <label for="inputExampleOne">Input Example:</label> <input type="text" name="inputExampleOne"
+                id="inputExampleOne">
+            <a href="#">Link Example</a>
+        </div>
+        <div class="testBox two">
+            <label for="inputExampleTwo">Input Example:</label> <input type="text" name="inputExampleTwo"
+                id="inputExampleTwo">
+            <a href="#">Link Example</a>
+        </div>
+        <div class="testBox three">
+            <label for="inputExampleThree">Input Example:</label> <input type="text" name="inputExampleThree"
+                id="inputExampleThree">
+            <a href="#">Link Example</a>
+        </div>
+        <div class="testBox four">
+            <label for="inputExample">Input Example:</label> <input type="text" name="inputExample">
+            <a href="#">Link Example</a>
+        </div>
+    </main>
+    <footer>Kevin Jacobsen, Web210: Spring 2024</footer>
+</body>
+
+</html>
