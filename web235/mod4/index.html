@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <!--
 Kevin Jacobsen WEB 235
-Module 3 Labs 1 + 2
-Feb 5, 2024
+Module 4 Labs 1 + 2
+Feb 12, 2024
 -->
 <html>
 
 <head>
     <meta charset="UTF-8">
-    <title>Module 3 Assignment Links</title>
+    <title>Kevin's Module 4 Assignment Links</title>
     <link href="../_css/site.css" rel="stylesheet">
+    <script src="../_js/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('a').each(function() {
+                $(this).attr('target', '_blank');
+            }); // end each
+        }); // end ready
+    </script>
 </head>
 
 <body>
@@ -19,14 +27,14 @@ Feb 5, 2024
         </header>
         <div class="content">
             <div class="main">
-                <h1>Module 3 Tutorials</h1>
-                <h2>Chapter 4</h2>
+                <h1>Module 4 Tutorials</h1>
+                <h2>Chapter 7</h2>
                 <ul>
-                    <li><a href="../mod3/chapter4/pull-quote.html">Automatic Pull Quotes</a></li>
+                    <li><a href="rollover.html">Adding Rollover Images</a></li>
+                    <li><a href="gallery.html">Photo Gallery with Effects</a></li>
                 </ul>
-                <h2>Chapter 5</h2>
-                <li><a href="../mod3/chapter5/events_intro.html">Introducing Events</a></li>
-                <li><a href="../mod3/chapter5/faq.html">A One-Page FAQ</a></li>
+                <h2>Chapter 8</h2>
+
 
             </div>
         </div>
