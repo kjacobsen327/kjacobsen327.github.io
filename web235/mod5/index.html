@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--
+Kevin Jacobsen WEB 235
+Module 5 Labs 1 + 2
+Feb 19, 2024
+-->
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kevin's Module 5 Assignment Links</title>
+    <link href="../_css/site.css" rel="stylesheet">
+    <script src="../_js/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('a').each(function () {
+                $(this).attr('target', '_blank');
+            }); // end each
+        }); // end ready
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            Kevin Jacobsen - Web 235: Spring 2024
+        </header>
+        <div class="content">
+            <div class="main">
+                <h1>Module 5 Tutorials</h1>
+                <h2>Lab 1: Chapter 9</h2>
+                <ul>
+                    <li><a href="hello_world.html">Creating a Dialog Box</a></li>
+                    <li><a href="dialog_properties.html">Passing Options to the Dialog Widget</a></li>
+                    <li><a href="dialog_buttons.html">Adding Buttons to a Dialog Box</a></li>
+                    <li><a href="tooltips.html">Adding Tooltips Quickly</a></li>
+                    <li><a href="advanced_tooltips.html">Add HTML to a Tooltip</a></li>
+                    <li><a href="tabs.html">Add Tabbed Panels</a></li>
+                    <li><a href="accordion.html">Create a jQuery UI Accordion</a></li>
+
+                </ul>
+                <h2>Lab 2: Chapter 10</h2>
+                <li><a href=".html">Adding a Birthdate Picker</a></li>
+                <li><a href=".html">jQuery UI Form Widget Tutorial</a></li>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
