@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<!--
+Kevin Jacobsen WEB 235
+Module 6 Lab 2
+Feb 26, 2024
+-->
 <html>
 
 <head>
@@ -32,11 +37,12 @@
 	<script src="../_js/jquery.min.js"></script>
 	<script>
 		$(document).ready(function () {
-			$('#newslinks a').click(function () {
-				var url = $(this).attr('href');
+			$('#newslinks a').click(function() {
+				var url=$(this).attr('href');
 				$('#headlines').load(url + ' #newsItem');
 				return false;
-			}); //end click
+			}); // end click
+
 
 		}); // end ready
 	</script>

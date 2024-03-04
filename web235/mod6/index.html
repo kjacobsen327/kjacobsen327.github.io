@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+Kevin Jacobsen WEB 235
+Module 6 Labs 1 + 2
+Feb 26, 2024
+-->
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kevin's Module 5 Assignment Links</title>
+    <link href="../_css/site.css" rel="stylesheet">
+    <script src="../_js/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('a').each(function () {
+                $(this).attr('target', '_blank');
+            }); // end each
+        }); // end ready
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            Kevin Jacobsen - Web 235: Spring 2024
+        </header>
+        <div class="content">
+            <div class="main">
+                <h1>Module 6 Tutorials</h1>
+                <h2>Lab 1: Chapter 12</h2>
+                <ul>
+                    <li><a href="draggable.html">Draggable Mini-Tutorial</a></li>
+                    <li><a href="to-the-trash.html">Drag-and-Drop Tutorial</a></li>
+
+                </ul>
+                <h2>Lab 2: Chapter 13</h2>
+                <li><a href="load.html">The load() Function</a></li>
+                <li><a href="login.html">Using the $.get() Method</a></li>
+                <li><a href="flickr.html">Adding Flickr Images to Your Site</a></li>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
