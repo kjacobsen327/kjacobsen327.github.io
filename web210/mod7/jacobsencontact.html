@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Form</title>
+    <link rel="stylesheet" href="jacobsencontact.css">
+</head>
+
+<body>
+    <main>
+        <h1>Accessible Form</h1>
+        <div class="mainWrapper">
+
+            <div class="formWrapper">
+                <form action="http://webdevbasics.net/scripts/demo.php" method="POST">
+                    <h2>E-mail Signup</h2>
+                    <div class="firstName">
+                        <label for="fName" class="formLabel"> First Name: </label>
+                        <input type="text" name="fName" id="fName" class="formInput" autofocus>
+                    </div>
+
+                    <div class="lastName">
+                        <label for="lName" class="formLabel"> Last Name: </label>
+                        <input type="text" name="lName" id="lName" class="formInput">
+                    </div>
+
+                    <div class="email">
+                        <label for="email" class="formLabel"> Email Address: </label>
+                        <input type="email" name="email" id="email" class="formInput">
+                    </div>
+
+                    <fieldset class="radioBtns">
+                        <legend>How did you hear about us?</legend>
+                        <label for="search_engine">
+                            <input type="radio" name="question" id="search_engine" value="search_engine">
+                            Search engine
+                        </label>
+
+                        <label for="friend">
+                            <input type="radio" name="question" id="friend" value="friend">
+                            Referred by a friend
+                        </label>
+                        <label for="twitter">
+                            <input type="radio" name="question" id="twitter" value="twitter">
+                            Twitter
+                        </label>
+                        <label for="other">
+                            <input type="radio" name="question" id="other" value="other">
+                            Other
+                        </label>
+                    </fieldset>
+
+                    <div class="message">
+                        <label for="message"> Comments or questions? </label>
+                        <textarea rows="6" name="message" id="message"></textarea>
+                    </div>
+
+                    <div class="submit">
+                        <button class="submitBtn">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
