@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+Kevin Jacobsen WEB 235
+Module 8 Lab
+March 11, 2024
+-->
+<html lang="en">
+
+<head>
+    <title>WEB 235 - Module 8 - Vue intro</title>
+    <meta charset="utf-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+
+
+</head>
+
+<body>
+    <h1>WEB 235 - Module 8 - Vue intro</h1>
+    <div id="app">
+        <h2>{{ message }}</h2>
+        <p>{{ switchmessage }}</p>
+        <button v-on:click="reverseMessage">Reverse Message</button>
+        <ol>
+            <li v-for="todo in todos">{{ todo.text }}</li>
+        </ol>
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: "This is the first app.",
+                switchmessage: 'Reverse this message by the word',
+                todos: [
+                    { text: 'Learn JavaScript' },
+                    { text: 'Learn Vue' },
+                    { text: 'Experiment' }
+                ]
+            },
+            methods: {
+                reverseMessage: function() {
+                    this.switchmessage = this.switchmessage.split(' ').reverse().join(' ')
+                }
+            }
+        });
+        app.todos.push({ text: 'Tedd wants a new item at the end of the list'});
+    </script>
+</body>
+
+</html>
