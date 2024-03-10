@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #f5f4e6;
+}
+h1,h2 {
+    text-align: center;
+}
+h1 {
+    font-size: 2.5em;
+    padding: 10px;
+    color: white;
+    background-color: green;
+}
+h2 {
+    font-size: 2em;
+    padding: 10px;
+}
+.sitemap {
+    display: flex;
+    justify-content: center;
+}
+.sitemap img {
+    width: 90vw;
+}
+.wireframes_gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+margin: 0 5vw 15px 5vw;
+}
+.wireframes_gallery .caption {
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.wireframes_gallery img {
+    border: 6px solid green;
+    display: block;
+}
