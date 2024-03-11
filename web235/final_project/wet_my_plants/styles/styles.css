@@ -271,6 +271,8 @@ i {
         background-color: #f8ecc1;
         display: block;
         margin-right: -40px;
+        order: 1;
+
     }
 
     .menu-icon {
