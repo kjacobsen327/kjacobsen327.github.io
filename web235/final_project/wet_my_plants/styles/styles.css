@@ -85,7 +85,7 @@ header .navigation .menu {
     z-index: 999;
 }
 
-.menu-item:nth-child(2) a{
+.menu-item:nth-child(2) a {
     width: 160px;
 }
 
@@ -181,19 +181,9 @@ i {
         overflow-y: auto;
     }
 
-    .sub-btn:first-child {
-        position: relative;
-        width: auto;
-        padding-right: 28px;
-    }
 
-    i {
-        position: absolute;
-        margin: 0;
-        top: 5px;
-        margin-left: auto;
-        width: 20px;
-    }
+
+
 
     .menu-item {
         position: relative;
@@ -205,12 +195,23 @@ i {
         margin: 0;
     }
 
-    .menu-item a {
-        height: auto;
+    i {
+        right: -185px;
+        top: 5px;
+        width: 20px;
+    }
+
+    .menu-item:nth-child(2) a i {
+        right: -120px;
+    }
+
+    .menu-item:first-child a,
+    .menu-item:nth-child(2) a {
+        width: fit-content;
+        position: relative;
     }
 
     .menu-item:nth-child(3) {
-        width: auto;
         margin: 0;
     }
 
@@ -238,6 +239,7 @@ i {
     .menu-item .sub-menu .sub-item {
         width: 220px;
     }
+
     .menu-item .sub-menu .sub-item:last-child:hover {
         border-radius: 0;
     }
