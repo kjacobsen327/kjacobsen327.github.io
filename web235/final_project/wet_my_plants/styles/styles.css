@@ -85,19 +85,20 @@ header .navigation .menu {
     z-index: 999;
 }
 
-.menu-item:nth-child(2) a {
+.menu-item:nth-child(3) a {
     width: 160px;
 }
 
-.menu-item:nth-child(3) {
+.menu-item:nth-child(4) {
     width: 120px;
     margin-right: 25px;
 }
 
-.menu-item:nth-child(4) {
+.menu-item:nth-child(5) {
     background-color: var(--main-green);
-    height: 80px;
+    height: auto;
     border-radius: 8px;
+    padding: 8px;
 }
 
 i {
@@ -166,6 +167,10 @@ i {
     border-radius: 0 0 8px 8px;
 }
 
+.menu-btn {
+    display: none;
+}
+
 @media (max-width: 960px) {
     header .navigation .menu {
         position: fixed;
@@ -176,14 +181,15 @@ i {
         min-width: 350px;
         height: 100vh;
         top: 0;
-        right: 0;
+        right: -100%;
         margin: 0;
         overflow-y: auto;
+        transition: 0.5s;
+        transition-property: right;
     }
-
-
-
-
+    header .navigation .menu.active {
+        right: 0;
+    }
 
     .menu-item {
         position: relative;
@@ -201,17 +207,17 @@ i {
         width: 20px;
     }
 
-    .menu-item:nth-child(2) a i {
+    .menu-item:nth-child(3) a i {
         right: -120px;
     }
 
-    .menu-item:first-child a,
-    .menu-item:nth-child(2) a {
+    .menu-item:nth-child(2) a,
+    .menu-item:nth-child(3) a {
         width: fit-content;
         position: relative;
     }
 
-    .menu-item:nth-child(3) {
+    .menu-item:nth-child(4) {
         margin: 0;
     }
 
@@ -242,5 +248,38 @@ i {
 
     .menu-item .sub-menu .sub-item:last-child:hover {
         border-radius: 0;
+    }
+
+    .close-btn {
+        position: absolute;
+        background: url("../images/close_btn.png")no-repeat;
+        width: 60px;
+        height: 60px;
+        background-size: 60px;
+        background-position: center;
+        top: 0;
+        right: 0;
+        margin: 25px;
+        cursor: pointer;
+    }
+
+
+    .menu-btn {
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        background-color: #f8ecc1;
+        display: block;
+        margin-right: -40px;
+    }
+
+    .menu-icon {
+        background: url(../images/menu-icon.png)no-repeat;
+        width: 70px;
+        height: 70px;
+        background-size: 70px;
+        background-position: center;
+        cursor: pointer;
+        margin: 40px 0 40px 20px;
     }
 }
