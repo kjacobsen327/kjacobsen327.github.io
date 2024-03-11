@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Wet My Plants - The wetter the better!">
+    <title>Wet My Plants | Home</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chicle&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Ojuju:wght@200..800&family=Shrikhand&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(document).ready(function () {
+
+            if ($(window).width() < 960) {
+                $('.sub-btn').click(function () {
+                    $(this).next('.sub-menu').slideToggle(300, 'linear');
+                }); // end click
+            }
+            $(window).resize(function () {
+                if ($(window).width() < 960) {
+                    $('.sub-btn').unbind('click');
+                    $('.sub-btn').bind('click', function () {
+                        $(this).next('.sub-menu').slideToggle(300, 'linear');
+                    }); // end click
+                } else {
+                    $('.sub-btn').unbind('click'); // remove click if window width <= 960px
+                };
+            }); // end resize
+        }); // end ready
+    </script>
+
+</head>
+
+<body>
+    <header>
+        <a class="logo" href="index.html">
+            <img src="images/wmp_icon.png" alt="Wet My Plants home page link">
+        </a>
+
+        <div class="navigation">
+            <ul class="menu">
+                <li class="menu-item">
+                    <a class="sub-btn" href="#">SERVICES<i class="fa-solid fa-caret-down"></i></a>
+                    <ul class="sub-menu">
+                        <li class="sub-item"><a href="#">Indoor Services</a></li>
+                        <li class="sub-item"><a href="#">Outdoor Services</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item">
+                    <a class="sub-btn" href="#">SHOP<i class="fa-solid fa-caret-down"></i></a>
+                    <ul class="shop sub-menu">
+                        <li class="sub-item"><a href="#">Indoor Plants</a></li>
+                        <li class="sub-item"><a href="#">Outdoor Plants</a></li>
+                        <li class="sub-item"><a href="#">Supplies</a></li>
+
+                    </ul>
+                </li>
+                <li class="menu-item"><a href="#">BLOG</a></li>
+                <li class="menu-item"><a href="#">CONTACT</a></li>
+
+            </ul>
+        </div>
+
+    </header>
+
+    <main>
+    </main>
+    <footer>
+
+    </footer>
+
+
+</body>
+
+</html>
