@@ -211,6 +211,33 @@ i {
 
 }
 
+h1 {
+    font-family: "Shrikhand", serif;
+    font-weight: 300;
+    background-color: #43340d91;
+    color: var(--main-yellow);
+
+    /* No px! */
+    --font-size-min: 26;
+    --font-size-max: 50;
+    --font-view-min: 576;
+    --font-view-max: 1280;
+
+    /* The magic part */
+    font-size: clamp(calc(var(--font-size-min) * 1px), calc((var(--font-size-min) * 1px) + (var(--font-size-max) - var(--font-size-min)) * ((100vw - (var(--font-view-min) * 1px)) / var(--font-view-max))), calc(var(--font-size-max) * 1px));
+
+    width: 60%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    top: 300px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 5px 0;
+
+}
+
 .grass-border {
     height: 150px;
     width: 100%;
@@ -227,7 +254,7 @@ i {
 .container {
     width: 100%;
     height: 100px;
-    min-width: 600px;
+    min-width: 300px;
     /* max-width: 800px; */
     max-height: 150px;
     display: grid;
@@ -589,14 +616,14 @@ i {
 
     .close-btn {
         position: absolute;
-        background: url("../images/close_btn.png")no-repeat;
-        width: 60px;
-        height: 60px;
-        background-size: 60px;
+        background: url("../images/close-btn.png")no-repeat;
+        width: 70px;
+        height: 70px;
+        background-size: 70px;
         background-position: center;
         top: 0;
         right: 0;
-        margin: 25px 15px;
+        margin: 20px 10px;
         cursor: pointer;
         z-index: 9999;
     }
@@ -608,7 +635,7 @@ i {
         border-radius: 50%;
         background-color: #f8ecc1;
         display: block;
-        margin-right: -45px;
+        margin-right: -40px;
         order: 1;
 
     }

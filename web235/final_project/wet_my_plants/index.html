@@ -25,6 +25,7 @@
     <header>
         <a class="logo" href="index.html">
             <img src="images/wmp_icon.png" alt="Wet My Plants home page link">
+            
         </a>
         <div class="menu-btn">
             <div class="menu-icon" tabindex="0"></div>
@@ -57,11 +58,16 @@
 
         <div class="wavy-border"></div>
     </header>
+
+
     <div class="hero">
         <div class="logo-container">
             <div class="logo-img"></div>
             <div class="grass-border"></div>
         </div>
+        <h1>INDOOR / OUTDOOR<br>PLANT SERVICES</h1>
+
+
         <div class="container">
 
             <div class="rain">
@@ -244,7 +250,9 @@
                 $('.menu').addClass("active");
                 $('.menu-icon').attr('tabindex', -1); // make hamburger menu button unfocusable on tabbing through menu
                 $('.close-btn').attr('tabindex', 0); // make close button focusable on tabbing through menu
-                $('.menu-btn').hide();
+                $('.menu-btn').fadeOut(700);
+                $('.close-btn').hide();
+                $('.close-btn').delay(400).fadeIn(700);
             }); // end click
 
             // close nav menu on click for mobile
@@ -252,7 +260,9 @@
                 $('.menu').removeClass('active');
                 $('.menu-icon, .close-btn').attr('tabindex', 0); // make hamburger menu button focusable on tabbing through menu
                 $('.close-btn').attr('tabindex', -1); // make close button unfocusable on tabbing through menu
-                $('.menu-btn').show();
+                $('.close-btn').fadeOut(700);
+                $('.menu-btn').fadeIn(700);
+
             }); // end click
 
             // to make the menu icon usable with keyboard only
