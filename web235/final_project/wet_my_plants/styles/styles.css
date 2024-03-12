@@ -670,12 +670,11 @@ h1 {
     }
 
     .hero .logo-img {
-        height: 125px;
+        height: 23vw;
         position: absolute;
-        top: -53px;
+        top: -10vw;
         width: 100%;
         z-index: 998;
-
     }
 
     .hero h1 {
