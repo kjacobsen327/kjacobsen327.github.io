@@ -16,6 +16,7 @@
 
 body {
     background-color: var(--main-tan);
+    width: 100%;
 }
 
 /* ____________________ HEADER NAV BAR SETTINGS ________________________________________ */
