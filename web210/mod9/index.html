@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<!-- 
+    Kevin Jacobsen
+    Web 210, Module 9 Lab
+    March 19, 2024
+ -->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Bell | Your one stop bridal shop!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <header>
+            <a class="skip-to-content-link" href="#content">
+                Skip to content
+            </a>
+            <div id="logo">
+
+                <h1>Wedding Bell</h1>
+            </div>
+
+            <nav>
+                <a href="index.html" class="current">HOME</a>
+                <a href="#">GOWNS</a>
+                <a href="#planning">PLANNING</a>
+                <a href="#contact">CONTACT</a>
+            </nav>
+
+        </header>
+
+
+
+        <main id="content">
+            <img src="bride_groom.webp"
+                alt="A man and a woman exchanging vows, exchanging rings, and sharing loving glances.">
+            <h2>Wedding Bell</h2>
+            <p> Wedding Bell is your one-stop shop for all your bridal needs.</p>
+
+            <section>
+                <h2>Designer Samples</h2>
+
+                <p>New designer sample gowns have arrived from premier bridal salons across the country. The gowns
+                    typically
+                    retail between $3,000 and $5,000 but at Wedding Bell they are offered at $1,200 to $2,000. Of
+                    course, we
+                    do economically priced sample gowns that start at about $500.</p>
+
+                <h3>Veils and Accessories</h3>
+                Looking for a veil at the last minute? We have plain edged veils in stock.
+            </section>
+
+            <section id="planning">
+                <h2>Wedding Planning</h2>
+
+                <p>Don't worry -- we'll plan your perfect wedding. No matter what your style or budget.Contact us
+                    for a consultation today.</p>
+
+
+                <div class="formWrapper">
+                    <h3>Make an appointment</h3>
+                    <form action="http://webdevbasics.net/scripts/demo.php" method="POST">
+                        <div class="firstName">
+                            <label for="fName" class="formLabel"> First Name: </label>
+                            <input type="text" name="fName" id="fName" class="formInput">
+                        </div>
+
+                        <div class="lastName">
+                            <label for="lName" class="formLabel"> Last Name: </label>
+                            <input type="text" name="lName" id="lName" class="formInput">
+                        </div>
+
+                        <div class="email">
+                            <label for="email" class="formLabel"> Email Address: </label>
+                            <input type="email" name="email" id="email" class="formInput">
+                        </div>
+
+                        <div class="phone">
+                            <label for="phone" class="formLabel"> Phone Number: </label>
+                            <input type="tel" name="phone" id="phone" class="formInput">
+                        </div>
+
+                        <div class="message">
+                            <label for="message"> Comments or questions? </label>
+                            <textarea rows="6" name="message" id="message"></textarea>
+                        </div>
+
+                        <div class="submit">
+                            <button class="submitBtn">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <section id="contact">
+                <h2>Contact Us</h2>
+                <span>(123) 456-7890</span>
+                <div id="hours_wrapper">
+                    <h3>Hours</h3>
+                    <span>Monday - CLOSED</span>
+                    <span>Tuesday 9:00am - 5:00pm</span>
+                    <span>Wednesday 9:00am - 5:00pm</span>
+                    <span>Thursday 9:00am - 5:00pm</span>
+                    <span>Friday 9:00am - 5:00pm</span>
+                    <span>Saturday 9:00am - 7:00pm</span>
+                    <span>Sunday 10:00am - 4:00pm</span>
+
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            Kevin Jacobsen, Web 210<br>Copyright &copy 2024
+        </footer>
+    </div>
+</body>
+
+</html>

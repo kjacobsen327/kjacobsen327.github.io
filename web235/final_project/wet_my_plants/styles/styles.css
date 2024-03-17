@@ -79,8 +79,8 @@ header .navigation .menu {
     color: var(--main-white);
 
     /* No px! */
-    --font-size-min: 30;
-    --font-size-max: 45;
+    --font-size-min: 22;
+    --font-size-max: 40;
     --font-view-min: 576;
     --font-view-max: 1280;
 
@@ -93,7 +93,7 @@ header .navigation .menu {
     justify-content: center;
     position: relative;
     flex-basis: auto;
-    width: 220px;
+    max-width: 220px;
     z-index: 9999;
 }
 
@@ -102,18 +102,24 @@ header .navigation .menu {
 }
 
 .menu-item:nth-child(4) {
-    width: 120px;
+    width: auto;
     margin-right: 25px;
+
 }
 
 .menu-item:nth-child(5) {
+    max-width: 120px;
+    margin-right: 25px;
+}
+
+.menu-item:nth-child(6) {
     background-color: var(--main-green);
     height: auto;
     border-radius: 8px;
     padding: 8px;
 }
 
-i {
+.menu-item i {
     position: absolute;
     top: 42px;
     left: 0;
@@ -196,6 +202,9 @@ i {
     z-index: 998;
 }
 
+
+/* ____________________ FRONT PAGE HERO SECTION ___________________________________ */
+/* ******************************************************************************** */
 .hero {
     background: url(../images/hero-image.webp)no-repeat;
     background-size: cover;
@@ -254,7 +263,7 @@ h1 {
     background-size: cover;
     position: absolute;
     bottom: -100px;
-
+    margin-bottom: 100px;
 }
 
 /* ____________________ WATER DROP CONTAINER SETTIINGS ___________________________________ */
@@ -270,6 +279,7 @@ h1 {
     grid-template-rows: repeat(3, 1fr);
     z-index: 998;
     position: absolute;
+    bottom: 0;
 }
 
 .row {
@@ -537,6 +547,149 @@ h1 {
 }
 
 
+
+main {
+    height: 800px;
+    border: thick solid red;
+}
+
+
+
+
+/* ____________________ FOOTER SETTINGS ________________________________________ */
+/* ***************************************************************************** */
+
+footer {
+    font-family: "Ojuju", sans-serif;
+    color: var(--main-white);
+    font-size: 1.15em;
+    font-weight: 600;
+    background: url(../images/footer_soil_bg.webp);
+    background-size: cover;
+    height: 550px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    padding-top: 100px;
+}
+
+footer .flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+footer .flex-container:first-child {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-logo-wrapper {
+    width: 100%;
+
+}
+
+.footer-logo {
+    height: 150px;
+    display: block;
+    background: url(../images/wmp_logo.webp)no-repeat;
+    background-size: contain;
+    background-position: top;
+}
+
+footer .flex-container:nth-child(2) {
+    width: 30%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    justify-content: center;
+}
+
+footer .flex-container:nth-child(2) a {
+    text-decoration: none;
+    display: block;
+    width: auto;
+    color: var(--main-white);
+    padding: 5px;
+}
+footer .flex-container:nth-child(2) a {
+    padding: 5px;
+}
+footer .flex-container:nth-child(2) a:hover {
+    background-color: var(--main-orange);
+    border-radius: 5px;
+}
+footer .flex-container:nth-child(2) ul {
+    list-style: none;
+    width: auto;
+}
+
+footer .flex-container:nth-child(2) ul,
+footer .flex-container:nth-child(2)>a {
+    margin-left: 30%;
+}
+
+footer .flex-container:nth-child(2) li {
+    padding-left: 10px;
+    font-weight: 400;
+}
+
+footer .flex-container:nth-child(3) {
+    font-size: 1.5em;
+    padding-top: 50px;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-right: 5%;
+}
+
+footer .flex-container:nth-child(3) div {
+    width: 100%;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+footer .flex-container:nth-child(3)>div:nth-child(2) {
+    flex-direction: column;
+}
+
+.sm-links-wrapper a {
+    height: 100px;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.sm-links-wrapper a:link,
+.sm-links-wrapper a:visited {
+    color: var(--main-white);
+}
+
+footer .fa-brands {
+    display: inline-block;
+    font-size: 1.5em;
+}
+
+.footer-bottom-bar {
+    position: absolute;
+    height: 25px;
+    width: 100%;
+    bottom: -25px;
+    color: #000;
+    text-align: center;
+}
+
 /* ____________________ MEDIA QUERY SETTINGS ___________________________________ */
 /* ***************************************************************************** */
 @media (max-width: 960px) {
@@ -573,7 +726,7 @@ h1 {
         margin: 0;
     }
 
-    i {
+    .menu-item i {
         right: -185px;
         top: 5px;
         width: 20px;
@@ -589,7 +742,8 @@ h1 {
         position: relative;
     }
 
-    .menu-item:nth-child(4) {
+    .menu-item:nth-child(4),
+    .menu-item:nth-child(5) {
         margin: 0;
     }
 
@@ -680,5 +834,49 @@ h1 {
     .hero h1 {
         width: 100%;
         border-radius: 0;
+    }
+
+
+    footer {
+        flex-direction: column;
+        height: fit-content;
+    }
+    footer .footer-logo-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+    footer .footer-logo {
+        min-width: 250px;
+        align-self: center;
+    }
+    footer .flex-container:nth-child(n+1) {
+        width: 100%;
+        padding: 15px 0;
+
+    }
+
+    footer .flex-container:nth-child(2) {
+        align-items: center;
+        
+    }
+
+    footer .flex-container:nth-child(2) ul {
+        padding: 0;
+        text-align: center;
+    }
+
+    footer .flex-container:nth-child(2) ul,
+    footer .flex-container:nth-child(2)>a {
+        padding-left: 0;
+        padding: 5px;
+        margin-left: 0;
+    }
+
+    footer .flex-container:nth-child(3) {
+        gap: 20px;
+    }
+
+    footer .flex-container:nth-child(3) div {
+        height: auto;
     }
 }
