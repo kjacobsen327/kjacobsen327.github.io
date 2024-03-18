@@ -8,6 +8,11 @@
     --main-brown: #967a59;
 }
 
+@font-face {
+    font-family: 'brasika';
+    src: url("../fonts/brasika.otf") format("opentype");
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -552,8 +557,67 @@ h1 {
 
 
 main {
-    height: 800px;
+    min-height: 800px;
 }
+
+.services {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.services > div {
+    width: 100%;
+    font-family: 'brasika', sans-serif;
+    color: var(--main-yellow);
+    -webkit-text-stroke: 2px #000000;
+    text-align: center;
+    font-size: 60px;
+}
+
+.card-wrapper {
+    display: flex;
+    width: 100%;
+    height: 400px;
+    gap: 5%;
+    padding: 0 5%;
+
+}
+
+.card {
+    position: relative;
+    width: 50%;
+    height: 500px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.indoor {
+    background: url(../images/indoor_services.webp);
+}
+
+.outdoor {
+    background: url(../images/outdoor_services.webp);
+}
+.indoor,
+.outdoor {
+    background-position: center center;
+}
+.card div {
+    font-family: 'brasika', sans-serif;
+    color: var(--main-yellow);
+    -webkit-text-stroke: 2px #000000;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 60px;
+}
+
+
+
 
 
 
@@ -618,13 +682,16 @@ footer .flex-container:nth-child(2) a {
     color: var(--main-white);
     padding: 5px;
 }
+
 footer .flex-container:nth-child(2) a {
     padding: 5px;
 }
+
 footer .flex-container:nth-child(2) a:hover {
     background-color: var(--main-orange);
     border-radius: 5px;
 }
+
 footer .flex-container:nth-child(2) ul {
     list-style: none;
     width: auto;
@@ -843,14 +910,17 @@ footer .fa-brands {
         flex-direction: column;
         height: fit-content;
     }
+
     footer .footer-logo-wrapper {
         display: flex;
         justify-content: center;
     }
+
     footer .footer-logo {
         min-width: 250px;
         align-self: center;
     }
+
     footer .flex-container:nth-child(n+1) {
         width: 100%;
         padding: 15px 0;
@@ -859,7 +929,7 @@ footer .fa-brands {
 
     footer .flex-container:nth-child(2) {
         align-items: center;
-        
+
     }
 
     footer .flex-container:nth-child(2) ul {
