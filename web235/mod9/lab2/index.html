@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--
+Kevin Jacobsen WEB 235
+Module 9 Lab 2
+March 18, 2024
+-->
+<html lang="en">
+
+<head>
+    <title>WEB 235 - Module 9 Lab 2 - Vue 3 intro</title>
+    <meta charset="utf-8">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+
+
+</head>
+
+<body>
+    <h1>WEB 235 - Module 9 Lab 2 - Vue 3 intro</h1>
+    <div id="app">
+        <h2>{{ message }}</h2>
+        <p> {{ switchmessage }}</p>
+        <button v-on:click="reverseMessage">Reverse Message</button>
+    <ol>
+        <li v-for="todo in todos">
+            {{ todo }}
+        </li>
+    </ol>
+    </div>
+
+
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    message: 'This is the first App.',
+                    switchmessage: 'Reverse this message by the word',
+                    todos: [
+                        'Learn JavaScript',
+                        'Learn Vue',
+                        'Experiment'
+                    ]
+                }
+            },
+            methods: {
+                reverseMessage() {
+                    this.switchmessage = this.switchmessage.split(' ').reverse().join(' ')
+                }
+            }
+        }).mount('#app')
+    </script>
+</body>
+
+</html>

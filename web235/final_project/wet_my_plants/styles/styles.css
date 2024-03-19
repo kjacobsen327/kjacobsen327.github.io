@@ -30,6 +30,7 @@ body {
     height: 100%;
     width: 100%;
     overflow-x: hidden;
+    position: relative;
 
 }
 
@@ -214,7 +215,7 @@ header .navigation .menu {
 /* ____________________ FRONT PAGE HERO SECTION ___________________________________ */
 /* ******************************************************************************** */
 .hero {
-    background: url(../images/hero-image.webp)no-repeat;
+    background: url(../images/hero-image-vintage.webp)no-repeat;
     background-size: cover;
     background-position: right;
     height: 500px;
@@ -556,33 +557,32 @@ h1 {
 
 
 
-main {
-    min-height: 800px;
-}
+main {}
 
 .services {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
-.services > div {
+.services>div {
     width: 100%;
     font-family: 'brasika', sans-serif;
     color: var(--main-yellow);
     -webkit-text-stroke: 2px #000000;
     text-align: center;
     font-size: 60px;
+    letter-spacing: .2rem;
 }
 
 .card-wrapper {
     display: flex;
     width: 100%;
-    height: 400px;
+    height: 500px;
     gap: 5%;
     padding: 0 5%;
+    margin-bottom: 10px;
 
 }
 
@@ -592,19 +592,24 @@ main {
     height: 500px;
     text-decoration: none;
     border-radius: 10px;
+    /* border: 2px solid #000; */
 }
 
 .indoor {
     background: url(../images/indoor_services.webp);
+    background-size: cover;
 }
 
 .outdoor {
     background: url(../images/outdoor_services.webp);
+    background-size: cover;
 }
+
 .indoor,
 .outdoor {
     background-position: center center;
 }
+
 .card div {
     font-family: 'brasika', sans-serif;
     color: var(--main-yellow);
@@ -616,7 +621,15 @@ main {
     font-size: 60px;
 }
 
-
+.indoor:hover,
+.outdoor:hover,
+.indoor:focus,
+.outdoor:focus {
+    border-bottom: 12px solid var(--main-yellow);
+    border-top: 12px solid var(--main-yellow);
+    transform: translateY(-8px);
+    transition: .3s linear;
+}
 
 
 
@@ -862,7 +875,7 @@ footer .fa-brands {
         right: 0;
         margin: 20px 10px;
         cursor: pointer;
-        z-index: 9999;
+        z-index: 99;
 
     }
 
@@ -876,6 +889,7 @@ footer .fa-brands {
         top: -20px;
         right: -40px;
         order: 1;
+        z-index: 999;
     }
 
     .menu-icon {
@@ -886,6 +900,8 @@ footer .fa-brands {
         background-position: center;
         cursor: pointer;
         margin: 40px 0 40px 20px;
+        z-index: 9999;
+
     }
 
     .hero .logo-container {
@@ -904,6 +920,18 @@ footer .fa-brands {
         width: 100%;
         border-radius: 0;
     }
+
+
+    .card-wrapper {
+        flex-direction: column;
+        height: 800px;
+    }
+
+    .card {
+        width: 100%;
+        height: 500px;
+    }
+
 
 
     footer {
