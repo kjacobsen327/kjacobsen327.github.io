@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--
+Kevin Jacobsen WEB 235
+Module 10 Lab 
+April 1, 2024
+-->
+<html lang="en">
+
+<head>
+    <title>Web 235 - Module 10: Vue - conditional, events</title>
+    <meta charset="utf-8">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" type="text/css" href="charcoal.css">
+
+</head>
+
+<body>
+    <div id="app">
+        <div class="cart">Cart({{ cart }})</div>
+        <div class="product-display">
+            <div class="product-container">
+                <div class="product-image">
+                    <img v-bind:src="image">
+                </div>
+                <div class="product-info">
+                    <h1>{{ product }}</h1>
+                    <p v-if="inventory > 10">In Stock</p>
+                    <p v-else-if="inventory <= 10 && inventory > 0">Almost sold out!</p>
+                    <p v-else>Out of Stock</p>
+                    <ul>
+                        <li v-for="detail in details">{{ detail }}</li>
+                    </ul>
+                    <div v-for="varient in varients" v-bind:key="varient.id"
+                        v-on:mouseover="updateImage(varient.image)">{{ varient.shape }}</div>
+                    <button class="button" v-on:click="addToCart">Add to Cart</button>
+                    <button class="button" v-on:click="remFromCart">Remove</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    product: 'Charcoal',
+                    image: 'briquettes-charcoal.jpg',
+                    inventory: 15,
+                    details: ["99% carbon", "Dark grey", "Gender-neutral", "20 pound bag"],
+                    varients: [
+                        { id: 137, shape: 'briquette', image: 'briquettes-charcoal.jpg' },
+                        { id: 138, shape: 'lump', image: 'lump-charcoal.png' }
+                    ],
+                    cart: 0
+                }
+            },
+            methods: {
+                updateImage(varientImage) {
+                    this.image = varientImage
+                },
+                addToCart() {
+                    this.cart += 1
+                },
+                remFromCart() {
+                    if (this.cart > 0) {
+                        this.cart -= 1
+                    }
+                }
+            }
+        }).mount('#app')
+    </script>
+</body>
+
+</html>

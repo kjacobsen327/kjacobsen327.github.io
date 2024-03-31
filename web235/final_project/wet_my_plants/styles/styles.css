@@ -13,6 +13,11 @@
     src: url("../fonts/brasika.otf") format("opentype");
 }
 
+@font-face {
+    font-family: 'retrograde';
+    src: url("../fonts/Retrograde.otf") format("opentype");
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -82,9 +87,15 @@ header .navigation .menu {
     align-items: center;
 }
 
+.menu-item:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 4px;
+    text-decoration-color: var(--main-yellow);
+}
+
 .menu-item>a {
-    font-family: "Ojuju", sans-serif;
-    font-weight: 700;
+    font-family: "Retrograde", serif;
     color: var(--main-white);
 
     /* No px! */
@@ -104,6 +115,11 @@ header .navigation .menu {
     flex-basis: auto;
     max-width: 220px;
     z-index: 9999;
+}
+
+.menu-item:nth-child(2) a,
+.menu-item:nth-child(3) a {
+    cursor: default
 }
 
 .menu-item:nth-child(3) a {
@@ -138,13 +154,13 @@ header .navigation .menu {
 }
 
 .menu-item .sub-menu {
-    font-family: "Ojuju", sans-serif;
-    font-weight: 600;
+    font-family: "Retrograde", serif;
+    font-weight: 100;
     position: absolute;
     background: var(--main-darktan);
     background-color: #43340dbb;
 
-    font-size: 1.5em;
+    font-size: 1.4em;
     top: 110px;
     width: 220px;
     list-style: none;
@@ -169,6 +185,11 @@ header .navigation .menu {
     transition: 0.5s;
 }
 
+#services_dropdown {
+    width: 200px;
+    margin-left: -20px;
+}
+
 .menu-item .sub-menu.shop {
     width: 200px;
     margin-left: -20px;
@@ -177,8 +198,9 @@ header .navigation .menu {
 .menu-item .sub-menu .sub-item {
     position: relative;
     width: 100%;
-    cursor: pointer;
     padding: 10px;
+    cursor: pointer;
+
 }
 
 .menu-item .sub-menu .sub-item a {
@@ -186,6 +208,7 @@ header .navigation .menu {
     text-decoration: none;
     text-align: center;
     width: 175px;
+    cursor: pointer;
 }
 
 .menu-item .sub-menu .sub-item:hover {
@@ -238,8 +261,8 @@ header .navigation .menu {
 }
 
 h1 {
-    font-family: "Ojuju", serif;
-    font-weight: 700;
+    font-family: "Retrograde", serif;
+    font-weight: 200;
     background-color: var(--main-darktan);
     color: var(--main-white);
 
@@ -579,11 +602,11 @@ main {}
 .card-wrapper {
     display: flex;
     width: 100%;
-    height: 500px;
+    height: 550px;
     gap: 5%;
     padding: 0 5%;
-    margin-bottom: 10px;
-
+    /* margin-bottom: 10px; */
+    box-sizing: border-box;
 }
 
 .card {
@@ -592,26 +615,27 @@ main {}
     height: 500px;
     text-decoration: none;
     border-radius: 10px;
-    /* border: 2px solid #000; */
+    border: 15px solid transparent;
 }
 
 .indoor {
     background: url(../images/indoor_services.webp);
-    background-size: cover;
 }
 
 .outdoor {
     background: url(../images/outdoor_services.webp);
-    background-size: cover;
 }
 
 .indoor,
 .outdoor {
     background-position: center center;
+    background-size: auto 500px;
+    outline: 2px solid #000;
+
 }
 
 .card div {
-    font-family: 'brasika', sans-serif;
+    font-family: 'brasika', serif;
     color: var(--main-yellow);
     -webkit-text-stroke: 2px #000000;
     position: absolute;
@@ -619,17 +643,312 @@ main {}
     left: 50%;
     transform: translateX(-50%);
     font-size: 60px;
+
 }
 
 .indoor:hover,
 .outdoor:hover,
 .indoor:focus,
 .outdoor:focus {
-    border-bottom: 12px solid var(--main-yellow);
-    border-top: 12px solid var(--main-yellow);
-    transform: translateY(-8px);
-    transition: .3s linear;
+    border: 15px dotted var(--main-yellow);
+    background-size: auto 550px;
+    ;
+    transition: 1s linear;
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    .service_page {
+        overflow: hidden;
+    }
+
+    .service_page .cs-container {
+        width: 100%;
+        /* changes to 1280px at desktop */
+        max-width: 34.375rem;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: clamp(3rem, 4vw, 4rem);
+        padding: 50px 5%;
+        ;
+    }
+
+    .service_page .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        max-width: 33.875rem;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+        position: relative;
+        z-index: 10;
+    }
+
+    .service_page .cs-text {
+        margin-bottom: 1rem;
+    }
+
+    .service_page .cs-text:last-of-type {
+        margin-bottom: 2rem;
+    }
+
+    .service_page .cs-title {
+        font-family: "brasika";
+        color: var(--main-yellow);
+        -webkit-text-stroke: .5px #000000;
+        font-size: 50px;
+        letter-spacing: .2rem;
+        width: 100%;
+    }
+
+    .service_page .cs-text,
+    .service_page .cs-ul {
+        font-family: "Retrograde", serif;
+        font-weight: 100;
+        font-size: 22px;
+        color: #3e2101;
+    }
+
+    .service_page .cs-ul {
+        width: 100%;
+        margin: 0 0 2rem 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        column-gap: 2.5rem;
+        row-gap: 1.5rem;
+    }
+
+    .service_page .cs-li {
+        font-size: var(--bodyFontSize);
+        list-style: none;
+        line-height: 1.2em;
+        width: 100%;
+        color: var(--bodyTextColor);
+        display: flex;
+        justify-content: flex-start;
+        /* push icon top the top so if the list item goes to two lines the icon stays at the top */
+        align-items: flex-start;
+        gap: 1rem;
+        font-size: 19px;
+    }
+
+    .service_page .cs-li span {
+        min-width: 150px;
+        font-size: 22px;
+        text-transform: uppercase;
+    }
+
+    .service_page .cs-icon {
+        width: 1.5rem;
+        height: auto;
+        /* adds extra space between the icon and top of parent so it's more centered */
+        margin-top: 1px;
+        display: block;
+    }
+
+    .service_page .cs-button-solid {
+        font-size: 1rem;
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        overflow: hidden;
+        margin: 0;
+        color: #fff;
+        padding: 0 3rem;
+        border-radius: 1.875rem;
+        background-color: var(--primary);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        transition: color .3s;
+    }
+
+    .service_page .cs-button-solid:before {
+        content: '';
+        position: absolute;
+        display: block;
+        height: 100%;
+        width: 0%;
+        background: var(--secondary);
+        opacity: 1;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: width .3s;
+    }
+
+    .service_page .cs-button-solid:hover:before {
+        width: 100%;
+    }
+
+    .service_page .cs-image-group {
+        /* font size scaling. Everything inside the group is in ems so they pull their value for em from the parent (this group div) and when the font is set to a vw, it scales the whole section down and grows proportionally with the screen width, stopping at the final em value declared in the second slot for the min function. */
+        font-size: min(2.25vw, .83em);
+        width: 40.75em;
+        min-height: 45em;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+    }
+
+    .service_page .cs-picture {
+        width: 33.875em;
+        height: auto;
+        border-radius: 15.625em;
+        border: 0.625em solid var(--main-green);
+        overflow: hidden;
+        display: block;
+        position: relative;
+    }
+
+    .service_page .cs-picture img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .service_page .cs-oval {
+        width: 45.4375em;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: -1;
+        transform: translate(-50%, -50%) rotate(38deg);
+    }
+
+    .service_page .cs-box {
+        text-align: center;
+        width: auto;
+        /* 16px - 40px */
+        padding: clamp(1em, 3vw, 2.5em) clamp(2.5em, 5vw, 4em);
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        right: 20px;
+        top: 2.8em;
+        z-index: 10;
+    }
+
+    .service_page .cs-blob {
+        width: 130%;
+        max-width: 300px;
+        height: 200px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .service_page .cs-number {
+        /* 24px - 49px */
+        font-size: clamp(1.25rem, 4.3vw, 3.0625rem);
+        line-height: 1.2em;
+        font-weight: 900;
+        margin: 0;
+        color: var(--main-white);
+        display: block;
+        z-index: 10;
+    }
+
+    .service_page .cs-desc {
+        /* 12px - 16px */
+        font-size: clamp(0.75rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        text-align: inherit;
+        font-weight: bold;
+        width: 100%;
+        max-width: 20ch;
+        color: var(--main-white);
+        position: relative;
+        z-index: 10;
+    }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 960px) {
+    .service_page .cs-container {
+        max-width: 80rem;
+        /* set to horizontal arrangement */
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+        padding: 50px 5%;
+    }
+
+    .service_page .cs-content {
+        width: 47%;
+        padding: 4.375rem 0;
+        align-self: center;
+    }
+
+    .service_page .cs-image-group {
+        font-size: min(1.2vw, 1em);
+        /* sends it to the right in the 2nd position */
+        order: 2;
+    }
+
+    .service_page .cs-box {
+        right: -20px;
+        top: 1em;
+    }
+    .service_page .cs-blob {
+        height: 275px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -639,10 +958,10 @@ main {}
 /* ***************************************************************************** */
 
 footer {
-    font-family: "Ojuju", sans-serif;
+    font-family: "Retrograde", serif;
     color: var(--main-white);
     font-size: 1.15em;
-    font-weight: 600;
+    font-weight: 100;
     background: url(../images/footer_soil_bg.webp);
     background-size: cover;
     height: 550px;
@@ -844,10 +1163,12 @@ footer .fa-brands {
         box-shadow: none;
     }
 
+    #services_dropdown,
     .menu-item .sub-menu.shop {
         width: 220px;
         margin: 0;
-
+        /* border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0; */
     }
 
     .menu-item:hover .sub-menu,
@@ -860,9 +1181,6 @@ footer .fa-brands {
         width: 220px;
     }
 
-    .menu-item .sub-menu .sub-item:last-child:hover {
-        border-radius: 0;
-    }
 
     .close-btn {
         position: absolute;
