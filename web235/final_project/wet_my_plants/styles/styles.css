@@ -89,11 +89,21 @@ header .navigation .menu {
 
 .menu-item:hover {
     text-decoration: underline;
-    text-underline-offset: 4px;
-    text-decoration-thickness: 4px;
+    text-underline-offset: 6px;
+    text-decoration-thickness: 6px;
     text-decoration-color: var(--main-yellow);
+    text-decoration-style: dotted;
 }
 
+.menu-item .current {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    text-decoration-thickness: 6px;
+    text-decoration-color: var(--main-yellow);
+    text-decoration-style: dotted;
+}
+
+.menu-item>div,
 .menu-item>a {
     font-family: "Retrograde", serif;
     color: var(--main-white);
@@ -113,8 +123,9 @@ header .navigation .menu {
     justify-content: center;
     position: relative;
     flex-basis: auto;
-    max-width: 220px;
+    /* max-width: 220px; */
     z-index: 9999;
+    padding: 0 10px;
 }
 
 .menu-item:nth-child(2) a,
@@ -128,7 +139,6 @@ header .navigation .menu {
 
 .menu-item:nth-child(4) {
     width: auto;
-    margin-right: 25px;
 
 }
 
@@ -187,12 +197,12 @@ header .navigation .menu {
 
 #services_dropdown {
     width: 200px;
-    margin-left: -20px;
+    margin-left: -25px;
 }
 
 .menu-item .sub-menu.shop {
     width: 200px;
-    margin-left: -20px;
+    margin-left: -50px;
 }
 
 .menu-item .sub-menu .sub-item {
@@ -235,8 +245,8 @@ header .navigation .menu {
 }
 
 
-/* ____________________ FRONT PAGE HERO SECTION ___________________________________ */
-/* ******************************************************************************** */
+/* ____________________ HOME PAGE HERO SECTION ___________________________________ */
+/* ******************************************************************************* */
 .hero {
     background: url(../images/hero-image-vintage.webp)no-repeat;
     background-size: cover;
@@ -298,8 +308,8 @@ h1 {
     margin-bottom: 100px;
 }
 
-/* ____________________ WATER DROP CONTAINER SETTIINGS ___________________________________ */
-/* *************************************************************************************** */
+/* ____________________ WATER DROP CONTAINER SETTINGS ___________________________________ */
+/* ************************************************************************************** */
 .container {
     width: 100%;
     height: 100px;
@@ -578,9 +588,8 @@ h1 {
     }
 }
 
-
-
-main {}
+/* ____________________ HOME PAGE MAIN CONTENT SETTINGS ________________________________________ */
+/* ********************************************************************************************* */
 
 .services {
     width: 100%;
@@ -647,9 +656,7 @@ main {}
 }
 
 .indoor:hover,
-.outdoor:hover,
-.indoor:focus,
-.outdoor:focus {
+.outdoor:hover {
     border: 15px dotted var(--main-yellow);
     background-size: auto 550px;
     ;
@@ -660,299 +667,214 @@ main {}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-/*-- -------------------------- -->
-<---       Side By Side         -->
-<--- -------------------------- -*/
-
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-    .service_page {
-        overflow: hidden;
-    }
-
-    .service_page .cs-container {
-        width: 100%;
-        /* changes to 1280px at desktop */
-        max-width: 34.375rem;
-        margin: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        gap: clamp(3rem, 4vw, 4rem);
-        padding: 50px 5%;
-        ;
-    }
-
-    .service_page .cs-content {
-        /* set text align to left if content needs to be left aligned */
-        text-align: left;
-        width: 100%;
-        max-width: 33.875rem;
-        display: flex;
-        flex-direction: column;
-        /* centers content horizontally, set to flex-start to left align */
-        align-items: flex-start;
-        position: relative;
-        z-index: 10;
-    }
-
-    .service_page .cs-text {
-        margin-bottom: 1rem;
-    }
-
-    .service_page .cs-text:last-of-type {
-        margin-bottom: 2rem;
-    }
-
-    .service_page .cs-title {
-        font-family: "brasika";
-        color: var(--main-yellow);
-        -webkit-text-stroke: .5px #000000;
-        font-size: 50px;
-        letter-spacing: .2rem;
-        width: 100%;
-    }
-
-    .service_page .cs-text,
-    .service_page .cs-ul {
-        font-family: "Retrograde", serif;
-        font-weight: 100;
-        font-size: 22px;
-        color: #3e2101;
-    }
-
-    .service_page .cs-ul {
-        width: 100%;
-        margin: 0 0 2rem 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        column-gap: 2.5rem;
-        row-gap: 1.5rem;
-    }
-
-    .service_page .cs-li {
-        font-size: var(--bodyFontSize);
-        list-style: none;
-        line-height: 1.2em;
-        width: 100%;
-        color: var(--bodyTextColor);
-        display: flex;
-        justify-content: flex-start;
-        /* push icon top the top so if the list item goes to two lines the icon stays at the top */
-        align-items: flex-start;
-        gap: 1rem;
-        font-size: 19px;
-    }
-
-    .service_page .cs-li span {
-        min-width: 150px;
-        font-size: 22px;
-        text-transform: uppercase;
-    }
-
-    .service_page .cs-icon {
-        width: 1.5rem;
-        height: auto;
-        /* adds extra space between the icon and top of parent so it's more centered */
-        margin-top: 1px;
-        display: block;
-    }
-
-    .service_page .cs-button-solid {
-        font-size: 1rem;
-        /* 46px - 56px */
-        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
-        text-decoration: none;
-        font-weight: 700;
-        overflow: hidden;
-        margin: 0;
-        color: #fff;
-        padding: 0 3rem;
-        border-radius: 1.875rem;
-        background-color: var(--primary);
-        display: inline-block;
-        position: relative;
-        z-index: 1;
-        transition: color .3s;
-    }
-
-    .service_page .cs-button-solid:before {
-        content: '';
-        position: absolute;
-        display: block;
-        height: 100%;
-        width: 0%;
-        background: var(--secondary);
-        opacity: 1;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        transition: width .3s;
-    }
-
-    .service_page .cs-button-solid:hover:before {
-        width: 100%;
-    }
-
-    .service_page .cs-image-group {
-        /* font size scaling. Everything inside the group is in ems so they pull their value for em from the parent (this group div) and when the font is set to a vw, it scales the whole section down and grows proportionally with the screen width, stopping at the final em value declared in the second slot for the min function. */
-        font-size: min(2.25vw, .83em);
-        width: 40.75em;
-        min-height: 45em;
-        display: flex;
-        justify-content: center;
-        position: relative;
-        z-index: 1;
-    }
-
-    .service_page .cs-picture {
-        width: 33.875em;
-        height: auto;
-        border-radius: 15.625em;
-        border: 0.625em solid var(--main-green);
-        overflow: hidden;
-        display: block;
-        position: relative;
-    }
-
-    .service_page .cs-picture img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-
-    .service_page .cs-oval {
-        width: 45.4375em;
-        height: auto;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        z-index: -1;
-        transform: translate(-50%, -50%) rotate(38deg);
-    }
-
-    .service_page .cs-box {
-        text-align: center;
-        width: auto;
-        /* 16px - 40px */
-        padding: clamp(1em, 3vw, 2.5em) clamp(2.5em, 5vw, 4em);
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        position: absolute;
-        right: 20px;
-        top: 2.8em;
-        z-index: 10;
-    }
-
-    .service_page .cs-blob {
-        width: 130%;
-        max-width: 300px;
-        height: 200px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    .service_page .cs-number {
-        /* 24px - 49px */
-        font-size: clamp(1.25rem, 4.3vw, 3.0625rem);
-        line-height: 1.2em;
-        font-weight: 900;
-        margin: 0;
-        color: var(--main-white);
-        display: block;
-        z-index: 10;
-    }
-
-    .service_page .cs-desc {
-        /* 12px - 16px */
-        font-size: clamp(0.75rem, 1.5vw, 1rem);
-        line-height: 1.5em;
-        text-align: inherit;
-        font-weight: bold;
-        width: 100%;
-        max-width: 20ch;
-        color: var(--main-white);
-        position: relative;
-        z-index: 10;
-    }
+/* ____________________ SERVICES PAGES SETTINGS ________________________________________ */
+/* ************************************************************************************* */
+.service_page {
+    overflow: hidden;
 }
 
-/* Desktop - 1024px */
-@media only screen and (min-width: 960px) {
-    .service_page .cs-container {
-        max-width: 80rem;
-        /* set to horizontal arrangement */
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: stretch;
-        padding: 50px 5%;
-    }
+.service_page .service-page-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: clamp(3rem, 4vw, 4rem);
+    padding: 50px 5%;
+    position: relative;
+}
 
-    .service_page .cs-content {
-        width: 47%;
-        padding: 4.375rem 0;
-        align-self: center;
-    }
+.service_page .service-page-content {
+    text-align: left;
+    width: 47%;
+    max-width: 33.875rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    z-index: 10;
+    padding: 4.375rem 0;
+    align-self: center;
+}
 
-    .service_page .cs-image-group {
-        font-size: min(1.2vw, 1em);
-        /* sends it to the right in the 2nd position */
-        order: 2;
-    }
+.service_page .service-page-text {
+    margin-bottom: 1rem;
+}
 
-    .service_page .cs-box {
-        right: -20px;
-        top: 1em;
-    }
-    .service_page .cs-blob {
-        height: 275px;
-    }
+.service_page .service-page-text:last-of-type {
+    margin-bottom: 2rem;
+}
+
+.service_page .service-page-title {
+    font-family: "brasika";
+    color: var(--main-yellow);
+    -webkit-text-stroke: 1px #000000;
+    font-size: 50px;
+    letter-spacing: .2rem;
+    width: 100%;
+
+    position: absolute;
+    left: 5%;
+    top: 20px;
+}
+
+.service_page .service-page-text,
+.service_page .service-page-ul {
+    font-family: "Retrograde", serif;
+    font-weight: 100;
+    font-size: 22px;
+    color: #3e2101;
+}
+
+.service_page .service-page-ul {
+    width: 100%;
+    margin: 0 0 2rem 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    column-gap: 2.5rem;
+    row-gap: 1.5rem;
+}
+
+.service_page .service-page-li {
+    list-style: none;
+    line-height: 1.1em;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+    font-size: 19px;
+}
+
+.service_page .service-page-li span {
+    min-width: 150px;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+.service_page .service-page-icon {
+    width: 3rem;
+    height: auto;
+    margin-top: 1px;
+    display: block;
+    margin-left: -20px;
+}
+
+.service_page .service-page-button {
+    font-family: "Retrograde", serif;
+    width: 300px;
+    font-size: 2rem;
+    background-color: var(--main-green);
+    color: var(--main-white);
+    text-decoration: none;
+    margin: 0;
+    border-radius: 1.875rem;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    padding: .75em;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 
+.service_page .service-page-button:hover {
+    background-color: var(--main-orange);
+    transition: background .4s;
+}
+
+.service_page .service-page-image-group {
+    font-size: min(2.25vw, .83em);
+    width: 40.75em;
+    min-height: 45em;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    order: 2;
+}
+
+.service_page .service-page-picture {
+    width: 33.875em;
+    height: auto;
+    border-radius: 15.625em;
+    border: 0.625em solid var(--main-green);
+    overflow: hidden;
+    display: block;
+    position: relative;
+}
+
+.service_page .service-page-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 
 
+.service_page .service-page-box {
+    text-align: center;
+    width: auto;
+    padding: clamp(1em, 3vw, 2.5em) clamp(2.5em, 5vw, 4em);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    right: -20px;
+    top: 1em;
+    z-index: 10;
+}
 
+.service-page-box.outdoor_star {
+    width: 165%;
 
+}
 
+.service_page .service-page-starburst {
+    width: 130%;
+    max-width: 300px;
+    height: 275px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
+.service_page .service-page-number {
+    font-size: clamp(1.25rem, 4.3vw, 3.0625rem);
+    line-height: 1.2em;
+    font-weight: 900;
+    margin: 0;
+    color: var(--main-white);
+    display: block;
+    z-index: 10;
+}
 
+.service_page .service-page-desc {
+    /* 12px - 16px */
+    font-size: clamp(0.75rem, 1.5vw, 1rem);
+    line-height: 1.5em;
+    text-align: inherit;
+    font-weight: bold;
+    width: 100%;
+    max-width: 20ch;
+    color: var(--main-white);
+    position: relative;
+    z-index: 10;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.service_page .service-page-desc.outdoor_star {
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
 
 /* ____________________ FOOTER SETTINGS ________________________________________ */
 /* ***************************************************************************** */
@@ -1091,11 +1013,11 @@ footer .fa-brands {
     text-align: center;
 }
 
-/* ____________________ MEDIA QUERY SETTINGS ___________________________________ */
+/* ____________________ MOBILE VIEW SETTINGS ___________________________________ */
 /* ***************************************************************************** */
 @media (max-width: 960px) {
 
-
+    /* NAVIGATION SETTINGS */
     header .navigation .menu {
         position: fixed;
         display: flex;
@@ -1125,6 +1047,10 @@ footer .fa-brands {
         width: 220px;
         padding: 0;
         margin: 0;
+    }
+
+    .menu-item:hover {
+        text-decoration: none;
     }
 
     .menu-item i {
@@ -1167,8 +1093,6 @@ footer .fa-brands {
     .menu-item .sub-menu.shop {
         width: 220px;
         margin: 0;
-        /* border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0; */
     }
 
     .menu-item:hover .sub-menu,
@@ -1180,7 +1104,6 @@ footer .fa-brands {
     .menu-item .sub-menu .sub-item {
         width: 220px;
     }
-
 
     .close-btn {
         position: absolute;
@@ -1194,7 +1117,6 @@ footer .fa-brands {
         margin: 20px 10px;
         cursor: pointer;
         z-index: 99;
-
     }
 
     .menu-btn {
@@ -1222,6 +1144,8 @@ footer .fa-brands {
 
     }
 
+
+    /* HOME PAGE MOBILE SETTINGS */
     .hero .logo-container {
         width: 100%;
     }
@@ -1239,7 +1163,6 @@ footer .fa-brands {
         border-radius: 0;
     }
 
-
     .card-wrapper {
         flex-direction: column;
         height: 800px;
@@ -1251,7 +1174,53 @@ footer .fa-brands {
     }
 
 
+    /* SERVICE PAGES MOBILE SETTINGS */
+    .service_page .service-page-container {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: -30px 0;
+    }
 
+
+    .service_page .service-page-content {
+        width: 100%;
+        padding-top: 0;
+        order: 2;
+    }
+
+    .service_page .service-page-image-group {
+        font-size: min(2.25vw, .83em);
+        order: 1;
+    }
+
+    .service_page .service-page-box {
+        right: 20px;
+        top: 2.8em;
+    }
+
+    .service_page .service-page-starburst {
+        height: 200px;
+    }
+
+    .service_page .service-page-title {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        left: 0;
+        /* No px! */
+        --font-size-min: 30;
+        --font-size-max: 55;
+        --font-view-min: 360;
+        --font-view-max: 960;
+
+        /* The magic part */
+        font-size: clamp(calc(var(--font-size-min) * 1px), calc((var(--font-size-min) * 1px) + (var(--font-size-max) - var(--font-size-min)) * ((100vw - (var(--font-view-min) * 1px)) / var(--font-view-max))), calc(var(--font-size-max) * 1px));
+    }
+
+    /* FOOTER MOBILE SETTINGS */
     footer {
         flex-direction: column;
         height: fit-content;

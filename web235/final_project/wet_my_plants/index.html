@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<!-- 
+    Kevin Jacobsen
+    Web 235: Spring, 2024
+    Final Project - Wet My Plants website
+ -->
 <html lang="en">
 
 <head>
@@ -19,6 +24,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="scripts/myScript.js" defer></script>
 </head>
 
 <body>
@@ -37,14 +43,14 @@
 
                     <div class="close-btn" tabindex="0"></div>
                     <li class="menu-item">
-                        <a class="sub-btn" href="#">SERVICES<i class="fa-solid fa-caret-down"></i></a>
+                        <div class="sub-btn" href="#">SERVICES<i class="fa-solid fa-caret-down"></i></div>
                         <ul id="services_dropdown" class="sub-menu">
                             <li class="sub-item"><a href="indoor_services.html">Indoor Services</a></li>
                             <li class="sub-item"><a href="outdoor_services.html">Outdoor Services</a></li>
                         </ul>
                     </li>
                     <li class="menu-item">
-                        <a class="sub-btn" href="#">SHOP<i class="fa-solid fa-caret-down"></i></a>
+                        <div class="sub-btn" href="#">SHOP<i class="fa-solid fa-caret-down"></i></div>
                         <ul class="shop sub-menu">
                             <li class="sub-item"><a href="#">Indoor Plants</a></li>
                             <li class="sub-item"><a href="#">Outdoor Plants</a></li>
@@ -218,27 +224,13 @@
                         <a href="indoor_services.html" class="card indoor">
                             <div>Indoor</div>
                         </a>
-                        <a href="outdoor_services" class="card outdoor">
+                        <a href="outdoor_services.html" class="card outdoor">
                             <div>Outdoor</div>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     </main>
 
@@ -281,70 +273,6 @@
             KEVIN JACOBSEN &copy; 2024
         </div>
     </footer>
-
-
-    <script>
-        $(document).ready(function () {
-
-            // ---------- JavaScript for the header nav bar ----------
-
-            // add click function to drop down sub menu items if screen width < 960px (mobile view)
-            if ($(window).width() < 960) {
-                $('.sub-btn').click(function () {
-                    $(this).next('.sub-menu').slideToggle(300, 'linear');
-                }); // end click
-                $('.menu-icon, .close-btn').attr('tabindex', 0); // make hamburger menu button focusable on tabbing through menu
-            }
-            // update nav functions on window resize
-            $(window).resize(function () {
-                if ($(window).width() < 960) {
-                    $('.sub-btn').unbind('click');
-                    $('.sub-btn').bind('click', function () {
-                        $(this).next('.sub-menu').slideToggle(300, 'linear');
-                    }); // end click
-                    $('.menu-icon, .close-btn').attr('tabindex', 0); // make hamburger menu button focusable on tabbing through menu
-                } else {
-                    // remove click event from menu items if window width > 960px (desktop view)
-                    // default is to hover on menu item to drop down sub menus
-                    $('.sub-btn').unbind('click');
-                    $('.menu-icon, .close-btn').attr('tabindex', -1); // make hamburger menu button unfocusable on tabbing through menu
-                };
-            }); // end resize
-
-            // open nav menu on click for mobile
-            $('.menu-btn').on('click', function () {
-                $('.menu').addClass("active");
-                $('.menu-icon').attr('tabindex', -1); // make hamburger menu button unfocusable on tabbing through menu
-                $('.close-btn').attr('tabindex', 0); // make close button focusable on tabbing through menu
-                $('.menu-btn').fadeOut(700);
-                $('.close-btn').hide();
-                $('.close-btn').delay(400).fadeIn(700);
-            }); // end click
-
-            // close nav menu on click for mobile
-            $('.close-btn').on('click', function () {
-                $('.menu').removeClass('active');
-                $('.menu-icon, .close-btn').attr('tabindex', 0); // make hamburger menu button focusable on tabbing through menu
-                $('.close-btn').attr('tabindex', -1); // make close button unfocusable on tabbing through menu
-                $('.close-btn').fadeOut(700);
-                $('.menu-btn').fadeIn(700);
-
-            }); // end click
-
-            // to make the menu icon usable with keyboard only
-            $('.menu-icon, .close-btn').on('keyup', function (event) {
-                event.preventDefault();
-                if (event.keyCode == 13 || event.keyCode == 32) {
-                    document.activeElement.click();
-                }
-            });
-            // ---------- end header nav menu JavaScript ----------
-
-
-
-        }); // end ready
-    </script>
-
 </body>
 
 </html>
