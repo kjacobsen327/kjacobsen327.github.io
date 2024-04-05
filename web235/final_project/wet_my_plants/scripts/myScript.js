@@ -9,6 +9,7 @@ $(document).ready(function () {
         }); // end click
         $('.menu-icon, .close-btn').attr('tabindex', 0); // make hamburger menu button focusable on tabbing through menu
     }
+
     // update nav functions on window resize
     $(window).resize(function () {
         if ($(window).width() < 960) {
@@ -33,6 +34,7 @@ $(document).ready(function () {
         $('.menu-btn').fadeOut(700);
         $('.close-btn').hide();
         $('.close-btn').delay(400).fadeIn(700);
+        $('.sub-menu').hide();
     }); // end click
 
     // close nav menu on click for mobile

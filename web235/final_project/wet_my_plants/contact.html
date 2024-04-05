@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<!-- 
+    Kevin Jacobsen
+    Web 235: Spring, 2024
+    Final Project - Wet My Plants website
+ -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Wet My Plants - Contact Us">
+    <title>Wet My Plants | Contact</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chicle&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Ojuju:wght@200..800&family=Shrikhand&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="scripts/myScript.js" defer></script>
+
+    <script type="text/javascript" src="scripts/jquery.toselect.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(function () {
+                $('#myToSelect').toSelect();
+            });
+
+            // hide the sub option on page load
+            $(window).on('load', function () {
+                $('#child').hide();
+            });
+
+            // shows sub options once first option for contacting is selected
+            $('#parent').on('change', function () {
+                // hide the sub option if "other" option is selected
+                if ($('#parent').val() == 3) {
+                    $('#child').hide();
+                }
+                else { $('#child').show(); }
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <div class="header-wrapper">
+        <header>
+
+            <a class="logo" href="index.html">
+                <img src="images/wmp_icon.png" alt="Wet My Plants home page link">
+
+            </a>
+            <div class="menu-btn">
+                <div class="menu-icon" tabindex="0"></div>
+            </div>
+            <div class="navigation">
+                <ul class="menu">
+
+                    <div class="close-btn" tabindex="0"></div>
+                    <li class="menu-item">
+                        <div class="sub-btn" href="#">SERVICES<i class="fa-solid fa-caret-down"></i></div>
+                        <ul id="services_dropdown" class="sub-menu">
+                            <li class="sub-item"><a href="indoor_services.html">Indoor Services</a></li>
+                            <li class="sub-item"><a href="outdoor_services.html">Outdoor Services</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <div class="sub-btn" href="#">SHOP<i class="fa-solid fa-caret-down"></i></div>
+                        <ul class="shop sub-menu">
+                            <li class="sub-item"><a href="#">Indoor Plants</a></li>
+                            <li class="sub-item"><a href="#">Outdoor Plants</a></li>
+                            <li class="sub-item"><a href="#">Supplies</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="menu-item"><a href="#">REVIEWS</a></li>
+                    <li class="menu-item"><a href="#">TIPS</a></li>
+
+                    <li class="menu-item"><a class="current" href="contact.html">CONTACT</a></li>
+
+                </ul>
+            </div>
+
+            <div class="wavy-border"></div>
+        </header>
+    </div>
+
+    <main class="contactMainWrapper">
+        <h2>Contact Us</h2>
+        <div class="formWrapper">
+            <form action="http://webdevbasics.net/scripts/demo.php" method="POST">
+                <div class="firstName">
+                    <label for="fName" class="formLabel"> First Name: </label>
+                    <input type="text" name="fName" id="fName" class="formInput" autofocus>
+                </div>
+
+                <div class="lastName">
+                    <label for="lName" class="formLabel"> Last Name: </label>
+                    <input type="text" name="lName" id="lName" class="formInput">
+                </div>
+
+                <div class="phone">
+                    <label for="phone" class="formLabel"> Phone Number: </label>
+                    <input type="phone" name="phone" id="phone" class="formInput">
+                </div>
+
+                <div class="email">
+                    <label for="email" class="formLabel"> Email Address: </label>
+                    <input type="email" name="email" id="email" class="formInput">
+                </div>
+
+                <fieldset class="radioBtns">
+                    <legend>What would you like to contact us about?</legend>
+
+
+                    <select id="myToSelect" data-parent="#parent" data-child="#child">
+                        <option value=""></option>
+                        <optgroup label="TextValue['Our Services',1]">
+                            <option value="1">I would like a free estimate</option>
+                            <option value="2">Change service date</option>
+                            <option value="3">Other</option>
+                        </optgroup>
+                        <optgroup label="TextValue['Our Shop',2]">
+                            <option value="4">I have a problem with my order</option>
+                            <option value="5">React</option>
+                            <option value="6">Other</option>
+                        </optgroup>
+                        <optgroup id="other-option" label="TextValue['Other',3]">
+                            <option value="7">HTML5</option>
+                            <option value="8">XML</option>
+                            <option value="9">CSS/CSS3</option>
+                        </optgroup>
+                    </select>
+
+                    <h2></h2>
+                    <select id="parent" name="parent" placeholder="select">
+                        <option id="select-default" value="" data-keep="false" hidden>Select</option>
+                    </select>
+
+                    <h2></h2>
+                    <select id="child" name="child">
+                        <option value="" data-keep="false" hidden>Select</option>
+                    </select>
+
+
+
+
+
+
+
+                </fieldset>
+
+                <div class="message">
+                    <label for="message"> Leave your message here </label>
+                    <textarea rows="6" name="message" id="message"></textarea>
+                </div>
+
+                <div class="submit">
+                    <button class="submitBtn">Submit</button>
+                </div>
+            </form>
+        </div>
+
+
+    </main>
+
+    <footer>
+        <div class="flex-container 1">
+            <div class="footer-logo-wrapper">
+                <a href="index.html" class="footer-logo"></a>
+
+            </div>
+        </div>
+        <div class="flex-container">
+            <ul><span>SERVICES</span>
+                <li><a href="indoor_services.html">- Indoor Services</a></li>
+                <li><a href="outdoor_services.html">- Outdoor Services</a></li>
+            </ul>
+            <ul><span>SHOP</span>
+                <li><a href="#">- Indoor Plants</a></li>
+                <li><a href="#">- Outdoor Plants</a></li>
+                <li><a href="#">- Supplies</a></li>
+            </ul>
+            <a href="#">REVIEWS</a>
+            <a href="#">TIPS</a>
+            <a href="contact.html">CONTACT</a>
+
+        </div>
+        <div class="flex-container">
+            <div class="phone-number-wrapper">224-123-1234</div>
+            <div class="address-wrapper">
+                <span>123 Succulent Way</span>
+                <span>Schaumburg, IL 60193</span>
+            </div>
+            <div class="sm-links-wrapper">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom-bar">
+            KEVIN JACOBSEN &copy; 2024
+        </div>
+    </footer>
+
+</body>
+
+</html>

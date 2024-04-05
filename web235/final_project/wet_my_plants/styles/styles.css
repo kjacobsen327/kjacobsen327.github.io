@@ -144,11 +144,11 @@ header .navigation .menu {
 
 .menu-item:nth-child(5) {
     max-width: 120px;
-    margin-right: 25px;
+    /* margin-right: 25px; */
 }
 
 .menu-item:nth-child(6) {
-    background-color: var(--main-green);
+    /* background-color: var(--main-green); */
     height: auto;
     border-radius: 8px;
     padding: 8px;
@@ -797,16 +797,19 @@ h1 {
     position: relative;
     z-index: 1;
     order: 2;
+    margin: 40px 0;
 }
 
 .service_page .service-page-picture {
     width: 33.875em;
-    height: auto;
+    height: 800px;
     border-radius: 15.625em;
     border: 0.625em solid var(--main-green);
     overflow: hidden;
     display: block;
     position: relative;
+    padding-top: 60px;
+
 }
 
 .service_page .service-page-picture img {
@@ -816,6 +819,7 @@ h1 {
     position: absolute;
     top: 0;
     left: 0;
+
 }
 
 
@@ -861,7 +865,7 @@ h1 {
 .service_page .service-page-desc {
     /* 12px - 16px */
     font-size: clamp(0.75rem, 1.5vw, 1rem);
-    line-height: 1.5em;
+    line-height: 1.3em;
     text-align: inherit;
     font-weight: bold;
     width: 100%;
@@ -873,8 +877,119 @@ h1 {
 
 .service_page .service-page-desc.outdoor_star {
     text-transform: uppercase;
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
+
+
+
+
+/* ____________________ CONTACT PAGE SETTINGS ________________________________________ */
+/* ************************************************************************************* */
+
+.contactMainWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.formWrapper {
+    font-family: 'Retrograde', sans-serif;
+    font-weight: 100;
+    width: 80%;
+    font-size: 20px;
+    border: 2px solid var(--main-darktan);
+    border-radius: 6px;
+    padding: 20px 0;
+}
+
+.formWrapper div {
+    width: 100%;
+    padding: 6px;
+}
+
+.firstName,
+.lastName,
+.phone,
+.email {
+    display: flex;
+    flex-direction: row;
+}
+
+.formLabel {
+    width: 50%;
+    text-align: right;
+    padding-right: 8px;
+}
+
+.formInput {
+    width: 250px;
+    border: none;
+    background-color: var(--main-white);
+    border-radius: 6px;
+    padding-left: 6px;
+}
+
+.radioBtns,
+.message {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.radioBtns {
+    width: 500px;
+    max-width: 98%;
+    margin: auto;
+}
+
+.radioBtns legend {
+    text-align: center;
+    padding: 6px;
+    font-size: 18px;
+}
+
+.radioBtns label {
+    display: flex;
+    width: 50%;
+    margin-left: 50%;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.message label {
+    padding: 6px;
+}
+
+textarea {
+    resize: none;
+    width: 500px;
+    max-width: 100%;
+    border-radius: 8px;
+    border: none;
+    padding: 6px;
+    background-color: var(--main-white);
+
+}
+
+.submit {
+    display: flex;
+    justify-content: center;
+}
+
+.submitBtn {
+    font-size: 18px;
+    color: white;
+    background-color: var(--main-green);
+    border: none;
+    padding: 6px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
 
 /* ____________________ FOOTER SETTINGS ________________________________________ */
 /* ***************************************************************************** */
@@ -1181,6 +1296,7 @@ footer .fa-brands {
         align-items: center;
         flex-direction: column;
         margin: -30px 0;
+        gap: 10px;
     }
 
 
@@ -1195,13 +1311,23 @@ footer .fa-brands {
         order: 1;
     }
 
+    .service_page .service-page-picture {
+        height: auto;
+        margin: 0;
+    }
+
     .service_page .service-page-box {
-        right: 20px;
+        right: -10px;
         top: 2.8em;
+    }
+
+    .service_page .service-page-box.outdoor_star {
+        right: 22px;
     }
 
     .service_page .service-page-starburst {
         height: 200px;
+        width: 220px;
     }
 
     .service_page .service-page-title {
@@ -1211,7 +1337,7 @@ footer .fa-brands {
         justify-content: center;
         left: 0;
         /* No px! */
-        --font-size-min: 30;
+        --font-size-min: 28;
         --font-size-max: 55;
         --font-view-min: 360;
         --font-view-max: 960;
@@ -1219,6 +1345,7 @@ footer .fa-brands {
         /* The magic part */
         font-size: clamp(calc(var(--font-size-min) * 1px), calc((var(--font-size-min) * 1px) + (var(--font-size-max) - var(--font-size-min)) * ((100vw - (var(--font-view-min) * 1px)) / var(--font-view-max))), calc(var(--font-size-max) * 1px));
     }
+
 
     /* FOOTER MOBILE SETTINGS */
     footer {
