@@ -925,7 +925,7 @@ header .navigation .menu {
     border-radius: 6px;
     padding: 20px 0;
 
-    
+
 
     /* No px! */
     --font-size-min: 16;
@@ -940,7 +940,7 @@ header .navigation .menu {
 
 .formWrapper div {
     width: 100%;
-    padding: 6px;
+    padding: 14px 6px;
 }
 
 .firstName,
@@ -949,6 +949,7 @@ header .navigation .menu {
 .email {
     display: flex;
     flex-direction: row;
+    position: relative;
 }
 
 .formLabel {
@@ -979,12 +980,14 @@ fieldset.options {
     align-items: center;
     margin: 10px 20px;
     border-radius: 8px;
+    position: relative;
+    padding-bottom: 14px;
 }
 
 legend {
     text-align: center;
     font-size: 26px;
-    padding: 8px;
+    margin-bottom: 10px;
     max-width: 90%;
 }
 
@@ -995,6 +998,7 @@ select {
     border-radius: 6px;
     border: none;
     margin: 10px;
+    position: relative;
 }
 
 .message label {
@@ -1033,6 +1037,26 @@ textarea {
 select:focus,
 textarea:focus {
     background-color: #FFF;
+}
+input.error {
+    border: 2px solid red;
+}
+label.error {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    color: red;
+}
+
+fieldset label.error {
+    bottom: 0;
+}
+
+input.valid.success-alert {
+    border: 2px solid var(--main-green);
+    color: green;
 }
 
 /* ____________________ FOOTER SETTINGS ________________________________________ */
@@ -1390,14 +1414,19 @@ footer .fa-brands {
         /* The magic part */
         font-size: clamp(calc(var(--font-size-min) * 1px), calc((var(--font-size-min) * 1px) + (var(--font-size-max) - var(--font-size-min)) * ((100vw - (var(--font-view-min) * 1px)) / var(--font-view-max))), calc(var(--font-size-max) * 1px));
     }
-
-    .formWrapper {
-        width: 90%;
+    .contact-hero {
+        height: 200px;
+        background-size: cover;
     }
+    .formWrapper {
+        width: 94%;
+    }
+
     select {
         width: 96%;
         max-width: 300px;
     }
+
     /* FOOTER MOBILE SETTINGS */
     footer {
         flex-direction: column;

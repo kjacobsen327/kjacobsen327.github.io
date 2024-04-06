@@ -24,22 +24,49 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="scripts/myScript.js" defer></script>
-
-    <script type="text/javascript" src="scripts/jquery.toselect.js"></script>
-
-    <script type="text/javascript">
+    <script src="scripts/myScript.js"></script>
+    <script src="scripts/jquery.validate.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+    <script src="scripts/jquery.toselect.js"></script>
+    <script>
         $(document).ready(function () {
+            $('#myForm').validate({
+                errorClass: "error fail-alert",
+                validClass: "valid success-alert",
+                rules: {
+                    fName: {
+                        required: true,
+                        minlength: 2
+                    },
+                    lName: {
+                        required: true,
+                        minlength: 2
+                    },
+                    phone: {
+                        required: true,
+                        phoneUS: true,
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    parent: {
+                        required: true
+                    }
+                }
+
+            }); // end validate
+
             $(function () {
                 $('#myToSelect').toSelect();
             });
 
-            // hide the sub option on page load
+            // hide the sub category option on page load
             $(window).on('load', function () {
                 $('#child').hide();
             });
 
-            // shows sub options once first option for contacting is selected
+            // shows sub category options once first option for contacting is selected
             $('#parent').on('change', function () {
                 // hide the sub option if "other" option is selected
                 if ($('#parent').val() == 3) {
@@ -49,7 +76,6 @@
             });
         });
     </script>
-
 </head>
 
 <body>
@@ -101,7 +127,7 @@
 
     <main class="contactMainWrapper">
         <div class="formWrapper">
-            <form action="http://webdevbasics.net/scripts/demo.php" method="POST">
+            <form id="myForm" action="http://webdevbasics.net/scripts/demo.php" method="POST">
                 <div class="firstName">
                     <label for="fName" class="formLabel"> First Name: </label>
                     <input type="text" name="fName" id="fName" class="formInput" autofocus>
@@ -114,7 +140,7 @@
 
                 <div class="phone">
                     <label for="phone" class="formLabel"> Phone Number: </label>
-                    <input type="phone" name="phone" id="phone" class="formInput">
+                    <input type="tel" name="phone" id="phone" class="formInput">
                 </div>
 
                 <div class="email">
@@ -129,7 +155,7 @@
                     <select id="myToSelect" data-parent="#parent" data-child="#child">
                         <option value=""></option>
                         <optgroup label="TextValue['Our Services',1]">
-                            <option value="1">I would like a free estimate</option>
+                            <option value="1">I would like a free estimate for a service</option>
                             <option value="2">Change service date</option>
                             <option value="3">Other</option>
                         </optgroup>
@@ -145,20 +171,14 @@
 
                     <h2></h2>
                     <select id="parent" name="parent" placeholder="select">
-                        <option id="select-default" value="" data-keep="false" hidden>Select</option>
+                        <option id="select-default" value="" data-keep="true" disabled selected hidden>- Select an
+                            option -</option>
                     </select>
 
                     <h2></h2>
                     <select id="child" name="child">
-                        <option value="" data-keep="false" hidden>Select</option>
+                        <option value="" data-keep="true" selected hidden>- Select an option -</option>
                     </select>
-
-
-
-
-
-
-
                 </fieldset>
 
                 <div class="message">
@@ -167,7 +187,7 @@
                 </div>
 
                 <div class="submit">
-                    <button class="submitBtn">SEND</button>
+                    <button type="submit" class="submitBtn">SEND</button>
                 </div>
             </form>
         </div>
@@ -214,6 +234,7 @@
             KEVIN JACOBSEN &copy; 2024
         </div>
     </footer>
+
 
 </body>
 
