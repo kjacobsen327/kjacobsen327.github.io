@@ -669,9 +669,7 @@ header .navigation .menu {
 
 /* ____________________ SERVICES PAGES SETTINGS ________________________________________ */
 /* ************************************************************************************* */
-.service_page {
-    overflow: hidden;
-}
+.service_page {}
 
 .service_page .service-page-container {
     width: 100%;
@@ -695,8 +693,8 @@ header .navigation .menu {
     align-items: flex-start;
     position: relative;
     z-index: 10;
-    padding: 4.375rem 0;
-    align-self: center;
+    margin-top: 50px;
+    align-self: flex-start;
 }
 
 .service_page .service-page-text {
@@ -718,6 +716,7 @@ header .navigation .menu {
     position: absolute;
     left: 5%;
     top: 20px;
+    z-index: 99;
 }
 
 .service_page .service-page-text,
@@ -777,7 +776,7 @@ header .navigation .menu {
     justify-content: center;
     position: absolute;
     padding: .75em;
-    bottom: -20px;
+    bottom: -75px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -1038,9 +1037,11 @@ select:focus,
 textarea:focus {
     background-color: #FFF;
 }
+
 input.error {
     border: 2px solid red;
 }
+
 label.error {
     position: absolute;
     bottom: -10px;
@@ -1370,14 +1371,19 @@ footer .fa-brands {
 
 
     .service_page .service-page-content {
+        max-width: 100%;;
         width: 100%;
-        padding-top: 0;
+        padding: 0;
+        margin-top: 0;
         order: 2;
     }
-
+    .service_page .service-page-content span {
+        max-width: 100px;
+    }
     .service_page .service-page-image-group {
         font-size: min(2.25vw, .83em);
         order: 1;
+        margin: 10px 0;
     }
 
     .service_page .service-page-picture {
@@ -1414,10 +1420,12 @@ footer .fa-brands {
         /* The magic part */
         font-size: clamp(calc(var(--font-size-min) * 1px), calc((var(--font-size-min) * 1px) + (var(--font-size-max) - var(--font-size-min)) * ((100vw - (var(--font-view-min) * 1px)) / var(--font-view-max))), calc(var(--font-size-max) * 1px));
     }
+
     .contact-hero {
         height: 200px;
         background-size: cover;
     }
+
     .formWrapper {
         width: 94%;
     }
