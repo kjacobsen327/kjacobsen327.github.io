@@ -879,11 +879,77 @@ header .navigation .menu {
     font-size: 1.2em;
 }
 
+.rotate {
+    animation: rotation 25s infinite linear;
+}
+
+.rotate-back {
+    animation: rotation-backwards 25s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotation-backwards {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+/* ____________________ REVIEWS PAGE SETTINGS ________________________________________ */
+/* *********************************************************************************** */
+main.reviews {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 3%;
+
+}
+
+.reviews-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.reviews p {
+    width: 300px;
+    font-family: 'Retrograde', sans-serif;
+    font-size: 22px;
+    text-align: center;
+    background-color: var(--main-white);
+    position: absolute;
+    z-index: 15;
+    bottom: 20px;
+
+}
+
+
+
+
+
+
+
 
 
 
 /* ____________________ CONTACT PAGE SETTINGS ________________________________________ */
-/* ************************************************************************************* */
+/* *********************************************************************************** */
 .contact-hero {
     width: 100%;
     height: 300px;
@@ -1371,15 +1437,18 @@ footer .fa-brands {
 
 
     .service_page .service-page-content {
-        max-width: 100%;;
+        max-width: 100%;
+        ;
         width: 100%;
         padding: 0;
         margin-top: 0;
         order: 2;
     }
+
     .service_page .service-page-content span {
         max-width: 100px;
     }
+
     .service_page .service-page-image-group {
         font-size: min(2.25vw, .83em);
         order: 1;
@@ -1419,6 +1488,11 @@ footer .fa-brands {
 
         /* The magic part */
         font-size: clamp(calc(var(--font-size-min) * 1px), calc((var(--font-size-min) * 1px) + (var(--font-size-max) - var(--font-size-min)) * ((100vw - (var(--font-view-min) * 1px)) / var(--font-view-max))), calc(var(--font-size-max) * 1px));
+    }
+
+    main.reviews {
+        flex-direction: column;
+        gap: 20px;
     }
 
     .contact-hero {
