@@ -909,14 +909,14 @@ header .navigation .menu {
 
 /* ____________________ REVIEWS PAGE SETTINGS ________________________________________ */
 /* *********************************************************************************** */
-main.reviews {
+/* main.reviews {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     margin: 0 3%;
 
-}
+} */
 
 .reviews-wrapper {
     width: 100%;
@@ -935,7 +935,7 @@ main.reviews {
     background-color: var(--main-white);
     position: absolute;
     z-index: 15;
-    bottom: 20px;
+    bottom: 30px;
 
 }
 

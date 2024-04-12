@@ -13,6 +13,8 @@
     <title>Wet My Plants | Reviews</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/cndk.beforeafter.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,12 +29,14 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="scripts/myScript.js"></script>
     <script src="scripts/cndk.beforeafter.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script>
         $(document).ready(function () {
             $(".beforeafterdefault").cndkbeforeafter({
                 autoSliding: true,
                 autoSlidingStopOnHover: true
             });
+
         }); // end ready
     </script>
 </head>
@@ -86,7 +90,52 @@
 
     <main class="reviews">
 
-        <div class="reviews-wrapper">
+
+        <div class="reviews swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="reviews-wrapper">
+
+                        <div class="beforeafterdefault">
+                            <div data-type="data-type-image">
+                                <div data-type="before"><img src="images/reviews/house1-before475x475.webp"></div>
+                                <div data-type="after"><img src="images/reviews/house1-after475x475.webp"></div>
+                            </div>
+                        </div>
+                        <p>JENNIFER CLUCAS - "5/5 STARS! I love wetting my new plants!"</p>
+                    </div>
+                </div>
+
+
+                
+                <div class="swiper-slide">
+                    <div class="reviews-wrapper">
+
+                        <div class="beforeafterdefault">
+                            <div data-type="data-type-image">
+                                <div data-type="before"><img src="images/reviews/house2-before475x475.webp"></div>
+                                <div data-type="after"><img src="images/reviews/house2-after475x475.webp"></div>
+                            </div>
+                        </div>
+                        <p>BOBBY CAT - "The new grass tastes so good!"</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">Slide 4</div>
+                ...
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+
+
+
+
+
+
+
+        <!-- <div class="reviews-wrapper">
 
             <div class="beforeafterdefault">
                 <div data-type="data-type-image">
@@ -94,9 +143,9 @@
                     <div data-type="after"><img src="images/reviews/house1-after475x475.webp"></div>
                 </div>
             </div>
-            <p>JENNIFER CLUCAS - "5/5 STARS! I LOVE WETTING MY PLANTS!"</p>
-
+            <p>JENNIFER CLUCAS - "5/5 STARS! I love wetting my new plants!"</p>
         </div>
+
         <div class="reviews-wrapper">
 
             <div class="beforeafterdefault">
@@ -105,9 +154,9 @@
                     <div data-type="after"><img src="images/reviews/house2-after475x475.webp"></div>
                 </div>
             </div>
-            <p>BOBBY CAT - "THE NEW PLANTS TASTE SO GOOD!"</p>
+            <p>BOBBY CAT - "The new grass tastes so good!"</p>
+        </div> -->
 
-        </div>
     </main>
 
 
@@ -151,7 +200,18 @@
         </div>
     </footer>
 
-
+    <script>            const swiper = new Swiper('.swiper', {
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            }
+        });</script>
 </body>
 
 </html>
