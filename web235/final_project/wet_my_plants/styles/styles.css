@@ -909,14 +909,18 @@ header .navigation .menu {
 
 /* ____________________ REVIEWS PAGE SETTINGS ________________________________________ */
 /* *********************************************************************************** */
-/* main.reviews {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin: 0 3%;
 
-} */
+.hero-image.reviews {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    background: url(../images/reviews/reviews-hero.webp);
+    background-position: center 8px;
+}
+main.reviews {
+    margin-top: 30px;
+    padding: 0 3%  3%;
+}
 
 .reviews-wrapper {
     width: 100%;
@@ -928,29 +932,21 @@ header .navigation .menu {
 }
 
 .reviews p {
-    width: 300px;
+    width: 330px;
     font-family: 'Retrograde', sans-serif;
-    font-size: 22px;
+    font-size: 20px;
     text-align: center;
     background-color: var(--main-white);
     position: absolute;
     z-index: 15;
     bottom: 30px;
-
+    height: 60px;
 }
-
-
-
-
-
-
-
-
 
 
 /* ____________________ CONTACT PAGE SETTINGS ________________________________________ */
 /* *********************************************************************************** */
-.contact-hero {
+.hero-image.contact {
     width: 100%;
     height: 300px;
     position: relative;
@@ -959,7 +955,7 @@ header .navigation .menu {
 
 }
 
-.contact-hero h1 {
+.hero-image h1 {
     width: 100%;
     text-align: center;
     font-family: "brasika";
@@ -968,7 +964,7 @@ header .navigation .menu {
     letter-spacing: .15rem;
     position: absolute;
     bottom: 0;
-    font-size: 60px;
+    font-size: 55px;
 
 }
 

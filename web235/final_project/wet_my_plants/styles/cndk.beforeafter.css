@@ -8,6 +8,7 @@
     overflow: hidden;
     position: relative;
     transition: 0.5s;
+    border-radius: 4px;
 }
 
 .cndkbeforeafter-container {
@@ -20,8 +21,8 @@
     z-index: 10;
     border: 20px solid var(--main-white);
     border-bottom: 100px solid var(--main-white);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;}
+
+}
 
 .cndkbeforeafter-item {
     overflow: hidden;
@@ -311,33 +312,5 @@
 @media only screen and (max-width: 960px) {
     .cndkbeforeafter {
         max-width: 100% !important;
-    }
-    
-    .cndkbeforeafter-container {
-        background: none;
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 10;
-    }
-
-    .cndkbeforeafter-item {
-        overflow: hidden;
-        position: relative;
-    }
-    
-    .cndkbeforeafter-item>div {
-        height: 100%;
-        position: absolute;
-    }
-    
-    .cndkbeforeafter-item img {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 512px;
-        height: 100%;
     }
 }
