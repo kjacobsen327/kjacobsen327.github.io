@@ -188,15 +188,15 @@
 }
 
 .cndkbeforeafter-animation-item-1 {
-    animation: cndkbeforeafter-continuous-1 10s ease-in-out infinite;
+    animation: cndkbeforeafter-continuous-1 8s ease-in-out infinite;
 }
 
 .cndkbeforeafter-animation-item-2 {
-    animation: cndkbeforeafter-continuous-2 10s ease-in-out infinite;
+    animation: cndkbeforeafter-continuous-2 8s ease-in-out infinite;
 }
 
 .cndkbeforeafter-animation-seperator {
-    animation: cndkbeforeafter-continuous-3 10s ease-in-out infinite;
+    animation: cndkbeforeafter-continuous-3 8s ease-in-out infinite;
 }
 
 /* Animations */
@@ -230,7 +230,7 @@
 
 @keyframes cndkbeforeafter-continuous-2 {
     0% {
-        width: 95%;
+        width: 100%;
     }
 
     50% {
@@ -238,7 +238,7 @@
     }
 
     100% {
-        width: 95%;
+        width: 100%;
     }
 }
 
@@ -278,10 +278,44 @@
 
 .cndkbeforeafter-theme-light .cndkbeforeafter-item-before-text,
 .cndkbeforeafter-theme-light .cndkbeforeafter-item-after-text {
-    background: var(--main-white) !important;
+    background: var(--main-yellow) !important;
     color: rgb(70, 70, 70) !important;
+
 }
 
+.cndkbeforeafter-item-before-text {
+    animation: before-fade 8s infinite;
+    border-bottom-right-radius: 8px;
+}
+@keyframes before-fade {
+    0% {
+        opacity: 0;
+    }
+    
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+.cndkbeforeafter-item-after-text {
+    animation: after-fade 8s infinite
+}
+@keyframes after-fade {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
 /* Theme Dark */
 .cndkbeforeafter-theme-dark .cndkbeforeafter-seperator {
     background: black !important;
