@@ -923,10 +923,9 @@ main.reviews {
 
 .reviews-wrapper {
     width: 100%;
-    min-height: 535px;
+   height: 500px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     position: relative;
 }
@@ -939,8 +938,8 @@ main.reviews {
     /* background-color: var(--main-white); */
     position: absolute;
     z-index: 15;
-    bottom: 2.1em;
-    /* border: thin solid red; */
+    bottom: 20px;
+    height: 100px;
 }
 
 
