@@ -940,6 +940,7 @@ main.reviews {
     position: absolute;
     z-index: 15;
     bottom: 2.1em;
+    border: thin solid red;
 }
 
 
