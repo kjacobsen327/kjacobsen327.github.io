@@ -923,7 +923,7 @@ main.reviews {
 
 .reviews-wrapper {
     width: 100%;
-    height: 535px;
+    min-height: 535px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -940,7 +940,7 @@ main.reviews {
     position: absolute;
     z-index: 15;
     bottom: 2.1em;
-    border: thin solid red;
+    /* border: thin solid red; */
 }
 
 
