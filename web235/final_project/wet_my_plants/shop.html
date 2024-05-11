@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<!-- 
+    Kevin Jacobsen
+    Web 235: Spring, 2024
+    Final Project - Wet My Plants website
+ -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Wet My Plants - Shop">
+    <title>Wet My Plants | Shop</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/shop.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chicle&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Ojuju:wght@200..800&family=Shrikhand&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="scripts/myScript.js"></script>
+    <script src="scripts/jquery.flip.js"></script>
+    <!-- Vue -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+</head>
+
+<body>
+    <div class="header-wrapper">
+        <header>
+            <a class="logo" href="index.html">
+                <img src="images/wmp_icon.png" alt="Wet My Plants home page link">
+            </a>
+            <div class="menu-btn">
+                <div class="menu-icon" tabindex="0"></div>
+            </div>
+            <div class="navigation">
+                <ul class="menu">
+                    <div class="close-btn" tabindex="0"></div>
+                    <li class="menu-item">
+                        <div class="sub-btn" href="#">SERVICES<i class="fa-solid fa-caret-down"></i></div>
+                        <ul id="services_dropdown" class="sub-menu">
+                            <li class="sub-item"><a href="indoor_services.html">Indoor Services</a></li>
+                            <li class="sub-item"><a href="outdoor_services.html">Outdoor Services</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <div class="sub-btn" href="#">SHOP<i class="fa-solid fa-caret-down"></i></div>
+                        <ul class="shop sub-menu">
+                            <li class="sub-item"><a href="shop.html">Indoor Plants</a></li>
+                            <li class="sub-item"><a href="shop.html">Outdoor Plants</a></li>
+                            <li class="sub-item"><a href="shop.html">Supplies</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item"><a href="reviews.html">REVIEWS</a></li>
+                    <li class="menu-item"><a href="#">TIPS</a></li>
+                    <li class="menu-item"><a class="current" href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <div class="wavy-border"></div>
+        </header>
+
+        <div class="hero-image reviews">
+            <h1>SHOP</h1>
+        </div>
+    </div>
+
+    <main>
+        <div id="app">
+
+            <div class="cart-btn" v-on:click="showCart()"><i class="fa-solid fa-cart-shopping"></i> ({{ cart.qty }})
+            </div>
+            <div class="product-wrapper">
+                <div id="aloe" class="product-container">
+                    <div class="flip-card">
+                        <div class="front">
+                            <img src="./images/wmp_indoor_plants/aloe.webp" alt="an aloe plant">
+                        </div>
+                        <div class="back">
+                            <table>
+                                <tr>
+                                    <td>Lighting:</td>
+                                    <td>Bright, indirect sun</td>
+                                </tr>
+                                <tr>
+                                    <td>Average mature height:</td>
+                                    <td>1–2 feet tall</td>
+                                </tr>
+                                <tr>
+                                    <td>Soil type:</td>
+                                    <td>Well-drained commercial potting mix</td>
+                                </tr>
+                                <tr>
+                                    <td>Frequency of watering:</td>
+                                    <td>1-2 times weekly</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <h2>Aloe</h2>
+                    <button v-on:click="changeQty($event,-1)">-</button>
+                    <input v-model.number="aloe.qtyToAdd">
+                    <button v-on:click="changeQty($event,1)">+</button>
+                    <button v-on:click="addToCart($event, aloe.qtyToAdd)">Add To Cart</button>
+                </div>
+            </div>
+            <div class="product-wrapper">
+
+                <div id="fiddle-leaf-fig" class="product-container">
+                    <img src="./images/wmp_indoor_plants/fiddle_leaf_fig.webp" alt="a fiddle leaf fig plant">
+                    <h2>Fiddle Leaf Fig</h2>
+                    <button v-on:click="changeQty($event,-1)">-</button>
+                    <input v-model.number="fiddleLeafFig.qtyToAdd">
+                    <button v-on:click="changeQty($event,1)">+</button>
+                    <button v-on:click="addToCart($event, fiddleLeafFig.qtyToAdd)">Add To Cart</button>
+
+                </div>
+            </div>
+
+            <div class="product-wrapper">
+
+                <div id="money-plant" class="product-container">
+                    <img src="./images/wmp_indoor_plants/money_plant.webp" alt="a money plant">
+                    <h2>Money Plant</h2>
+                    <button v-on:click="changeQty($event,-1)">-</button>
+                    <input v-model.number="moneyPlant.qtyToAdd">
+                    <button v-on:click="changeQty($event,1)">+</button>
+                    <button v-on:click="addToCart($event, moneyPlant.qtyToAdd)">Add To Cart</button>
+
+                </div>
+            </div>
+            <div v-show="cartVisible" class="cart">
+                <div v-on:click="closeCart()">
+                    <div class="close-x">X</div>
+                    <h2>Cart</h2>
+                </div>
+                <div v-for>{{ cart.items }}</div>
+
+
+            </div>
+        </div>
+
+
+    </main>
+
+    <footer>
+        <div class="flex-container 1">
+            <div class="footer-logo-wrapper">
+                <a href="index.html" class="footer-logo"></a>
+
+            </div>
+        </div>
+        <div class="flex-container">
+            <ul><span>SERVICES</span>
+                <li><a href="indoor_services.html">- Indoor Services</a></li>
+                <li><a href="outdoor_services.html">- Outdoor Services</a></li>
+            </ul>
+            <ul><span>SHOP</span>
+                <li><a href="shop.html">- Indoor Plants</a></li>
+                <li><a href="shop.html">- Outdoor Plants</a></li>
+                <li><a href="shop.html">- Supplies</a></li>
+            </ul>
+            <a href="reviews.html">REVIEWS</a>
+            <a href="#">TIPS</a>
+            <a href="contact.html">CONTACT</a>
+
+        </div>
+        <div class="flex-container">
+            <div class="phone-number-wrapper">224-123-1234</div>
+            <div class="address-wrapper">
+                <span>123 Succulent Way</span>
+                <span>Schaumburg, IL 60193</span>
+            </div>
+            <div class="sm-links-wrapper">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom-bar">
+            KEVIN JACOBSEN &copy; 2024
+        </div>
+    </footer>
+
+
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    cartVisible: false,
+                    cart: {
+                        qty: 0,
+                        items: []
+                    },
+                    aloe: {
+                        qtyToAdd: 0,
+                        qtyInCart: 0
+                    },
+                    fiddleLeafFig: {
+                        qtyToAdd: 0,
+                        qtyInCart: 0
+                    },
+                    moneyPlant: {
+                        qtyToAdd: 0,
+                        qtyInCart: 0
+                    },
+                }
+            },
+            methods: {
+                showCart() {
+                    this.cartVisible = true
+                },
+                closeCart() {
+                    this.cartVisible = false
+                },
+                changeQty(e, number) {
+                    if (e.target.parentElement.id === "aloe") {
+                        this.aloe.qtyToAdd += number;
+                    }
+                    else if (e.target.parentElement.id === "fiddle-leaf-fig") {
+                        this.fiddleLeafFig.qtyToAdd += number;
+                    }
+                    else {
+                        this.moneyPlant.qtyToAdd += number;
+                    }
+                },
+                addToCart(e, number) {
+                    this.cart.qty += 1
+                    this.cart.items.push((e.target.parentElement.id) + ": " + number)
+                }
+            }
+        })
+        app.mount('#app')
+    </script>
+
+    <script>
+        $(document).ready(
+            function(){
+                $(".flip-card").flip({
+                    trigger: "hover"
+                }
+                )
+
+            }
+        )
+    </script>
+
+</body>
+
+</html>

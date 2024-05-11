@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+Kevin Jacobsen WEB 235
+Module 12 Lab 1
+April 15, 2024
+-->
+<html lang="en">
+
+<head>
+    <title>WEB 235 - Module 12 - Introduction to React</title>
+    <meta charset="utf-8">
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <h1>WEB 235 - Module 12 - Introduction to React</h1>
+    <p>Render page content using React in testing mode and including CDN scripts</p>
+    <div id="mydiv">
+
+    </div>
+    <script type="text/babel">
+        class Rstart extends React.Component {
+            render() {
+                return <div>
+                    <h2>React Elements</h2>
+                    <ul>
+                        <li>Components</li>
+                        <li>Styling</li>
+                        <li>Props</li>
+                        <li>State</li>
+                        <li>Events</li>
+                    </ul>
+                </div>
+            }
+        }
+        ReactDOM.render(<Rstart />, document.getElementById('mydiv'))
+
+    </script>
+</body>
+
+</html>
