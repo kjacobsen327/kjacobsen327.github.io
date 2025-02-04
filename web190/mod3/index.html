@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<!-- Kevin Jacobsen
+ Web 190
+ Module 3 Lab
+ Feb 4, 2025 -->
+<html lang="en">
+
+<head>
+    <title>Kevin Jacobsen - Module 3 Lab</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #AABEE4;
+            background: linear-gradient(135deg, #AABEE4, #998CA8);
+        }
+
+
+        .wrapper {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        header {
+            padding-bottom: 5px;
+            border-bottom: 3px solid black;
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        nav a,
+        footer a {
+            color: black;
+            text-decoration: none;
+            padding: 0 15px;
+            text-align: center;
+        }
+
+        nav a {
+            width: 125px;
+
+            background-color: white;
+            border: 1px solid black;
+            box-shadow: 2px 2px black;
+            border-radius: 5px;
+        }
+
+        a:hover {
+            color: lightskyblue;
+        }
+
+        nav a:hover {
+            box-shadow: 1px 1px black;
+            transform: translateX(1px);
+            transform: translateY(1px);
+        }
+
+        .row {
+            display: flex;
+        }
+
+        .side,
+        .main {
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            background-color: white;
+        }
+
+        .side {
+            flex: 30%;
+        }
+
+        .main {
+            flex: 70%;
+            padding: 10px;
+        }
+
+        #address {
+            border: thin solid black;
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 2px 2px black;
+
+        }
+
+        footer {
+            text-align: center;
+            border-top: 3px solid black;
+            padding-top: 5px;
+        }
+
+        .footerNav {
+
+            border: thin solid black;
+            box-shadow: 2px 2px black;
+            border-radius: 5px;
+            background-color: #d5dff1;
+        }
+
+        .copyright {
+            padding: 10px;
+        }
+
+        @media screen and (max-width: 700px) {
+
+            .row,
+            nav {
+                flex-direction: column;
+            }
+
+            .wrapper {
+                width: 100%;
+            }
+
+            nav a {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="=wrapper">
+        <header>
+            <h1>Module 3 Lab</h1>
+            <nav>
+                <a href="">Nav 1</a>
+                <a href="">Nav 2</a>
+                <a href="">Nav 3</a>
+                <a href="">Nav 4</a>
+                <a href="">Nav 5</a>
+            </nav>
+        </header>
+        <div class="row">
+            <div class="side">
+                <h2>Side Content</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor iusto itaque, facere ab nostrum
+                    doloremque a cupiditate, quisquam totam unde voluptatibus tempora id minima provident. Dolores ex
+                    aspernatur maiores laborum!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor iusto itaque, facere ab nostrum
+                    doloremque a cupiditate, quisquam totam unde voluptatibus tempora id minima provident. Dolores ex
+                    aspernatur maiores laborum!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor iusto itaque, facere ab nostrum
+                    doloremque a cupiditate, quisquam totam unde voluptatibus tempora id minima provident. Dolores ex
+                    aspernatur maiores laborum!</p>
+            </div>
+            <div class="main">
+                <h2>Main Content</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor iusto itaque, facere ab nostrum
+                    doloremque a cupiditate, quisquam totam unde voluptatibus tempora id minima provident. Dolores ex
+                    aspernatur maiores laborum!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor iusto itaque, facere ab nostrum
+                    doloremque a cupiditate, quisquam totam unde voluptatibus tempora id minima provident. Dolores ex
+                    aspernatur maiores laborum!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor iusto itaque, facere ab nostrum
+                    doloremque a cupiditate, quisquam totam unde voluptatibus tempora id minima provident. Dolores ex
+                    aspernatur maiores laborum!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor iusto itaque, facere ab nostrum
+                    doloremque a cupiditate, quisquam totam unde voluptatibus tempora id minima provident. Dolores ex
+                    aspernatur maiores laborum!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor iusto itaque, facere ab nostrum
+                    doloremque a cupiditate, quisquam totam unde voluptatibus tempora id minima provident. Dolores ex
+                    aspernatur maiores laborum!</p>
+
+                <div id="address">
+                    <p>Kevin Jacobsen
+                        <br>1311 Forestdale Ct
+                        <br>Schaumburg, IL 60193
+                    </p>
+                    <a href="mailto:someone@example.com">k_jacobsen12@mail.harpercollege.edu</a>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="footerNav">
+                <a href="">Nav 1</a>
+                <a href="">Nav 2</a>
+                <a href="">Nav 3</a>
+                <a href="">Nav 4</a>
+                <a href="">Nav 5</a>
+            </div>
+            <div class="copyright">Copyright@2025, Kevin Jacobsen</div>
+        </footer>
+    </div>
+</body>
+
+</html>
