@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<!-- Kevin Jacobsen
+ Web 190
+ Module 4 Lab
+ Feb 4, 2025 -->
+<html lang="en">
+
+<head>
+    <title>Web 190 - Spring 2025 - Module 4</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #AABEE4;
+            background: linear-gradient(135deg, #AABEE4, #998CA8);
+        }
+
+
+        .wrapper {
+            margin: auto;
+            width: 90%;
+            border: thin solid black;
+        }
+
+        header {
+
+            padding-bottom: 20px;
+            border-bottom: 3px solid black;
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+        }
+
+
+        .side,
+        .main {
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            background-color: white;
+            border-radius: 5px;
+
+        }
+
+        .flex-container > figure {
+            width: 250px;
+            margin: 10px;
+            text-align: center;
+            line-height: 25px;
+            font-size: 1.1em;
+        }
+        .flex-container > figure > img {
+            width: 100%;
+            height: auto;
+        }
+        footer {
+            text-align: center;
+            border-top: 3px solid black;
+            padding-top: 5px;
+        }
+
+        .copyright {
+            padding: 10px;
+        }
+
+        @media screen and (max-width: 700px) {
+            .wrapper {
+                width: 100%;
+            }
+            .flex-container > figure {
+                width: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="=wrapper">
+        <header>
+            <h1>Web 190 - Spring 2025 - Module 4</h1>
+        </header>
+
+
+        <div class="main">
+            <h2>The Justify-Content Property</h2>
+            <p>"The "justify-content: space-around;" declaration displays the flex items with space before, between, and
+                after the lines."</p>
+            <div class="flex-container">
+                <figure>
+                    <img src="images/IMG_0456.jpg">
+                    <figcaption>The Lake Express at the dock in Milwaukee</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/IMG_0457.jpg">
+                    <figcaption>Top Deck of Lake Express</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/IMG_0458.jpg">
+                    <figcaption>Leaving Milwaukee</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/IMG_0460.jpg">
+                    <figcaption>Wake</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/IMG_0470.jpg">
+                    <figcaption>The Beach at Goderich, Ontario, Canada</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/IMG_0477.jpg">
+                    <figcaption>The Harbor at Tobermory, Ontario, Canada</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/IMG_0478.jpg">
+                    <figcaption>Boat Dock, Tobermory</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/IMG_0482.jpg">
+                    <figcaption>Monarch Butterfly</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/IMG_0484.jpg">
+                    <figcaption>The Chi-Cheemaun approaching the dock in Tobermory</figcaption>
+                </figure>
+            </div>
+        </div>
+        <footer>
+            
+            <div class="copyright">Copyright@2025, Kevin Jacobsen</div>
+        </footer>
+    </div>
+</body>
+
+</html>
