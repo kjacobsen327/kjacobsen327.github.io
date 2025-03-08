@@ -1,0 +1,206 @@
+header {
+    position: relative;
+    background-color: rgb(230, 249, 254);
+}
+
+nav {
+    font-family: "Wendy One", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    margin: 0 3%;
+}
+
+nav .link_wrapper {
+    /* border: thin solid green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    z-index: 2;
+    margin-top: 20px;
+    width: 35%;
+    min-width: 200px;
+    height: 180px;
+    background: #ffffff00 url(../images/logo.svg) no-repeat top center;
+    background-size: contain;
+}
+
+nav a {
+    text-decoration: none;
+    /* responsive font size setting from class: max font size is 19px */
+    font-size: calc(12px + (18 - 12) * ((100vw - 400px) / (800 - 400)));
+    color: #EE3424;
+
+}
+
+
+.hero {
+    width: 100%;
+    height: 550px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+
+}
+
+.hero .wrapper {
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+
+    width: 50vw;
+    min-width: 400px;
+    animation: drawArc1 6s linear infinite;
+}
+.hero .wrapper.fish2 {
+    left: 30%;
+        animation: drawArc3 8s linear infinite;
+
+}
+.jumping_fish {
+    display: inline-block;
+    margin: -20vh;
+    animation: drawArc2 6s linear infinite;
+}
+.jumping_fish2 {
+    display: inline-block;
+    margin: -20vh;
+    animation: drawArc4 8s linear infinite;
+}
+
+.jumping_fish img {
+    width: 35vw;
+    max-width: 200px;
+}
+@keyframes drawArc1 {
+    0% {
+        transform: rotate(-30deg);
+    }
+
+    40% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(180deg);
+    }
+
+}
+
+@keyframes drawArc2 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(-180deg);
+    }
+
+    100% {
+        transform: rotate(-180deg);
+    }
+
+}
+@keyframes drawArc3 {
+    0% {
+        transform: rotate(-30deg);
+    }
+
+    30% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(180deg);
+    }
+
+}
+
+@keyframes drawArc4 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    30% {
+        transform: rotate(-180deg);
+    }
+
+    100% {
+        transform: rotate(-180deg);
+    }
+
+}
+
+img.waves {
+    width: 100%;
+    max-height: 250px;
+    position: absolute;
+    bottom: 0;
+    user-select: none;
+    -drag: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+}
+
+.wave2_wrapper,
+.wave3_wrapper {
+    z-index: -1;
+    bottom: 1vw;
+    left: -10vw;
+    position: absolute;
+    animation: wave_rotate 5s linear infinite;
+
+}
+
+img.waves2,
+img.waves3 {
+    width: 120vw;
+    max-height: 250px;
+    user-select: none;
+    -drag: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    animation: wave_move 7s ease-in-out infinite;
+}
+
+.wave3_wrapper {
+    z-index: -2;
+    animation: wave_rotate 6s linear infinite;
+
+}
+
+img.waves3 {
+    animation: wave_move 10s ease-in-out infinite;
+
+}
+
+@keyframes wave_rotate {
+    0% {
+        transform:
+            rotate(0deg) translateY(10px) rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg) translateY(10px) rotate(-360deg);
+    }
+}
+
+@keyframes wave_move {
+    0% {
+        transform: translateX(20px)
+    }
+
+    50% {
+        transform: translateX(-20px)
+    }
+
+    100% {
+        transform: translateX(20px)
+    }
+}
