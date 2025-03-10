@@ -51,12 +51,27 @@ nav a {
     background-repeat: no-repeat;
     background-position: top right;
 }
+.seaweed {
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+    left: -60px;
+    width: calc(50px + 50vw);
+    height: calc(50px + 25vw);
+
+    min-height: 300px;
+    min-width: 200px;
+    background-image: url(../images/seaweed.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+}
 
 .shrimp_wrapper {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    height: 500px;
+    height: 530px;
     user-select: none;
     -drag: none;
     -moz-user-select: none;
@@ -65,17 +80,17 @@ nav a {
 }
 .shrimply {
     position: relative;
-    height: 275px;
+    height: 250px;
     width: auto;
     margin-right: 3%;
 }
 @media screen and (max-width: 510px) {
+    .seaweed {
+    }
     .shrimp_wrapper {
         justify-content: center;
     }
     .shrimply {
-        height: 200px;
-
         margin-right: 0;
     }
 }
