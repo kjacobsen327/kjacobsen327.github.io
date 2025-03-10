@@ -41,14 +41,16 @@ nav a {
 .shrimply {
     border: 2px solid greenyellow;
     position: absolute;
-    top: -50px;
-    right: 0;
-    height: calc(100vh - 8vw);
-    width: 380px;
-    background-image: url(../images/shrimply.webp);
+    top: calc(10vh - 10vw);
+    right: -50px;
+    height: 100vh;
+    min-height: 650px;
+    width: 70%;
+    min-width: 450px;
+    background-image: url(../images/net.png);
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top right;
 }
 
 
