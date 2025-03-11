@@ -5,7 +5,7 @@ header {
 }
 
 nav {
-    font-family: "Wendy One", sans-serif;
+    font-family: "luckiest guy", sans-serif;
     display: flex;
     justify-content: space-between;
     height: 50px;
@@ -35,9 +35,14 @@ nav a {
     /* responsive font size setting from class: max font size is 19px */
     font-size: calc(12px + (18 - 12) * ((100vw - 400px) / (800 - 400)));
     color: #EE3424;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #E6F9FE;
 }
 
-
+nav a:hover {
+    -webkit-text-stroke-width: 0;
+    -webkit-text-stroke-color: #EE3424;
+}
 .net {
     position: absolute;
     top: calc(10vh - 10vw);
