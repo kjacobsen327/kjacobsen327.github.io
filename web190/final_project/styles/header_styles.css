@@ -42,6 +42,9 @@ nav a {
 nav a:hover {
     -webkit-text-stroke-width: 0;
     -webkit-text-stroke-color: #EE3424;
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: #3D89C9;
 }
 .net {
     position: absolute;

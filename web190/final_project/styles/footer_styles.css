@@ -78,7 +78,21 @@ footer div.middle div:first-child {
 .footer_logo {
     width: 85%;
 }
-
+.footer_socials {
+    display: flex;
+}
+.footer_socials span {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+}
+.footer_socials i {
+    font-size: 2.5em;
+    color: #15478D;
+}
+.footer_socials i:hover {
+    color: #EE3424;
+}
 .clam {
     background: url(../images/clam_180.webp);
     background-repeat: no-repeat;
@@ -121,7 +135,7 @@ footer b {
     margin-right: auto;
     width: 300px;
     height: 6px;
-    background-color: #000;
+    background-color: #15478D;
     border-radius: 3px;
     margin-top: -10px;
 }
@@ -142,7 +156,7 @@ footer b {
     bottom: 0;
     right: 0;
     width: 100%;
-    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-width: .7px;
     -webkit-text-stroke-color: black;
     z-index: 5;
 }
@@ -270,7 +284,7 @@ footer b {
 
     footer div.middle {
         order: 1;
-        height: 325px;
+        height: 300px;
     }
 
     footer div.right {
@@ -281,7 +295,13 @@ footer b {
         height: 200px;
         width: 75%;
     }
-
+    .footer_socials span {
+        height: 100px;
+        width: 75px;
+        align-items: center;
+        align-content: center;
+        
+    }
     footer div {
         width: 100%;
         text-align: center;
