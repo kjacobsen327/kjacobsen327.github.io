@@ -1,0 +1,151 @@
+<!doctype html>
+<!-- 
+    Kevin Jacobsen
+    Web 190: Spring, 2025
+    Module 9-2 Lab (CSS Flexbox Performance Assignment)
+    March 14, 2025
+ -->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chaos Mongers Team Helper</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <style>
+        .nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+        }
+    </style>
+
+</head>
+
+<body class="bg-light" data-bs-spy="scroll" data-bs-target=".nav" data-bs-offset="50">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#battle-tactics">Battle Tactics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#hero">Hero Phase</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>Chaos Mongers Team Helper</h1>
+        <p>Cause we like to drink beer.</p>
+    </div>
+    <div class="container p-1">
+        <div id="battle-tactics" class="container bg-success rounded mb-3">
+            <div class="row p-2">
+                <h2 class="text-white text-center">Battle Tactics</h2>
+                <div class="border bg-light">
+                    <h3>Ordained Charge (Chaos)</h3>
+                    <p>Pick an objective controlled by opponent.<br>Charge 2 friendly units.<br>Gain control of
+                        objective.</p>
+                </div>
+                <div class="border bg-light">
+                    <h3>Offering of Carnage (Chaos)</h3>
+                    <p>Destroy 2 or more enemy units.</p>
+                </div>
+                <div class="border bg-light">
+                    <h3>Seize the Center</h3>
+                    <p>Have 2 or more friendly units within 3" of the center of battlefield and not in combat.</p>
+                </div>
+                <div class="border bg-light">
+                    <h3>Take the Flanks</h3>
+                    <p>Have 1 friendly unit within 6" of each short battlefield edge. <br>Units must not be wholly
+                        within friendly
+                        territory or set up this turn.</p>
+                </div>
+                <div class="border bg-light">
+                    <h3>Take Their Land</h3>
+                    <p>Pick and control a terrain feature wholly or partially within enemy territory.<br>Must be wholly
+                        outside
+                        friendly territory.</p>
+                </div>
+                <div class="border bg-light">
+                    <h3>Do Not Waver</h3>
+                    <p>2 or more friendly units fight and no friendly units are destroyed.</p>
+                </div>
+                <div class="border bg-light">
+                    <h3>Slay the Entourage</h3>
+                    <p>Pick a unit in enemy general's regiment and destroy it.</p>
+                </div>
+                <div class="border bg-light">
+                    <h3>Attack on Two Fronts</h3>
+                    <p>Control 2 or more objectives that you didn't control, and 1 of those was controlled by opponent.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="hero" class="container bg-primary rounded">
+            <div class="row p-2">
+                <h2 class="text-white text-center">Hero Phase</h2>
+
+                <div class="container bg-info rounded mb-3 p-1">
+                    <h3>Abilities</h3>
+                    <div class="border p-1 bg-light">
+                        <h4>Pledge to Chaos</h4>
+                        <ul>
+                            <li><b>Khorne:</b> +1 melee attacks.</li>
+                            <li><b>Nurgle:</b> Ward (6+).</li>
+                            <li><b>Slaanesh:</b> 3d6 charge.</li>
+                            <li><b>Tzeentch: (movement phase)
+                                </b> Roll 2D6 then pick a point a number of inches equal to roll. <br>Set up wholly
+                                within 6" of that point and more than 9" from enemy units.</li>
+                        </ul>
+                    </div>
+                    <div class="border p-1 bg-light">
+                        <h4>Oracular Visions (Chaos Sorcerer)</h4>
+                        <p>Roll 3+: Unit wholly within 12" gets Ward (5+) until start of next turn.</p>
+                    </div>
+                </div>
+
+                <div class="container bg-info rounded mb-3 p-1">
+                    <h3>Spells</h3>
+                    <div class="border p-1 bg-light">
+                        <h4>Binding Damnation (Casting Value: 7)</h4>
+                        <p>Enemy unit within 12" has <b>Strike-Last.</b></p>
+                    </div>
+                    <div class="border p-1 bg-light">
+                        <h4>Daemonic Speed (Casting Value: 7)</h4>
+                        <p>Friendly unit wholly within 12" gets <b>3D6 to charge.</b></p>
+                    </div>
+                    <div class="border p-1 bg-light">
+                        <h4>Spite-Tongue Curse (Casting Value: 5)</h4>
+                        <p>Inflict 3 mortal damage to enemy within 12".
+                        <br>If spell is unsuccessful or unbound, caster takes D3 mortal damage.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="col-sm-12 text-center small p-2 ">Kevin Jacobsen &copy 2025</div>
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    </div>
+</body>
+
+</html>
