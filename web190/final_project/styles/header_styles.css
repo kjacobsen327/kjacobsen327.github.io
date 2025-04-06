@@ -2,49 +2,96 @@ header {
     position: relative;
     background-color: rgb(230, 249, 254);
     overflow: hidden;
+    margin-bottom: -100px;
+}
+nav {
+    position: relative;
+    z-index: 999;
+
+}
+nav .navbar-toggler {
+    z-index: 9999;
+}
+nav .navbar-toggler-icon {
+    background-image: url(../images/red_hamburger_icon.svg)
 }
 
-nav {
-    font-family: "luckiest guy", sans-serif;
+
+.navbar-nav {
+    width: 100%;
     display: flex;
     justify-content: space-between;
+    margin-left: 15px;
+}
+
+@media screen and (max-width: 576px) {
+    #collapsibleNavbar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #E6F9FE;
+        border-bottom: 5px solid #14478B;
+        
+    }
+    .navbar-nav {
+        margin: 0;
+    }
+}
+
+nav .nav_logo {
+    position: relative;
+    z-index: 9999;
+    width: 50px;
     height: 50px;
-    margin: 0 3%;
-}
-
-nav .link_wrapper {
-    /* border: thin solid green; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-}
-
-.logo {
-    z-index: 2;
-    margin-top: 20px;
-    width: 35%;
-    min-width: 200px;
-    height: 280px;
-    background: #ffffff00 url(../images/logo.svg) no-repeat top center;
+    background: url(../images/nav_logo.svg) no-repeat center;
     background-size: contain;
 }
 
-nav a {
+nav .nav-item a {
+    font-family: "luckiest guy", sans-serif;
     text-decoration: none;
-    /* responsive font size setting from class: max font size is 19px */
     font-size: calc(12px + (18 - 12) * ((100vw - 400px) / (800 - 400)));
     color: #EE3424;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #E6F9FE;
 }
 
-nav a:hover {
+nav .nav-item a:hover {
+    color: #EE3424;
+
     -webkit-text-stroke-width: 0;
     -webkit-text-stroke-color: #EE3424;
+
     text-decoration-line: underline;
     text-decoration-style: wavy;
     text-decoration-color: #3D89C9;
+}
+
+@media screen and (max-width: 576px) {
+
+    nav .nav-item a {
+        font-size: 20px;
+        text-align: center;
+        padding: 15px 0;
+    }
+}
+
+
+
+/* HERO SECTION */
+
+.logo {
+    position: absolute;
+    z-index: 2;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35%;
+    min-width: 200px;
+    height: 280px;
+    background: #ffffff00 url(../images/logo.svg) no-repeat top center;
+    background-size: contain;
 }
 .net {
     position: absolute;
@@ -59,6 +106,7 @@ nav a:hover {
     background-repeat: no-repeat;
     background-position: top right;
 }
+
 .seaweed {
     position: absolute;
     z-index: 3;
@@ -79,29 +127,32 @@ nav a:hover {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    height: 530px;
+    height: 575px;
     user-select: none;
     -drag: none;
     -moz-user-select: none;
     -webkit-user-drag: none;
     -webkit-user-select: none;
 }
+
 .shrimply {
     position: relative;
-    height: 250px;
+    height: 220px;
     width: auto;
     margin-right: 3%;
 }
+
 @media screen and (max-width: 510px) {
-    .seaweed {
-    }
     .shrimp_wrapper {
         justify-content: center;
+        height: 600px;
     }
+
     .shrimply {
         margin-right: 0;
     }
 }
+
 .hero {
     width: 100%;
     height: 650px;
@@ -111,9 +162,6 @@ nav a:hover {
     overflow: hidden;
 
 }
-
-
-
 
 .hero .fish_wrapper {
     position: absolute;
@@ -129,17 +177,20 @@ nav a:hover {
     -webkit-user-select: none;
     animation: drawArc1 6s linear infinite;
 }
+
 .hero .fish_wrapper.fish2 {
     left: 30%;
-        animation: drawArc3 8s linear infinite;
+    animation: drawArc3 8s linear infinite;
 
 }
+
 .jumping_fish {
     display: inline-block;
     margin: -20vh;
-    
+
     animation: drawArc2 6s linear infinite;
 }
+
 .jumping_fish2 {
     display: inline-block;
     margin: -20vh;
@@ -150,6 +201,7 @@ nav a:hover {
     width: 35vw;
     max-width: 200px;
 }
+
 @keyframes drawArc1 {
     0% {
         transform: rotate(-30deg);
@@ -179,6 +231,7 @@ nav a:hover {
     }
 
 }
+
 @keyframes drawArc3 {
     0% {
         transform: rotate(-30deg);

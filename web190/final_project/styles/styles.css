@@ -5,5 +5,80 @@
 
 body {
     overflow-x: hidden;
+    width: 100%;
+}
 
+main {
+    height: 1000px;
+    position: relative;
+    width: 100%;
+    background: url(../images/blue_bg.webp);
+    background-size: 100% 40%;
+}
+
+.page_heading {
+    position: absolute;
+    top: -150px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 96%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 4;
+    background: url(../images/rope_border.png);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+}
+#specials {
+    background: url(../images/white_wavy_bg.svg);
+    background-size: cover;
+}
+
+.catch_of_the_day {
+    background: url(../images/catchoftheday.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 70%;
+    height: 100px;
+}
+.carousel-inner {
+    margin-top: 7vw;
+    margin-bottom: 30px;
+}
+
+#specials img {
+    width: 80%;
+    
+}
+.carousel-indicators button:first-child,
+.carousel-indicators button:nth-child(2),
+.carousel-indicators button:nth-child(3),
+.carousel-indicators button:nth-child(4),
+.carousel-indicators button:nth-child(5),
+.carousel-indicators button:nth-child(6),
+.carousel-indicators button:last-child {
+    border: none;
+    height: 7px;
+    border-radius: 10px;
+    background: #15478D;
+    margin-bottom: 6px;
+}
+
+#specials button span{
+    height: 4rem;
+    width: 3rem;
+    background-size: contain;
+}
+
+#specials .carousel-control-prev-icon {
+    background-image: url(../images/prev_arrow.svg)
+}
+#specials .carousel-control-next-icon {
+    background-image: url(../images/next_arrow.svg)
 }
