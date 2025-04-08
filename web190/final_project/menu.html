@@ -10,10 +10,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Lil' Fishy - Seafood Tapas & Bar">
-    <title>Lil' Fishy | Home</title>
+    <title>Lil' Fishy | Menu</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/header_styles.css">
     <link rel="stylesheet" href="styles/footer_styles.css">
+    <link rel="stylesheet" href="styles/footer_styles.css">
+    <link rel="stylesheet" href="styles/menu_styles.css">
+
+
 
 
     <!-- Google Fonts -->
@@ -36,7 +40,9 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-dark fixed-top">
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.html"><div class="nav_logo"></div></a>
+                <a class="navbar-brand" href="index.html">
+                    <div class="nav_logo"></div>
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapsibleNavbar">
                     <span class="navbar-toggler-icon"></span>
@@ -62,7 +68,7 @@
                 </div>
             </div>
         </nav>
-      
+
         <div class="logo"></div>
         <div class="net"></div>
         <div class="seaweed"></div>
@@ -84,59 +90,82 @@
 
         </div>
     </header>
-    <main>
-        <!-- <div class="page_heading">
-            <h2>Small Bites. Big Flavors.</h2>
-        </div> -->
-        <!-- Carousel -->
-        <div id="specials" class="carousel slide container-fluid p-3" data-bs-ride="carousel">
-            <!-- Indicators/dots -->
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#specials" data-bs-slide-to="0" class="active"></button>
-                <button type="button" data-bs-target="#specials" data-bs-slide-to="1"></button>
-                <button type="button" data-bs-target="#specials" data-bs-slide-to="2"></button>
-                <button type="button" data-bs-target="#specials" data-bs-slide-to="3"></button>
-                <button type="button" data-bs-target="#specials" data-bs-slide-to="4"></button>
-                <button type="button" data-bs-target="#specials" data-bs-slide-to="5"></button>
-                <button type="button" data-bs-target="#specials" data-bs-slide-to="6"></button>
+    <main class="menu">
+
+
+        <div class="container-fluid">
+
+            <!-- SEAFOOD CATEGORY -->
+            <div class="category-display">
+                <h2 class="display-2">Seafood</h2>
+            </div>
+            <div class="row menu-category">
+                <!-- Item 1 -->
+                <div class="col-md-12 col-lg-6 mb-5">
+                    <div class="menu-item">
+                        <div class="porthole-frame">
+                            <img src="./images/menu/Reel Good Ceviche.jpeg" class="food" alt="Seafood Item">
+                            <img src="./images/porthole.webp" class="frame" alt="Porthole Frame">
+                        </div>
+                        <div class="menu-description">
+                            <h5>Grilled Salmon</h5>
+                            <p>Fresh Atlantic salmon grilled with herbs and served with lemon butter sauce.</p>
+                            <div class="menu-price">$18.99</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add 4 more seafood items similarly -->
+                <div class="col-md-12 col-lg-6 mb-5">
+                    <div class="menu-item">
+                        <div class="porthole-frame">
+                            <img src="./images/menu/Reel Good Ceviche.jpeg" class="food" alt="Seafood Item">
+                            <img src="./images/porthole.webp" class="frame" alt="Porthole Frame">
+                        </div>
+                        <div class="menu-description">
+                            <h5>Grilled Salmon</h5>
+                            <p>Fresh Atlantic salmon grilled with herbs and served with lemon butter sauce.</p>
+                            <div class="menu-price">$18.99</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-6 mb-5">
+                    <div class="menu-item">
+                        <div class="porthole-frame">
+                            <img src="./images/menu/Reel Good Ceviche.jpeg" class="food" alt="Seafood Item">
+                            <img src="./images/porthole.webp" class="frame" alt="Porthole Frame">
+                        </div>
+                        <div class="menu-description">
+                            <h5>Grilled Salmon</h5>
+                            <p>Fresh Atlantic salmon grilled with herbs and served with lemon butter sauce.</p>
+                            <div class="menu-price">$18.99</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-6 mb-5">
+                    <div class="menu-item">
+                        <div class="porthole-frame">
+                            <img src="./images/menu/Reel Good Ceviche.jpeg" class="food" alt="Seafood Item">
+                            <img src="./images/porthole.webp" class="frame" alt="Porthole Frame">
+                        </div>
+                        <div class="menu-description">
+                            <h5>Grilled Salmon</h5>
+                            <p>Fresh Atlantic salmon grilled with herbs and served with lemon butter sauce.</p>
+                            <div class="menu-price">$18.99</div>
+                        </div>
+                    </div>
+                </div>
+
+
 
             </div>
 
-            <!-- The slideshow/carousel -->
-            <div class="carousel-inner">
-                <div class="catch_of_the_day m-auto"></div>
+            <!-- LANDLUBBERS CATEGORY -->
+            <h2>Landlubbers</h2>
 
-                <div class="carousel-item active">
-                    <img src="./images/specials/sun.png" alt="sunday special" class="d-block w-80 m-auto">
-                </div>
-                <div class="carousel-item">
-                    <img src="./images/specials/mon.png" alt="monday special" class="d-block w-80 m-auto">
-                </div>
-                <div class="carousel-item">
-                    <img src="./images/specials/tues.png" alt="tuesday special" class="d-block w-80 m-auto">
-                </div>
-                <div class="carousel-item">
-                    <img src="./images/specials/wed.png" alt="wednesday special" class="d-block w-80 m-auto">
-                </div>
-                <div class="carousel-item">
-                    <img src="./images/specials/thurs.png" alt="thursday special" class="d-block w-80 m-auto">
-                </div>
-                <div class="carousel-item">
-                    <img src="./images/specials/fri.png" alt="friday special" class="d-block w-80 m-auto">
-                </div>
-                <div class="carousel-item">
-                    <img src="./images/specials/sat.png" alt="saturday special" class="d-block w-80 m-auto">
-                </div>
+            <!-- DESSERTS CATEGORY -->
+            <h2>Desserts</h2>
 
-            </div>
-
-            <!-- Left and right controls/icons -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#specials" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#specials" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </button>
         </div>
 
 

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!-- 
+    Kevin Jacobsen
+    Web 190: Spring, 2025
+    Module 13 Lab
+    April 8, 2025
+ -->
+<html lang="en">
+
+<head>
+  <title>Module 13 Lab: W3.CSS Grid</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2025.css">
+
+</head>
+
+<body>
+  <div class="w3-container">
+    <div class="w3-container w3-2025-dejavu-blue">
+      <h1>Mod 13 Lab: W3.CSS Grid</h1>
+    </div>
+
+    <div class="w3-bar w3-2025-lime-cream ">
+      <a href="#" class="w3-bar-item w3-button w3-text-teal">Home</a>
+      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-text-teal">Link 1</a>
+      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-text-teal">Link 2</a>
+      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-text-teal">Link 3</a>
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium w3-text-teal"
+        onclick="myFunction()">&#9776;</a>
+    </div>
+
+    <div id="demo" class="w3-bar-block w3-2025-lime-cream w3-hide w3-hide-large w3-hide-medium">
+      <a href="#" class="w3-bar-item w3-button">Link 1</a>
+      <a href="#" class="w3-bar-item w3-button">Link 2</a>
+      <a href="#" class="w3-bar-item w3-button">Link 3</a>
+    </div>
+
+
+    <!-- start of row 1 -->
+    <div class="w3-row w3-2025-cocoon w3-text-black">
+      <div class="w3-col l2 m3 s12  w3-center w3-text-black">
+        <h2>left column</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos distinctio atque explicabo. Ratione sequi
+          libero, voluptatem inventore soluta dolorem minus voluptatibus voluptate possimus? Eaque, architecto
+          consequuntur. Aliquam, amet exercitationem! Mollitia!</p>
+      </div>
+      <div class="w3-col l8 m6 s12  w3-center w3-text-black">
+        <h2>middle column</h2>
+        <img src="./bobby1.JPG" alt="bobby" class="w3-image w3-right w3-margin" style="width:100%;max-width:300px">
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio iste at magnam officiis dolor id illum
+          molestias dicta voluptatem quo nulla vitae alias eos aperiam, sapiente repudiandae recusandae rerum tempore.
+        </p>
+      </div>
+      <div class="w3-col l2 m3 s12  w3-center w3-text-black">
+        <h2>right column</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum unde velit sapiente esse placeat soluta
+          delectus fuga alias, consequuntur nostrum, dolore ullam odit suscipit aut veniam. Quasi laudantium at
+          eligendi.</p>
+      </div>
+    </div>
+    <!-- end of row 1 -->
+
+    <!-- start of row 2 -->
+    <div class="w3-row w3-2025-cocoon">
+      <div class="w3-col l6 m4 s12  w3-center w3-text-black">
+        <h2>left column</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos distinctio atque explicabo. Ratione sequi
+          libero, voluptatem inventore soluta dolorem minus voluptatibus voluptate possimus? Eaque, architecto
+          consequuntur. Aliquam, amet exercitationem! Mollitia!</p>
+      </div>
+      <div class="w3-col l6 m8 s12  w3-center w3-2025-lime-cream">
+        <h2>Winter Items</h2>
+        <table class="w3-table w3-striped w3-text-black">
+          <tr>
+            <th>Item</th>
+            <th>Price</th>
+          </tr>
+          <tr>
+            <td>Gloves</td>
+            <td>$28</td>
+          </tr>
+          <tr>
+            <td>Jacket</td>
+            <td>$54</td>
+          </tr>
+          <tr>
+            <td>Scarf</td>
+            <td>$23</td>
+          </tr>
+          <tr>
+            <td>Cap</td>
+            <td>$32</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <!-- end of row 2 -->
+
+    <div class="w3-container w3-2025-dejavu-blue w3-center">
+      <p>Kevin Jacobsen &copy;2025</p>
+    </div>
+  </div>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("demo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+  </script>
+</body>
+
+
+</html>
