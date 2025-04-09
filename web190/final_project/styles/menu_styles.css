@@ -39,7 +39,6 @@ img.food {
     height: 220px;
     width: auto;
     border-radius: 50%;
-
 }
 
 img.frame {
@@ -49,6 +48,7 @@ img.frame {
     top: 0;
     left: 0;
 }
+
 
 .menu-description {
     background: #F8F4E8;
@@ -79,4 +79,15 @@ text-align: end;
 justify-content: flex-end;
 margin-right: 50px;
 margin-top: -10px;
+}
+
+@media screen and (max-width: 576px) {
+    img.food,
+    img.frame {
+        height: 175px;
+    }
+    .menu-description h5,
+    .menu-price {
+        font-size: 18px;
+    }
 }
