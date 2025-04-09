@@ -110,6 +110,7 @@ footer div.middle div:first-child {
     margin-bottom: 75px;
     font-family: "Barlow Condensed", sans-serif;
     font-weight: 600;
+    z-index: 999;
 }
 
 .right .hours div {
