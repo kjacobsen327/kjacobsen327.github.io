@@ -29,9 +29,9 @@ div.porthole-frame {
     background: #F8F4E8;
     border-top-left-radius: 50%;
     border-bottom-left-radius: 50%;
-
-    box-sizing: border-box;
+    display: block;
     height: fit-content;
+    border: thin solid red;
 }
 
 img.food {
