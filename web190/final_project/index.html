@@ -19,7 +19,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Londrina+Outline&family=Luckiest+Guy&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mr+Dafoe&family=Sulphur+Point:wght@300;400;700&family=Luckiest+Guy&display=swap"
         rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -36,7 +36,9 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-dark fixed-top">
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.html"><div class="nav_logo"></div></a>
+                <a class="navbar-brand" href="index.html">
+                    <div class="nav_logo"></div>
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapsibleNavbar">
                     <span class="navbar-toggler-icon"></span>
@@ -62,7 +64,7 @@
                 </div>
             </div>
         </nav>
-      
+
         <div class="logo"></div>
         <div class="net"></div>
         <div class="seaweed"></div>
@@ -85,9 +87,7 @@
         </div>
     </header>
     <main>
-        <!-- <div class="page_heading">
-            <h2>Small Bites. Big Flavors.</h2>
-        </div> -->
+
         <!-- Carousel -->
         <div id="specials" class="carousel slide container-fluid p-3" data-bs-ride="carousel">
             <!-- Indicators/dots -->
@@ -139,6 +139,29 @@
             </button>
         </div>
 
+        <div class="container p-5">
+            <div class="row ">
+                <div class="col-lg-4 my-auto">
+                    <img src="./images/bob.webp" alt="baitin' bob holding up a tiny shrimp" class="img-fluid ms-3 d-block bob">
+                </div>
+                <div class="our_story col-lg-8 p-3">
+                    <h2 class="text-center">Our Story</h2>
+                    <p>Bob wasn't your typical fisherman. He wasn't interested in giant catches or tall tales; his pride
+                        and joy was his boat, The Net Result, a quirky little vessel better suited for hauling snacks
+                        than sharks. Bob had a soft spot for the sea's tiniest treasures—anchovies, sardines, and
+                        shrimp.
+                    </p>
+                    <p>One day, as Bob sorted his catch, a particularly feisty shrimp wriggled free and landed squarely
+                        on his sandwich. Bob chuckled, shook his head, and named the shrimp Scampi. “You've got spirit,
+                        kid,” he said. Inspired by Scampi's boldness, Bob hung up his nets and opened Lil Fishy, a tapas
+                        bar that puts small seafood in the spotlight.
+                    </p>
+                    <p class="signature">- Bob's Family</p>
+                </div>
+            </div>
+        </div>
+
+
 
     </main>
     <div class="footer_wrapper">
@@ -147,7 +170,7 @@
 
         <footer>
             <div class="left">
-                <div class="phone"><b>123 &bull; 456 &bull; 7890</b></div>
+                <a href="tel:+11234567890" class="phone"><b>123 &bull; 456 &bull; 7890</b></a>
                 <div class="address"><b>1400 Whitehead St<br>Key West, FL 33040</b></div>
             </div>
             <div class="middle">
@@ -169,7 +192,7 @@
                     </div>
                 </div>
             </div>
-            <div class="copyright">Design by Kevin Jacobsen - 2025</div>
+            <div class="copyright">Design by Kevin Jacobsen &copy; 2025</div>
             <div class="crab"><img src="images/crab.webp"></div>
 
         </footer>

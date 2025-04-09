@@ -1,6 +1,7 @@
 .footer_wrapper {
     position: relative;
     z-index: 50;
+    top: -20px;
 }
 
 .rope_divider {
@@ -16,6 +17,7 @@
 }
 
 footer {
+    
     font-family: "dangrek", sans-serif;
     padding: 40px 3% 50px 3%;
     width: 100%;
@@ -44,14 +46,21 @@ footer div.left {
     gap: 30px;
 }
 
-footer div.phone,
-footer div.address {
-    /* responsive font size setting from class: max font size is 19px */
-    font-size: calc(15px + (22 - 15) * ((100vw - 400px) / (800 - 400)));
+footer a.phone,
+footer div.address b {
+    font-family: "luckiest guy", sans-serif;
+    font-size: 30px;
+    font-weight: 400;
 }
 
-footer div.phone b {
+footer a.phone  {
     color: #EE3424;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+footer a.phone b {
+    color: red;
 }
 
 footer div.middle {
@@ -79,6 +88,7 @@ footer div.middle div:first-child {
     width: 85%;
 }
 .footer_socials {
+    padding-top: 20px;
     display: flex;
 }
 .footer_socials span {
@@ -93,27 +103,13 @@ footer div.middle div:first-child {
 .footer_socials i:hover {
     color: #EE3424;
 }
-.clam {
-    background: url(../images/clam_180.webp);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    height: 400px;
-    width: 400px;
-
-    position: absolute;
-    top: -30px;
-    left: 50%;
-    transform: translateX(-50%) rotate(160deg);
-
-    z-index: 1;
-}
-
 
 .right .hours {
     width: 100%;
-    font-size: 1.3em;
+    font-size: 1.2em;
     margin-bottom: 75px;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 600;
 }
 
 .right .hours div {
@@ -123,6 +119,8 @@ footer div.middle div:first-child {
 
 footer b {
     color: #15478D;
+    font-family: "luckiest guy", sans-serif;
+    font-weight: 400;
 }
 
 .right .hours div b {
@@ -142,6 +140,8 @@ footer b {
 
 
 .hours div:first-child b {
+    font-family: "luckiest guy", sans-serif;
+    font-weight: 400;
     color: #EE3424;
     line-height: 1.5em;
     font-size: calc(15px + (22 - 15) * ((100vw - 400px) / (800 - 400)));
@@ -149,6 +149,8 @@ footer b {
 
 
 .copyright {
+    font-family: "Barlow Condensed", sans-serif;
+font-weight: 500;
     background-color: #3D89C9;
     color: white;
     font-size: 1.5em;
@@ -156,8 +158,7 @@ footer b {
     bottom: 0;
     right: 0;
     width: 100%;
-    -webkit-text-stroke-width: .7px;
-    -webkit-text-stroke-color: black;
+
     z-index: 5;
 }
 
@@ -167,7 +168,7 @@ footer b {
     left: -50px;
     height: 300px;
     transform: rotate(10deg);
-    animation: movecrab 8s ease-in-out infinite;
+    animation: movecrab 7s ease-in-out infinite;
 }
 
 

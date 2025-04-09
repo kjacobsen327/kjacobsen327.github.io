@@ -5,8 +5,6 @@
     
 }
 .category-display {
-
-
     width: 100%;
     height: 150px;
     display: flex;
@@ -54,13 +52,30 @@ img.frame {
 
 .menu-description {
     background: #F8F4E8;
-
+    width: 100%;
     border-top-right-radius: 110px;
     border-bottom-right-radius: 110px;
     font-size: calc(13px + (15 - 13) * ((100vw - 400px) / (800 - 400)));
+    font-family: "Barlow Condensed", sans-serif;
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 10px;
+}
+
+.menu-description h5,
+.menu-price {
+    font-size: 24px;
+    padding-right: 50px;
+    font-family: "luckiest guy", sans-serif;
+    color: #15478D;
+}
+
+.menu-price {
+font-size: 1.8em;
+color: #EE3424;
+text-align: end;
+justify-content: flex-end;
+margin-right: 50px;
 }
