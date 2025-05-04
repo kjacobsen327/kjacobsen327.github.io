@@ -1,0 +1,58 @@
+.contact h2 {
+    text-align: center;
+    font-family: 'luckiest guy', sans-serif;
+    color: #15478D;
+    margin-top: -50px;
+    position: relative;
+    z-index: 999;
+    font-size: 45px;
+}
+
+.contact-section {
+    background-image: url('../images/message.webp');
+    /* Replace with your image */
+    background-size: 900px;
+    background-repeat: no-repeat;
+    background-position: center 20px;
+    padding: 60px 20px;
+}
+
+.contact-form-container {
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.form-control::placeholder {
+    color: #aaa;
+}
+#message {
+    resize: none;
+}
+.btn-submit {
+    background-color: #EE3424;
+    color: #fff;
+    border: none;
+    width: 50%;
+    margin: 0 auto;
+    padding: 5px;
+    border-radius: 15px;
+    font-family: "Barlow Condensed", sans-serif;
+
+}
+
+.btn-custom:hover {
+    background-color: #163141;
+}
+.form-label {
+    font-family: "luckiest guy", sans-serif;
+    color: #15478D;
+    font-size: 1.1em;
+    padding-left: 15px;
+
+}
+.form-control{
+    font-family: "Barlow Condensed", sans-serif;
+
+}
